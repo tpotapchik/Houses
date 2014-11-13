@@ -6,7 +6,7 @@
  * Time: 0:31
  */
 ?>
-<div class="filter-panel">
+<div class="filter-panel <?= $other?'other-page':'' ?>">
     <div class="_title">НАЙТИ ПРОЕКТ МЕЧТЫ</div>
     <form action="#">
         <div class="centralize clearfix">

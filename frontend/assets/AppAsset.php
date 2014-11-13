@@ -19,6 +19,7 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/main.css',
+        'http://fonts.googleapis.com/css?family=Roboto:300&subset=cyrillic,latin'
     ];
     public $js = [
         'js/vendor/jquery-migrate-1.2.1.min.js',
