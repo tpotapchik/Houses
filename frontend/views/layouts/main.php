@@ -59,13 +59,8 @@ AppAsset::register($this);
     </div>
 
     <div class="footer">
-        <div class="footer-nav">
-            <div class="centralize">
-                <a href="/">Главная</a><a href="about.html">О нас</a><a href="catalog.html">Каталог проектов</a><a href="design.html">Дизайн интерьеров</a><a
-                    href="news.html">Новости</a><a
-                    href="map.html">Контакты</a>
-            </div>
-        </div>
+
+        <?= \frontend\widgets\FooterMenu::widget(Yii::$app->params['mainMenu']) ?>
 
         <div class="footer-bottom">
             <div class="centralize">

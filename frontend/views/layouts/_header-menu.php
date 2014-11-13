@@ -7,9 +7,4 @@
  */
 ?>
 
-<?= \frontend\widgets\Menu::widget([
-    'items' => [
-        'Main' => ['site/index'],
-        'About' => ['site/about']
-    ]
-]) ?>
+<?= \frontend\widgets\Menu::widget(Yii::$app->params['mainMenu']) ?>

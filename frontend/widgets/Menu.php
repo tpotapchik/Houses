@@ -57,7 +57,7 @@ class Menu extends Widget
         return $result;
     }
 
-    private function renderItem($item)
+    protected function renderItem($item)
     {
 
         if (is_string($item)) {
