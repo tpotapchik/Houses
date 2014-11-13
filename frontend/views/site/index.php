@@ -5,9 +5,9 @@ $this->title = 'DOMY';
 ?>
 
 <div class="slider-content">
-    <?= $this->render('../layouts/_filter-panel', []) ?>
+    <?= $this->render('../layouts/_filter-panel', ['other' => false]) ?>
     <div class="slider">
-        <div class="slider-item" style="background-image: url('img/temp/slider.jpg')">
+        <div class="slider-item" style="background-image: url('/img/temp/slider.jpg')">
             <a href="project-house.html" class="slider-link">
                 <div class="slider-text">
                     <div class="centralize">
@@ -22,7 +22,7 @@ $this->title = 'DOMY';
             </a>
         </div>
 
-        <div class="slider-item" style="background-image: url('img/temp/slider2.jpg')">
+        <div class="slider-item" style="background-image: url('/img/temp/slider2.jpg')">
             <a href="project-house.html" class="slider-link">
                 <div class="slider-text">
                     <div class="centralize">
@@ -38,7 +38,7 @@ $this->title = 'DOMY';
             </a>
         </div>
 
-        <div class="slider-item" style="background-image: url('img/temp/slider3.jpg')">
+        <div class="slider-item" style="background-image: url('/img/temp/slider3.jpg')">
             <a href="project-house.html" class="slider-link">
                 <div class="slider-text">
                     <div class="centralize">

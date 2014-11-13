@@ -11,6 +11,8 @@ $config = [
 //            'enableStrictParsing' => true,
             'showScriptName' => false,
             'rules' => [
+                'about' => 'site/about',
+                '/' => 'site/index'
             ]
         ],
         'errorHandler' => [

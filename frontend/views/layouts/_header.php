@@ -8,7 +8,7 @@
 ?>
 <div class="header">
     <div class="centralize">
-        <a href="/" class="logo"><img src="/img/logo.png" alt="Логотип"/></a>
+        <a href="<?= Yii::$app->homeUrl ?>" class="logo"><img src="/img/logo.png" alt="Логотип"/></a>
 
         <div class="call-back right">
             <div class="social">

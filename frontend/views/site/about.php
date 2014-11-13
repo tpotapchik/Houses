@@ -1,8 +1,9 @@
 <?php
-use yii\helpers\Html;
+
+use yii\widgets\Breadcrumbs;
 
 /* @var $this yii\web\View */
-$this->title = 'DOMY';
+$this->title = 'О нас';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
@@ -11,9 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <!--main part-->
 <div class="centralize">
 
-    <div class="breadcrums clearfix">
-        <a href="index.html">Главная</a> - О нас
-    </div>
+    <?= $this->render('../layouts/_breadcrumbs', []) ?>
 
     <div class="main-title">О НАС</div>
     <div class="main-block clearfix">
