@@ -1,7 +1,5 @@
 <?php
 
-use yii\widgets\Breadcrumbs;
-
 /* @var $this yii\web\View */
 $this->title = 'О нас';
 $this->params['breadcrumbs'][] = $this->title;

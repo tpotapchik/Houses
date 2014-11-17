@@ -5,6 +5,8 @@
  * Date: 13.11.14
  * Time: 0:26
  */
+
+$contacts = Yii::$app->params['contacts'];
 ?>
 <div class="header">
     <div class="centralize">
@@ -19,14 +21,14 @@
             <div class="call_me"><a href="#popup" class="popup">Заказать звонок</a></div>
         </div>
         <div class="contact right">
-            <a class="mail" href="mailto:info@site.by"><i class="_ico"></i>info@site.by</a>
-            <a class="skype" href="skype:archipelag.by"><i class="_ico"></i>login_skype</a>
+            <a class="mail" href="mailto:<?= $contacts['email'] ?>"><i class="_ico"></i><?= $contacts['email'] ?></a>
+            <a class="skype" href="skype:<?= $contacts['skype'] ?>"><i class="_ico"></i><?= $contacts['skype'] ?></a>
         </div>
         <div class="phone right">
             <div class="_ico"></div>
-            <p>+375 29 100 00 00</p>
+            <p><?= $contacts['phone1'] ?></p>
 
-            <p>+375 29 100 00 00</p>
+            <p><?= $contacts['phone2'] ?></p>
         </div>
     </div>
 </div>

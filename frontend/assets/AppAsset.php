@@ -26,7 +26,7 @@ class AppAsset extends AssetBundle
         'js/plugins/slick.min.js',
         'js/plugins/chosen.min.js',
         'js/plugins/jquery.fancybox.pack.js',
-        'js/main.js'
+        'js/main.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

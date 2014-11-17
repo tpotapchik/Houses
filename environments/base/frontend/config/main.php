@@ -12,7 +12,8 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 'about' => 'site/about',
-                '/' => 'site/index'
+                '/' => 'site/index',
+                'contacts' => 'site/contacts'
             ]
         ],
         'errorHandler' => [
