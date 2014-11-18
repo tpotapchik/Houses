@@ -1,5 +1,5 @@
 <?php
-if ($_SERVER['HTTP_HOST'] == 'house.loc') {
+if (getenv('APP_ENV') == 'dev') {
     return [
         'class' => 'yii\db\Connection',
         'dsn' => 'pgsql:host=localhost;dbname=home',
