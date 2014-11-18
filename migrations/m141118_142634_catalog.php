@@ -13,10 +13,16 @@ class m141118_142634_catalog extends Migration
         $this->createHelper('typeView');
         $this->createHelper('category');
         $this->createHelper('collection');
+        $this->createHelperPhotos('floor');
+        $this->createHelperPhotos('facade');
+        $this->createHelperPhotos('photo');
     }
 
     public function safeDown()
     {
+        $this->dropHelperPhotos('photo');
+        $this->dropHelperPhotos('facade');
+        $this->dropHelperPhotos('floor');
         $this->dropHelper('collection');
         $this->dropHelper('category');
         $this->dropHelper('typeView');
@@ -42,7 +48,7 @@ class m141118_142634_catalog extends Migration
             'category_id' => 'int NOT NULL',
             'collection_id' => 'int NOT NULL',
             'carPlaces' => 'smallint',
-            'cubage' => 'decimal(4,2)',
+            'cubage' => 'real',
         ]);
 
         $this->createIndex('project_numCat', 'project', 'numCat', true);
@@ -68,6 +74,24 @@ class m141118_142634_catalog extends Migration
     {
         $this->dropForeignKey('fk_project_'.$tableName, 'project');
         $this->dropIndex($tableName.'_val_uniq', $tableName);
+        $this->dropTable($tableName);
+    }
+
+    private function createHelperPhotos($tableName)
+    {
+        $this->createTable($tableName, [
+            'id' => 'pk',
+            'title' => 'string',
+            'file' => 'string',
+            'project_id' => 'int NOT NULL'
+        ]);
+
+        $this->addForeignKey('fk_'.$tableName.'_project', $tableName, 'project_id', 'project', 'id', 'CASCADE', 'CASCADE');
+    }
+
+    private function dropHelperPhotos($tableName)
+    {
+        $this->dropForeignKey('fk_'.$tableName.'_project', $tableName);
         $this->dropTable($tableName);
     }
 }
