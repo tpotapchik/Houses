@@ -22,13 +22,15 @@ use Yii;
  * @property integer $collection_id
  * @property integer $carPlaces
  * @property double $cubage
- *
- * @property Photo[] $photos
+ * @property double $effectiveArea
+ * @property Size[] $sizes
  * @property Roof $roof
  * @property Type $type
  * @property TypeView $typeView
  * @property Category $category
  * @property Collection $collection
+ * @property Area[] $areas
+ * @property Photo[] $photos
  * @property Facade[] $facades
  * @property Floor[] $floors
  */
@@ -52,7 +54,7 @@ class Project extends \yii\db\ActiveRecord
             [['technology'], 'string'],
             [['ready', 'new', 'southEnter', 'energySaving'], 'boolean'],
             [['roof_id', 'type_id', 'typeView_id', 'category_id', 'collection_id', 'carPlaces'], 'integer'],
-            [['cubage'], 'number'],
+            [['cubage', 'effectiveArea'], 'number'],
             [['numCat', 'title'], 'string', 'max' => 255],
             [['numCat'], 'unique']
         ];
@@ -79,15 +81,16 @@ class Project extends \yii\db\ActiveRecord
             'collection_id' => Yii::t('yii', 'Collection ID'),
             'carPlaces' => Yii::t('yii', 'Car Places'),
             'cubage' => Yii::t('yii', 'Cubage'),
+            'effectiveArea' => Yii::t('house', 'Effective area')
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getPhotos()
+    public function getSizes()
     {
-        return $this->hasMany(Photo::className(), ['project_id' => 'id']);
+        return $this->hasMany(Size::className(), ['project_id' => 'id']);
     }
 
     /**
@@ -133,6 +136,22 @@ class Project extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
+    public function getAreas()
+    {
+        return $this->hasMany(Area::className(), ['project_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getPhotos()
+    {
+        return $this->hasMany(Photo::className(), ['project_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
     public function getFacades()
     {
         return $this->hasMany(Facade::className(), ['project_id' => 'id']);
@@ -162,20 +181,9 @@ class Project extends \yii\db\ActiveRecord
         $this->collection_id = Collection::getOrInsert($xml['колекция']);
         $this->carPlaces = $xml['Количество_Мест_На_Машины'];
         $this->cubage = $this->getCubage($xml['кубатура']);
+        $this->effectiveArea = $this->getEffectiveArea($xml['полезная']);
         if ($this->save()) {
-
-            if (isset($xml['фотографии'])) {
-                //photo
-                Photo::import($xml['фотографии'], $this->id);
-            }
-            if (isset($xml['фасады'])) {
-                //facade
-                Facade::import($xml['фасады'], $this->id);
-            }
-            if (isset($xml['этажи'])) {
-                //floor
-                Floor::import($xml['этажи'], $this->id);
-            }
+            $this->postSaveImport($xml);
         }
     }
 
@@ -196,5 +204,31 @@ class Project extends \yii\db\ActiveRecord
     private function getCubage(array $cubage)
     {
         return sprintf("%01.2f", doubleval($cubage['@attributes']['общая']));
+    }
+
+    /**
+     * @param $xml
+     */
+    private function postSaveImport($xml)
+    {
+        if (isset($xml['фотографии'])) {
+            //photo
+            Photo::import($xml['фотографии'], $this->id);
+        }
+        if (isset($xml['фасады'])) {
+            //facade
+            Facade::import($xml['фасады'], $this->id);
+        }
+        if (isset($xml['этажи'])) {
+            //floor
+            Floor::import($xml['этажи'], $this->id);
+        }
+        Area::import($xml['полезная'], $this->id);
+        Size::import($xml['размеры'], $this->id);
+    }
+
+    private function getEffectiveArea($effectiveArea)
+    {
+        return sprintf("%01.2f", doubleval($effectiveArea['@attributes']['площадь']));
     }
 }

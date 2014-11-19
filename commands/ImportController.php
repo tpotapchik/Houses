@@ -22,6 +22,7 @@ class ImportController extends Controller
 
 //        var_dump($xml_array);
         foreach ($xml_array['проект'] as $project) {
+//            print_r($project);
             $projectAR = new Project();
             $projectAR->importXML($project);
         }

@@ -16,10 +16,14 @@ class m141118_142634_catalog extends Migration
         $this->createHelperPhotos('floor');
         $this->createHelperPhotos('facade');
         $this->createHelperPhotos('photo');
+        $this->createHelperType('area');
+        $this->createHelperType('size');
     }
 
     public function safeDown()
     {
+        $this->dropHelperType('size');
+        $this->dropHelperType('area');
         $this->dropHelperPhotos('photo');
         $this->dropHelperPhotos('facade');
         $this->dropHelperPhotos('floor');
@@ -49,6 +53,7 @@ class m141118_142634_catalog extends Migration
             'collection_id' => 'int NOT NULL',
             'carPlaces' => 'smallint',
             'cubage' => 'real',
+            'effectiveArea' => 'real'
         ]);
 
         $this->createIndex('project_numCat', 'project', 'numCat', true);
@@ -90,6 +95,24 @@ class m141118_142634_catalog extends Migration
     }
 
     private function dropHelperPhotos($tableName)
+    {
+        $this->dropForeignKey('fk_'.$tableName.'_project', $tableName);
+        $this->dropTable($tableName);
+    }
+
+    private function createHelperType($tableName)
+    {
+        $this->createTable($tableName, [
+            'id' => 'pk',
+            'type' => 'string',
+            'value' => 'real',
+            'project_id' => 'int NOT NULL'
+        ]);
+
+        $this->addForeignKey('fk_'.$tableName.'_project', $tableName, 'project_id', 'project', 'id', 'CASCADE', 'CASCADE');
+    }
+
+    private function dropHelperType($tableName)
     {
         $this->dropForeignKey('fk_'.$tableName.'_project', $tableName);
         $this->dropTable($tableName);

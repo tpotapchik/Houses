@@ -26,6 +26,19 @@ return [
             ],
         ],
         'db' => $db,
+        'i18n' => [
+            'translations' => [
+                'house*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    //'basePath' => '@app/messages',
+                    //'sourceLanguage' => 'en-US',
+                    'fileMap' => [
+                        'house'       => 'house.php',
+                        'house/error' => 'error.php',
+                    ],
+                ],
+            ],
+        ],
     ],
     'params' => $params,
 ];
