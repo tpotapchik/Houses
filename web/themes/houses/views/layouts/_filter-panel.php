@@ -21,8 +21,8 @@ $categoryDropDown = ArrayHelper::map(Category::find()->all(), 'id', 'value');
             <div class="filter-row clearfix">
                 <label>Полезная площадь</label>
 
-                <div class="small-input margin-r">от<input type="text"/>м<sup>2</sup></div>
-                <div class="small-input">до<input type="text"/>м<sup>2</sup></div>
+                <div class="small-input margin-r">от<?= \yii\helpers\Html::activeTextInput($model, 'effectiveAreaFrom') ?>м<sup>2</sup></div>
+                <div class="small-input">до<?= \yii\helpers\Html::activeTextInput($model, 'effectiveAreaTo') ?>м<sup>2</sup></div>
             </div>
 
                 <?= $form->field($model, 'categoryId', [
