@@ -7,7 +7,9 @@
  */
 use app\models\Category;
 use yii\helpers\ArrayHelper;
+use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+
 $model = new \app\models\FilterPanel();
 
 $categoryDropDown = ArrayHelper::map(Category::find()->all(), 'id', 'value');
@@ -21,8 +23,8 @@ $categoryDropDown = ArrayHelper::map(Category::find()->all(), 'id', 'value');
             <div class="filter-row clearfix">
                 <label>Полезная площадь</label>
 
-                <div class="small-input margin-r">от<?= \yii\helpers\Html::activeTextInput($model, 'effectiveAreaFrom') ?>м<sup>2</sup></div>
-                <div class="small-input">до<?= \yii\helpers\Html::activeTextInput($model, 'effectiveAreaTo') ?>м<sup>2</sup></div>
+                <div class="small-input margin-r">от<?= Html::activeTextInput($model, 'effectiveAreaFrom') ?>м<sup>2</sup></div>
+                <div class="small-input">до<?= Html::activeTextInput($model, 'effectiveAreaTo') ?>м<sup>2</sup></div>
             </div>
 
                 <?= $form->field($model, 'categoryId', [
