@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\FilterPanel;
+use app\models\Project;
 use app\models\ProjectSearch;
 use Yii;
 use yii\web\Controller;
@@ -32,9 +33,10 @@ class CatalogController extends Controller
         return $this->render('search', ['model' => $model, 'dataProvider' => $dataProvider]);
     }
 
-    public function actionView()
+    public function actionView($numCat)
     {
-        return $this->render('view');
+        $model = Project::findOne(['numCat' => $numCat]);
+        return $this->render('view', ['model' => $model]);
     }
 }
 

@@ -10,14 +10,16 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
-$model = new \app\models\FilterPanel();
+if (!isset($model)) {
+    $model = new \app\models\FilterPanel();
+}
 
 $categoryDropDown = ArrayHelper::map(Category::find()->all(), 'id', 'value');
 ?>
 <div class="filter-panel <?= $other?'other-page':'' ?>">
     <div class="_title">НАЙТИ ПРОЕКТ МЕЧТЫ</div>
 
-    <?php $form = ActiveForm::begin(['id' => 'contact-form', 'action' => ['site/about']]); ?>
+    <?php $form = ActiveForm::begin(['id' => 'contact-form', 'action' => ['catalog/search'], 'method' => 'get']); ?>
     <div class="centralize clearfix">
         <div class="filter-column">
             <div class="filter-row clearfix">

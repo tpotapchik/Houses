@@ -20,7 +20,8 @@ $config = [
             'rules' => [
                 'about' => 'site/about',
                 '/' => 'site/index',
-                'contacts' => 'site/contacts'
+                'contacts' => 'site/contacts',
+                'catalog/view/<numCat:[[:word:]-]+>' => 'catalog/view'
             ]
         ],
         'cache' => [

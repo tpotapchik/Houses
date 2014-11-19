@@ -12,5 +12,6 @@ return [
     'Project title' => 'Название проекта',
     'Garage' => 'Гараж',
     'Ground floor' => 'Цокольный этаж',
-    'Effective area' => 'Полезная площадь'
+    'Effective area' => 'Полезная площадь',
+    'Catalog Projects' => 'Каталог проектов'
 ];
