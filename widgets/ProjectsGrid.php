@@ -59,12 +59,7 @@ class ProjectsGrid extends BaseListView
         /** @var Project $model */
         $odd = $index % 2 == 0 ? 'left' : 'right';
 
-        $photoLink = '/img/temp/house1.jpg';
-        /** @var Photo $photo */
-        $photo = $model->getPhotos()->where('title=:title', [':title'=>'фото'])->one();
-        if ($photo) {
-            $photoLink = $photo->file;
-        }
+        $photoLink = $model->getMainPhoto();
 
         $content = Html::a(
                         Html::tag('div', $model->title, ['class' => '_title-project']) .

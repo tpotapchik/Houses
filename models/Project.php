@@ -231,4 +231,18 @@ class Project extends \yii\db\ActiveRecord
     {
         return sprintf("%01.2f", doubleval($effectiveArea['@attributes']['площадь']));
     }
+
+    /**
+     * @param string $DefaultPhoto
+     * @return string
+     */
+    public function getMainPhoto($DefaultPhoto = '/img/temp/house1.jpg')
+    {
+        /** @var Photo $photo */
+        $photo = $this->getPhotos()->where('title=:title', [':title'=>'фото'])->one();
+        if ($photo) {
+            $DefaultPhoto = $photo->file;
+        }
+        return $DefaultPhoto;
+    }
 }
