@@ -14,7 +14,7 @@ if (!isset($model)) {
     $model = new \app\models\FilterPanel();
 }
 
-$categoryDropDown = ArrayHelper::map(Category::find()->all(), 'id', 'value');
+$categoryDropDown = ArrayHelper::map(Category::find()->all(), 'id', 'processedValue');
 ?>
 <div class="filter-panel <?= $other?'other-page':'' ?>">
     <div class="_title">НАЙТИ ПРОЕКТ МЕЧТЫ</div>

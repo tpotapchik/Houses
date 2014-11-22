@@ -30,21 +30,7 @@ AppAsset::register($this);
     <?= $this->render('_header', []) ?>
     <?= $this->render('_header-menu', []) ?>
 
-    <div class="order-call" id="popup">
-        <div class="message">Спасибо! Мы перезвоним вам<br> в ближайшее время.</div>
-        <div class="_title">ЗАКАЗАТЬ ЗВОНОК</div>
-        <form action="#" method="post">
-            <div class="form-row">Введите свое имя</div>
-            <input type="text" class="popup-input" placeholder="Введите свое имя"/>
-            <div class="form-row">Введите ваш номер телефона<br><span>+375 (29) 000-00-11, +7 (495) 888-11-88, +380 (25) 111-11-11</span>
-            </div>
-            <input type="tel" class="popup-input" placeholder="Введите ваш номер телефона"/>
-            <button type="submit" id="js-submit" class="order-call-btn">ЗАКАЗАТЬ ЗВОНОК</button>
 
-
-        </form>
-
-    </div>
     <!--end HEADER-->
 
     <?= $content ?>

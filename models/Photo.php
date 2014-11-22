@@ -14,7 +14,7 @@ use Yii;
  *
  * @property Project $project
  */
-class Photo extends \yii\db\ActiveRecord
+class Photo extends PhotoGeneral
 {
     /**
      * @inheritdoc

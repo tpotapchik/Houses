@@ -11,7 +11,7 @@ class m141118_142634_catalog extends Migration
         $this->createHelper('roof');
         $this->createHelper('type');
         $this->createHelper('typeView');
-        $this->createHelper('category');
+        $this->createHelperExtended('category');
         $this->createHelper('collection');
         $this->createHelperPhotos('floor');
         $this->createHelperPhotos('facade');
@@ -53,7 +53,8 @@ class m141118_142634_catalog extends Migration
             'collection_id' => 'int NOT NULL',
             'carPlaces' => 'smallint',
             'cubage' => 'real',
-            'effectiveArea' => 'real'
+            'effectiveArea' => 'real',
+            'priceUSD' => 'int DEFAULT 0'
         ]);
 
         $this->createIndex('project_numCat', 'project', 'numCat', true);
@@ -116,5 +117,16 @@ class m141118_142634_catalog extends Migration
     {
         $this->dropForeignKey('fk_'.$tableName.'_project', $tableName);
         $this->dropTable($tableName);
+    }
+
+    private function createHelperExtended($tableName)
+    {
+        $this->createTable($tableName, [
+            'id' => 'pk',
+            'value' => 'string NOT NULL',
+            'processedValue' => 'string NOT NULL'
+        ]);
+        $this->createIndex($tableName.'_val_uniq', $tableName, 'value', true);
+        $this->addForeignKey('fk_project_'.$tableName, 'project', $tableName.'_id', $tableName, 'id', 'CASCADE', 'CASCADE');
     }
 }
