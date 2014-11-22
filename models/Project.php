@@ -23,16 +23,18 @@ use Yii;
  * @property integer $carPlaces
  * @property double $cubage
  * @property double $effectiveArea
- * @property Size[] $sizes
+ * @property integer $priceUSD
+ *
+ * @property Floor[] $floors
+ * @property Facade[] $facades
+ * @property Photo[] $photos
+ * @property Area[] $areas
  * @property Roof $roof
  * @property Type $type
  * @property TypeView $typeView
  * @property Category $category
  * @property Collection $collection
- * @property Area[] $areas
- * @property Photo[] $photos
- * @property Facade[] $facades
- * @property Floor[] $floors
+ * @property Size[] $sizes
  */
 class Project extends \yii\db\ActiveRecord
 {
@@ -53,7 +55,7 @@ class Project extends \yii\db\ActiveRecord
             [['numCat', 'title', 'technology', 'roof_id', 'type_id', 'typeView_id', 'category_id', 'collection_id'], 'required'],
             [['technology'], 'string'],
             [['ready', 'new', 'southEnter', 'energySaving'], 'boolean'],
-            [['roof_id', 'type_id', 'typeView_id', 'category_id', 'collection_id', 'carPlaces'], 'integer'],
+            [['roof_id', 'type_id', 'typeView_id', 'category_id', 'collection_id', 'carPlaces', 'priceUSD'], 'integer'],
             [['cubage', 'effectiveArea'], 'number'],
             [['numCat', 'title'], 'string', 'max' => 255],
             [['numCat'], 'unique']
@@ -81,7 +83,8 @@ class Project extends \yii\db\ActiveRecord
             'collection_id' => Yii::t('yii', 'Collection ID'),
             'carPlaces' => Yii::t('yii', 'Car Places'),
             'cubage' => Yii::t('yii', 'Cubage'),
-            'effectiveArea' => Yii::t('house', 'Effective area')
+            'effectiveArea' => Yii::t('yii', 'Effective Area'),
+            'priceUSD' => Yii::t('yii', 'Price Usd'),
         ];
     }
 

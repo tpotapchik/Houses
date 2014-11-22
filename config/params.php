@@ -17,5 +17,6 @@ return [
         'phone2' => '+375 29 677 10 59',
         'skype' => 'archipelag.by',
         'address' => ''
-    ]
+    ],
+    'callUsEmail' => 'sahnovski@gmail.com'
 ];
