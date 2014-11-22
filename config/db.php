@@ -11,7 +11,7 @@ if (getenv('APP_ENV') == 'dev') {
     //production
     return [
         'class' => 'yii\db\Connection',
-        'dsn' => 'pgsql:host=pgsql1.activeby.net;dbname=domtut',
+        'dsn' => 'mysql:host=mysql5.activeby.net;dbname=domtut',
         'username' => 'dom',
         'password' => '6nip2Ujs',
         'charset' => 'utf8',
