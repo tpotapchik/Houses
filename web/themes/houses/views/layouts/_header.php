@@ -6,8 +6,10 @@
  * Time: 0:26
  */
 
+use yii\captcha\Captcha;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\widgets\MaskedInput;
 
 $contacts = Yii::$app->params['contacts'];
 if (!isset($model)) {
@@ -51,17 +53,22 @@ if (!isset($model)) {
     ]) ?>
 
     <div class="form-row">Введите ваш номер телефона<br><span>+375 (29) 000-00-11, +7 (495) 888-11-88, +380 (25) 111-11-11</span></div>
-        <?= \yii\widgets\MaskedInput::widget([
-            'model' => $model,
-            'attribute' => 'phoneNumber',
+        <?= $form->field($model, 'phoneNumber', ['template' => '{input}',])->widget(MaskedInput::className(), [
             'mask' => '+9{1,3} (9{2,3}) 999-99-99',
-            'name' => 'test',
             'options' => [
-                'class' => 'popup-input',
-                'type' => 'tel'
+                'class' => 'popup-input'
             ]
         ]) ?>
-        <button type="submit" id="js-submit" class="order-call-btn">ЗАКАЗАТЬ ЗВОНОК</button>
+
+    <div class="form-row">Введите символы с картинки</div>
+    <?= $form->field($model, 'verifyCode', [
+        'template' => '{input}',
+        'inputOptions' => []
+    ])->widget(Captcha::className(), [
+        'options' => ['class' => 'popup-input',]
+    ]) ?>
+<!--        <button type="submit" id="js-submit" class="order-call-btn">ЗАКАЗАТЬ ЗВОНОК</button>-->
+    <?= Html::submitButton('ЗАКАЗАТЬ ЗВОНОК', ['class' => 'order-call-btn', 'name' => 'contact-button']) ?>
 
 
 <?php ActiveForm::end(); ?>
