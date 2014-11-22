@@ -17,10 +17,12 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
 
     <div class="main-block clearfix">
         <div class="right-block right">
+        <?php if ($model->priceUSD > 0):?>
             <div class="price-project">
                 Цена проекта:
-                <div class="_title">1100 y.e.</div>
+                <div class="_title"><?= $model->priceUSD . ' y.e.' ?></div>
             </div>
+        <?php endif; ?>
             <div class="order-phone">
                 Заказать этот проект<br/>
                 Вы можете по телефону:
@@ -36,17 +38,20 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
         </div>
 
         <div class="text-block-project ovhidden">
+            <?php
+            $photo = $model->getMainPhoto('/img/temp/image_project1.jpg');
+            $facadesPhotos = $model->getFacades()->all();
+            $faca = \yii\helpers\ArrayHelper::remove($facadesPhotos, 0);
+            ?>
             <div class="project-nav">
-                <a href="#">визуализации</a>|<a href="">планы</a>|<a href="/img/temp/image_project_slider-3.jpg" class="fancybox" rel="gallery2">фасады</a>|<a href="">расположение</a>|<a href="">3D прогулка</a>
-
+                <a href="#">визуализации</a>|<a href="">планы</a>|<a href="<?= $faca->file ?>" class="fancybox" rel="gallery2">фасады</a>|<a href="">расположение</a>|<a href="">3D прогулка</a>
 
             </div>
 
             <?php
-            $photo = $model->getMainPhoto('/img/temp/image_project1.jpg');
-
             echo Html::a(
-                Html::img($photo,
+                Html::img(
+                    $photo,
                     [
                         'alt' => $this->title,
                         'class' => 'main-pic'
@@ -60,7 +65,6 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
             );
             ?>
             <?php
-            $facadesPhotos = $model->getFacades()->all();
             foreach ($facadesPhotos as $facade) {
                 echo Html::a(
                     '',
@@ -94,55 +98,58 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
             <div class="characteristics ovhidden">
                 <div class="_title">Технические характеристики</div>
                 <ul class="_parameters">
+                    <?php
+                    $areas = \yii\helpers\ArrayHelper::map($model->getAreas()->all(), 'type', 'value');
+                    $sizes = \yii\helpers\ArrayHelper::map($model->getSizes()->all(), 'type', 'value');
+                    ?>
                     <li>
                         <span>Площадь:</span>
-                        <span>119,89 м<sup>2</sup></span></li>
+                        <span><?= $areas['общая'] ?> м<sup>2</sup></span></li>
                     <li>
-                        <span>Площадь гаража:</span>
-                        <span>16,91 м<sup>2</sup></span></li>
+                        <span>Площадь кровли:</span>
+                        <span><?= $areas['кровли'] ?> м<sup>2</sup></span></li>
                     <li>
                         <span>Площадь застройки:</span>
-                        <span>116,98 м<sup>2</sup></span>
+                        <span><?= $areas['застройки'] ?> м<sup>2</sup></span>
                     </li>
                     <li>
                         <span>Объем:</span>
-                        <span>650,7 м<sup>2</sup></span></li>
+                        <span><?= $model->cubage ?> м<sup>3</sup></span></li>
                     <li>
                         <span>Высота:</span>
-                        <span>8,88 м</span></li>
+                        <span><?= $sizes['высота'] ?> м</span></li>
                     <li>
                         <span>Минимальная площадь участка:</span>
-                        <span>24,55х17,88</span>
+                        <span><?= sprintf('%Gx%G', $sizes['ширина'], $sizes['длина']) ?></span>
                     </li>
                 </ul>
-                <div class="_title">Технология</div>
-                <ul class="_technology">
-                    <li>
-                        <span>Крыша:</span>
-                        <span>керамическая плитка, угол наклона 45`</span></li>
-                    <li>
-                        <span>Полы:</span>
-                        <span>бетон, литой</span></li>
-                    <li>
-                        <span>Стена:</span>
-                        <span>2-слойные - газобетон SOLBET 24см + пенополистерол</span>
-                    </li>
-
-                </ul>
-                <div class="_title">Отопление</div>
-                <ul class="_parameters">
-                    <li>
-                        <span>Газ</span>
-                    </li>
-                    <li>
-                        <span>Газ</span>
-                    </li>
-
-                </ul>
+<!--                <div class="_title">Технология</div>-->
+<!--                <ul class="_technology">-->
+<!--                    <li>-->
+<!--                        <span>Крыша:</span>-->
+<!--                        <span>керамическая плитка, угол наклона 45`</span></li>-->
+<!--                    <li>-->
+<!--                        <span>Полы:</span>-->
+<!--                        <span>бетон, литой</span></li>-->
+<!--                    <li>-->
+<!--                        <span>Стена:</span>-->
+<!--                        <span>2-слойные - газобетон SOLBET 24см + пенополистерол</span>-->
+<!--                    </li>-->
+<!---->
+<!--                </ul>-->
+<!--                <div class="_title">Отопление</div>-->
+<!--                <ul class="_parameters">-->
+<!--                    <li>-->
+<!--                        <span>Газ</span>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <span>Газ</span>-->
+<!--                    </li>-->
+<!---->
+<!--                </ul>-->
                 <div class="_title">Описание</div>
                 <ul class="_technology">
-                    Тут идет краткое описание проекта или информация, которая заинтересует покупателя
-
+                    <?= $model->technology ?>
                 </ul>
             </div>
 
