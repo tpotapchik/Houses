@@ -9,6 +9,7 @@ use Yii;
  *
  * @property integer $id
  * @property string $value
+ * @property string $processedValue
  *
  * @property Project[] $projects
  */
@@ -22,14 +23,20 @@ class Category extends GeneralHelper
         return 'category';
     }
 
+    private static function processValue($value)
+    {
+        $value = str_replace('_', ' ', $value);
+        return ucfirst($value);
+    }
+
     /**
      * @inheritdoc
      */
     public function rules()
     {
         return [
-            [['value'], 'required'],
-            [['value'], 'string', 'max' => 255],
+            [['value', 'processedValue'], 'required'],
+            [['value', 'processedValue'], 'string', 'max' => 255],
             [['value'], 'unique']
         ];
     }
@@ -42,6 +49,7 @@ class Category extends GeneralHelper
         return [
             'id' => Yii::t('yii', 'ID'),
             'value' => Yii::t('yii', 'Value'),
+            'processedValue' => Yii::t('yii', 'Processed Value'),
         ];
     }
 
@@ -51,5 +59,26 @@ class Category extends GeneralHelper
     public function getProjects()
     {
         return $this->hasMany(Project::className(), ['category_id' => 'id']);
+    }
+
+    /**
+     * @param $value
+     * @return int|null
+     */
+    public static function getOrInsert($value)
+    {
+        $result = null;
+        $model = static::findOne(['value' => $value]);
+        if ($model) {
+            $result = $model->id;
+        } else {
+            $model = new static();
+            $model->value = $value;
+            $model->processedValue = static::processValue($value);
+            if ($model->save()) {
+                $result = $model->id;
+            }
+        }
+        return $result;
     }
 }
