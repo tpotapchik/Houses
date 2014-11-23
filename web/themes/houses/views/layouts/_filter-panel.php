@@ -53,9 +53,9 @@ $categoryDropDown = ArrayHelper::map(Category::find()->all(), 'id', 'processedVa
                 <?= $form->field($model, 'hasGroundFloor', [
                     'template' => "{input}\n{label}",
                     'labelOptions' => ['class' => ''],
-                    'options' => ['class' => 'component-checkbox _label2'],
+                    'options' => ['class' => 'component-checkbox _label2', 'style' => 'display: none;'],
                     'inputOptions' => [
-                        'class' => ''
+                        'class' => '',
                     ]
                 ])->checkbox([], false) ?>
             </div>
