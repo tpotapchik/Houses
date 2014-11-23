@@ -12,11 +12,11 @@ return [
         ]
     ],
     'contacts' => [
-        'email' => 'info@site.by',
+        'email' => 'info@dom-tut.by',
         'phone1' => '+375 17 677 10 59',
         'phone2' => '+375 29 677 10 59',
-        'skype' => 'archipelag.by',
-        'address' => ''
+        'skype' => 'skypedomby',
+        'address' => '220035, Республика Беларусь,<br>г.Минск, ул. Тимирязева, 67, 10 этаж, оф.1009'
     ],
     'callUsEmail' => 'sahnovski@gmail.com'
 ];

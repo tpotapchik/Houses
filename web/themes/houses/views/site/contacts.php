@@ -23,8 +23,8 @@ $contacts = Yii::$app->params['contacts'];
         MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
             '<div class="contacts-popup">'
             + '<img src="/img/logo.png" alt="" style="width: 100px; height: 39px"/>'
-            + '220035, Республика Беларусь,<br>'
-            + 'г.Минск, ул. Тимирязева, 67, 10 этаж, оф.1009<br><br>'
+            + '<?= $contacts['address'] ?>'
+            + '<br><br>'
             + 'Тел: <?= $contacts['phone1'] ?><br>'
             + 'Тел: <?= $contacts['phone2'] ?><br>'
             + 'E-mail: <a href="mailto:<?= $contacts['email'] ?>"><?= $contacts['email'] ?></a>'
