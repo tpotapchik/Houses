@@ -92,9 +92,9 @@ class Category extends GeneralHelper
 
         $project = $this->getDb()->cache(function (Connection $db) {
             if (strpos(strtolower($db->getDriverName()), 'mysql') !== false) {
-                $expression = new Expression('RANDOM()');
-            } else {
                 $expression = new Expression('RAND()');
+            } else {
+                $expression = new Expression('RANDOM()');
             }
 
             return $this->getProjects()->orderBy($expression)->limit(1)->one();
