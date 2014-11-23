@@ -13,8 +13,10 @@ use yii\widgets\ActiveForm;
 if (!isset($model)) {
     $model = new \app\models\FilterPanel();
 }
-
-$categoryDropDown = ArrayHelper::map(Category::find()->all(), 'id', 'processedValue');
+$categorys = Yii::$app->getDb()->cache(function (\yii\db\Connection $db) {
+    return Category::find()->all();
+}, 60 * 5);
+$categoryDropDown = ArrayHelper::map($categorys, 'id', 'processedValue');
 ?>
 <div class="filter-panel <?= $other?'other-page':'' ?>">
     <div class="_title">НАЙТИ ПРОЕКТ МЕЧТЫ</div>

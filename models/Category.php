@@ -3,6 +3,8 @@
 namespace app\models;
 
 use Yii;
+use yii\data\ActiveDataProvider;
+use yii\db\Connection;
 
 /**
  * This is the model class for table "category".
@@ -80,5 +82,17 @@ class Category extends GeneralHelper
             }
         }
         return $result;
+    }
+
+    public function getRandomProject()
+    {
+//        $project = $this->getProjects()->orderBy('RANDOM()')->limit(1)->one();
+//        var_dump($project);die;
+
+        $project = $this->getDb()->cache(function (Connection $db) {
+            return $this->getProjects()->orderBy('RANDOM()')->limit(1)->one();
+        }, 60 * 5);
+
+        return $project;
     }
 }

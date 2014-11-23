@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\db\Connection;
 
 /**
  * This is the model class for table "project".
@@ -242,7 +243,9 @@ class Project extends \yii\db\ActiveRecord
     public function getMainPhoto($DefaultPhoto = '/img/temp/house1.jpg')
     {
         /** @var Photo $photo */
-        $photo = $this->getPhotos()->where('title=:title', [':title'=>'фото'])->one();
+        $photo = $this->getDb()->cache(function (Connection $db) {
+            return $this->getPhotos()->where('title=:title', [':title'=>'фото'])->one();
+        }, 60 * 5);
         if ($photo) {
             $DefaultPhoto = $photo->file;
         }

@@ -53,7 +53,7 @@ class ProjectsGrid extends BaseListView
         return $class::widget($pager);
     }
 
-    private function renderItem($model, $index)
+    protected function renderItem($model, $index)
     {
         /** @var Project $model */
         $odd = $index % 2 == 0 ? 'left' : 'right';

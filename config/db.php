@@ -6,6 +6,8 @@ if (getenv('APP_ENV') == 'dev') {
         'username' => 'home',
         'password' => 'home',
         'charset' => 'utf8',
+        'enableSchemaCache' => true,
+        'enableQueryCache' => true
     ];
 } else {
     //production
