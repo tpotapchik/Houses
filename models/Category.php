@@ -5,6 +5,7 @@ namespace app\models;
 use Yii;
 use yii\data\ActiveDataProvider;
 use yii\db\Connection;
+use yii\db\Expression;
 
 /**
  * This is the model class for table "category".
@@ -90,7 +91,8 @@ class Category extends GeneralHelper
 //        var_dump($project);die;
 
         $project = $this->getDb()->cache(function (Connection $db) {
-            return $this->getProjects()->orderBy('RANDOM()')->limit(1)->one();
+            $expression = new Expression('RANDOM()');
+            return $this->getProjects()->orderBy($expression)->limit(1)->one();
         }, 60 * 5);
 
         return $project;
