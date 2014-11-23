@@ -9,7 +9,6 @@
 namespace app\widgets;
 
 
-use app\models\Photo;
 use app\models\Project;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
