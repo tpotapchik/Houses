@@ -13,9 +13,9 @@ if (getenv('APP_ENV') == 'dev') {
     //production
     return [
         'class' => 'yii\db\Connection',
-        'dsn' => 'mysql:host=mysql5.activeby.net;dbname=domtut',
-        'username' => 'dom',
-        'password' => '6nip2Ujs',
+        'dsn' => 'mysql:host=localhost;dbname=test',
+        'username' => 'user1118294_dom',
+        //'password' => '6nip2Ujs',
         'charset' => 'utf8',
     ];
 }
