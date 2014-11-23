@@ -91,7 +91,12 @@ class Category extends GeneralHelper
 //        var_dump($project);die;
 
         $project = $this->getDb()->cache(function (Connection $db) {
-            $expression = new Expression('RANDOM()');
+            if (strpos(strtolower($db->getDriverName()), 'mysql') !== false) {
+                $expression = new Expression('RANDOM()');
+            } else {
+                $expression = new Expression('RAND()');
+            }
+
             return $this->getProjects()->orderBy($expression)->limit(1)->one();
         }, 60 * 5);
 
