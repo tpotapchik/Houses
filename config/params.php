@@ -18,5 +18,5 @@ return [
         'skype' => 'skypedomby',
         'address' => '220035, Республика Беларусь,<br>г.Минск, ул. Тимирязева, 67, 10 этаж, оф.1009'
     ],
-    'callUsEmail' => 'sahnovski@gmail.com'
+    'callUsEmail' => 'info@dom-tut.by'
 ];
