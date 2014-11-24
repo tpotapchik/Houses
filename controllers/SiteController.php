@@ -2,12 +2,14 @@
 
 namespace app\controllers;
 
+use app\models\CallUsForm;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use yii\web\Response;
 
 class SiteController extends Controller
 {
@@ -97,5 +99,17 @@ class SiteController extends Controller
     public function actionContacts()
     {
         return $this->render('contacts');
+    }
+
+    public function actionCallus()
+    {
+        $model = new CallUsForm();
+        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['callUsEmail'])) {
+            Yii::$app->getResponse()->data = [];
+        } else {
+            Yii::$app->getResponse()->data = ['error' => $model->getErrors()];
+        }
+        Yii::$app->getResponse()->format = Response::FORMAT_JSON;
+        Yii::$app->getResponse()->send();
     }
 }

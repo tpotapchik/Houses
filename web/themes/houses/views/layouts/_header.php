@@ -45,7 +45,12 @@ if (!isset($model)) {
     <div class="message">Спасибо! Мы перезвоним вам<br> в ближайшее время.</div>
     <div class="_title">ЗАКАЗАТЬ ЗВОНОК</div>
     <!--open-->
-<?php $form = ActiveForm::begin(['action' => ['site/callus'], 'method' => 'post']); ?><!--open-->
+<?php $form = ActiveForm::begin([
+    'action' => ['site/callus'],
+    'method' => 'post',
+    'id' => 'callUsForm',
+
+]); ?><!--open-->
     <div class="form-row">Введите свое имя</div>
     <?= Html::activeTextInput($model, 'name', [
         'class' => 'popup-input',
@@ -68,7 +73,7 @@ if (!isset($model)) {
         'options' => ['class' => 'popup-input',]
     ]) ?>
 <!--        <button type="submit" id="js-submit" class="order-call-btn">ЗАКАЗАТЬ ЗВОНОК</button>-->
-    <?= Html::submitButton('ЗАКАЗАТЬ ЗВОНОК', ['class' => 'order-call-btn', 'name' => 'contact-button']) ?>
+    <?= Html::submitButton('ЗАКАЗАТЬ ЗВОНОК', ['class' => 'order-call-btn', 'name' => 'contact-button', 'id' => 'js-submit']) ?>
 
 
 <?php ActiveForm::end(); ?>

@@ -87,9 +87,6 @@ class Category extends GeneralHelper
 
     public function getRandomProject()
     {
-//        $project = $this->getProjects()->orderBy('RANDOM()')->limit(1)->one();
-//        var_dump($project);die;
-
         $project = $this->getDb()->cache(function (Connection $db) {
             if (strpos(strtolower($db->getDriverName()), 'mysql') !== false) {
                 $expression = new Expression('RAND()');

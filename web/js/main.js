@@ -1,14 +1,4 @@
 $(function () {
-    $('input[type="text"], input[type="email"], input[type="tel"], textarea').focus(function () {
-        if ($(this).val() == $(this).attr("title")) {
-            $(this).val("");
-        }
-    }).blur(function () {
-                if ($(this).val() == "") {
-                    $(this).val($(this).attr("title"));
-                }
-            });
-
     $('.slider').slick({
         dots: false
     });
@@ -68,61 +58,38 @@ $(function () {
 
     $(".popup").fancybox();
 
-    $('#js-submit').click(function (e) {
-        e.preventDefault();
-        var $this = $(this);
-        var popup = $('.order-call');
-        var message = popup.find('.message');
-        var $form = popup.find('form');
-        var $inputName = $form.find('input[type="text"]');
-        var $inputTel = $form.find('input[type="tel"]');
-
-        if ($inputName.val() == '') {
-            $inputName.addClass('error');
-
-        } else if ($inputTel.val() == '') {
-            $inputTel.addClass('error');
-
-        } else if (!validatePhone($inputTel.val())) {
-            $inputTel.addClass('error');
-
-        } else {
-            $this.attr('disabled', 'disabled');
-            $.ajax({
-                url: $form.attr('action'),
-                type: "POST",
-                data: $form.serialize(),
-                success: function (data) {
-
-                    if (data.error) {
-                        alert('Произошла ошибка');
-                    } else {
-                        message.slideDown();
-
-                        setTimeout(function () {
-                            $.fancybox.close();
-                            $form[0].reset();
-                            message.hide();
-                            $this.removeAttr('disabled');
-                        }, 5000);
-                    }
-                },
-                error: function () {
-                    alert('Произошла ошибка. Попробуйте еще раз.');
-                }
-            });
-        }
-    });
-
     $('.order-call form').find('input').focus(function () {
         $(this).removeClass('error');
-    })
+    });
 
+    beforeSubmit = function(event) {
+        console.log(event, 'my handler');
+        $form = $(event.target);
+        var popup = $('.order-call');
+        var message = popup.find('.message');
+        $.ajax({
+            url: $form.attr('action'),
+            type: "POST",
+            data: $form.serialize(),
+            success: function (data) {
+                if (data.error) {
+                    alert('Произошла ошибка');
+                } else {
+                    message.slideDown();
 
+                    setTimeout(function () {
+                        $.fancybox.close();
+                        $form[0].reset();
+                        message.hide();
+                    }, 5000);
+                }
+            },
+            error: function () {
+                alert('Произошла ошибка. Попробуйте еще раз.');
+            }
+        });
+        return false;
+    };
+    $('#callUsForm').on('beforeSubmit', beforeSubmit);
 });
-
-function validatePhone(phone) {
-    var reg = /^[0-9\s\-\(\)\+]+$/;
-    return reg.test(phone);
-}
 

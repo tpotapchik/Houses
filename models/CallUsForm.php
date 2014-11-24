@@ -51,14 +51,14 @@ class CallUsForm extends Model
     {
         if ($this->validate()) {
             $bodyTemplate = 'Привет, меня зовут %s. Перезвоните мне на номер %s.';
-            Yii::$app->mailer->compose()
+            $sendResult = Yii::$app->mailer->compose()
                 ->setTo($email)
                 ->setFrom([$email => $this->name])
                 ->setSubject('Перезвоните мне')
                 ->setTextBody(sprintf($bodyTemplate, $this->name, $this->phoneNumber))
                 ->send();
 
-            return true;
+            return $sendResult;
         } else {
             return false;
         }
