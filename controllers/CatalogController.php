@@ -18,19 +18,19 @@ class CatalogController extends Controller
     public function actionSearch()
     {
         $dataProvider = null;
-        $model = new FilterPanel();
+        $modelForm = new FilterPanel();
 
-        if ($model->load(Yii::$app->request->get()) && $model->validate()) {
+        if ($modelForm->load(Yii::$app->request->get()) && $modelForm->validate()) {
             $searchModel = new ProjectSearch();
-            $dataProvider = $searchModel->searchFilter($model);
+            $dataProvider = $searchModel->searchFilter($modelForm);
         } else {
             //todo remove that
-            var_dump($model->getErrors());
+            var_dump($modelForm->getErrors());
             die;
         }
 
 
-        return $this->render('search', ['model' => $model, 'dataProvider' => $dataProvider]);
+        return $this->render('search', ['model' => $modelForm, 'dataProvider' => $dataProvider]);
     }
 
     public function actionView($numCat)

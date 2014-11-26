@@ -6,6 +6,7 @@ use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\models\Project;
+use yii\db\Expression;
 
 /**
  * ProjectSearch represents the model behind the search form about `app\models\Project`.
@@ -87,16 +88,27 @@ class ProjectSearch extends Project
     {
         $query = Project::find();
 
+        $query->andFilterWhere(['category_id' => $model->categoryId])
+            ->andFilterWhere(['like', new Expression('lower(title)'), explode(' ', $model->projectTitle)]);
+
+        if ($model->isGarage) {
+            $query->andFilterWhere(['>', 'carPlaces', intval($model->isGarage)]);
+        }
+
+        if ($model->effectiveAreaFrom > 0 && $model->effectiveAreaTo > 0) {
+            $query->andFilterWhere(['between', 'effectiveArea', $model->effectiveAreaFrom, $model->effectiveAreaTo]);
+        } elseif ($model->effectiveAreaFrom > 0) {
+            $query->andFilterWhere(['>=', 'effectiveArea', $model->effectiveAreaFrom]);
+        } elseif ($model->effectiveAreaTo > 0) {
+            $query->andFilterWhere(['<=', 'effectiveArea', $model->effectiveAreaTo]);
+        }
+
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
             'pagination' => [
                 'pageSize' => 10,
             ],
         ]);
-
-        $query->andFilterWhere(['category_id' => $model->categoryId])
-            ->andFilterWhere(['like', 'lower(title)', $model->projectTitle])
-            ->andFilterWhere(['between', 'effectiveArea', $model->effectiveAreaFrom, $model->effectiveAreaTo]);
 
         return $dataProvider;
     }
