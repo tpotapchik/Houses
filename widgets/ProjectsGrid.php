@@ -9,6 +9,7 @@
 namespace app\widgets;
 
 
+use app\models\GeneralHelper;
 use app\models\Project;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
@@ -61,12 +62,12 @@ class ProjectsGrid extends BaseListView
         $photoLink = $model->getMainPhoto();
 
         $content = Html::a(
-                        Html::tag('div', $model->title, ['class' => '_title-project']) .
-                        Html::img($photoLink, ['alt' => 'Картинка дома', 'style' => 'width: 492px; height: 240px;']) .
-                        '<div class="_more-button">
-                            <div class="show-more-btn-wrapper"><span class="show-more-btn">Подробнее</span></div>
-                        </div>',
-                        ['catalog/view/'.$model->numCat],
+            Html::tag('div', $model->title, ['class' => '_title-project']) .
+            Html::img($photoLink, ['alt' => 'Картинка дома', 'style' => 'width: 492px; height: 240px;']) .
+            '<div class="_more-button">
+                    <div class="show-more-btn-wrapper"><span class="show-more-btn">Подробнее</span></div>
+            </div>',
+            ['catalog/'.$model->getCategory()->one()->url.'/'.$model->numCat],
             ['class' => 'picture-block']
         );
 

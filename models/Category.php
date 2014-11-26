@@ -13,6 +13,7 @@ use yii\db\Expression;
  * @property integer $id
  * @property string $value
  * @property string $processedValue
+ * @property string $url
  *
  * @property Project[] $projects
  */
@@ -24,6 +25,15 @@ class Category extends GeneralHelper
     public static function tableName()
     {
         return 'category';
+    }
+
+    public function behaviors()
+    {
+        return [
+            'Category' => [
+                'class' => 'app\library\CategoryBehavior'
+            ]
+        ];
     }
 
     private static function processValue($value)
@@ -38,9 +48,9 @@ class Category extends GeneralHelper
     public function rules()
     {
         return [
-            [['value', 'processedValue'], 'required'],
+            [['value', 'processedValue', 'url'], 'required'],
             [['value', 'processedValue'], 'string', 'max' => 255],
-            [['value'], 'unique']
+            [['value', 'url'], 'unique']
         ];
     }
 
@@ -78,8 +88,11 @@ class Category extends GeneralHelper
             $model = new static();
             $model->value = $value;
             $model->processedValue = static::processValue($value);
+            $model->url = GeneralHelper::translitForUrl($model->value);
             if ($model->save()) {
                 $result = $model->id;
+            } else {
+                throw new \Exception('cant save Categoty');
             }
         }
         return $result;

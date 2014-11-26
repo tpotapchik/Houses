@@ -21,7 +21,9 @@ $config = [
                 'about' => 'site/about',
                 '/' => 'site/index',
                 'contacts' => 'site/contacts',
-                'catalog/view/<numCat:[[:word:]-]+>' => 'catalog/view'
+                'catalog' => 'catalog/index',
+                'catalog/<category:[[:word:]-_]+>/<numCat:[[:word:]-]+>' => 'catalog/view',
+                'catalog/<category:[[:word:]-_]+>' => 'catalog/category'
             ]
         ],
         'cache' => [

@@ -29,14 +29,17 @@ class CatalogController extends Controller
             die;
         }
 
-
         return $this->render('search', ['model' => $modelForm, 'dataProvider' => $dataProvider]);
     }
 
-    public function actionView($numCat)
+    public function actionView($category, $numCat)
     {
         $model = Project::findOne(['numCat' => $numCat]);
         return $this->render('view', ['model' => $model]);
     }
-}
 
+    public function actionCategory($category)
+    {
+        return 'aaa';
+    }
+}
