@@ -90,5 +90,16 @@ $contacts = Yii::$app->params['contacts'];
         });
     }
 </script>
-<div id="officeMap">
-</div>
+  <div class="centralize">
+            <div class="office-block-map">
+                <div class="connect-map">С нами легко связаться:</div>
+                <img src="img/logo.png" alt="" style="width: 100px; height: 39px"/><br><br>
+               <?= $contacts['address'] ?><br><br>
+                <b><?= $contacts['phone1'] ?></b><br>
+                <b><?= $contacts['phone2'] ?><br>
+                E-mail: <a href="mailto:<?= $contacts['email'] ?>"><?= $contacts['email'] ?></a>
+
+            </div>
+            <div id="officeMap">
+            </div>
+  </div>
