@@ -96,7 +96,7 @@ $contacts = Yii::$app->params['contacts'];
                 <img src="img/logo.png" alt="" style="width: 100px; height: 39px"/><br><br>
                <?= $contacts['address'] ?><br><br>
                 <b><?= $contacts['phone1'] ?></b><br>
-                <b><?= $contacts['phone2'] ?><br>
+                <b><?= $contacts['phone2'] ?><br><br>
                 E-mail: <a href="mailto:<?= $contacts['email'] ?>"><?= $contacts['email'] ?></a>
 
             </div>

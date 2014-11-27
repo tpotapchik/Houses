@@ -974,7 +974,8 @@ body {
 
 .footer {
   height: 215px;
-  margin-top: -215px; }
+  margin-top: -215px;
+  font-weight: 400;}
 
 .row {
   *zoom: 1;
@@ -1862,6 +1863,9 @@ h2 {
   font-size: 14px;
   background-color: #fff;
   padding: 20px;
+}
+.office-block-map a {
+  color: #820084;
 }
 .contacts-popup {
   width: 310px;
