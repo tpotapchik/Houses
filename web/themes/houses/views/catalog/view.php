@@ -1,10 +1,14 @@
 <?php
 /* @var $this yii\web\View */
+use app\models\GeneralHelper;
 use yii\helpers\Html;
 
 /* @var $model \app\models\Project */
 $this->title = Yii::t('house', 'Project "{projectName}"', ['projectName' => $model->title] );
+/** @var \app\models\Category $category */
+$category = $model->getCategory()->one();
 $this->params['breadcrumbs'][] = ['label' => Yii::t('house', 'Catalog Projects'), 'url' => ['catalog/index']];
+$this->params['breadcrumbs'][] = ['label' => GeneralHelper::mb_ucfirst($category->processedValue), 'url' => ['catalog/'.$category->url]];
 $this->params['breadcrumbs'][] = $this->title;
 Yii::$app->params['mainMenu']['items'][2]['active'] = true;
 ?>
@@ -104,7 +108,7 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
                     ?>
                     <li>
                         <span>Площадь:</span>
-                        <span><?= $areas['общая'] ?> м<sup>2</sup></span></li>
+                        <span><?= $model->effectiveArea ?> м<sup>2</sup></span></li>
                     <li>
                         <span>Площадь кровли:</span>
                         <span><?= $areas['кровли'] ?> м<sup>2</sup></span></li>
