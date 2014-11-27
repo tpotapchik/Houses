@@ -40,6 +40,6 @@ class CatalogController extends Controller
 
     public function actionCategory($category)
     {
-        return 'aaa';
+        throw new \Exception('not implemented method');
     }
 }
