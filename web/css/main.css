@@ -1852,7 +1852,8 @@ h2 {
 
 #officeMap {
   width: 100%;
-  height: 400px; }
+  height: 400px;
+  margin: 9px 0 15px}
 .connect-map {
   color: #820084;
   font-size: 24px;
