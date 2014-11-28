@@ -107,7 +107,7 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
                     $sizes = \yii\helpers\ArrayHelper::map($model->getSizes()->all(), 'type', 'value');
                     ?>
                     <li>
-                        <span>Площадь:</span>
+                        <span>Общая площадь:</span>
                         <span><?= $model->effectiveArea ?> м<sup>2</sup></span></li>
                     <li>
                         <span>Площадь кровли:</span>
