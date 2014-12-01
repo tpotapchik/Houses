@@ -6,6 +6,7 @@ use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\models\Project;
+use yii\db\Connection;
 use yii\db\Expression;
 
 /**
@@ -13,6 +14,7 @@ use yii\db\Expression;
  */
 class ProjectSearch extends Project
 {
+    public static $queryRandom = null;
     /**
      * @inheritdoc
      */
@@ -86,6 +88,24 @@ class ProjectSearch extends Project
      */
     public function searchFilter(FilterPanel $model)
     {
+        $query = $this->prepareQuery($model);
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+            'pagination' => [
+                'pageSize' => 10,
+            ],
+        ]);
+
+        return $dataProvider;
+    }
+
+    /**
+     * @param FilterPanel $model
+     * @return \yii\db\ActiveQuery
+     */
+    public function prepareQuery(FilterPanel $model)
+    {
         $query = Project::find();
 
         $query->andFilterWhere(['category_id' => $model->categoryId])
@@ -97,19 +117,31 @@ class ProjectSearch extends Project
 
         if ($model->effectiveAreaFrom > 0 && $model->effectiveAreaTo > 0) {
             $query->andFilterWhere(['between', 'effectiveArea', $model->effectiveAreaFrom, $model->effectiveAreaTo]);
+            return $query;
         } elseif ($model->effectiveAreaFrom > 0) {
             $query->andFilterWhere(['>=', 'effectiveArea', $model->effectiveAreaFrom]);
+            return $query;
         } elseif ($model->effectiveAreaTo > 0) {
             $query->andFilterWhere(['<=', 'effectiveArea', $model->effectiveAreaTo]);
+            return $query;
         }
+        return $query;
+    }
 
-        $dataProvider = new ActiveDataProvider([
-            'query' => $query,
-            'pagination' => [
-                'pageSize' => 10,
-            ],
-        ]);
+    /**
+     * @param FilterPanel $model
+     * @return Project
+     * @throws \Exception
+     */
+    public function searchOneRandomByFilter(FilterPanel $model)
+    {
+        static::$queryRandom = $this->prepareQuery($model);
 
-        return $dataProvider;
+        $project = Yii::$app->getDb()->cache(function (Connection $db) {
+            return ProjectSearch::$queryRandom->orderBy(new Expression('RAND()'))->limit(1)->one();
+        }, 60 * 5);
+
+        return $project;
+
     }
 }
