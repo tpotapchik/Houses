@@ -23,6 +23,7 @@ $config = [
                 'contacts' => 'site/contacts',
                 'catalog' => 'catalog/index',
                 'catalog/<category:[[:word:]-_]+>/<numCat:[[:word:]-]+>' => 'catalog/view',
+                'catalog/search' => 'catalog/search',
                 'catalog/<category:[[:word:]-_]+>' => 'catalog/category'
             ]
         ],
