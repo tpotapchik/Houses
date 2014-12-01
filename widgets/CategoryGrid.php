@@ -20,12 +20,11 @@ class CategoryGrid extends ProjectsGrid
         parent::init();
     }
 
-    protected function renderItem($model, $index)
+    protected function renderItem(Category $model, $index)
     {
         /** @var Project $project */
         $odd = $index % 2 == 0 ? 'left' : 'right';
 
-        /** @var Category $model */
         $project = $model->getRandomProject();
 
         $photoLink = $project->getMainPhoto();

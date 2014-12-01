@@ -4,6 +4,7 @@ namespace app\models;
 
 use Yii;
 use yii\db\Connection;
+use yii\db\Expression;
 
 /**
  * This is the model class for table "project".
@@ -250,5 +251,18 @@ class Project extends \yii\db\ActiveRecord
             $DefaultPhoto = $photo->file;
         }
         return $DefaultPhoto;
+    }
+
+    /**
+     * @return mixed
+     * @throws \Exception
+     */
+    public static function getRandom()
+    {
+        $project = Yii::$app->getDb()->cache(function (Connection $db) {
+            return static::find()->orderBy(new Expression('RAND()'))->limit(1)->one();
+        }, 60 * 5);
+
+        return $project;
     }
 }
