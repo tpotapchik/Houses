@@ -34,7 +34,7 @@ $panel = new \app\models\FilterPanel();
         ?>
         <a href="<?= \yii\helpers\Url::toRoute(['catalog/search', $panel->formName() => $panel->getAttributes()]) ?>" class="picture-block">
             <div class="_title">ДОМА ДО 100 м<sup>2</sup></div>
-            <?= Html::img($photoLink, ['alt' => $project->title, 'style' => 'width: 492px; height: 240px;']) ?>
+            <?= Html::img($photoLink, ['alt' => $project->title, 'style' => 'width: 492px; height: auto;']) ?>
 
             <div class="_more-button">
                 <div class="show-more-btn-wrapper"><span class="show-more-btn">Подробнее</span></div>
@@ -50,7 +50,7 @@ $panel = new \app\models\FilterPanel();
         ?>
         <a href="<?= \yii\helpers\Url::toRoute(['catalog/search', $panel->formName() => $panel->getAttributes()]) ?>" class="picture-block">
             <div class="_title">СРЕДНИЕ ДОМА ДО 100-180 м<sup>2</sup></div>
-            <?= Html::img($photoLink, ['alt' => $project->title, 'style' => 'width: 492px; height: 240px;']) ?>
+            <?= Html::img($photoLink, ['alt' => $project->title, 'style' => 'width: 492px; height: auto;']) ?>
 
             <div class="_more-button">
                 <div class="show-more-btn-wrapper"><span class="show-more-btn">Подробнее</span></div>
@@ -66,7 +66,7 @@ $panel = new \app\models\FilterPanel();
         ?>
         <a href="<?= \yii\helpers\Url::toRoute(['catalog/search', $panel->formName() => $panel->getAttributes()]) ?>" class="picture-block">
             <div class="_title">БОЛЬШИЕ ДОМА БОЛЕЕ 180 м<sup>2</sup></div>
-            <?= Html::img($photoLink, ['alt' => $project->title, 'style' => 'width: 492px; height: 240px;']) ?>
+            <?= Html::img($photoLink, ['alt' => $project->title, 'style' => 'width: 492px; height: auto;']) ?>
 
             <div class="_more-button">
                 <div class="show-more-btn-wrapper"><span class="show-more-btn">Подробнее</span></div>

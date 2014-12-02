@@ -1417,10 +1417,6 @@ body {
     color: #767575;
     text-align: center;
     margin: 2px 0; }
-  .picture-block img {
-    width: 492px;
-    height: auto;
-  }
   .picture-block ._title-project {
     color: #fff;
     position: absolute;
