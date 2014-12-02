@@ -8,14 +8,11 @@ $this->title = 'DOMY';
     <?= $this->render('../layouts/_filter-panel', ['other' => false]) ?>
     <div class="slider">
         <div class="slider-item" style="background-image: url('/img/temp/slider.jpg')">
-            <a href="project-house.html" class="slider-link">
+            <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-link">
                 <div class="slider-text">
                     <div class="centralize">
-                        <div class="_title">АКСАMИТ</div>
-                        <div class="_content ovhidden">Стильный двухэтажный дом в средиземноморском стиле.
-                            Запроектирован гараж на 1 авто и несколько террас. На первом этаже - гостиная-
-                            столовая, кухня с кладовой, санузел.
-                            Второй этаж включает 3 спальни, из них 2 с гардеробными, а также ванную комнату.
+                        <div class="_title">ARIEL</div>
+                        <div class="_content ovhidden">Просторный одноэтажный дом с гаражом для 2 автомобилей. В составе помещений гостиная с выходом на террасу, кухня-столовая, 3 спальни, 2 ванные комнаты и гостевой санузел.
                         </div>
                     </div>
                 </div>
