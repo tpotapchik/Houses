@@ -2,9 +2,9 @@
 if (getenv('APP_ENV') == 'dev') {
     return [
         'class' => 'yii\db\Connection',
-        'dsn' => 'pgsql:host=localhost;dbname=home',
-        'username' => 'home',
-        'password' => 'home',
+        'dsn' => 'mysql:host=localhost;dbname=dev_house',
+        'username' => 'dev',
+        'password' => 'dev',
         'charset' => 'utf8',
         'enableSchemaCache' => true,
         'enableQueryCache' => true

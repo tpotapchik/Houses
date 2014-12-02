@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Category;
 use app\models\FilterPanel;
 use app\models\Project;
 use app\models\ProjectSearch;
@@ -38,8 +39,9 @@ class CatalogController extends Controller
         return $this->render('view', ['model' => $model]);
     }
 
-    public function actionCategory($category)
+    public function actionCategory($category_url)
     {
-        throw new \Exception('not implemented method');
+        $category = Category::findOne(['url' => $category_url]);
+        return $this->render('categoryView', ['category' => $category]);
     }
 }
