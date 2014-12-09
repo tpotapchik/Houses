@@ -21,7 +21,7 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
             <?= $this->render('../layouts/_right-menu', []) ?>
         </div>
         <div class="main-text-block ovhidden">
-            <img src="img/temp/project.jpg" class="main-pic" alt="Заказать типовой проект"/>
+            <img src="/img/temp/project.jpg" class="main-pic" alt="Заказать типовой проект"/>
             <div class="main-text-block-wrap clearfix">
                 <div class="news-short-info">
                     • Абсолютно все типовые проекты, независимо от того в какой стране были разработаны, должны быть адаптированы к условиям конкретного
