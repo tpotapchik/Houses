@@ -33,10 +33,7 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
                 <div class="_title"><?= Yii::$app->params['contacts']['phone2'] ?></div>
 
             </div>
-            <div class="right-menu">
-                <a href="order-project.html">Как заказать проект?</a><a href="content-project.html">Состав проектов</a><a
-                    href="individual-project.html">Индивидуальные проекты</a><a href="3D.html">3D прогулки</a>
-            </div>
+            <?= $this->render('../layouts/_right-menu', []) ?>
 
 
         </div>

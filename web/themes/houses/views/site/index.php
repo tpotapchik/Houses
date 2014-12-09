@@ -98,9 +98,7 @@ $this->title = 'DOMY';
                 </ul>
                 <span class="square"></span>
             </div>
-            <div class="right-menu">
-                <a href="#">Как заказать проект?</a><a href="#">Состав проектов</a><a href="#">Индивидуальные проекты</a><a href="#">3D прогулки</a>
-            </div>
+            <?= $this->render('../layouts/_right-menu', []) ?>
 
 
         </div>

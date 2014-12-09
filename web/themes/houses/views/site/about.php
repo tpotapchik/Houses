@@ -16,10 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="main-block clearfix">
         <div class="right-block right">
 
-            <div class="right-menu">
-                <a href="order-project.html">Как заказать проект?</a><a href="content-project.html">Состав проектов</a><a href="individual-project.html">Индивидуальные
-                    проекты</a><a href="3D.html">3D прогулки</a>
-            </div>
+            <?= $this->render('../layouts/_right-menu', []) ?>
             <div class="list-news">
                 <h2>Новости</h2>
                 <ul class="list-news-content">

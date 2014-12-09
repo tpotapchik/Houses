@@ -19,6 +19,7 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 'about' => 'site/about',
+                'catalog/pages/order-project' => 'catalog/order-project',
                 '/' => 'site/index',
                 'contacts' => 'site/contacts',
                 'catalog' => 'catalog/index',

@@ -44,4 +44,9 @@ class CatalogController extends Controller
         $category = Category::findOne(['url' => $category_url]);
         return $this->render('categoryView', ['category' => $category]);
     }
+
+    public function actionOrderProject()
+    {
+        return $this->render('orderProject');
+    }
 }
