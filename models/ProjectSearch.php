@@ -21,7 +21,7 @@ class ProjectSearch extends Project
     public function rules()
     {
         return [
-            [['id', 'roof_id', 'type_id', 'typeView_id', 'category_id', 'collection_id', 'carPlaces'], 'integer'],
+            [['id', 'ready', 'new', 'southEnter', 'roof_id', 'energySaving', 'type_id', 'typeView_id', 'category_id', 'collection_id', 'carPlaces', 'priceUSD'], 'integer'],
             [['numCat', 'title', 'technology'], 'safe'],
             [['ready', 'new', 'southEnter', 'energySaving'], 'boolean'],
             [['cubage', 'effectiveArea'], 'number'],
@@ -70,6 +70,7 @@ class ProjectSearch extends Project
             'carPlaces' => $this->carPlaces,
             'cubage' => $this->cubage,
             'effectiveArea' => $this->effectiveArea,
+            'priceUSD' => $this->priceUSD,
         ]);
 
         $query->andFilterWhere(['like', 'numCat', $this->numCat])
