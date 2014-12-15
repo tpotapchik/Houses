@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\Category;
+use app\models\ContactForm;
 use app\models\FilterPanel;
 use app\models\Project;
 use app\models\ProjectSearch;
@@ -47,6 +48,15 @@ class CatalogController extends Controller
 
     public function actionOrderProject()
     {
-        return $this->render('orderProject');
+        $model = new ContactForm();
+        if ($model->load(Yii::$app->request->post()) && $model->validate() && $model->sendEmail(Yii::$app->params['callUsEmail'])) {
+            Yii::$app->session->setFlash('contactFormSubmitted');
+
+            return $this->refresh();
+        } else {
+            return $this->render('orderProject', [
+                'model' => $model,
+            ]);
+        }
     }
 }

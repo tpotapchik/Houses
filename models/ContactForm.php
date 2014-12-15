@@ -1,9 +1,15 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: coxa
+ * Date: 15.12.14
+ * Time: 22:55
+ */
 
-namespace frontend\models;
-
-use Yii;
+namespace app\models;
 use yii\base\Model;
+use Yii;
+
 
 /**
  * ContactForm is the model behind the contact form.
@@ -37,7 +43,10 @@ class ContactForm extends Model
     public function attributeLabels()
     {
         return [
-            'verifyCode' => 'Verification Code',
+            'verifyCode' => Yii::t('yii', 'Verification Code'),
+            'subject' => 'Тема сообщения',
+            'name' => 'Ваше имя',
+            'body' => 'Сообщение'
         ];
     }
 

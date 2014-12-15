@@ -14,5 +14,7 @@ return [
     'Ground floor' => 'Цокольный этаж',
     'Effective area' => 'Полезная площадь',
     'Catalog Projects' => 'Каталог проектов',
-    'Project "{projectName}"' => 'Проект "{projectName}"'
+    'Project "{projectName}"' => 'Проект "{projectName}"',
+    'Phone number' => 'Телефонный номер',
+    'Name' => 'Имя'
 ];

@@ -1941,6 +1941,17 @@ h2 {
 .form-row span {
   font-size: 12px; }
 
+form .error {
+  color: #d81415;
+  font-size: 1.6em;
+  margin-bottom: 11px;
+  margin-top: -10px;
+}
+
+.has-error input {
+  border: 2px solid #d81415;
+}
+
 .popup-input,
 .popup-textarea {
   width: 100%;

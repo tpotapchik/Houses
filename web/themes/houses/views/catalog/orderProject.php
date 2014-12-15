@@ -1,6 +1,10 @@
 <?php
 
 /* @var $this yii\web\View */
+use yii\captcha\Captcha;
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+
 $this->title = 'Как заказать проект ';
 $this->params['breadcrumbs'][] = ['label' => Yii::t('house', 'Catalog Projects'), 'url' => ['catalog/index']];
 $this->params['breadcrumbs'][] = $this->title;
@@ -109,34 +113,80 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
             </div>
         </div>
         <div class="feedback-block-wrapper">
-                    <div class="feedback-block">
-                        <div class="message">Спасибо! Мы свяжемся с вами<br> в ближайшее время.</div>
-                        <div class="_title">ФОРМА ОБРАТНОЙ СВЯЗИ</div>
-                        <form id="feedbackForm" action="/site/callus" method="post">
-                            <input type="hidden" name="_csrf" value="SXdDTXRSN25kMigEDSEDXhonLzccYUclKzEzLDANZxgmKAIfDiZeAA=="><!--open-->
-                            <div class="form-row">Введите свое имя</div>
-                            <input type="text" id="callusform-name" class="popup-input" name="CallUsForm[name]">
+            <div class="feedback-block">
+                <div class="message">Спасибо! Мы свяжемся с вами<br> в ближайшее время.</div>
+                <div class="_title">ФОРМА ОБРАТНОЙ СВЯЗИ</div>
 
-                            <div class="form-row">Введите ваш электронный адрес</div>
-                            <div class="form-group field-callusform-phonenumber required">
-                                <input type="text" id="callusform-phonenumber" class="popup-input" name="CallUsForm[phoneNumber]">
-                            </div>
-                            <div class="form-row">Напишите комментарий</div>
-                            <textarea name="" class="popup-textarea" id="" cols="30" rows="10"></textarea>
+                <?php $form = ActiveForm::begin([
+                    'method' => 'post',
+                    'enableClientValidation' => true,
+                ]); ?>
+                <div class="form-row">Введите свое имя</div>
+                <?= $form->field($model, 'name', [
+                    'template' => "{input}\n{hint}\n{error}",
+                    'errorOptions' => [
+                        'class' => 'error'
+                    ],
+                    'inputOptions' => [
+                        'class' => 'popup-input',
+                        'placeholder' => 'Вася',
 
-                            <div class="form-row">Введите символы с картинки</div>
-                            <div class="form-group field-callusform-verifycode">
-                                <img id="callusform-verifycode-image" src="/site/captcha?v=548f17c8c435f" alt=""> <input type="text" id="callusform-verifycode"
-                                                                                                                         class="popup-input"
-                                                                                                                         name="CallUsForm[verifyCode]">
-                            </div>
-                            <button type="submit" id="js-submit" class="order-call-btn" name="contact-button">ОТПРАВИТЬ</button>
+                    ]
+                ]) ?>
 
-                        </form>
-                    </div>
-                </div>
+                <div class="form-row">Введите тему сообщения</div>
+                <?= $form->field($model, 'subject', [
+                    'template' => "{input}\n{hint}\n{error}",
+                    'errorOptions' => [
+                        'class' => 'error'
+                    ],
+                    'inputOptions' => [
+                        'class' => 'popup-input',
+                        'placeholder' => 'Хочу сотрудничать'
+                    ]
+                ]) ?>
 
+                <div class="form-row">Введите ваш электронный адрес</div>
+                <?= $form->field($model, 'email', [
+                    'template' => "{input}\n{hint}\n{error}",
+                    'errorOptions' => [
+                        'class' => 'error'
+                    ],
+                    'inputOptions' => [
+                        'class' => 'popup-input',
+                        'placeholder' => 'vasya@fake-site.com'
+                    ]
+                ]) ?>
 
+                <div class="form-row">Напишите комментарий</div>
+                <?= $form->field($model, 'body', [
+                    'template' => "{input}\n{hint}\n{error}",
+                    'errorOptions' => [
+                        'class' => 'error'
+                    ],
+                    'inputOptions' => [
+                        'class' => 'popup-textarea',
+                        'cols' => '30',
+                        'rows' => '10'
+                    ]
+                ])->textArea() ?>
+
+                <div class="form-row">Введите символы с картинки</div>
+                <?= $form->field($model, 'verifyCode', [
+                    'template' => "{hint}\n{input}\n{error}",
+                    'inputOptions' => [],
+                    'errorOptions' => [
+                        'class' => 'error'
+                    ],
+                ])->hint('Чтоб обновить картинку - нажмите на нее')->widget(Captcha::className(), [
+                    'options' => ['class' => 'popup-input',]
+                ]) ?>
+                <?= Html::submitButton('ОТПРАВИТЬ', ['class' => 'order-call-btn', 'name' => 'contact-button', 'id' => 'js-submit']) ?>
+
+                <?php ActiveForm::end(); ?>
+
+            </div>
+        </div>
     </div>
 
     <?= $this->render('../layouts/_our-projects', []) ?>
