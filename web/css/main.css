@@ -1950,6 +1950,8 @@ h2 {
   font-size: 1.6em;
   padding: 0 5px;
   box-sizing: border-box; }
+.popup-textarea {padding-bottom: 10px;
+padding-top: 10px;}
 .popup-input.error,
 .popup-textarea.error {
   border: 2px solid #d81415; }
