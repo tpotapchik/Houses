@@ -1948,7 +1948,7 @@ form .error {
   margin-top: -10px;
 }
 
-.has-error input {
+.has-error input, .has-error textarea {
   border: 2px solid #d81415;
 }
 
