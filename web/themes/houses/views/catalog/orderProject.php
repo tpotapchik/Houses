@@ -108,6 +108,35 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
 
             </div>
         </div>
+        <div class="feedback-block-wrapper">
+                    <div class="feedback-block">
+                        <div class="message">Спасибо! Мы свяжемся с вами<br> в ближайшее время.</div>
+                        <div class="_title">ФОРМА ОБРАТНОЙ СВЯЗИ</div>
+                        <form id="feedbackForm" action="/site/callus" method="post">
+                            <input type="hidden" name="_csrf" value="SXdDTXRSN25kMigEDSEDXhonLzccYUclKzEzLDANZxgmKAIfDiZeAA=="><!--open-->
+                            <div class="form-row">Введите свое имя</div>
+                            <input type="text" id="callusform-name" class="popup-input" name="CallUsForm[name]">
+
+                            <div class="form-row">Введите ваш электронный адрес</div>
+                            <div class="form-group field-callusform-phonenumber required">
+                                <input type="text" id="callusform-phonenumber" class="popup-input" name="CallUsForm[phoneNumber]">
+                            </div>
+                            <div class="form-row">Напишите комментарий</div>
+                            <textarea name="" class="popup-textarea" id="" cols="30" rows="10"></textarea>
+
+                            <div class="form-row">Введите символы с картинки</div>
+                            <div class="form-group field-callusform-verifycode">
+                                <img id="callusform-verifycode-image" src="/site/captcha?v=548f17c8c435f" alt=""> <input type="text" id="callusform-verifycode"
+                                                                                                                         class="popup-input"
+                                                                                                                         name="CallUsForm[verifyCode]">
+                            </div>
+                            <button type="submit" id="js-submit" class="order-call-btn" name="contact-button">ОТПРАВИТЬ</button>
+
+                        </form>
+                    </div>
+                </div>
+
+
     </div>
 
     <?= $this->render('../layouts/_our-projects', []) ?>

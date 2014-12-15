@@ -90,6 +90,39 @@ $(function () {
         });
         return false;
     };
+
     $('#callUsForm').on('beforeSubmit', beforeSubmit);
+
+
+    //feedback
+    beforeSubmit = function(event) {
+        console.log(event, 'my handler');
+        $form = $(event.target);
+        var popup = $('.feedback-block');
+        var message = popup.find('.message');
+        $.ajax({
+            url: $form.attr('action'),
+            type: "POST",
+            data: $form.serialize(),
+            success: function (data) {
+                if (data.error) {
+                    alert('Произошла ошибка');
+                } else {
+                    message.slideDown();
+
+                    setTimeout(function () {
+                        $form[0].reset();
+                        message.hide();
+                    }, 5000);
+                }
+            },
+            error: function () {
+                alert('Произошла ошибка. Попробуйте еще раз.');
+            }
+        });
+        return false;
+    };
+    $('#feedbackForm').on('beforeSubmit', beforeSubmit);
+
 });
 
