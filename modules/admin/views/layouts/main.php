@@ -27,7 +27,7 @@ AdminAsset::register($this);
         <?php
         NavBar::begin([
             'brandLabel' => 'Home Control',
-            'brandUrl' => Yii::$app->homeUrl,
+            'brandUrl' => [ '/admin/' ],
             'renderInnerContainer' => false,
             'renderNavbarHeader' => true,
             'renderCollapse' => false,
@@ -90,6 +90,11 @@ AdminAsset::register($this);
             [
                 'label' => '<i class="fa fa-bank"></i> '.Yii::t('yii', 'Projects'),
                 'url' => ['project/index'],
+                'visible' => !Yii::$app->user->isGuest
+            ],
+            [
+                'label' => '<i class="fa fa-sitemap"></i> '.Yii::t('yii', 'Category\'s'),
+                'url' => ['category/index'],
                 'visible' => !Yii::$app->user->isGuest
             ]
         ];

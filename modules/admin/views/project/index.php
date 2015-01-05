@@ -28,22 +28,34 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'numCat',
+//            'numCat',
             'title',
             'technology:ntext',
-            'ready',
+//            'ready',
             // 'new',
             // 'southEnter',
             // 'roof_id',
             // 'energySaving',
             // 'type_id',
+            [
+                'attribute' => 'type',
+                'value' => 'type.value'
+            ],
             // 'typeView_id',
+            [
+                'attribute' => 'typeView',
+                'value' => 'typeView.value'
+            ],
             // 'category_id',
+            [
+                'attribute' => 'category',
+                'value' => 'category.processedValue'
+            ],
             // 'collection_id',
             // 'carPlaces',
             // 'cubage',
             // 'effectiveArea',
-            // 'priceUSD',
+             'priceUSD',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Project */
+/* @var $model app\models\Category */
 
-$this->title = $model->title;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('yii', 'Projects'), 'url' => ['index']];
+$this->title = $model->processedValue;
+$this->params['breadcrumbs'][] = ['label' => Yii::t('yii', 'Categories'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="project-view">
+<div class="category-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -29,22 +29,9 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'numCat',
-            'title',
-            'technology:ntext',
-            'ready',
-            'new',
-            'southEnter',
-            'roof.value:text:Крыша',
-            'energySaving',
-            'type.value:text:Тип',
-            'typeView.value:text:Вид',
-            'category.processedValue:text:Категория',
-            'collection.value:text:Коллекция',
-            'carPlaces',
-            'cubage',
-            'effectiveArea',
-            'priceUSD',
+            'value',
+            'processedValue',
+            'url:url',
         ],
     ]) ?>
 

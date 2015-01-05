@@ -44,13 +44,17 @@ $config = [
             // 'useFileTransport' to false and configure a transport
             // for the mailer to send real emails.
 //            'useFileTransport' => true,
+//            'transport' => [
+//                'class' => 'Swift_SmtpTransport',
+//                'host' => 'ox20m.atservers.net',
+//                'username' => 'info@dom-tut.by',
+//                'password' => 'jz}QT7_vua',
+//                'port' => '25',
+//                'encryption' => 'tls',
+//            ],
             'transport' => [
-                'class' => 'Swift_SmtpTransport',
-                'host' => 'ox20m.atservers.net',
-                'username' => 'info@dom-tut.by',
-                'password' => 'jz}QT7_vua',
-                'port' => '25',
-                'encryption' => 'tls',
+                 'class' => 'Swift_MailTransport', // это обертка mail()
+//                'constructArgs' => ['-f your@mail.com'],
             ],
         ],
         'log' => [
