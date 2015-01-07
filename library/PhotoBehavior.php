@@ -8,18 +8,26 @@
 
 namespace app\library;
 
-
+use Symfony\Component\Config\Definition\Exception\Exception;
 use Yii;
 use yii\base\Behavior;
 use yii\base\ModelEvent;
 use yii\db\ActiveRecord;
 use yii\helpers\Console;
 
+/**
+ * Class PhotoBehavior
+ * @package Library
+ */
 class PhotoBehavior extends Behavior
 {
     public $path;
     public $urlPart = '/images/';
 
+    /**
+     * Events declaration
+     * @return array
+     */
     public function events()
     {
         return [
@@ -29,6 +37,9 @@ class PhotoBehavior extends Behavior
         ];
     }
 
+    /**
+     * @param ModelEvent $event
+     */
     public function beforeInsert(ModelEvent $event)
     {
         $filename = md5($this->owner->file);
@@ -44,16 +55,25 @@ class PhotoBehavior extends Behavior
         }
 
         if ($coping) {
-            $result = copy(html_entity_decode($this->owner->file), $this->path . $filename);
+            $result = copy(
+                html_entity_decode($this->owner->file),
+                $this->path . $filename
+            );
         }
 
         if ($result) {
-
             $newFilename = $this->getExtention($this->path, $filename);
 
             if ($newFilename === false) {
                 unlink($this->path . $filename);
-                echo Console::ansiFormat("PREVENT INSERTING\n".$this->owner->file."\n".$this->owner->project_id, [Console::FG_RED]);
+                echo Console::ansiFormat(
+                    "PREVENT INSERTING" .
+                    PHP_EOL .
+                    $this->owner->file .
+                    PHP_EOL .
+                    $this->owner->project_id,
+                    [Console::FG_RED]
+                );
                 $event->isValid = false;
                 Yii::$app->getCache()->set('prevent', true);
                 return;
@@ -64,7 +84,10 @@ class PhotoBehavior extends Behavior
                 $this->owner->file = $this->urlPart . $newFilename;
             }
         } elseif ($coping) {
-            echo Console::ansiFormat("cant copy image\n" . $this->owner->file . "\n", [Console::FG_RED]);
+            echo Console::ansiFormat(
+                "cant copy image" . PHP_EOL . $this->owner->file . PHP_EOL,
+                [Console::FG_RED]
+            );
         }
         if (Yii::$app->getCache()->get('prevent')) {
             echo Console::ansiFormat("INSERTING...\n", [Console::FG_GREEN]);
@@ -81,34 +104,40 @@ class PhotoBehavior extends Behavior
 
     public function init()
     {
-        $this->path = \Yii::$app->basePath . DIRECTORY_SEPARATOR . 'web' . DIRECTORY_SEPARATOR . 'images' . DIRECTORY_SEPARATOR;
+        $this->path = \Yii::$app->basePath .
+            DIRECTORY_SEPARATOR .
+            'web' . DIRECTORY_SEPARATOR .
+            'images' . DIRECTORY_SEPARATOR;
     }
 
     public function beforeUpdate()
     {
-        echo 'update';
+        throw new Exception('Method not implemented');
     }
 
+    /**
+     * Get file extention
+     * @param string $filePath
+     * @param string $filename
+     * @return bool|string
+     */
     private function getExtention($filePath, $filename)
     {
         $result = exif_imagetype($filePath . $filename);
 
-        switch ($result)
-        {
+        switch ($result) {
             case IMAGETYPE_GIF:
-                $ext = '.gif';
-            break;
+                    $ext = '.gif';
+                break;
             case IMAGETYPE_JPEG:
-                $ext = '.jpg';
+                    $ext = '.jpg';
                 break;
             case IMAGETYPE_JPEG2000:
-                $ext = '.jpeg2000';
+                    $ext = '.jpeg2000';
                 break;
             default:
                 return false;
-            break;
         }
         return $filename . $ext;
     }
-
 }
