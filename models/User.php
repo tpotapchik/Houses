@@ -7,12 +7,12 @@
  */
 
 namespace app\models;
+
 use Yii;
 use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
-
 
 /**
  * User model
@@ -33,7 +33,12 @@ class User extends ActiveRecord implements IdentityInterface
 {
     const STATUS_DELETED = 0;
     const STATUS_ACTIVE = 10;
+    const SCENARIO_CREATE = 'create';
     const ROLE_USER = 10;
+
+    public $repeatpassword;
+    public $rawPassword;
+
     /**
      * @inheritdoc
      */
@@ -56,11 +61,30 @@ class User extends ActiveRecord implements IdentityInterface
     public function rules()
     {
         return [
+            ['username', 'string', 'min' => 3],
+            ['username', 'unique'],
+            ['username', 'required'],
+            ['email', 'email'],
+            ['email', 'required'],
+            ['password', 'string', 'max' => 250],
+            ['password', 'required', 'on' => self::SCENARIO_CREATE],
+            [
+                'repeatpassword',
+                'compare',
+                'compareAttribute' => 'password',
+                'message' => "Passwords don't match"
+            ],
             ['status', 'default', 'value' => self::STATUS_ACTIVE],
             ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
             ['role', 'default', 'value' => self::ROLE_USER],
             ['role', 'in', 'range' => [self::ROLE_USER]],
         ];
+    }
+    public function scenarios()
+    {
+        $scenarios = parent::scenarios();
+        $scenarios[self::SCENARIO_CREATE] = ['username', 'email', 'password'];
+        return $scenarios;
     }
     /**
      * @inheritdoc
@@ -74,7 +98,9 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public static function findIdentityByAccessToken($token, $type = null)
     {
-        throw new NotSupportedException('"findIdentityByAccessToken" is not implemented.');
+        throw new NotSupportedException(
+            '"findIdentityByAccessToken" is not implemented.'
+        );
     }
     /**
      * Finds user by username
@@ -84,7 +110,9 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public static function findByUsername($username)
     {
-        return static::findOne(['username' => $username, 'status' => self::STATUS_ACTIVE]);
+        return static::findOne(
+            ['username' => $username, 'status' => self::STATUS_ACTIVE]
+        );
     }
     /**
      * Finds user by password reset token
@@ -147,7 +175,10 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public function validatePassword($password)
     {
-        return Yii::$app->security->validatePassword($password, $this->password_hash);
+        return Yii::$app->security->validatePassword(
+            $password,
+            $this->password_hash
+        );
     }
     /**
      * Generates password hash from password and sets it to the model
@@ -156,7 +187,15 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public function setPassword($password)
     {
-        $this->password_hash = Yii::$app->security->generatePasswordHash($password);
+        $this->rawPassword = $password;
+        if ($password != '') {
+            $this->password_hash = Yii::$app->security->generatePasswordHash($password);
+        }
+    }
+
+    public function getPassword()
+    {
+        return $this->rawPassword;
     }
     /**
      * Generates "remember me" authentication key
@@ -170,7 +209,8 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public function generatePasswordResetToken()
     {
-        $this->password_reset_token = Yii::$app->security->generateRandomString() . '_' . time();
+        $this->password_reset_token = Yii::$app->security->generateRandomString() .
+            '_' . time();
     }
     /**
      * Removes password reset token
