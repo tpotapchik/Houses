@@ -2,6 +2,8 @@
 
 namespace app\modules\admin\controllers;
 
+use app\models\Roof;
+use app\models\Type;
 use Yii;
 use app\models\Project;
 use app\models\ProjectSearch;
@@ -85,7 +87,7 @@ class ProjectController extends Controller
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
-                'model' => $model,
+                'model' => $model
             ]);
         }
     }

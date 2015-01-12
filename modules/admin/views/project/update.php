@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = Yii::t('yii', 'Update');
 <div class="project-update">
 
     <h1><?= Html::encode($this->title) ?></h1>
-
+    <em>Смотреть на сайте: <?= Html::a($model->title, ['/catalog/'.$model->getCategory()->one()->url.'/'.$model->numCat], ['target' => '_blank']) ?></em>
     <?= $this->render('_form', [
         'model' => $model,
     ]) ?>

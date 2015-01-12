@@ -16,5 +16,9 @@ return [
     'Catalog Projects' => 'Каталог проектов',
     'Project "{projectName}"' => 'Проект "{projectName}"',
     'Phone number' => 'Телефонный номер',
-    'Name' => 'Имя'
+    'Name' => 'Имя',
+    'Price USD' => 'Цена USD',
+    'Effective Area' => 'Эффективная площадь',
+    'Cubage' => 'Объем',
+    'Car Places' => 'Место под машину'
 ];
