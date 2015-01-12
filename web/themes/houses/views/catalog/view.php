@@ -4,7 +4,7 @@ use app\models\GeneralHelper;
 use yii\helpers\Html;
 
 /* @var $model \app\models\Project */
-$this->title = Yii::t('house', 'Project "{projectName}"', ['projectName' => $model->title] );
+$this->title = Yii::t('house', 'Project "{projectName}"', ['projectName' => $model->title]);
 /** @var \app\models\Category $category */
 $category = $model->getCategory()->one();
 $this->params['breadcrumbs'][] = ['label' => Yii::t('house', 'Catalog Projects'), 'url' => ['catalog/index']];
@@ -66,6 +66,7 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
             );
             ?>
             <?php
+            /** @var \app\models\Facade $facade */
             foreach ($facadesPhotos as $facade) {
                 echo Html::a(
                     '',
@@ -83,6 +84,7 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
             <div class="plan-pictures">
                 <?php
                 $floorsPhotos = $model->getFloors()->all();
+                /** @var \app\models\Floor $floor */
                 foreach ($floorsPhotos as $floor) {
                     echo Html::a(
                         Html::img($floor->file, ['alt' => $floor->title]),
