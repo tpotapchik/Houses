@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use AlexanderEmelyanov\yii\modules\articles\models\Article;
 use app\models\Category;
 use app\models\ContactForm;
 use app\models\FilterPanel;
@@ -9,6 +10,7 @@ use app\models\Project;
 use app\models\ProjectSearch;
 use Yii;
 use yii\web\Controller;
+use yii\web\NotFoundHttpException;
 
 class CatalogController extends Controller
 {
@@ -54,9 +56,42 @@ class CatalogController extends Controller
 
             return $this->refresh();
         } else {
+            $article = $this->getArticle('order-project');
             return $this->render('orderProject', [
                 'model' => $model,
+                'article' => $article
             ]);
+        }
+    }
+
+    /**
+     * @param $key_url
+     * @return array|null|\yii\db\ActiveRecord
+     */
+    private function getArticle($key_url)
+    {
+        $article = Article::findOne(['url_key' => $key_url]);
+        if ($article) {
+            return $article->getArticleInstances()->one();
+        } else {
+            return null;
+        }
+    }
+
+    public function actionShowArticle($article_url)
+    {
+        $specialPagesUrls = [
+            'actionOrderProject' => 'order-project'
+        ];
+
+        if ($key = array_search($article_url, $specialPagesUrls)) {
+            return $this->$key();
+        } else {
+            if ($article = $this->getArticle($article_url)) {
+                return $this->render('article', ['article' => $article]);
+            } else {
+                throw new NotFoundHttpException();
+            }
         }
     }
 }

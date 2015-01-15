@@ -12,6 +12,10 @@ class Module extends \yii\base\Module
     {
         parent::init();
 
-        // custom initialization code goes here
+        $this->modules = [
+            'articles' => [
+                'class' => 'AlexanderEmelyanov\yii\modules\articles\Module'
+            ]
+        ];
     }
 }

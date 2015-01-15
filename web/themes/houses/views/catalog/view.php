@@ -14,10 +14,10 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
 ?>
 <?= $this->render('../layouts/_filter-panel', ['other' => true]) ?>
 <!--main part-->
-<div class="centralize">
+<div class="centralize" itemscope itemtype ="http://schema.org/ItemPage">
     <?= $this->render('../layouts/_breadcrumbs', []) ?>
 
-    <div class="main-title project"><?= strtoupper($this->title) ?> | <b><?= $model->effectiveArea ?> м<sup>2</sup></b></div>
+    <div class="main-title project"><span itemprop="name"><?= strtoupper($this->title) ?></span> | <b><?= $model->effectiveArea ?> м<sup>2</sup></b></div>
 
     <div class="main-block clearfix">
         <div class="right-block right">

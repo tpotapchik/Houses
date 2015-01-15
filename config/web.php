@@ -19,7 +19,7 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 'about' => 'site/about',
-                'catalog/pages/order-project' => 'catalog/order-project',
+                'catalog/pages/<article_url:[[:word:]-_]+>' => 'catalog/show-article',
                 '/' => 'site/index',
                 'contacts' => 'site/contacts',
                 'catalog' => 'catalog/index',
@@ -86,6 +86,14 @@ $config = [
                     'fileMap' => [
                         'house'       => 'house.php',
                         'house/error' => 'error.php',
+                    ],
+                ],
+                'app*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    //'basePath' => '@app/messages',
+                    //'sourceLanguage' => 'en-US',
+                    'fileMap' => [
+                        'app'       => 'app.php',
                     ],
                 ],
             ],

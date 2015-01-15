@@ -23,12 +23,18 @@
         "alexander-emelyanov/yii2-articles-module": "dev-master"
     },
     "require-dev": {
-        "yiisoft/yii2-codeception": "*",
-        "yiisoft/yii2-debug": "*",
-        "yiisoft/yii2-gii": "*",
-        "yiisoft/yii2-faker": "*",
+        "yiisoft/yii2-codeception": "*@stable",
+        "yiisoft/yii2-debug": "*@stable",
+        "yiisoft/yii2-gii": "*@stable",
+        "yiisoft/yii2-faker": "*@stable",
         "phpmd/phpmd" : "@stable"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/coxa/yii2-articles-module"
+        }
+    ],
     "config": {
         "process-timeout": 1800
     },
