@@ -1,5 +1,6 @@
 <?php
 
+use dosamigos\ckeditor\CKEditor;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\jui\DatePicker;
@@ -26,7 +27,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'intro_text')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'full_text')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'full_text')->widget(CKEditor::className(), [
+        'options' => ['rows' => 6],
+        'preset' => 'standard',
+        'clientOptions' => [
+            'contentsCss' => '/css/main.css'
+        ]
+    ]) ?>
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => 255]) ?>
 
