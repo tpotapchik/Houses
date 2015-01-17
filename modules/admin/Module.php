@@ -14,7 +14,7 @@ class Module extends \yii\base\Module
 
         $this->modules = [
             'articles' => [
-                'class' => 'AlexanderEmelyanov\yii\modules\articles\Module'
+                'class' => 'app\modules\articles\Articles'
             ]
         ];
     }

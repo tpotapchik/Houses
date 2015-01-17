@@ -2,7 +2,7 @@
 
 namespace app\controllers;
 
-use AlexanderEmelyanov\yii\modules\articles\models\Article;
+use app\models\Article;
 use app\models\Category;
 use app\models\ContactForm;
 use app\models\FilterPanel;
@@ -71,11 +71,7 @@ class CatalogController extends Controller
     private function getArticle($key_url)
     {
         $article = Article::findOne(['url_key' => $key_url]);
-        if ($article) {
-            return $article->getArticleInstances()->one();
-        } else {
-            return null;
-        }
+        return $article;
     }
 
     public function actionShowArticle($article_url)

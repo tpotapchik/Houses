@@ -78,24 +78,41 @@ AdminAsset::register($this);
 
         $sideItems = [
             [
-                'label' => '<i class="fa fa-dashboard"></i> '.Yii::t('yii', 'Dashboard'),
+                'label' => '<i class="fa fa-dashboard"></i> '.Yii::t('app', 'Dashboard'),
                 'url' => ['/site/index'],
                 'visible' => !Yii::$app->user->isGuest
             ],
             [
-                'label' => '<i class="fa fa-users"></i> '.Yii::t('yii', 'Users'),
+                'label' => '<i class="fa fa-users"></i> '.Yii::t('app', 'Users'),
                 'url' => ['user/index'],
                 'visible' => !Yii::$app->user->isGuest
             ],
             [
-                'label' => '<i class="fa fa-bank"></i> '.Yii::t('yii', 'Projects'),
+                'label' => '<i class="fa fa-bank"></i> '.Yii::t('app', 'Projects'),
                 'url' => ['project/index'],
                 'visible' => !Yii::$app->user->isGuest
             ],
             [
-                'label' => '<i class="fa fa-sitemap"></i> '.Yii::t('yii', 'Category\'s'),
+                'label' => '<i class="fa fa-sitemap"></i> '.Yii::t('app', 'Category\'s'),
                 'url' => ['category/index'],
                 'visible' => !Yii::$app->user->isGuest
+            ],
+            [
+                'label' => '<i class="fa fa-archive" ></i>'.Yii::t('app', 'Articles'),
+                'url' => ['article/index'],
+                'visible' => !Yii::$app->user->isGuest,
+                'items' => [
+                    [
+                        'label' => '<i class="fa fa-file"></i> '.Yii::t('app', 'Article'),
+                        'url' => ['/admin/articles/article/index'],
+                        'visible' => !Yii::$app->user->isGuest
+                    ],
+                    [
+                        'label' => '<i class="fa fa-file"></i> '.Yii::t('app', 'Article Categories'),
+                        'url' => ['/admin/articles/article-category/index'],
+                        'visible' => !Yii::$app->user->isGuest
+                    ],
+                ]
             ]
         ];
         echo Nav::widget([
