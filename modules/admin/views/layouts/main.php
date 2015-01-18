@@ -84,17 +84,17 @@ AdminAsset::register($this);
             ],
             [
                 'label' => '<i class="fa fa-users"></i> '.Yii::t('app', 'Users'),
-                'url' => ['user/index'],
+                'url' => ['/admin/user/index'],
                 'visible' => !Yii::$app->user->isGuest
             ],
             [
                 'label' => '<i class="fa fa-bank"></i> '.Yii::t('app', 'Projects'),
-                'url' => ['project/index'],
+                'url' => ['/admin/project/index'],
                 'visible' => !Yii::$app->user->isGuest
             ],
             [
                 'label' => '<i class="fa fa-sitemap"></i> '.Yii::t('app', 'Category\'s'),
-                'url' => ['category/index'],
+                'url' => ['/admin/category/index'],
                 'visible' => !Yii::$app->user->isGuest
             ],
             [

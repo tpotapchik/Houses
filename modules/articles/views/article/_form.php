@@ -26,20 +26,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'intro_text')->textarea(['rows' => 6]) ?>
 
-    <?php
-    $attribute = 'full_text';
-    $js = "CKEDITOR.on('instanceCreated', function(e) {
-        e.editor.on('change', function(ev) {
-            CKEDITOR.instances['" . $attribute . "'].updateElement();
-            $('#' + ev.editor.name).trigger('change');
-            return false;
-        });
-    });";
-    $this->registerJS($js);
-    ?>
-    <?= $form->field($model, $attribute)->widget(CKEditor::className(), [
+    <?= $form->field($model, 'full_text')->widget(CKEditor::className(), [
         'options' => ['rows' => 6],
-        'preset' => 'standard',
+        'preset' => 'full',
         'clientOptions' => [
             'contentsCss' => '/css/main.css'
         ]
