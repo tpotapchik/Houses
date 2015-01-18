@@ -1,7 +1,8 @@
 <?php
 
 /* @var $this yii\web\View */
-/** @var \AlexanderEmelyanov\yii\modules\articles\models\ArticleInstance $article */
+
+/** @var app\models\Article $article */
 
 $this->title = $article->title;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('house', 'Catalog Projects'), 'url' => ['catalog/index']];

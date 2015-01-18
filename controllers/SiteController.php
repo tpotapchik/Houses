@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Article;
 use app\models\CallUsForm;
 use Yii;
 use yii\filters\AccessControl;
@@ -9,6 +10,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use yii\web\NotFoundHttpException;
 use yii\web\Response;
 
 class SiteController extends Controller
@@ -51,7 +53,12 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        return $this->render('index');
+        $article = Article::getArticle('');
+        if ($article) {
+            return $this->render('index', ['article' => $article]);
+        } else {
+            throw new NotFoundHttpException();
+        }
     }
 
     public function actionLogin()
@@ -93,7 +100,12 @@ class SiteController extends Controller
 
     public function actionAbout()
     {
-        return $this->render('about');
+        $article = Article::getArticle('about');
+        if ($article) {
+            return $this->render('about', ['article' => $article]);
+        } else {
+            throw new NotFoundHttpException();
+        }
     }
 
     public function actionContacts()

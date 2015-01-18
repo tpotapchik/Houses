@@ -56,22 +56,12 @@ class CatalogController extends Controller
 
             return $this->refresh();
         } else {
-            $article = $this->getArticle('order-project');
+            $article = Article::getArticle('order-project');
             return $this->render('orderProject', [
                 'model' => $model,
                 'article' => $article
             ]);
         }
-    }
-
-    /**
-     * @param $key_url
-     * @return array|null|\yii\db\ActiveRecord
-     */
-    private function getArticle($key_url)
-    {
-        $article = Article::findOne(['url_key' => $key_url], ['category_id' => 1]);
-        return $article;
     }
 
     public function actionShowArticle($article_url)
@@ -83,7 +73,7 @@ class CatalogController extends Controller
         if ($key = array_search($article_url, $specialPagesUrls)) {
             return $this->$key();
         } else {
-            if ($article = $this->getArticle($article_url)) {
+            if ($article = Article::getArticle($article_url)) {
                 return $this->render('article', ['article' => $article]);
             } else {
                 throw new NotFoundHttpException();

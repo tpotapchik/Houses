@@ -49,6 +49,17 @@ class Article extends \yii\db\ActiveRecord
     }
 
     /**
+     * @param string $urlKey
+     * @param int $categoryId
+     * @param bool $published
+     * @return static
+     */
+    public static function getArticle($urlKey, $categoryId = 1, $published = true)
+    {
+        return self::findOne(['url_key' => $urlKey, 'category_id' => $categoryId, 'is_published' => $published]);
+    }
+
+    /**
      * @inheritdoc
      */
     public function rules()
