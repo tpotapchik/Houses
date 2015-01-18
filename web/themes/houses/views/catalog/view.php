@@ -22,9 +22,16 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
     <div class="main-block clearfix">
         <div class="right-block right">
         <?php if ($model->priceUSD > 0):?>
+            <?php
+            $nbrb = new \app\library\NbrbClient();
+            $rate = $nbrb->getCurrencyOnDate();
+            $rate = $rate + (2/100) * $rate; //increment rate to 2 percent
+            $formatter = Yii::$app->getFormatter();
+            $price = $formatter->asCurrency($rate * $model->priceUSD, 'BYR');
+            ?>
             <div class="price-project">
                 Цена проекта:
-                <div class="_title"><?= $model->priceUSD . ' y.e.' ?></div>
+                <div class="_title"><?= $price ?></div>
             </div>
         <?php endif; ?>
             <div class="order-phone">

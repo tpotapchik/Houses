@@ -32,11 +32,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'numCat',
             'title',
             'technology:ntext',
-            'ready',
-            'new',
-            'southEnter',
+            'ready:boolean',
+            'new:boolean',
+            'southEnter:boolean',
             'roof.value:text:Крыша',
-            'energySaving',
+            'energySaving:boolean',
             'type.value:text:Тип',
             'typeView.value:text:Вид',
             'category.processedValue:text:Категория',
@@ -44,7 +44,13 @@ $this->params['breadcrumbs'][] = $this->title;
             'carPlaces',
             'cubage',
             'effectiveArea',
-            'priceUSD',
+            [
+                'attribute' => 'priceUSD',
+                'format' => [
+                    'currency',
+                    'USD'
+                ]
+            ]
         ],
     ]) ?>
 
