@@ -24,6 +24,7 @@ class m150117_204415_articles extends Migration
             'author_id' => Schema::TYPE_INTEGER . ' NOT NULL',
             'category_id' => Schema::TYPE_INTEGER . ' NOT NULL',
             'created_at' => Schema::TYPE_DATETIME . ' NOT NULL',
+            'updated_at' => Schema::TYPE_DATETIME . ' NOT NULL',
             'is_published' => Schema::TYPE_BOOLEAN . ' NOT NULL DEFAULT FALSE',
             'intro_text' => Schema::TYPE_TEXT,
             'full_text' => Schema::TYPE_TEXT . ' NOT NULL',

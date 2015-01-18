@@ -70,7 +70,7 @@ class CatalogController extends Controller
      */
     private function getArticle($key_url)
     {
-        $article = Article::findOne(['url_key' => $key_url]);
+        $article = Article::findOne(['url_key' => $key_url], ['category_id' => 1]);
         return $article;
     }
 

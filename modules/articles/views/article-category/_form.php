@@ -22,7 +22,10 @@ use yii\widgets\ActiveForm;
                     ->all(),
                 'id',
                 'title'
-            )
+            ),
+            [
+                'prompt'=>'-- No parent --'
+            ]
         ) ?>
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => 255]) ?>

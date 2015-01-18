@@ -3,6 +3,8 @@
 namespace app\models;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
+use yii\db\Expression;
 
 /**
  * This is the model class for table "article".
@@ -12,6 +14,7 @@ use Yii;
  * @property integer $author_id
  * @property integer $category_id
  * @property string $created_at
+ * @property string $updated_at
  * @property integer $is_published
  * @property string $intro_text
  * @property string $full_text
@@ -24,6 +27,19 @@ use Yii;
  */
 class Article extends \yii\db\ActiveRecord
 {
+
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => TimestampBehavior::className(),
+                'createdAtAttribute' => 'created_at',
+                'updatedAtAttribute' => 'updated_at',
+                'value' => new Expression('NOW()'),
+            ],
+        ];
+    }
+
     /**
      * @inheritdoc
      */
@@ -38,9 +54,9 @@ class Article extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['author_id', 'category_id', 'created_at', 'full_text', 'title'], 'required'],
+            [['author_id', 'category_id', 'full_text', 'title'], 'required'],
             [['author_id', 'category_id', 'is_published'], 'integer'],
-            [['created_at'], 'safe'],
+            [['created_at', 'updated_at'], 'safe'],
             [['intro_text', 'full_text', 'meta_keywords', 'meta_description'], 'string'],
             [['url_key', 'title'], 'string', 'max' => 255],
             [['url_key'], 'unique']
@@ -58,6 +74,7 @@ class Article extends \yii\db\ActiveRecord
             'author_id' => Yii::t('app', 'Author ID'),
             'category_id' => Yii::t('app', 'Category ID'),
             'created_at' => Yii::t('app', 'Created At'),
+            'updated_at' => Yii::t('app', 'Updated At'),
             'is_published' => Yii::t('app', 'Is Published'),
             'intro_text' => Yii::t('app', 'Intro Text'),
             'full_text' => Yii::t('app', 'Full Text'),
