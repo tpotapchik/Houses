@@ -19,7 +19,7 @@ use yii\helpers\Console;
  * Class PhotoBehavior
  * @package Library
  */
-class PhotoBehavior extends Behavior
+class PhotoInsertBehavior extends Behavior
 {
     public $path;
     public $urlPart = '/images/';
