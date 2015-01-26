@@ -20,7 +20,7 @@ use yii\web\UploadedFile;
 
 class PhotoBehavior extends Behavior
 {
-    const MODEL_ATTRIBUTE = 'file';
+    public $attribute = 'file';
 
     public $urlPart = '/images/';
     public $unlinkOnSave = true;
@@ -54,10 +54,10 @@ class PhotoBehavior extends Behavior
     {
         /** @var ActiveRecord $model */
         $model = $this->owner;
-        $this->_file = UploadedFile::getInstance($model, self::MODEL_ATTRIBUTE);
+        $this->_file = UploadedFile::getInstance($model, $this->attribute);
         if ($this->_file instanceof UploadedFile) {
             $this->_file->name = $this->generateFileName($this->_file);
-            $model->setAttribute(self::MODEL_ATTRIBUTE, $this->_urlPath . $this->_file);
+            $model->setAttribute($this->attribute, $this->_urlPath . $this->_file);
         }
     }
 
@@ -86,7 +86,7 @@ class PhotoBehavior extends Behavior
     public function afterSave(AfterSaveEvent $event)
     {
         if ($this->_file instanceof UploadedFile) {
-            $path = $this->getUploadPath(self::MODEL_ATTRIBUTE);
+            $path = $this->getUploadPath($this->attribute);
             if (!FileHelper::createDirectory(dirname($path))) {
                 throw new InvalidParamException("Directory specified in 'path' attribute doesn't exist or cannot be created.");
             }
@@ -100,12 +100,12 @@ class PhotoBehavior extends Behavior
         $model = $this->owner;
 
         if ($this->_file instanceof UploadedFile) {
-            if (!$model->getIsNewRecord() && $model->isAttributeChanged(self::MODEL_ATTRIBUTE)) {
+            if (!$model->getIsNewRecord() && $model->isAttributeChanged($this->attribute)) {
                 if ($this->unlinkOnSave === true) {
-                    $this->delete(self::MODEL_ATTRIBUTE, true);
+                    $this->delete($this->attribute, true);
                 }
             }
-            $model->setAttribute(self::MODEL_ATTRIBUTE, $this->_urlPath . $this->_file->name);
+            $model->setAttribute($this->attribute, $this->_urlPath . $this->_file->name);
         }
     }
 
@@ -176,7 +176,7 @@ class PhotoBehavior extends Behavior
      */
     public function beforeDelete()
     {
-        $attribute = self::MODEL_ATTRIBUTE;
+        $attribute = $this->attribute;
         if ($this->unlinkOnDelete && $attribute) {
             $this->delete($attribute);
         }

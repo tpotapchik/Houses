@@ -32,7 +32,7 @@ class Photo extends PhotoGeneral
         return [
             [['project_id'], 'required'],
             [['project_id'], 'integer'],
-            [['file'], 'file'],
+            [['file'], 'file', 'extensions' => 'jpeg, gif, png', 'on' => ['insert', 'update']],
             [['title'], 'string', 'max' => 255]
         ];
     }

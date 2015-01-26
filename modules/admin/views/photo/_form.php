@@ -1,5 +1,6 @@
 <?php
 
+use karpoff\icrop\CropImageUpload;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -18,7 +19,12 @@ use yii\widgets\ActiveForm;
         'участок' => 'участок',
     ]) ?>
 
-    <?= $form->field($model, 'file')->fileInput() ?>
+    <?= $form->field($model, 'file')->widget(CropImageUpload::className(), [
+        'ratio' => 1.97,
+        'url' => '',
+        'crop_value' => '0-0-100-100',
+//        'crop_field' => 'photo_crop',
+    ]) ?>
 
     <?= $form->field($model, 'project_id')->textInput() ?>
 

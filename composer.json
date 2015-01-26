@@ -25,7 +25,8 @@
         "2amigos/yii2-ckeditor-widget": "*",
         "iutbay/yii2-kcfinder": "*",
         "mongosoft/yii2-upload-behavior": "*",
-        "iutbay/yii2-fontawesome": "*"
+        "iutbay/yii2-fontawesome": "*",
+        "karpoff/yii2-crop-image-upload": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*@stable",
