@@ -35,11 +35,11 @@ $types = Type::find()->all();
 
     <?= $form->field($model, 'type_id')->dropDownList(ArrayHelper::map($types, 'id', 'value'))->label('Тип') ?>
 
-<!--    --><?//= $form->field($model, 'typeView_id')->textInput() ?>
-<!---->
-<!--    --><?//= $form->field($model, 'category_id')->textInput() ?>
-<!---->
-<!--    --><?//= $form->field($model, 'collection_id')->textInput() ?>
+    <?= $form->field($model, 'typeView_id')->dropDownList(ArrayHelper::map(\app\models\TypeView::find()->all(), 'id', 'value'))->label('Вид') ?>
+
+    <?= $form->field($model, 'category_id')->dropDownList(ArrayHelper::map(\app\models\Category::find()->all(), 'id', 'processedValue'))->label('Категория') ?>
+
+    <?= $form->field($model, 'collection_id')->dropDownList(ArrayHelper::map(\app\models\Collection::find()->all(), 'id', 'value'))->label('Коллекция') ?>
 
     <?= $form->field($model, 'carPlaces')->textInput() ?>
 

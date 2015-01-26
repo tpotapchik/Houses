@@ -32,7 +32,8 @@ class Photo extends PhotoGeneral
         return [
             [['project_id'], 'required'],
             [['project_id'], 'integer'],
-            [['title', 'file'], 'string', 'max' => 255]
+            [['file'], 'file'],
+            [['title'], 'string', 'max' => 255]
         ];
     }
 
