@@ -1,5 +1,6 @@
 <?php
 /* @var $this yii\web\View */
+use app\library\NbrbClient;
 use app\models\GeneralHelper;
 use yii\helpers\Html;
 
@@ -23,11 +24,12 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
         <div class="right-block right">
         <?php if ($model->priceUSD > 0):?>
             <?php
-            $nbrb = new \app\library\NbrbClient();
-            $rate = $nbrb->getCurrencyOnDate();
+            $nbrb = new NbrbClient();
+            $rate = $nbrb->getCurrencyOnDate(null, NbrbClient::CURRENCY_EUR);
             $rate = $rate + (2/100) * $rate; //increment rate to 2 percent
             $formatter = Yii::$app->getFormatter();
-            $price = $formatter->asCurrency($rate * $model->priceUSD, 'BYR');
+            $totalPrice = $rate * $model->priceUSD;
+            $price = NbrbClient::formatter($totalPrice, 'BYR');
             ?>
             <div class="price-project">
                 Цена проекта:
