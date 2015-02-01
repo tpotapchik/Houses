@@ -16,6 +16,7 @@ class NbrbClient
     private $_xmlUrl = '';
 
     const CURRENCY_USD = 'USD';
+    const CURRENCY_EUR = 'EUR';
 
     public function __construct()
     {
@@ -60,5 +61,43 @@ class NbrbClient
         }
 
         return intval($result['Rate']);
+    }
+
+    public static function formatter($number, $currencyCode)
+    {
+        $map = [
+            3 => 'млрд.',
+            2 => 'млн.',
+            1 => 'тыс.',
+        ];
+
+        $length = strlen($number);
+        $lengthDelta = $length;
+
+        $parts = [];
+        $x = 3;
+
+        for ($i = $length; $i >= 0; $i--) {
+            if ($lengthDelta-$x >= 0) {
+                $part = substr($number, $lengthDelta-$x, $x);
+                if (strlen($part) === 0) {
+                    break;
+                }
+                $parts[] = $part;
+                $lengthDelta -= $x;
+            } else {
+                $x--;
+                $i++;
+            }
+        }
+
+        $result = '';
+        foreach ($parts as $key => $part) {
+            if ($key > 0) {
+                $result = $part .' '. $map[$key] . ' ' . $result;
+            }
+        }
+
+        return $result.' '.$currencyCode;
     }
 }

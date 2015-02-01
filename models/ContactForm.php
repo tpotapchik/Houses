@@ -9,6 +9,7 @@
 namespace app\models;
 use yii\base\Model;
 use Yii;
+use yii\log\Logger;
 
 
 /**
@@ -58,11 +59,13 @@ class ContactForm extends Model
      */
     public function sendEmail($email)
     {
-        return Yii::$app->mailer->compose()
+        $result = Yii::$app->mailer->compose()
             ->setTo($email)
             ->setFrom([$this->email => $this->name])
             ->setSubject($this->subject)
             ->setTextBody($this->body)
             ->send();
+
+        return $result;
     }
 }
