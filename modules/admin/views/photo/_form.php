@@ -22,8 +22,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'file')->widget(CropImageUpload::className(), [
         'ratio' => 1.97,
         'url' => '',
-        'crop_value' => '0-0-100-100',
-//        'crop_field' => 'photo_crop',
+        'crop_value' => '0-0-100-100'
     ]) ?>
 
     <?= $form->field($model, 'project_id')->textInput() ?>
