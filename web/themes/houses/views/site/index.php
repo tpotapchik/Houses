@@ -11,7 +11,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $article->meta_des
     <?= $this->render('../layouts/_filter-panel', ['other' => false]) ?>
     <div class="slider">
         <div class="slider-item" style="background-image: url('/img/temp/slider.jpg')">
-            <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-link">
+            <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel" class="slider-link">
                 <div class="slider-text">
                     <div class="centralize">
                         <div class="_title">ARIEL</div>
@@ -23,7 +23,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $article->meta_des
         </div>
 
         <div class="slider-item" style="background-image: url('/img/temp/slider2.jpg')">
-            <a href="/catalog/odnosemeynyy_odnoetajnyy/decyma_CE" class="slider-link">
+            <a href="/catalog/odnosemeynyy_odnoetajnyy/decyma" class="slider-link">
                 <div class="slider-text">
                     <div class="centralize">
                         <div class="_title">DECYMA</div>
@@ -36,7 +36,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $article->meta_des
         </div>
 
         <div class="slider-item" style="background-image: url('/img/temp/slider3.jpg')">
-            <a href="/catalog/odnosemeynyy_odnoetajnyy/ambrozja_CE" class="slider-link">
+            <a href="/catalog/odnosemeynyy_odnoetajnyy/ambrozja" class="slider-link">
                 <div class="slider-text">
                     <div class="centralize">
                         <div class="_title">AMBROZJA</div>
@@ -47,7 +47,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $article->meta_des
             </a>
         </div>
         <div class="slider-item" style="background-image: url('/img/temp/slider4.jpg')">
-                    <a href="/catalog/odnosemeynyy_odnoetajnyy/ambrozja_3_CE" class="slider-link">
+                    <a href="/catalog/odnosemeynyy_odnoetajnyy/ambrozja_3" class="slider-link">
                         <div class="slider-text">
                             <div class="centralize">
                                 <div class="_title">AMBROZJA 3</div>
@@ -58,7 +58,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $article->meta_des
                     </a>
         </div>
         <div class="slider-item" style="background-image: url('/img/temp/slider5.jpg')">
-                    <a href="/catalog/odnosemeynyy_s_jiloy_mansardoy/jezyna_CE" class="slider-link">
+                    <a href="/catalog/odnosemeynyy_s_jiloy_mansardoy/jezyna" class="slider-link">
                         <div class="slider-text">
                             <div class="centralize">
                                 <div class="_title">JEŻYNA</div>

@@ -1,6 +1,8 @@
 $(function () {
     $('.slider').slick({
-        dots: false
+        dots: false,
+        autoplay: true,
+        autoplaySpeed: 5000
     });
     $('.partners').slick({
         dots: false,

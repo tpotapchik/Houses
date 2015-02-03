@@ -22,7 +22,7 @@
     <div class="_content right">
         <a href="#" class="picture-block small">
             <div class="_title">ПРОЕКТИРОВАНИЕ ДОМОВ</div>
-            <img src="/img/temp/house2.jpg" alt="Картинка дома"/>
+            <img src="/img/temp/house3.jpg" alt="Картинка дома"/>
 
             <div class="_more-button">
                 <div class="text"><b>Индивидуальное проектирование</b> - поможет спроетировать и построить дом, который реализует прежде всего Ваши
