@@ -9,6 +9,7 @@
 namespace app\library;
 
 use Symfony\Component\Config\Definition\Exception\Exception;
+use Symfony\Component\Filesystem\Filesystem;
 use Yii;
 use yii\base\Behavior;
 use yii\base\ModelEvent;
@@ -21,8 +22,14 @@ use yii\helpers\Console;
  */
 class PhotoInsertBehavior extends Behavior
 {
-    public $path;
-    public $urlPart = '/images/';
+    public $basePath;
+    public $baseUrlPart = '/images/';
+    private $urlPart;
+    private $path;
+    /**
+     * @var Filesystem
+     */
+    private $fs;
 
     /**
      * Events declaration
@@ -42,7 +49,7 @@ class PhotoInsertBehavior extends Behavior
      */
     public function beforeInsert(ModelEvent $event)
     {
-        $filename = md5($this->owner->file);
+        $filename = $this->generateFileName($this->owner->file);
         $coping = true;
         $result = false;
 
@@ -55,10 +62,27 @@ class PhotoInsertBehavior extends Behavior
         }
 
         if ($coping) {
-            $result = copy(
-                html_entity_decode($this->owner->file),
-                $this->path . $filename
-            );
+            $this->fs->mkdir($this->path);
+            $result = false;
+            while (!$result) {
+                try {
+                    $result = @copy(
+                        html_entity_decode($this->owner->file),
+                        $this->path . $filename
+                    );
+                } catch (Exception $e) {
+                    echo Console::ansiFormat(
+                        "Try AGAIN " . html_entity_decode($this->owner->file) .
+                        PHP_EOL .
+                        $this->owner->file .
+                        PHP_EOL .
+                        $this->owner->project_id,
+                        [Console::FG_RED]
+                    );
+                }
+            }
+
+
         }
 
         if ($result) {
@@ -104,10 +128,29 @@ class PhotoInsertBehavior extends Behavior
 
     public function init()
     {
-        $this->path = \Yii::$app->basePath .
+        $this->basePath = \Yii::$app->basePath .
             DIRECTORY_SEPARATOR .
             'web' . DIRECTORY_SEPARATOR .
             'images' . DIRECTORY_SEPARATOR;
+        $this->fs = new Filesystem();
+    }
+
+    protected function generateFileName($filename)
+    {
+        $hash = md5('_' . $filename . '_');
+        $parts = [];
+        for ($i = 0; $i < 3; $i++) {
+            $parts[] = substr($hash, 0, 3);
+            $hash = substr_replace($hash, '', 0, 3);
+        }
+        $hasParts = implode(DIRECTORY_SEPARATOR, $parts) . DIRECTORY_SEPARATOR;
+        $this->path = $this->basePath . $hasParts;
+        $this->urlPart = $this->baseUrlPart . $hasParts;
+        $filename = $hash;
+        unset($hash);
+        unset($hasParts);
+
+        return $filename;
     }
 
     public function beforeUpdate()

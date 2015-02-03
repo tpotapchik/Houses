@@ -2,6 +2,7 @@
 
 namespace app\models;
 
+use Symfony\Component\Config\Definition\Exception\Exception;
 use Yii;
 
 /**
@@ -54,10 +55,21 @@ class Photo extends PhotoGeneral
     {
         foreach ($items['фото'] as $item) {
             $model = new static();
-            $model->project_id = $project_id;
-            $model->title = $item['@attributes']['название'];
-            $model->file = $item['@attributes']['файл'];
-            $model->save();
+
+            if (!isset($item['@attributes'])) {
+                $i = $item;
+            } else {
+                $i = $item['@attributes'];
+            }
+            try {
+                $model->project_id = $project_id;
+                $model->title = $i['название'];
+                $model->file = $i['файл'];
+                $model->save();
+            } catch (Exception $e) {
+                print_r($items);
+                print_r($item);
+            }
         }
     }
 

@@ -39,6 +39,9 @@ class CatalogController extends Controller
     public function actionView($category, $numCat)
     {
         $model = Project::findOne(['numCat' => $numCat]);
+        if (is_null($model)) {
+            throw new NotFoundHttpException('Project not exists');
+        }
         return $this->render('view', ['model' => $model]);
     }
 
