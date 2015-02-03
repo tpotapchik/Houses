@@ -49,7 +49,7 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
 
         <div class="text-block-project ovhidden">
             <?php
-            $photo = $model->getMainPhoto('/img/temp/image_project1.jpg');
+            $photo = $model->getMainPhoto();
             $facadesPhotos = $model->getFacades()->all();
             $faca = \yii\helpers\ArrayHelper::remove($facadesPhotos, 0);
             ?>
