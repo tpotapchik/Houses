@@ -29,7 +29,7 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
 
     <?php
     $searchModel = new ProjectSearch();
-    $dataProvider = $searchModel->search(['category_id' => $category->id]);
+    $dataProvider = $searchModel->search(['ProjectSearch' => ['category_id' => $category->id]]);
     ?>
 
     <?= ProjectsGrid::widget([
