@@ -13,6 +13,7 @@ use Imagine\Image\Box;
 use Imagine\Image\Point;
 use yii\base\InvalidConfigException;
 use yii\base\ModelEvent;
+use yii\db\AfterSaveEvent;
 use yii\db\BaseActiveRecord;
 use yii\imagine\Image;
 
@@ -96,7 +97,7 @@ class CropPhotoBehavior extends PhotoBehavior
     /**
      * @inheritdoc
      */
-    public function afterSave($event)
+    public function afterSave(AfterSaveEvent $event)
     {
         parent::afterSave($event);
 
