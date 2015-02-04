@@ -19,7 +19,11 @@ $panel = new \app\models\FilterPanel();
     <div class="_content left">
         <a href="<?= \yii\helpers\Url::toRoute(['catalog/index']) ?>" class="picture-block">
             <div class="_title">ВСЕ ПРОЕКТЫ</div>
-            <img src="/img/temp/house1.jpg" alt="Картинка дома"/>
+            <?php
+            $project = $projectSearch->searchOneRandomByFilter(new \app\models\FilterPanel());
+            $photoLink = $project->getMainPhoto();
+            ?>
+            <?= Html::img($photoLink, ['alt' => $project->title, 'style' => 'width: 492px; height: auto;']) ?>
 
             <div class="_more-button">
                 <div class="show-more-btn-wrapper"><span class="show-more-btn">Подробнее</span></div>
