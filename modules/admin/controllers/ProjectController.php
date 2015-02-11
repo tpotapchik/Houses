@@ -81,10 +81,22 @@ class ProjectController extends Controller
      */
     public function actionUpdate($id)
     {
+        $ref = Yii::$app->getRequest()->getReferrer();
+        $key = 'afterProjectUpdateUrl';
+        if (strpos($ref, 'admin/project/index') !== false) {
+            Yii::$app->getSession()->addFlash($key, $ref, true);
+        }
+
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            if (Yii::$app->getSession()->hasFlash($key)) {
+                Yii::$app->getSession()->setFlash('success', Yii::t('app', 'Project was updated: {title}', ['title'=>$model->title]), true);
+                return $this->redirect(Yii::$app->getSession()->getFlash($key, null, true)[0]);
+            } else {
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
+
         } else {
             return $this->render('update', [
                 'model' => $model

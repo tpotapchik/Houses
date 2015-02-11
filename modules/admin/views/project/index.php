@@ -13,6 +13,13 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="project-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
+
+<?php if (Yii::$app->getSession()->hasFlash('success')) : ?>
+    <div class="alert alert-success">
+        <?= Yii::$app->getSession()->getFlash('success') ?>
+    </div>
+<?php endif; ?>
+
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
