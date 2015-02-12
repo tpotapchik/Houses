@@ -6,13 +6,9 @@
  * Time: 18:41
  */
 
-namespace console\controllers;
+namespace app\commands;
 
-
-use common\components\BiletiByAPI;
-use common\models\Concert;
-use common\models\Show;
-use common\models\User;
+use app\library\Backup;
 use Yii;
 use yii\console\Controller;
 
@@ -25,5 +21,9 @@ class CronController extends Controller
     public function actionDaily()
     {
         echo 'Daily cron start' . PHP_EOL;
+
+        $bdBackup = new Backup();
+        echo 'backup ok ' . $bdBackup->backupBd() . PHP_EOL;
+        echo 'img ' . $bdBackup->backupImages() . PHP_EOL;
     }
 }

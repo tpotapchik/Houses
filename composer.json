@@ -26,7 +26,8 @@
         "iutbay/yii2-kcfinder": "*",
         "mongosoft/yii2-upload-behavior": "*",
         "iutbay/yii2-fontawesome": "*",
-        "karpoff/yii2-crop-image-upload": "*"
+        "karpoff/yii2-crop-image-upload": "*",
+        "dropbox/dropbox-stadk": "1.1.*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*@stable",
