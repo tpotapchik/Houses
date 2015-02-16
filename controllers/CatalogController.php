@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\Article;
 use app\models\Category;
+use app\models\CategorySearch;
 use app\models\ContactForm;
 use app\models\FilterPanel;
 use app\models\Project;
@@ -16,7 +17,9 @@ class CatalogController extends Controller
 {
     public function actionIndex()
     {
-        return $this->render('index');
+        $searchModel = new CategorySearch();
+        $dataProvider = $searchModel->search([]);
+        return $this->render('index', ['dataProvider' => $dataProvider]);
     }
 
     public function actionSearch()

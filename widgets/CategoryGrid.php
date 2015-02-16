@@ -12,11 +12,11 @@ class CategoryGrid extends ProjectsGrid
 {
     public function init()
     {
-        $query = Category::find();
-
-        $this->dataProvider = new ActiveDataProvider([
-            'query' => $query,
-        ]);
+//        $query = Category::find();
+//
+//        $this->dataProvider = new ActiveDataProvider([
+//            'query' => $query,
+//        ]);
         parent::init();
     }
 

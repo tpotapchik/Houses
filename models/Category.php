@@ -2,8 +2,8 @@
 
 namespace app\models;
 
+use himiklab\sortablegrid\SortableGridBehavior;
 use Yii;
-use yii\data\ActiveDataProvider;
 use yii\db\Connection;
 use yii\db\Expression;
 
@@ -14,6 +14,7 @@ use yii\db\Expression;
  * @property string $value
  * @property string $processedValue
  * @property string $url
+ * @property integer $sortOrder
  *
  * @property Project[] $projects
  */
@@ -32,7 +33,11 @@ class Category extends GeneralHelper
         return [
             'Category' => [
                 'class' => 'app\library\CategoryBehavior'
-            ]
+            ],
+            'sort' => [
+                'class' => SortableGridBehavior::className(),
+                'sortableAttribute' => 'sortOrder'
+            ],
         ];
     }
 

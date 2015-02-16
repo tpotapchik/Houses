@@ -2,6 +2,7 @@
 
 namespace app\modules\admin\controllers;
 
+use himiklab\sortablegrid\SortableGridAction;
 use Yii;
 use app\models\Category;
 use app\models\CategorySearch;
@@ -14,6 +15,23 @@ use yii\filters\VerbFilter;
  */
 class CategoryController extends Controller
 {
+
+    public function actions()
+    {
+        return [
+            'sort' => [
+                'class' => SortableGridAction::className(),
+                'modelName' => Category::className(),
+            ],
+        ];
+    }
+
+    public function beforeAction($action)
+    {
+        $this->enableCsrfValidation = ($action->id !== "sort"); // <-- here
+        return parent::beforeAction($action);
+    }
+
     public function behaviors()
     {
         return [

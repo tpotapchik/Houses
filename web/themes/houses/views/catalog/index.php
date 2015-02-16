@@ -15,7 +15,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= $this->render('../layouts/_breadcrumbs', []) ?>
     <div class="main-title"><?= strtoupper($this->title)?></div>
 
-    <?= CategoryGrid::widget([]);
+    <?= CategoryGrid::widget([
+        'dataProvider' => $dataProvider,
+    ]);
     ?>
 
     <?php //todo insert here text about catalog ?>
