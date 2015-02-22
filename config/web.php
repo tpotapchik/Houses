@@ -25,7 +25,8 @@ $config = [
                 'catalog' => 'catalog/index',
                 'catalog/<category:[[:word:]-_]+>/<numCat:[[:word:]-]+>' => 'catalog/view',
                 'catalog/search' => 'catalog/search',
-                'catalog/<category_url:[[:word:]-_]+>' => 'catalog/category'
+                'catalog/<category_url:[[:word:]-_]+>' => 'catalog/category',
+                'news' => 'news/index'
             ]
         ],
         'cache' => [

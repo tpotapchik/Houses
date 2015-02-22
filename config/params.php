@@ -7,7 +7,7 @@ return [
             ['label' => 'О нас', 'url' => ['site/about']],
             ['label' => 'Каталог проектов', 'url' => ['catalog/index']],
 //            ['label' => 'Дизайн интерьеров', 'url' => ['site/index']],
-//            ['label' => 'Новости', 'url' => ['site/index']],
+            ['label' => 'Новости', 'url' => ['news/index']],
             ['label' => 'Контакты', 'url' => ['site/contacts']],
         ]
     ],
