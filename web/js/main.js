@@ -40,7 +40,16 @@ $(function () {
 
     $(".fancybox").fancybox({
         nextEffect:'fade',
-        prevEffect:'fade'
+        prevEffect:'fade',
+        helpers	: {
+            title	: {
+                type: 'outside'
+            },
+            thumbs	: {
+                width	: 50,
+                height	: 50
+            }
+        }
     });
 
     $(window).on('scroll', function () {

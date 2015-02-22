@@ -51,11 +51,16 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
             <?php
             $photo = $model->getMainPhoto();
             $facadesPhotos = $model->getFacades()->all();
-            $faca = \yii\helpers\ArrayHelper::remove($facadesPhotos, 0);
+            $facadeFirstLink = \yii\helpers\ArrayHelper::remove($facadesPhotos, 0);
+            if ($facadeFirstLink !== null) {
+                $facadeFirstLink = $facadeFirstLink->file;
+            } else {
+                $facadeFirstLink = '#';
+            }
+
             ?>
             <div class="project-nav">
-                <a href="#">визуализации</a>|<a href="">планы</a>|<a href="<?= $faca->file ?>" class="fancybox" rel="gallery2">фасады</a>|<a href="">расположение</a>|<a href="">3D прогулка</a>
-
+                <a href="#">визуализации</a>|<a href="">планы</a>|<a href="<?= $facadeFirstLink ?>" class="fancybox" rel="gallery2">фасады</a>|<a href="">расположение</a>|<a href="">3D прогулка</a>
             </div>
 
             <?php
@@ -86,6 +91,20 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
                     ]
                 );
             }
+
+            $photos = $model->getOtherPhotos();
+            /** @var \app\models\Facade $facade */
+            foreach ($facadesPhotos as $facade) {
+                echo Html::a(
+                    '',
+                    $facade->file,
+                    [
+                        'class' => 'fancybox',
+                        'rel' => 'gallery2'
+                    ]
+                );
+            }
+
             ?>
         </div>
         <div class="text-block-project ovhidden">

@@ -253,6 +253,19 @@ class Project extends \yii\db\ActiveRecord
         return $DefaultPhoto;
     }
 
+    public function getOtherPhotos()
+    {
+        $result = [];
+        /** @var Photo $photo */
+        $photo = $this->getDb()->cache(function (Connection $db) {
+            return $this->getPhotos()->where('title!=:title', [':title'=>'фото'])->all();
+        }, 60 * 5);
+        if ($photo) {
+            $result = $photo;
+        }
+        return $result;
+    }
+
     /**
      * @return mixed
      * @throws \Exception
