@@ -66,10 +66,8 @@ class PhotoInsertBehavior extends Behavior
             $result = false;
             while (!$result) {
                 try {
-                    $result = @copy(
-                        html_entity_decode($this->owner->file),
-                        $this->path . $filename
-                    );
+                    $this->fs->copy(html_entity_decode($this->owner->file), $this->path . $filename);
+                    $result = true;
                 } catch (Exception $e) {
                     echo Console::ansiFormat(
                         "Try AGAIN " . html_entity_decode($this->owner->file) .
@@ -153,9 +151,10 @@ class PhotoInsertBehavior extends Behavior
         return $filename;
     }
 
-    public function beforeUpdate()
+    public function beforeUpdate(ModelEvent $event)
     {
-        throw new Exception('Method not implemented');
+//        throw new Exception('Method not implemented');
+        $this->beforeInsert($event);
     }
 
     /**

@@ -9,6 +9,8 @@
 namespace app\commands;
 
 
+use app\models\Facade;
+use app\models\Floor;
 use app\models\Project;
 use yii\console\Controller;
 use yii\helpers\Console;
@@ -48,5 +50,29 @@ class ImportController extends Controller
                 $project->save();
             }
         }
+    }
+
+    public function actionFacades() {
+
+        $facades = Facade::find()->where('file LIKE "%www.domywstylu.pl%"')->all();
+        $count = count($facades);
+        Console::startProgress(0, count($facades));
+        foreach ($facades as $key => $facade) {
+            Console::updateProgress($key, $count);
+            $r = $facade->save();
+        }
+        Console::endProgress();
+    }
+
+    public function actionFloors() {
+
+        $facades = Floor::find()->where('file LIKE "%www.domywstylu.pl%"')->all();
+        $count = count($facades);
+        Console::startProgress(0, count($facades));
+        foreach ($facades as $key => $facade) {
+            Console::updateProgress($key, $count);
+            $r = $facade->save();
+        }
+        Console::endProgress();
     }
 }
