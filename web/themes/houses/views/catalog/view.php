@@ -93,8 +93,8 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
             }
 
             $photos = $model->getOtherPhotos();
-            /** @var \app\models\Facade $facade */
-            foreach ($facadesPhotos as $facade) {
+            /** @var \app\models\Photo $photo */
+            foreach ($photos as $facade) {
                 echo Html::a(
                     '',
                     $facade->file,
