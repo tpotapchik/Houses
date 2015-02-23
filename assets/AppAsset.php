@@ -19,6 +19,7 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/main.css',
+        'css/jquery.fancybox-thumbs.css',
         'http://fonts.googleapis.com/css?family=Roboto:300&subset=cyrillic,latin'
     ];
     public $js = [
@@ -26,6 +27,7 @@ class AppAsset extends AssetBundle
         'js/plugins/slick.min.js',
         'js/plugins/chosen.min.js',
         'js/plugins/jquery.fancybox.pack.js',
+        'js/plugins/jquery.fancybox-thumbs.js',
         'js/main.js',
     ];
     public $depends = [
