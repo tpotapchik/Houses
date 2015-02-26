@@ -15,6 +15,9 @@ Thumbs.db
 # composer vendor dir
 /vendor
 
+#projects images
+/web/images
+
 # composer itself is not needed
 composer.phar
 # composer lock file is not needed
