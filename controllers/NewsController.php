@@ -2,6 +2,9 @@
 
 namespace app\controllers;
 
+use app\models\Article;
+use yii\web\NotFoundHttpException;
+
 class NewsController extends \yii\web\Controller
 {
     public function actionIndex()
@@ -9,9 +12,13 @@ class NewsController extends \yii\web\Controller
         return $this->render('index');
     }
 
-    public function actionView()
+    public function actionView($article_url)
     {
-        return $this->render('view');
+        if ($article = Article::getArticle($article_url, 2)) {
+            return $this->render('view', ['article' => $article]);
+        } else {
+            throw new NotFoundHttpException();
+        }
     }
 
 }

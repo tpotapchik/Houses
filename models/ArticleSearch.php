@@ -12,6 +12,7 @@ use app\models\Article;
  */
 class ArticleSearch extends Article
 {
+    protected $orderBy = ['created_at' => SORT_DESC];
     /**
      * @inheritdoc
      */
@@ -69,6 +70,8 @@ class ArticleSearch extends Article
             ->andFilterWhere(['like', 'title', $this->title])
             ->andFilterWhere(['like', 'meta_keywords', $this->meta_keywords])
             ->andFilterWhere(['like', 'meta_description', $this->meta_description]);
+
+        $query->orderBy($this->orderBy);
 
         return $dataProvider;
     }

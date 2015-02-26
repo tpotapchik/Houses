@@ -1,5 +1,7 @@
 <?php
 
+use app\models\ArticleCategory;
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\grid\GridView;
 
@@ -31,7 +33,12 @@ $this->params['breadcrumbs'][] = $this->title;
             'title',
             'url_key:url',
             'author.username',
-            'category.title',
+            [
+                'attribute' => 'category_id',
+                'label' => Yii::t('app', 'Category'),
+                'value' => 'category.title',
+                'filter' => ArrayHelper::map(ArticleCategory::find()->all(), 'id', 'title')
+            ],
             'created_at',
             'is_published:boolean',
             // 'intro_text:ntext',

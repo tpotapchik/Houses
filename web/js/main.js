@@ -25,18 +25,18 @@ $(function () {
         width: "100px"
     });
 
-    $('.more-btn').click(function () {
-        var $this = $(this);
-        $this.closest('.main-text-block-wrap').find('.news-body').slideToggle();
-
-        if ($this.hasClass('opened')) {
-            $this.text('Читать полностью');
-        } else {
-            $this.text('Свернуть');
-        }
-        $this.toggleClass('opened');
-
-    });
+    //$('.more-btn').click(function () {
+    //    var $this = $(this);
+    //    $this.closest('.main-text-block-wrap').find('.news-body').slideToggle();
+    //
+    //    if ($this.hasClass('opened')) {
+    //        $this.text('Читать полностью');
+    //    } else {
+    //        $this.text('Свернуть');
+    //    }
+    //    $this.toggleClass('opened');
+    //
+    //});
 
     $(".fancybox").fancybox({
         nextEffect:'fade',

@@ -5,15 +5,25 @@
  * Date: 18.01.15
  * Time: 13:44
  */
+
+use app\models\Article;
+use yii\helpers\Html;
+
+//todo what about cache this query?
+//get 5th last news
+$articles = Article::find()->limit(5)->orderBy(['created_at' => SORT_DESC])->andWhere(['category_id' => 2,
+    'is_published' => true])->all();
+
 ?>
 <div class="list-news">
     <h2>Новости</h2>
     <ul class="list-news-content">
-        <li><a href="#">Где миллионеру купить яхту этой осенью</a></li>
-        <li><a href="#">В России моугт запретить импорт автомобилей из Европы</a></li>
-        <li><a href="#">Чемпион Беларуси "Неман" стартовал с четырех поражений подряд</a></li>
-        <li><a href="#">Предсказания Муаммара Каддафи о судьбе Ливии начинают сбываться спустя три года после его сметри</a></li>
-        <li><a href="#">МИД РФ:Контактная группа по Украине собрется в "самое ближайшее время"</a></li>
+        <?php
+        /** @var Article $article */
+        foreach ($articles as $article) {
+                echo Html::tag('li', Html::a($article->title, ['news/'.$article->url_key]));
+        }
+        ?>
     </ul>
     <span class="square"></span>
 </div>

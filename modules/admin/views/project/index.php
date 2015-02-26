@@ -1,5 +1,7 @@
 <?php
 
+use app\models\Category;
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\grid\GridView;
 
@@ -45,8 +47,9 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'energySaving',
             // 'type_id',
             [
-                'attribute' => 'type',
-                'value' => 'type.value'
+                'attribute' => 'type_id',
+                'value' => 'type.value',
+                'filter' => ArrayHelper::map(\app\models\Type::find()->all(), 'id', 'value')
             ],
             // 'typeView_id',
             [
@@ -55,8 +58,10 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             // 'category_id',
             [
-                'attribute' => 'category',
-                'value' => 'category.processedValue'
+                'attribute' => 'category_id',
+                'value' => 'category.processedValue',
+                'label' => Yii::t('app', 'Category'),
+                'filter' => ArrayHelper::map(\app\models\Category::find()->all(), 'id', 'processedValue')
             ],
             // 'collection_id',
             // 'carPlaces',

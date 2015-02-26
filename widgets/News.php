@@ -57,10 +57,12 @@ class News extends BaseListView{
     {
         /** @var Article $model */
 
-        $content = Html::tag('div', Html::tag('span', $model->title, ['class' => '_text']), ['class' => 'news-head']);
+//        $content = Html::tag('div', Html::tag('span', $model->title, ['class' => '_text']), ['class' => 'news-head']);
+        $content = Html::tag('div', Html::a($model->title, ['news/'.$model->url_key], ['class' => '_text']), ['class' => 'news-head']);
         $content .= Html::tag('div', $model->intro_text, ['class' => 'news-short-info']);
-        $content .= Html::tag('div', $model->full_text, ['class' => 'news-body']);
-        $content .= Html::tag('div', 'Читать полностью', ['class' => 'more-btn']);
+//        $content .= Html::tag('div', $model->full_text, ['class' => 'news-body']);
+        $content .= Html::a('Читать полностью', ['news/'.$model->url_key], ['class' => 'more-btn']);
+//        $content .= Html::tag('div', 'Читать полностью', ['class' => 'more-btn']);
 
         return Html::tag('div', $content, ['class' => 'main-text-block-wrap clearfix']);
     }
