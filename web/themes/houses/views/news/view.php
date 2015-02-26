@@ -3,7 +3,7 @@
 /** @var app\models\Article $article */
 
 $this->title = $article->title;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('house', 'Catalog Projects'), 'url' => ['catalog/index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'News'), 'url' => ['news/index']];
 $this->params['breadcrumbs'][] = $this->title;
 
 $this->registerMetaTag(['name' => 'keywords', 'content' => $article->meta_keywords]);

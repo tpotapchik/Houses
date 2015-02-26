@@ -16,5 +16,6 @@ return [
     'Create {modelClass}' => 'Создать {modelClass}',
     'Are you sure you want to delete this item?' => 'Вы уверены в том, что хотите удалить это?',
     'Project was updated: {title}' => 'Был обновлен проект: {title}',
-    'Category' => 'Категория'
+    'Category' => 'Категория',
+    'News' => 'Новости'
 ];

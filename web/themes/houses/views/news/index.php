@@ -3,7 +3,7 @@
 use app\models\ArticleSearch;
 use app\widgets\News;
 
-$this->title = 'Новости ';
+$this->title = Yii::t('app', 'News');
 //$this->params['breadcrumbs'][] = ['label' => Yii::t('house', 'Catalog Projects'), 'url' => ['catalog/index']];
 $this->params['breadcrumbs'][] = $this->title;
 
