@@ -1,7 +1,7 @@
 <?php
 use app\modules\admin\assets\AdminAsset;
+use app\modules\admin\components\sbAdmin\Nav;
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
 use app\modules\admin\components\sbAdmin\NavBar;
 use yii\widgets\Breadcrumbs;
 
@@ -44,12 +44,22 @@ AdminAsset::register($this);
         $topItems = [];
         if (!Yii::$app->user->isGuest) {
             $topItems[] = [
-                'label' => '<i class="fa fa-user"></i> ' . ucfirst(Yii::$app->user->identity->username),
+                'label' => '<i class="fa fa-user"></i> ' . ucfirst(Yii::$app->user->identity->username) . ' <i class="fa fa-caret-down"></i>',
                 'items' => [
                     [
                         'label' => '<i class="fa fa-sign-out fa-fw" ></i> '.Yii::t('yii', 'Logout'),
                         'url' => ['/site/logout'],
-                    ]
+                        'options' => [
+                            'class' => 'testClass'
+                        ]
+                    ],
+                ],
+                'options' => [
+                    'level' => 'dropdown-menu dropdown-user'
+                ],
+                'linkOptions' => [
+                    'class' => 'dropdown-toggle',
+                    'data-toggle' => 'dropdown'
                 ]
             ];
         }
@@ -59,69 +69,72 @@ AdminAsset::register($this);
             'options' => ['class' => 'navbar-top-links navbar-right'],
             'items' => $topItems,
         ]);
+            //--start sidebar
+            NavBar::begin([
+                'renderInnerContainer' => false,
+                'renderCollapse' => true,
+                'renderNavbarHeader' => false,
+                'options' => [
+                    'class' => 'navbar-default sidebar',
+                    'role' => 'navigation',
+    //                'style' => 'margin-bottom: 0',
+                    'tag' => 'div'
+                ],
+                'containerOptions' => ['class' => 'sidebar-collapse'],
+            ]);
 
+            $sideItems = [
+                [
+                    'label' => '<i class="fa fa-dashboard"></i> '.Yii::t('app', 'Dashboard'),
+                    'url' => ['/site/index'],
+                    'visible' => !Yii::$app->user->isGuest
+                ],
+                [
+                    'label' => '<i class="fa fa-users"></i> '.Yii::t('app', 'Users'),
+                    'url' => ['/admin/user/index'],
+                    'visible' => !Yii::$app->user->isGuest
+                ],
+                [
+                    'label' => '<i class="fa fa-bank"></i> '.Yii::t('app', 'Projects'),
+                    'url' => ['/admin/project/index'],
+                    'visible' => !Yii::$app->user->isGuest
+                ],
+                [
+                    'label' => '<i class="fa fa-sitemap"></i> '.Yii::t('app', 'Category\'s'),
+                    'url' => ['/admin/category/index'],
+                    'visible' => !Yii::$app->user->isGuest
+                ],
+                [
+                    'label' => '<i class="fa fa-archive" ></i>'.Yii::t('app', 'Articles').'<span class="fa arrow"></span>',
+                    'url' => ['article/index'],
+                    'visible' => !Yii::$app->user->isGuest,
+                    'items' => [
+                        [
+                            'label' => '<i class="fa fa-file"></i> '.Yii::t('app', 'Article'),
+                            'url' => ['/admin/articles/article/index'],
+                            'visible' => !Yii::$app->user->isGuest
+                        ],
+                        [
+                            'label' => '<i class="fa fa-file"></i> '.Yii::t('app', 'Article Categories'),
+                            'url' => ['/admin/articles/article-category/index'],
+                            'visible' => !Yii::$app->user->isGuest
+                        ],
+                    ]
+                ]
+            ];
+            echo Nav::widget([
+                'encodeLabels' => false,
+                'options' => ['class' => 'nav'],
+                'id' => 'side-menu',
+                'items' => $sideItems,
+            ]);
+            NavBar::end();
+            //--end sidebar
 
         NavBar::end();
 
         //--------------------------------------
-        NavBar::begin([
-            'renderInnerContainer' => false,
-            'renderCollapse' => true,
-            'renderNavbarHeader' => false,
-            'options' => [
-                'class' => 'navbar-default navbar-static-side',
-                'role' => 'navigation',
-                'style' => 'margin-bottom: 0'
-            ],
-            'containerOptions' => ['class' => 'sidebar-collapse'],
-        ]);
 
-        $sideItems = [
-            [
-                'label' => '<i class="fa fa-dashboard"></i> '.Yii::t('app', 'Dashboard'),
-                'url' => ['/site/index'],
-                'visible' => !Yii::$app->user->isGuest
-            ],
-            [
-                'label' => '<i class="fa fa-users"></i> '.Yii::t('app', 'Users'),
-                'url' => ['/admin/user/index'],
-                'visible' => !Yii::$app->user->isGuest
-            ],
-            [
-                'label' => '<i class="fa fa-bank"></i> '.Yii::t('app', 'Projects'),
-                'url' => ['/admin/project/index'],
-                'visible' => !Yii::$app->user->isGuest
-            ],
-            [
-                'label' => '<i class="fa fa-sitemap"></i> '.Yii::t('app', 'Category\'s'),
-                'url' => ['/admin/category/index'],
-                'visible' => !Yii::$app->user->isGuest
-            ],
-            [
-                'label' => '<i class="fa fa-archive" ></i>'.Yii::t('app', 'Articles'),
-                'url' => ['article/index'],
-                'visible' => !Yii::$app->user->isGuest,
-                'items' => [
-                    [
-                        'label' => '<i class="fa fa-file"></i> '.Yii::t('app', 'Article'),
-                        'url' => ['/admin/articles/article/index'],
-                        'visible' => !Yii::$app->user->isGuest
-                    ],
-                    [
-                        'label' => '<i class="fa fa-file"></i> '.Yii::t('app', 'Article Categories'),
-                        'url' => ['/admin/articles/article-category/index'],
-                        'visible' => !Yii::$app->user->isGuest
-                    ],
-                ]
-            ]
-        ];
-        echo Nav::widget([
-            'encodeLabels' => false,
-            'options' => ['class' => 'nav'],
-            'id' => 'side-menu',
-            'items' => $sideItems,
-        ]);
-        NavBar::end();
         ?>
 
         <div id="page-wrapper">
@@ -133,6 +146,7 @@ AdminAsset::register($this);
             <?= $content ?>
         </div>
     </div>
+    <!-- /#wrapper -->
     <?php $this->endBody() ?>
     </body>
     </html>

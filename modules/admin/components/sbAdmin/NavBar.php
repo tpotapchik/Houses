@@ -23,6 +23,8 @@ class NavBar extends \yii\bootstrap\NavBar
 
     public $renderCollapse = true;
 
+    public $tag = 'nav';
+
     public function init()
     {
         Widget::init();
@@ -38,7 +40,7 @@ class NavBar extends \yii\bootstrap\NavBar
             $this->options['role'] = 'navigation';
         }
         $options = $this->options;
-        $tag = ArrayHelper::remove($options, 'tag', 'nav');
+        $tag = ArrayHelper::remove($options, 'tag', $this->tag);
         echo Html::beginTag($tag, $options);
         if ($this->renderInnerContainer) {
             if (!isset($this->innerContainerOptions['class'])) {
