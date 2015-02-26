@@ -22,28 +22,33 @@ if (!isset($model)) {
 
         <div class="call-back right">
             <div class="social">
-                <a rel="nofollow" href="https://www.youtube.com/channel/UCg34LYTRug0x8hNVbjbeZ3A" target="_blank" class="yt"></a>
-                <a rel="nofollow" href="https://plus.google.com/u/0/108290869583672576270/posts" target="_blank" class="gp"></a>
-                <a rel="nofollow" href="http://vk.com/dom_tut" target="_blank" class="vk"></a>
-                <a rel="nofollow" href="https://www.facebook.com/pages/Проектная-мастерская-Дом-Тутby/1602271246672110" target="_blank" class="fb"></a>
+                <a rel="nofollow" href="<?= $social['youtube'] ?>" target="_blank" class="yt"></a>
+                <a rel="nofollow" href="<?= $social['gPlus'] ?>" target="_blank" class="gp"></a>
+                <a rel="nofollow" href="<?= $social['vk'] ?>" target="_blank" class="vk"></a>
+                <a rel="nofollow" href="<?= $social['fb'] ?>" target="_blank" class="fb"></a>
              </div>
             <div class="call_me"><a href="#popup" class="popup">Заказать звонок</a></div>
         </div>
         <div class="contact right">
             <a class="mail" href="mailto:<?= $contacts['email'] ?>"><i class="_ico"></i><?= $contacts['email'] ?></a>
-            <a class="skype" href="skype:dom-tut.by<?//= $contacts['skype'] ?>"><i class="_ico"></i>dom-tut.by<?//= $contacts['skype'] ?></a>
+            <a class="skype" href="skype:<?= $contacts['skype'] ?>"><i class="_ico"></i><?= $contacts['skype'] ?></a>
         </div>
         <div class="phone right">
             <div class="_ico"></div>
-<table>
-<tr>
-<td>+375 17</td>
-<td rowspan="2"><font style="font-size:35px; padding-left:15px;">677-10-59</font></td>
-</tr>
-<tr>
-<td>+375 29</td>
-</tr>
-</table>
+                <table>
+                    <tr>
+                        <td>+375 17</td><?php
+                        /*
+                         * IF you want to change any contact lets go to ../config/params.php
+                         * PLEASE DO NOT TOUCH ANY PHP EXPRESSIONS LIKE <?= $contacts['email'] ?> OR <?= $contacts['phone'] ?>
+                         */
+                        ?>
+                        <td rowspan="2"><font style="font-size:35px; padding-left:15px;"><?= $contacts['phone'] ?></font></td>
+                    </tr>
+                    <tr>
+                        <td>+375 29</td>
+                    </tr>
+                </table>
         </div>
     </div>
 </div>

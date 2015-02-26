@@ -5,6 +5,8 @@ use yii\helpers\Html;
 /* @var $content string */
 
 AppAsset::register($this);
+
+$social = Yii::$app->params['social'];
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -27,7 +29,7 @@ AppAsset::register($this);
     <?php $this->beginBody() ?>
     <div class="page">
     <div class="page_i">
-    <?= $this->render('_header', []) ?>
+    <?= $this->render('_header', ['social' => $social]) ?>
     <?= $this->render('_header-menu', []) ?>
 
 
@@ -50,12 +52,10 @@ AppAsset::register($this);
                 </span>
 
                 <div class="footer-social">
-                    <a href="http://facebook.com" class="fb"></a>
-                    <a href="http://twitter.com" class="tw"></a>
-                    <a href="http://linkedin.com" class="in"></a>
-                    <a href="http://vk.com" class="vk"></a>
-                    <a href="http://odnoklassniki.ru" class="ok"></a>
-                    <a href="http://youtube.com" class="yt"></a>
+                    <a href="<?= $social['youtube'] ?>" class="yt"></a>
+                    <a href="<?= $social['gPlus'] ?>" class="gp"></a>
+                    <a href="<?= $social['vk'] ?>" class="vk"></a>
+                    <a href="<?= $social['fb'] ?>" class="fb"></a>
                 </div>
 
             </div>
