@@ -32,7 +32,8 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
             $price = NbrbClient::formatter($totalPrice, 'BYR');
             ?>
             <div class="price-project">
-                Цена проекта:
+                Цена полного проекта,<br/>
+                включая инженерный раздел:
                 <div class="_title"><?= $price ?></div>
             </div>
         <?php endif; ?>

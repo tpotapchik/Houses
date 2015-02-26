@@ -18,14 +18,15 @@ if (!isset($model)) {
 ?>
 <div class="header">
     <div class="centralize">
-        <a href="<?= Yii::$app->homeUrl ?>" class="logo"><img src="/img/logo.png" alt="Логотип"/></a>
+        <a href="<?= Yii::$app->homeUrl ?>" class="logo"><img src="/img/logo3.png" alt="Логотип"/></a>
 
         <div class="call-back right">
             <div class="social">
-                <a href="http://youtube.com" class="yt"></a>
-                <a href="http://vk.com" class="vk"></a>
-                <a href="http://facebook.com" class="fb"></a>
-            </div>
+                <a rel="nofollow" href="<?= $social['youtube'] ?>" target="_blank" class="yt"></a>
+                <a rel="nofollow" href="<?= $social['gPlus'] ?>" target="_blank" class="gp"></a>
+                <a rel="nofollow" href="<?= $social['vk'] ?>" target="_blank" class="vk"></a>
+                <a rel="nofollow" href="<?= $social['fb'] ?>" target="_blank" class="fb"></a>
+             </div>
             <div class="call_me"><a href="#popup" class="popup">Заказать звонок</a></div>
         </div>
         <div class="contact right">
@@ -34,9 +35,20 @@ if (!isset($model)) {
         </div>
         <div class="phone right">
             <div class="_ico"></div>
-            <p><?= $contacts['phone1'] ?></p>
-
-            <p><?= $contacts['phone2'] ?></p>
+                <table>
+                    <tr>
+                        <td>+375 17</td><?php
+                        /*
+                         * IF you want to change any contact lets go to ../config/params.php
+                         * PLEASE DO NOT TOUCH ANY PHP EXPRESSIONS LIKE <?= $contacts['email'] ?> OR <?= $contacts['phone'] ?>
+                         */
+                        ?>
+                        <td rowspan="2"><font style="font-size:35px; padding-left:15px;"><?= $contacts['phone'] ?></font></td>
+                    </tr>
+                    <tr>
+                        <td>+375 29</td>
+                    </tr>
+                </table>
         </div>
     </div>
 </div>

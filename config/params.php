@@ -13,10 +13,17 @@ return [
     ],
     'contacts' => [
         'email' => 'info@dom-tut.by',
+        'phone' => '677-10-59',
         'phone1' => '+375 17 677 10 59',
         'phone2' => '+375 29 677 10 59',
-        'skype' => 'skypedomby',
+        'skype' => 'dom-tut.by',
         'address' => '220035, Республика Беларусь,<br>г.Минск, ул. Тимирязева, 67, 10 этаж, оф.1009'
+    ],
+    'social' => [
+        'fb' => 'https://www.facebook.com/pages/Проектная-мастерская-Дом-Тутby/1602271246672110',
+        'gPlus' => 'https://plus.google.com/u/0/108290869583672576270/posts',
+        'youtube' => 'https://www.youtube.com/channel/UCg34LYTRug0x8hNVbjbeZ3A',
+        'vk' => 'http://vk.com/dom_tut'
     ],
     'callUsEmail' => 'info@dom-tut.by',
     'nbrbUrl' => 'http://www.nbrb.by/Services/XmlExRates.aspx'
