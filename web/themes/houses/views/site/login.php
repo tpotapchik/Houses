@@ -9,6 +9,8 @@ use yii\widgets\ActiveForm;
 $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
+<center>
 <div class="site-login">
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -20,9 +22,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?= $form->field($model, 'username') ?>
                 <?= $form->field($model, 'password')->passwordInput() ?>
                 <?= $form->field($model, 'rememberMe')->checkbox() ?>
-                <div style="color:#999;margin:1em 0">
-                    If you forgot your password you can <?= Html::a('reset it', ['site/request-password-reset']) ?>.
-                </div>
+                <br />
+                    Забыли пароль? <?= Html::a('reset it', ['site/request-password-reset']) ?>.
                 <div class="form-group">
                     <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
                 </div>
@@ -30,3 +31,9 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </div>
 </div>
+<br/><br/><br/>
+<!--LiveInternet logo--><a href="http://www.liveinternet.ru/stat/dom-tut.by/index.html"
+target="_blank"><img src="//counter.yadro.ru/logo?52.6"
+title="LiveInternet: показано число просмотров и посетителей за 24 часа"
+alt="" border="0" width="88" height="31"/></a><!--/LiveInternet-->
+</center>

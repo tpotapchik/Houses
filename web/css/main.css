@@ -1,3 +1,4 @@
+.site-login {font:15px verdana; color:#fff;}
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block; }
 
@@ -1185,7 +1186,7 @@ body {
       .header .call-back .social a.yt {
         background: url("../img/sprite.png") no-repeat scroll -167px 0 transparent; }
       .header .call-back .social a.gp {
-        background: url("../img/sprite.png") no-repeat scroll -253px 0 transparent; }
+        background: url("../img/sprite.png") no-repeat scroll -254px 0 transparent; }
       .header .call-back .social a.vk {
         background: url("../img/sprite.png") no-repeat scroll -196px 0 transparent; }
       .header .call-back .social a.fb {
@@ -1214,10 +1215,10 @@ body {
 .header-menu-item {
   color: #fff;
   text-decoration: none;
-  font-size: 2.4em;
-  line-height: 82px;
-  padding: 0 18px 0 19px;
-  height: 81px;
+  font-size: 2.0em;
+  line-height: 52px;
+  padding: 0 35px;
+  height: 51px;
   float: left; }
   .header-menu-item:first-child {
     padding: 0 20px; }
