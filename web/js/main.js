@@ -41,10 +41,14 @@ $(function () {
     $(".fancybox").fancybox({
         nextEffect:'fade',
         prevEffect:'fade',
+        scrollOutside: false,
         helpers	: {
             thumbs	: {
                 width	: 150,
                 height	: 150
+            },
+            overlay: {
+                locked: false
             }
         }
     });
