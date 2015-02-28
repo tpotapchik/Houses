@@ -46,19 +46,19 @@ $config = [
             // 'useFileTransport' to false and configure a transport
             // for the mailer to send real emails.
 //            'useFileTransport' => true,
-            'transport' => [
-                'class' => 'Swift_SmtpTransport',
-                'host' => 'ox20m.atservers.net',
-                'username' => 'info@dom-tut.by',
-                'password' => 'jz}QT7_vua',
-                'port' => '25',
-                'encryption' => 'tls',
-                'AuthMode' => 'login'
-            ],
 //            'transport' => [
-//                 'class' => 'Swift_MailTransport', // это обертка mail()
-////                'constructArgs' => ['-f your@mail.com'],
+//                'class' => 'Swift_SmtpTransport',
+//                'host' => 'ox20m.atservers.net',
+//                'username' => 'info@dom-tut.by',
+//                'password' => 'jz}QT7_vua',
+//                'port' => '25',
+//                'encryption' => 'tls',
+//                'AuthMode' => 'login'
 //            ],
+            'transport' => [
+                 'class' => 'Swift_MailTransport', // это обертка mail()
+                 'constructArgs' => ['-f info@dom-tut.by'],
+            ],
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
