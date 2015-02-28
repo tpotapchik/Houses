@@ -67,7 +67,10 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'carPlaces',
             // 'cubage',
             // 'effectiveArea',
-             'priceUSD',
+            [
+                'attribute' => 'priceUSD',
+                'label' => 'Цена в EUR',
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
