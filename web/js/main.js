@@ -75,7 +75,6 @@ $(function () {
     });
 
     beforeSubmit = function(event) {
-        console.log(event, 'my handler');
         $form = $(event.target);
         var popup = $('.order-call');
         var message = popup.find('.message');
@@ -83,9 +82,15 @@ $(function () {
             url: $form.attr('action'),
             type: "POST",
             data: $form.serialize(),
+            beforeSend: function(){
+                popup.find('.order-call-btn').attr('disabled','disabled').text('Отправляется...').addClass('disabled');
+            },
+            complete: function (){
+                popup.find('.order-call-btn').removeAttr('disabled').text('ЗАКАЗАТЬ ЗВОНОК').removeClass('disabled');
+            },
             success: function (data) {
                 if (data.error) {
-                    alert('Произошла ошибка');
+                    alert('Произошла ошибка. Попробуйте еще раз.');
                 } else {
                     message.slideDown();
 
@@ -116,9 +121,15 @@ $(function () {
             url: $form.attr('action'),
             type: "POST",
             data: $form.serialize(),
+            beforeSend: function(){
+                popup.find('.order-call-btn').attr('disabled','disabled').text('Отправляется...').addClass('disabled');
+            },
+            complete: function (){
+                popup.find('.order-call-btn').removeAttr('disabled').text('ОТПРАВИТЬ').removeClass('disabled');
+            },
             success: function (data) {
                 if (data.error) {
-                    alert('Произошла ошибка');
+                    alert('Произошла ошибка. Попробуйте еще раз.');
                 } else {
                     message.slideDown();
 

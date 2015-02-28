@@ -1989,6 +1989,10 @@ padding-top: 10px;}
 .popup-textarea {
   height: 138px; }
 
+.capcha {
+    cursor: pointer;
+}
+
 
 .order-call-btn {
   background: #820084;
@@ -2001,6 +2005,8 @@ padding-top: 10px;}
   font-size: 1.6em; }
   .order-call-btn:hover {
     background: #970084; }
+  .order-call-btn.disabled {
+    background: #7a7a7d; }
 
 .message {
   display: none;

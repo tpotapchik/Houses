@@ -105,7 +105,8 @@ if (!isset($model)) {
             'class' => 'error'
         ],
     ])->hint('Чтоб обновить картинку - нажмите на нее')->widget(Captcha::className(), [
-        'options' => ['class' => 'popup-input',]
+        'options' => ['class' => 'popup-input'],
+        'imageOptions' => ['class' => 'capcha']
     ]) ?>
     <?= Html::submitButton('ЗАКАЗАТЬ ЗВОНОК', ['class' => 'order-call-btn', 'name' => 'contact-button', 'id' => 'js-submit']) ?>
 

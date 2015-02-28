@@ -95,7 +95,8 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
                         'class' => 'error'
                     ],
                 ])->hint('Чтоб обновить картинку - нажмите на нее')->widget(Captcha::className(), [
-                    'options' => ['class' => 'popup-input',]
+                    'options' => ['class' => 'popup-input',],
+                    'imageOptions' => ['class' => 'capcha']
                 ]) ?>
                 <?= Html::submitButton('ОТПРАВИТЬ', ['class' => 'order-call-btn', 'name' => 'contact-button', 'id' => 'js-submit']) ?>
 
