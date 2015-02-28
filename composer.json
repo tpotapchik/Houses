@@ -27,7 +27,8 @@
         "mongosoft/yii2-upload-behavior": "*",
         "iutbay/yii2-fontawesome": "*",
         "karpoff/yii2-crop-image-upload": "*",
-        "himiklab/yii2-sortable-grid-view-widget" : "*"
+        "himiklab/yii2-sortable-grid-view-widget" : "*",
+        "himiklab/yii2-sitemap-module" : "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*@stable",

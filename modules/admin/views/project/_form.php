@@ -47,7 +47,7 @@ $types = Type::find()->all();
 
     <?= $form->field($model, 'effectiveArea')->textInput() ?>
 
-    <?= $form->field($model, 'priceUSD')->textInput() ?>
+    <?= $form->field($model, 'priceUSD')->textInput()->label('EUR') ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? Yii::t('yii', 'Create') : Yii::t('yii', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

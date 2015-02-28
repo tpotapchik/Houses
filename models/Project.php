@@ -2,9 +2,12 @@
 
 namespace app\models;
 
+use himiklab\sitemap\behaviors\SitemapBehavior;
 use Yii;
+use yii\behaviors\TimestampBehavior;
 use yii\db\Connection;
 use yii\db\Expression;
+use yii\helpers\Url;
 
 /**
  * This is the model class for table "project".
@@ -26,6 +29,8 @@ use yii\db\Expression;
  * @property double $cubage
  * @property double $effectiveArea
  * @property integer $priceUSD
+ * @property string $created_at
+ * @property string $updated_at
  *
  * @property Floor[] $floors
  * @property Facade[] $facades
@@ -54,11 +59,12 @@ class Project extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['numCat', 'title', 'technology', 'roof_id', 'type_id', 'typeView_id', 'category_id', 'collection_id'], 'required'],
+            [['numCat', 'title', 'technology', 'roof_id', 'type_id', 'typeView_id', 'category_id', 'collection_id', 'created_at', 'updated_at'], 'required'],
             [['technology'], 'string'],
             [['ready', 'new', 'southEnter', 'energySaving'], 'boolean'],
             [['roof_id', 'type_id', 'typeView_id', 'category_id', 'collection_id', 'carPlaces', 'priceUSD'], 'integer'],
             [['cubage', 'effectiveArea'], 'number'],
+            [['created_at', 'updated_at'], 'safe'],
             [['numCat', 'title'], 'string', 'max' => 255],
             [['numCat'], 'unique']
         ];
@@ -277,5 +283,34 @@ class Project extends \yii\db\ActiveRecord
         }, 60 * 5);
 
         return $project;
+    }
+
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => TimestampBehavior::className(),
+                'createdAtAttribute' => 'created_at',
+                'updatedAtAttribute' => 'updated_at',
+                'value' => new Expression('NOW()'),
+            ],
+            'sitemap' => [
+                'class' => SitemapBehavior::className(),
+                'scope' => function ($model) {
+                    /** @var \yii\db\ActiveQuery $model */
+                    $model->select(['numCat', 'category_id', 'updated_at']);
+//                    $model->andWhere(['is_published' => 1])->andWhere(['category_id' => 2]);
+                },
+                'dataClosure' => function ($model) {
+                    /** @var self $model */
+                    return [
+                        'loc' => Url::to(['/catalog/'.$model->getCategory()->one()->url.'/'.$model->numCat], true),
+                        'lastmod' => strtotime($model->updated_at),
+                        'changefreq' => SitemapBehavior::CHANGEFREQ_WEEKLY,
+                        'priority' => 0.8
+                    ];
+                }
+            ]
+        ];
     }
 }
