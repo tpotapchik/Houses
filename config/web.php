@@ -57,7 +57,7 @@ $config = [
 //            ],
             'transport' => [
                  'class' => 'Swift_MailTransport', // это обертка mail()
-                 'constructArgs' => ['-f info@dom-tut.by'],
+                 'constructArgs' => [null],
             ],
         ],
         'log' => [
