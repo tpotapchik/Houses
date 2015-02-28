@@ -2,9 +2,11 @@
 
 namespace app\models;
 
+use himiklab\sitemap\behaviors\SitemapBehavior;
 use Yii;
 use yii\behaviors\TimestampBehavior;
 use yii\db\Expression;
+use yii\helpers\Url;
 
 /**
  * This is the model class for table "article".
@@ -36,6 +38,23 @@ class Article extends \yii\db\ActiveRecord
                 'createdAtAttribute' => 'created_at',
                 'updatedAtAttribute' => 'updated_at',
                 'value' => new Expression('NOW()'),
+            ],
+            'sitemap' => [
+                'class' => SitemapBehavior::className(),
+                'scope' => function ($model) {
+                    /** @var \yii\db\ActiveQuery $model */
+                    $model->select(['url_key', 'updated_at']);
+                    $model->andWhere(['is_published' => 1])->andWhere(['category_id' => 2]);
+                },
+                'dataClosure' => function ($model) {
+                    /** @var self $model */
+                    return [
+                        'loc' => Url::to(['/news/'.$model->url_key], true),
+                        'lastmod' => strtotime($model->updated_at),
+                        'changefreq' => SitemapBehavior::CHANGEFREQ_WEEKLY,
+                        'priority' => 0.8
+                    ];
+                }
             ],
         ];
     }
