@@ -50,35 +50,64 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
 
         <div class="text-block-project ovhidden">
             <?php
-            $photo = $model->getMainPhoto();
+            $mainPhoto = $model->getMainPhoto();
             $facadesPhotos = $model->getFacades()->all();
-            $facadeFirstLink = \yii\helpers\ArrayHelper::remove($facadesPhotos, 0);
-            if ($facadeFirstLink !== null) {
-                $facadeFirstLink = $facadeFirstLink->file;
-            } else {
-                $facadeFirstLink = '#';
+            $floorsPhotos = $model->getFloors()->all();
+            $visualisations = $model->getOtherPhotos();
+
+            $indexes = [
+                'visualisation' => 0,
+                'plans' => count($visualisations)+count($floorsPhotos)+count($visualisations)+1,
+                'facades' => count($floorsPhotos)+count($visualisations)-1,
+                'position' => 0
+            ];
+
+            /** @var \app\models\Photo $photo */
+            foreach ($visualisations as $key => $photo) {
+                if ($photo->title === 'участок') {
+                    $indexes['position'] = $key+1;
+                    break;
+                }
             }
+
+
 
             ?>
             <div class="project-nav">
-                <a href="#">визуализации</a>|<a href="">планы</a>|<a href="<?= $facadeFirstLink ?>" class="fancybox" rel="gallery2">фасады</a>|<a href="">расположение</a>|<a href="">3D прогулка</a>
+                <a href="javascript: openGallery(<?=$indexes['visualisation']?>);">визуализации</a>|
+                <a href="javascript: openGallery(<?=$indexes['plans']?>);">планы</a>|
+                <a href="javascript: openGallery(<?=$indexes['facades']?>);">фасады</a>|
+                <a href="javascript: openGallery(<?=$indexes['position']?>);">расположение</a>|
+                <a href="">3D прогулка</a>
             </div>
 
             <?php
             echo Html::a(
                 Html::img(
-                    $photo,
+                    $mainPhoto,
                     [
                         'alt' => $this->title,
                         'class' => 'main-pic'
                     ]
                 ),
-                $photo,
+                $mainPhoto,
                 [
                     'class' => 'fancybox',
                     'rel' => 'gallery2'
                 ]
             );
+            //visualisations
+            /** @var \app\models\Photo $photo */
+            foreach ($visualisations as $photo) {
+                echo Html::a(
+                    '',
+                    $photo->file,
+                    [
+                        'class' => 'fancybox',
+                        'rel' => 'gallery2'
+                    ]
+                );
+            }
             ?>
             <?php
             /** @var \app\models\Facade $facade */
@@ -93,18 +122,7 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
                 );
             }
 
-            $photos = $model->getOtherPhotos();
-            /** @var \app\models\Photo $photo */
-            foreach ($photos as $facade) {
-                echo Html::a(
-                    '',
-                    $facade->file,
-                    [
-                        'class' => 'fancybox',
-                        'rel' => 'gallery2'
-                    ]
-                );
-            }
+
 
             ?>
         </div>
@@ -112,7 +130,7 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
 
             <div class="plan-pictures">
                 <?php
-                $floorsPhotos = $model->getFloors()->all();
+                //plans
                 /** @var \app\models\Floor $floor */
                 foreach ($floorsPhotos as $floor) {
                     echo Html::a(
@@ -189,6 +207,33 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
 
         </div>
     </div>
+    <script>
+        var FancyOptions = {
+            nextEffect:'fade',
+            prevEffect:'fade',
+            scrollOutside: false,
+            helpers	: {
+                thumbs	: {
+                    width	: 150,
+                    height	: 150
+                },
+                overlay: {
+                    locked: false
+                }
+            },
+            beforeShow : function() {
+                var alt = this.element.find('img').attr('alt');
+
+                this.inner.find('img').attr('alt', alt);
+
+                this.title = alt;
+            }
+        };
+        var openGallery = function(index){
+            FancyOptions.index = index;
+            $.fancybox($('a[rel=gallery2]'), FancyOptions);
+        };
+    </script>
 
     <?= $this->render('../layouts/_parthners', []) ?>
 </div>
