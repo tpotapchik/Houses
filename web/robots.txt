@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /cgi-bin/
+Host: dom-tut.by
+Sitemap: http://dom-tut.by/sitemap.xml
