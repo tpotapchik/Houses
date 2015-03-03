@@ -15,7 +15,7 @@ $contacts = Yii::$app->params['contacts'];
 
     function init() {
         myMap = new ymaps.Map('officeMap', {
-            center: [53.925486, 27.507860],
+            center: [53.87940, 27.45594],
             zoom: 16,
             controls: []
         });
