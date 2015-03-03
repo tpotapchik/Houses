@@ -206,6 +206,10 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
 
 
         </div>
+        <div class="text-block-project ovhidden">
+            <h3 class="advice-title">Полезный совет</h3>
+            <div class="advice"></div>
+        </div>
     </div>
     <script>
         var FancyOptions = {
