@@ -1,0 +1,48 @@
+html {
+    font-size: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%; }
+
+html, button, input, select, textarea {
+    font-family: sans-serif; }
+
+body {
+    color: #606060;
+    background-color: #e8e8e8;
+    margin: 0; }
+
+
+a:focus {
+    outline: thin dotted; }
+
+a:active, a:hover {
+    outline: 0; }
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0; }
+
+h2 {
+    color: #820084;
+    font-size: 24px;
+    text-align: center;
+    margin: 0px 0 22px; }
+
+h3 {
+    font-size: 1.17em;
+    margin: 1em 0; }
+
+h4 {
+    font-size: 1em;
+    margin: 1.33em 0; }
+
+h5 {
+    font-size: .83em;
+    margin: 1.67em 0; }
+
+h6 {
+    font-size: .67em;
+    margin: 2.33em 0; }
+
+b, strong {
+    font-weight: 600; }

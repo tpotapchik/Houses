@@ -206,10 +206,12 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
 
 
         </div>
+        <?php if (strlen($model->advice) > 0) : ?>
         <div class="text-block-project ovhidden">
             <h3 class="advice-title">Полезный совет</h3>
-            <div class="advice">Тут будет текст с советами</div>
+            <div class="advice"><?= $model->advice ?></div>
         </div>
+        <?php endif; ?>
     </div>
     <script>
         var FancyOptions = {

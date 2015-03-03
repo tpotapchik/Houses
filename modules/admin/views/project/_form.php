@@ -2,6 +2,7 @@
 
 use app\models\Roof;
 use app\models\Type;
+use dosamigos\ckeditor\CKEditor;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
@@ -48,6 +49,14 @@ $types = Type::find()->all();
     <?= $form->field($model, 'effectiveArea')->textInput() ?>
 
     <?= $form->field($model, 'priceUSD')->textInput()->label('EUR') ?>
+
+    <?= $form->field($model, 'advice')->widget(CKEditor::className(), [
+        'options' => ['rows' => 6],
+        'preset' => 'full',
+        'clientOptions' => [
+            'contentsCss' => '/css/advice.css'
+        ]
+    ]) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? Yii::t('yii', 'Create') : Yii::t('yii', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
