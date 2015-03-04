@@ -101,7 +101,7 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
         <div class="footer-bottom">
             <div class="centralize">
                 <span class="copyright">
-                    <?= date('Y') ?> &copy; Все права защищены
+                    2013 - <?= date('Y') ?> &copy; Все права защищены
                 </span>
 
                 <div class="footer-social">
