@@ -62,11 +62,12 @@ $(function () {
     });
 
 
-    var $document = $(document);
-    var scrollTopNew = $document.scrollTop();
-    var sidebar = $('.right-block');
-    var PanelPosition = sidebar.offset().top;
-    
+    var $block = $('.right-block');
+    var fixedOffset = $block.offset().top;
+    var footerHeight = $('.footer').height();
+    var documentHeight = $(document).height();
+    var windowHeight = $(window).height();
+
 
     $(window).on('scroll', function () {
         if ($(document).scrollTop() >= 900) {
@@ -75,14 +76,15 @@ $(function () {
         else {
             $('.back-top').fadeOut();
         }
-
-        if (scrollTopNew >= PanelPosition + 56) {
-            sidebar.addClass('fixed-sidebar');
-            //productSliderStickHeight = sidebar.outerHeight();
-        } else {
-            sidebar.removeClass('fixed-sidebar');
+        var blockHeightCorrection = $block.height() - windowHeight;
+        var stopPosition = documentHeight - windowHeight - blockHeightCorrection - footerHeight-136; /*partners height*/
+        var scrollTop = $(document).scrollTop();
+        //fixed right col
+        if (scrollTop >= fixedOffset && scrollTop < stopPosition ) {
+            $block.css({position:'fixed',top:'0',left: '1166px'});
+        }  else if (scrollTop > stopPosition || scrollTop <= fixedOffset) {
+            $block.css({position:'static'});
         }
-
     });
 
     $('.back-top').click(function () {
