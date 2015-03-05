@@ -21,7 +21,7 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
     <div class="main-title project"><span itemprop="name"><?= strtoupper($this->title) ?></span> | <b><?= $model->effectiveArea ?> м<sup>2</sup></b></div>
 
     <div class="main-block clearfix">
-    <div id="fixed-widget">
+    <div id="fixed-widget88">
         <div class="right-block right">
         <?php if ($model->priceUSD > 0):?>
             <?php
