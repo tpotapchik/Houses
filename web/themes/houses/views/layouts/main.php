@@ -117,6 +117,7 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
     <div class="back-top"><span></span></div>
 
     <?php $this->endBody() ?>
+    <script src="http://dom-tut.by/js/slider.js"></script>
 </body>
 </html>
 <?php $this->endPage() ?>
