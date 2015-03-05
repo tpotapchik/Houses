@@ -51,6 +51,14 @@ $(function () {
         prevEffect:'fade'
     });
 
+
+    var $block = $('.right-block');
+    var fixedOffset = $block.offset().top;
+    var footerHeight = $('.footer').height();
+    var documentHeight = $(document).height();
+    var windowHeight = $(window).height();
+
+
     $(window).on('scroll', function () {
         if ($(document).scrollTop() >= 900) {
             $('.back-top').fadeIn();
@@ -58,13 +66,24 @@ $(function () {
         else {
             $('.back-top').fadeOut();
         }
+        var blockHeightCorrection = $block.height() - windowHeight;
+        var stopPosition = documentHeight - windowHeight - blockHeightCorrection - footerHeight-136; /*partners height*/
+        var scrollTop = $(document).scrollTop();
+        //fixed right col
+        if (scrollTop >= fixedOffset && scrollTop < stopPosition ) {
+            $block.css({position:'fixed',top:'0',left: '1166px'});
+        }  else if (scrollTop > stopPosition || scrollTop <= fixedOffset) {
+            $block.css({position:'static'});
+        }
     });
+
 
     $('.back-top').click(function () {
         $('body,html').animate({
             'scrollTop': 0
         }, 400)
     });
+
 
     $(".popup").fancybox();
 
