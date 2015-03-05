@@ -32,8 +32,6 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 </div>
 <br/><br/><br/>
-<!--LiveInternet logo--><a href="http://www.liveinternet.ru/stat/dom-tut.by/index.html"
-target="_blank"><img src="//counter.yadro.ru/logo?52.6"
-title="LiveInternet: показано число просмотров и посетителей за 24 часа"
-alt="" border="0" width="88" height="31"/></a><!--/LiveInternet-->
+<a rel="nofollow" target="_blank" href="http://www.liveinternet.ru/stat/dom-tut.by/index.html"><img src="http://www.liveinternet.ru/stat/dom-tut.by/index.gif?graph=yes" alt="Статистика за месяц" title="Статистика за месяц" width="490" height="345" align="center" /></a>
 </center>
+<br/><br/>

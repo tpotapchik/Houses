@@ -22,7 +22,7 @@ $contacts = Yii::$app->params['contacts'];
 
         MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
             '<div class="contacts-popup">'
-            + '<img src="/img/logo.png" alt="" style="width: 100px; height: 39px"/>'
+            + '<img src="/img/logo3.png" alt="" style="width: 100px; height: 39px"/>'
             + '<?= $contacts['address'] ?>'
             + '<br><br>'
             + 'Тел: <?= $contacts['phone1'] ?><br>'
@@ -93,7 +93,7 @@ $contacts = Yii::$app->params['contacts'];
   <div class="centralize">
             <div class="office-block-map">
                 <div class="connect-map">С нами легко связаться:</div>
-                <img src="img/logo.png" alt="" style="width: 100px; height: 39px"/><br><br>
+                <img src="img/logo3.png" alt="" style="width: 100px; height: 39px"/><br><br>
                <?= $contacts['address'] ?><br><br>
                 <b><?= $contacts['phone1'] ?></b><br>
                 <b><?= $contacts['phone2'] ?><br><br>
