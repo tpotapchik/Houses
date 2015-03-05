@@ -23,12 +23,14 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
 
     <div class="main-title"><?= $this->title ?></div>
     <div class="main-block clearfix">
+    <div id="fixed-widget">
         <div class="right-block right">
             <?= $this->render('../layouts/_right-menu', []) ?>
         </div>
         <div class="main-text-block ovhidden">
             <?= $article->full_text ?>
         </div>
+    </div>
     </div>
 
     <?= $this->render('../layouts/_our-projects', []) ?>
