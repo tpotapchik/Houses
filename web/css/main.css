@@ -1559,7 +1559,7 @@ h2 {
       line-height: 30px;
       width: 100%; }
         .characteristics ._parameters li:nth-child(even) {
-            background-color: #c0c0c0;
+            background-color: #dadada;
         }
       .characteristics ._parameters li span {
         float: right;
