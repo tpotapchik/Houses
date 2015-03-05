@@ -64,7 +64,8 @@ $(function () {
 
     var $document = $(document);
     var scrollTopNew = $document.scrollTop();
-    var PanelPosition = $('.right-block').offset().top;
+    var sidebar = $('.right-block');
+    var PanelPosition = sidebar.offset().top;
     
 
     $(window).on('scroll', function () {
