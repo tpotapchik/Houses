@@ -48,6 +48,7 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
 
 
         </div>
+        </div>
 
         <div class="text-block-project ovhidden">
             <?php
@@ -81,7 +82,7 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
                 <a href="javascript: openGallery(<?=$indexes['position']?>);">расположение</a>|
                 <a href="">3D прогулка</a>
             </div>
-            </div>
+
 
             <?php
             echo Html::a(
