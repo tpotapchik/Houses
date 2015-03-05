@@ -21,6 +21,7 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
     <div class="main-title project"><span itemprop="name"><?= strtoupper($this->title) ?></span> | <b><?= $model->effectiveArea ?> м<sup>2</sup></b></div>
 
     <div class="main-block clearfix">
+    <div id="fixed-widget">
         <div class="right-block right">
         <?php if ($model->priceUSD > 0):?>
             <?php
@@ -79,6 +80,7 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
                 <a href="javascript: openGallery(<?=$indexes['facades']?>);">фасады</a>|
                 <a href="javascript: openGallery(<?=$indexes['position']?>);">расположение</a>|
                 <a href="">3D прогулка</a>
+            </div>
             </div>
 
             <?php
