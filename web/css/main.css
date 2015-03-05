@@ -1543,7 +1543,7 @@ h2 {
     font-size: 18px;}
 
 .characteristics {
-  margin-right: 317px; }
+  }
   .characteristics ._title {
     color: #820084;
     font-weight: 700; }
@@ -1558,6 +1558,9 @@ h2 {
       *zoom: 1;
       line-height: 30px;
       width: 100%; }
+        .characteristics ._parameters li:first-child {
+            background-color: #c0c0c0;
+        }
       .characteristics ._parameters li span {
         float: right;
         font-weight: 700; }
@@ -1586,10 +1589,9 @@ h2 {
           font-weight: 700; }
 
 .plan-pictures {
-  width: 300px;
-  float: right; }
+  width: 100%; }
   .plan-pictures img {
-    width: 300px;
+    width: 100%;
     margin-bottom: 9px; }
 
 .main-text-block {

@@ -128,22 +128,7 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
         </div>
         <div class="text-block-project ovhidden">
 
-            <div class="plan-pictures">
-                <?php
-                //plans
-                /** @var \app\models\Floor $floor */
-                foreach ($floorsPhotos as $floor) {
-                    echo Html::a(
-                        Html::img($floor->file, ['alt' => $floor->title]),
-                        $floor->file,
-                        [
-                            'class' => 'fancybox',
-                            'rel' => 'gallery2'
-                        ]
-                    );
-                }
-                ?>
-            </div>
+
 
             <div class="characteristics ovhidden">
                 <div class="_title">Технические характеристики</div>
@@ -201,6 +186,22 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
                 <ul class="_technology">
                     <?= $model->technology ?>
                 </ul>
+            </div>
+            <div class="plan-pictures">
+                <?php
+                //plans
+                /** @var \app\models\Floor $floor */
+                foreach ($floorsPhotos as $floor) {
+                    echo Html::a(
+                        Html::img($floor->file, ['alt' => $floor->title]),
+                        $floor->file,
+                        [
+                            'class' => 'fancybox',
+                            'rel' => 'gallery2'
+                        ]
+                    );
+                }
+                ?>
             </div>
 
 
