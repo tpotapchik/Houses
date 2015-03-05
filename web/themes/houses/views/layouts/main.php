@@ -40,7 +40,7 @@ $social = Yii::$app->params['social'];
 
         </script>
     <?php endif; ?>
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!--<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>-->
 </head>
 
 <body>
@@ -117,7 +117,7 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
     <div class="back-top"><span></span></div>
 
     <?php $this->endBody() ?>
-    <script src="http://dom-tut.by/js/slider.js"></script>
+    <!--<script src="http://dom-tut.by/js/slider.js"></script>-->
 </body>
 </html>
 <?php $this->endPage() ?>

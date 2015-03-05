@@ -25,6 +25,7 @@ $(function () {
         width: "100px"
     });
 
+
     //$('.more-btn').click(function () {
     //    var $this = $(this);
     //    $this.closest('.main-text-block-wrap').find('.news-body').slideToggle();
@@ -60,6 +61,12 @@ $(function () {
         }
     });
 
+
+    var $document = $(document);
+    var scrollTopNew = $document.scrollTop();
+    var PanelPosition = $('.right-block').offset().top;
+    
+
     $(window).on('scroll', function () {
         if ($(document).scrollTop() >= 900) {
             $('.back-top').fadeIn();
@@ -67,6 +74,14 @@ $(function () {
         else {
             $('.back-top').fadeOut();
         }
+
+        if (scrollTopNew >= PanelPosition + 56) {
+            sidebar.addClass('fixed-sidebar');
+            //productSliderStickHeight = sidebar.outerHeight();
+        } else {
+            sidebar.removeClass('fixed-sidebar');
+        }
+
     });
 
     $('.back-top').click(function () {
