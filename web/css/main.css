@@ -1558,7 +1558,7 @@ h2 {
       *zoom: 1;
       line-height: 30px;
       width: 100%; }
-        .characteristics ._parameters li:first-child {
+        .characteristics ._parameters li:nth-child(even) {
             background-color: #c0c0c0;
         }
       .characteristics ._parameters li span {
@@ -1585,7 +1585,7 @@ h2 {
         vertical-align: top;
         *display: inline;
         *zoom: 1; }
-        .characteristics ._technology li span:nth-child(even) {
+        .characteristics ._technology li span:first-child {
           font-weight: 700; }
 
 .plan-pictures {
