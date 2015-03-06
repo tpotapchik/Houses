@@ -1838,7 +1838,8 @@ h2 {
   background-color: #820084;
   padding: 2px 28px;
   float: right;
-  margin-top: 5px; }
+  margin-top: 5px;
+  text-decoration: none;}
   .more-btn:hover {
     background-color: #970084; }
 
