@@ -14,7 +14,7 @@ use yii\helpers\Html;
 $projectSearch = new ProjectSearch();
 $panel = new \app\models\FilterPanel();
 ?>
-<div class="main-title">НАШИ ПРОЕКТЫ ДОМОВ</div>
+<div class="main-title stop-element">НАШИ ПРОЕКТЫ ДОМОВ</div>
 <div class="main-block projects-house clearfix">
     <div class="_content left">
         <a href="<?= \yii\helpers\Url::toRoute(['catalog/index']) ?>" class="picture-block">
