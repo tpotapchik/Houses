@@ -82,7 +82,7 @@ $(function () {
         //fixed right col
         if (scrollTop >= fixedOffset && scrollTop < stopPosition ) {
             $block.css({position:'fixed',top:'0',marginLeft:'714px'})
-        }  else if (scrollTop > stopPosition || scrollTop <= fixedOffset) {
+        }  else {
             $block.css({position:'static',marginLeft:'0'});
         }
     });
