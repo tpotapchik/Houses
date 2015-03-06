@@ -52,28 +52,26 @@ $(function () {
     });
 
 
+
     var $block = $('.right-block');
+    var $stopBlock = $('.stop-element');
     var fixedOffset = $block.offset().top;
-    var footerHeight = $('.footer').height();
-    var documentHeight = $(document).height();
-    var windowHeight = $(window).height();
-
-
+    var stopPosition = $stopBlock.offset().top - $block.height();
     $(window).on('scroll', function () {
-        if ($(document).scrollTop() >= 900) {
+        var scrollTop = $(document).scrollTop();
+
+        if (scrollTop >= 900) {
             $('.back-top').fadeIn();
         }
         else {
             $('.back-top').fadeOut();
         }
-        var blockHeightCorrection = $block.height() - windowHeight;
-        var stopPosition = documentHeight - windowHeight - blockHeightCorrection - footerHeight-136; /*partners height*/
-        var scrollTop = $(document).scrollTop();
+
         //fixed right col
         if (scrollTop >= fixedOffset && scrollTop < stopPosition ) {
-            $block.css({position:'fixed',top:'0',left: '1166px'});
-        }  else if (scrollTop > stopPosition || scrollTop <= fixedOffset) {
-            $block.css({position:'static'});
+            $block.css({position:'fixed',top:'0',marginLeft:'714px'})
+        }  else {
+            $block.css({position:'static',marginLeft:'0'});
         }
     });
 
@@ -147,7 +145,7 @@ function validatePhone(phone) {
 
 var myMap, myPlacemark, MyBalloonLayout;
 
-ymaps.ready(init);
+//ymaps.ready(init);
 
 function init() {
     myMap = new ymaps.Map('officeMap', {

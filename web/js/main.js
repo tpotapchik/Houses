@@ -61,14 +61,21 @@ $(function () {
         }
     });
 
+    function eee(){
+
+    }
+
 
     var $block = $('.right-block');
     var $stopBlock = $('.stop-element');
-    var fixedOffset = $block.offset().top;
-    var stopPosition = $stopBlock.offset().top - $block.height();
-
+    var fixedOffset, stopPosition, scrollTop;
     $(window).on('scroll', function () {
-        var scrollTop = $(document).scrollTop();
+        setTimeout(function () {
+            fixedOffset = $block.offset().top;
+            stopPosition = $stopBlock.offset().top - $block.height();
+            scrollTop = $(document).scrollTop();
+        }, 1000);
+
         if (scrollTop >= 900) {
             $('.back-top').fadeIn();
         }
@@ -77,10 +84,10 @@ $(function () {
         }
 
         //fixed right col
-        if (scrollTop >= fixedOffset && scrollTop < stopPosition ) {
-            $block.css({position:'fixed',top:'0',marginLeft:'714px'})
-        }  else {
-            $block.css({position:'static',marginLeft:'0'});
+        if (scrollTop >= fixedOffset && scrollTop < stopPosition) {
+            $block.css({position: 'fixed', top: '0', marginLeft: '714px'})
+        } else {
+            $block.css({position: 'static', marginLeft: '0'});
         }
     });
 
