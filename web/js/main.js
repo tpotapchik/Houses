@@ -68,13 +68,14 @@ $(function () {
 
     var $block = $('.right-block');
     var $stopBlock = $('.stop-element');
-    var fixedOffset, stopPosition, scrollTop;
+    var fixedOffset, stopPosition;
+    setTimeout(function () {
+        fixedOffset = $block.offset().top;
+        stopPosition = $stopBlock.offset().top - $block.height();
+    }, 500);
+
     $(window).on('scroll', function () {
-        setTimeout(function () {
-            fixedOffset = $block.offset().top;
-            stopPosition = $stopBlock.offset().top - $block.height();
-            scrollTop = $(document).scrollTop();
-        }, 1000);
+        var scrollTop = $(document).scrollTop();
 
         if (scrollTop >= 900) {
             $('.back-top').fadeIn();
