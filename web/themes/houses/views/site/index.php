@@ -1,10 +1,12 @@
 <?php
 /* @var $this yii\web\View */
-/** @var app\models\Article $article */
-$this->title = $article->title;
+use app\models\Article;
 
-$this->registerMetaTag(['name' => 'keywords', 'content' => $article->meta_keywords]);
-$this->registerMetaTag(['name' => 'description', 'content' => $article->meta_description]);
+/** @var app\models\Article $mainArticle */
+$mainArticle = Article::getMain();
+
+$this->registerMetaTag(['name' => 'keywords', 'content' => $mainArticle->meta_keywords]);
+$this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta_description]);
 ?>
 
 <div class="slider-content">
@@ -96,7 +98,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $article->meta_des
 
         </div>
         <div class="main-text-block ovhidden">
-            <?= $article->full_text ?>
+            <?= $mainArticle->full_text ?>
         </div>
     </div>
 

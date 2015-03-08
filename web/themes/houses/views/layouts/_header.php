@@ -19,7 +19,7 @@ if (!isset($model)) {
 
 <div class="header">
     <div class="centralize">
-        <a href="<?= Yii::$app->homeUrl ?>" class="logo"><img src="/img/logo3.png" alt="Логотип"/></a>
+        <a href="<?= Yii::$app->homeUrl ?>" class="logo"><img src="/img/logo3.png" alt="<?=Yii::$app->params['projectName']?>"/></a>
 
         <div class="call-back right">
             <div class="social">

@@ -53,12 +53,7 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        $article = Article::getArticle('');
-        if ($article) {
-            return $this->render('index', ['article' => $article]);
-        } else {
-            throw new NotFoundHttpException();
-        }
+        return $this->render('index', ['article' => Article::getMain()]);
     }
 
     public function actionLogin()

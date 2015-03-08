@@ -1,6 +1,9 @@
 <?php
 use app\assets\AppAsset;
+use app\models\Article;
 use yii\helpers\Html;
+use yii\web\NotFoundHttpException;
+
 /* @var $this \yii\web\View */
 /* @var $content string */
 
@@ -8,6 +11,14 @@ AppAsset::register($this);
 $isProdEnv = !(getenv('APP_ENV') == 'dev' || $_SERVER['HTTP_HOST'] == 'house.loc');
 
 $social = Yii::$app->params['social'];
+
+$mainArticle = Article::getMain();
+
+if (strlen($this->title) > 0) {
+    $this->title .= ' - ' . $mainArticle->title;
+} else {
+    $this->title = $mainArticle->title;
+}
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>

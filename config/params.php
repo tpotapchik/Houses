@@ -26,5 +26,6 @@ return [
         'vk' => 'http://vk.com/dom_tut'
     ],
     'callUsEmail' => 'info@dom-tut.by',
-    'nbrbUrl' => 'http://www.nbrb.by/Services/XmlExRates.aspx'
+    'nbrbUrl' => 'http://www.nbrb.by/Services/XmlExRates.aspx',
+    'projectName' => 'Проектная мастерская Dom-Tut.by'
 ];

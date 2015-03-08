@@ -7,6 +7,7 @@ use Yii;
 use yii\behaviors\TimestampBehavior;
 use yii\db\Expression;
 use yii\helpers\Url;
+use yii\web\NotFoundHttpException;
 
 /**
  * This is the model class for table "article".
@@ -76,6 +77,24 @@ class Article extends \yii\db\ActiveRecord
     public static function getArticle($urlKey, $categoryId = 1, $published = true)
     {
         return self::findOne(['url_key' => $urlKey, 'category_id' => $categoryId, 'is_published' => $published]);
+    }
+
+    public static function getMain(){
+        $cache = Yii::$app->cache;
+        if ($mainArticle = $cache->get('mainArticle')) {
+            $fakeDb = new Article();
+            $fakeDb->setAttributes($mainArticle);
+            $mainArticle = $fakeDb;
+            unset($fakeDb);
+        } else {
+            $mainArticle = Article::getArticle('');
+            if ($mainArticle) {
+                $cache->set('mainArticle', $mainArticle->toArray(), 60*5);
+            } else {
+                throw new NotFoundHttpException();
+            }
+        }
+        return $mainArticle;
     }
 
     /**
