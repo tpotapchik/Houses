@@ -1859,7 +1859,8 @@ h2 {
     width: 25px;
     height: 25px;
     margin: 0 2px;
-    font-size: 18px; }
+    font-size: 18px;
+    line-height: 24px;}
     .pagination a.active, .pagination a:hover {
       color: #fff;
       background-color: #7fb000; }
