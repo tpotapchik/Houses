@@ -58,6 +58,9 @@ $types = Type::find()->all();
         ]
     ]) ?>
 
+    <?= $form->field($model, 'meta_keywords')->textarea() ?>
+    <?= $form->field($model, 'meta_description')->textarea() ?>
+
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? Yii::t('yii', 'Create') : Yii::t('yii', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>

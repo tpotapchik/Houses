@@ -12,6 +12,14 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('house', 'Catalog Projects')
 $this->params['breadcrumbs'][] = ['label' => GeneralHelper::mb_ucfirst($category->processedValue), 'url' => ['catalog/'.$category->url]];
 $this->params['breadcrumbs'][] = $this->title;
 Yii::$app->params['mainMenu']['items'][2]['active'] = true;
+
+$firstAdviceSentence = $model->getAdviceSentence();
+if (strlen($firstAdviceSentence) > 0) {
+    $this->title .= ' - ' . $firstAdviceSentence;
+}
+
+$this->registerMetaTag(['name' => 'keywords', 'content' => $model->meta_keywords]);
+$this->registerMetaTag(['name' => 'description', 'content' => $model->meta_description]);
 ?>
 <?= $this->render('../layouts/_filter-panel', ['other' => true]) ?>
 <!--main part-->

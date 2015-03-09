@@ -32,6 +32,8 @@ use yii\helpers\Url;
  * @property string $created_at
  * @property string $updated_at
  * @property string $advice
+ * @property string $meta_keywords
+ * @property string $meta_description
  *
  * @property Floor[] $floors
  * @property Facade[] $facades
@@ -61,7 +63,7 @@ class Project extends \yii\db\ActiveRecord
     {
         return [
             [['numCat', 'title', 'technology', 'roof_id', 'type_id', 'typeView_id', 'category_id', 'collection_id', 'created_at', 'updated_at'], 'required'],
-            [['technology', 'advice'], 'string'],
+            [['technology', 'advice', 'meta_keywords', 'meta_description'], 'string'],
             [['ready', 'new', 'southEnter', 'energySaving'], 'boolean'],
             [['roof_id', 'type_id', 'typeView_id', 'category_id', 'collection_id', 'carPlaces', 'priceUSD'], 'integer'],
             [['cubage', 'effectiveArea'], 'number'],
@@ -95,6 +97,8 @@ class Project extends \yii\db\ActiveRecord
             'effectiveArea' => Yii::t('house', 'Effective Area'),
             'priceUSD' => Yii::t('house', 'Price USD'),
             'advice' => Yii::t('app', 'Advice'),
+            'meta_keywords' => Yii::t('app', 'Meta Keywords'),
+            'meta_description' => Yii::t('app', 'Meta Description'),
         ];
     }
 
@@ -314,5 +318,22 @@ class Project extends \yii\db\ActiveRecord
                 }
             ]
         ];
+    }
+
+    /**
+     * get first sentence of advice
+     * @return string
+     */
+    public function getAdviceSentence()
+    {
+        $match = [];
+        preg_match('/^(.+?)\./', $this->advice, $match);
+        if (isset($match[1])) {
+            $match = $match[1];
+        } else {
+            $match = '';
+        }
+        $match = strip_tags($match);
+        return $match;
     }
 }
