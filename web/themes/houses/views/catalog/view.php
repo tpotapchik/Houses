@@ -73,13 +73,6 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
                 return 0;
             });
 
-//            $indexes = [
-//                'visualisation' => 0,
-//                'plans' => count($visualisations)+count($floorsPhotos)+count($visualisations)+2,
-//                'facades' => count($floorsPhotos)+count($visualisations),
-//                'position' => 0
-//            ];
-
             /** @var \app\models\Photo $photo */
             foreach ($visualisations as $key => $photo) {
                 if ($photo->title === 'участок') {
@@ -114,6 +107,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
                 ]
             );
             //visualisations
+            $positionsPhotos = [];
             /** @var \app\models\Photo $photo */
             foreach ($visualisations as $photo) {
                 $options = [
@@ -122,30 +116,21 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
                 ];
                 if ($photo->title === 'участок') {
                     $options['class'] = $options['class'] . ' position';
+                    $positionsPhotos[] = Html::a(
+                        '',
+                        $photo->file,
+                        $options
+                    );
+                } else {
+                    echo Html::a(
+                        '',
+                        $photo->file,
+                        $options
+                    );
                 }
-                echo Html::a(
-                    '',
-                    $photo->file,
-                    $options
-                );
             }
             ?>
-            <?php
-            /** @var \app\models\Facade $facade */
-            foreach ($facadesPhotos as $facade) {
-                echo Html::a(
-                    '',
-                    $facade->file,
-                    [
-                        'class' => 'fancybox facades',
-                        'rel' => 'gallery2'
-                    ]
-                );
-            }
 
-
-
-            ?>
         </div>
         <div class="text-block-project ovhidden">
 
@@ -198,7 +183,23 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
                 }
                 ?>
             </div>
+            <?php
+            /** @var \app\models\Facade $facade */
+            foreach ($facadesPhotos as $facade) {
+                echo Html::a(
+                    '',
+                    $facade->file,
+                    [
+                        'class' => 'fancybox facades',
+                        'rel' => 'gallery2'
+                    ]
+                );
+            }
 
+            foreach ($positionsPhotos as $a) {
+                echo $a;
+            }
+            ?>
 
 
         </div>
