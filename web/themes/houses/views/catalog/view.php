@@ -26,7 +26,9 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
 <div class="centralize" itemscope itemtype ="http://schema.org/ItemPage">
     <?= $this->render('../layouts/_breadcrumbs', []) ?>
 
-    <div class="main-title project"><span itemprop="name"><?= strtoupper($this->title) ?></span> | <b><?= $model->effectiveArea ?> м<sup>2</sup></b></div>
+    <div class="main-title project">
+        <span itemprop="name"><?= strtoupper($this->title) ?></span> | <b><?= $model->effectiveArea ?> м<sup>2</sup></b>
+    </div>
 
     <div class="main-block clearfix">
 
@@ -50,11 +52,8 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
                 Заказать этот проект<br/>
                 Вы можете по телефону:
                 <div class="_title"><?= Yii::$app->params['contacts']['phone2'] ?></div>
-
             </div>
             <?= $this->render('../layouts/_right-menu', []) ?>
-
-
         </div>
 
 
@@ -65,12 +64,21 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
             $floorsPhotos = $model->getFloors()->all();
             $visualisations = $model->getOtherPhotos();
 
-            $indexes = [
-                'visualisation' => 0,
-                'plans' => count($visualisations)+count($floorsPhotos)+count($visualisations)+1,
-                'facades' => count($floorsPhotos)+count($visualisations)-1,
-                'position' => 0
-            ];
+            usort($visualisations, function($a, $b) {
+                if ($b->title === 'участок') {
+                    return -1;
+                } elseif ($a->title === 'участок') {
+                    return 1;
+                }
+                return 0;
+            });
+
+//            $indexes = [
+//                'visualisation' => 0,
+//                'plans' => count($visualisations)+count($floorsPhotos)+count($visualisations)+2,
+//                'facades' => count($floorsPhotos)+count($visualisations),
+//                'position' => 0
+//            ];
 
             /** @var \app\models\Photo $photo */
             foreach ($visualisations as $key => $photo) {
@@ -80,14 +88,12 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
                 }
             }
 
-
-
             ?>
             <div class="project-nav">
-                <a href="javascript: openGallery(<?=$indexes['visualisation']?>);">визуализации</a>|
-                <a href="javascript: openGallery(<?=$indexes['plans']?>);">планы</a>|
-                <a href="javascript: openGallery(<?=$indexes['facades']?>);">фасады</a>|
-                <a href="javascript: openGallery(<?=$indexes['position']?>);">расположение</a>|
+                <a href="javascript: void(0);" onclick="openGallery()" data-imgIndex="0">визуализации</a>|
+                <a class="openGallery" data-index="plans" href="javascript: void(0);">планы</a>|
+                <a class="openGallery" data-index="facades" href="javascript: void(0);">фасады</a>|
+                <a class="openGallery" data-index="position" href="javascript: void(0);">расположение</a>|
                 <a href="">3D прогулка</a>
             </div>
 
@@ -110,13 +116,17 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
             //visualisations
             /** @var \app\models\Photo $photo */
             foreach ($visualisations as $photo) {
+                $options = [
+                    'class' => 'fancybox visualisation',
+                    'rel' => 'gallery2'
+                ];
+                if ($photo->title === 'участок') {
+                    $options['class'] = $options['class'] . ' position';
+                }
                 echo Html::a(
                     '',
                     $photo->file,
-                    [
-                        'class' => 'fancybox',
-                        'rel' => 'gallery2'
-                    ]
+                    $options
                 );
             }
             ?>
@@ -127,7 +137,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
                     '',
                     $facade->file,
                     [
-                        'class' => 'fancybox',
+                        'class' => 'fancybox facades',
                         'rel' => 'gallery2'
                     ]
                 );
@@ -138,8 +148,6 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
             ?>
         </div>
         <div class="text-block-project ovhidden">
-
-
 
             <div class="characteristics ovhidden">
                 <div class="_title">Технические характеристики</div>
@@ -169,30 +177,6 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
                         <span><?= sprintf('%Gx%G', $sizes['ширина'], $sizes['длина']) ?></span>
                     </li>
                 </ul>
-<!--                <div class="_title">Технология</div>-->
-<!--                <ul class="_technology">-->
-<!--                    <li>-->
-<!--                        <span>Крыша:</span>-->
-<!--                        <span>керамическая плитка, угол наклона 45`</span></li>-->
-<!--                    <li>-->
-<!--                        <span>Полы:</span>-->
-<!--                        <span>бетон, литой</span></li>-->
-<!--                    <li>-->
-<!--                        <span>Стена:</span>-->
-<!--                        <span>2-слойные - газобетон SOLBET 24см + пенополистерол</span>-->
-<!--                    </li>-->
-<!---->
-<!--                </ul>-->
-<!--                <div class="_title">Отопление</div>-->
-<!--                <ul class="_parameters">-->
-<!--                    <li>-->
-<!--                        <span>Газ</span>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <span>Газ</span>-->
-<!--                    </li>-->
-<!---->
-<!--                </ul>-->
                 <div class="_title">Описание</div>
                 <ul class="_technology">
                     <?= $model->technology ?>
@@ -207,7 +191,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
                         Html::img($floor->file, ['alt' => $floor->title]),
                         $floor->file,
                         [
-                            'class' => 'fancybox',
+                            'class' => 'fancybox plans',
                             'rel' => 'gallery2'
                         ]
                     );
@@ -247,8 +231,8 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
                 this.title = alt;
             }
         };
-        var openGallery = function(index){
-            FancyOptions.index = index;
+        var openGallery = function(){
+            FancyOptions.index = $(this).data('imgIndex');
             $.fancybox($('a[rel=gallery2]'), FancyOptions);
         };
     </script>

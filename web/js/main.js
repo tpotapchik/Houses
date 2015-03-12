@@ -61,9 +61,21 @@ $(function () {
         }
     });
 
-    function eee(){
+    $('a.openGallery').each(function(index, link){
+        link = $(link);
+        var classType = link.data('index');
 
-    }
+        var imagesCollection = $('.fancybox');
+        for(var i=0; imagesCollection.length > i; i++)
+        {
+            if ($(imagesCollection[i]).hasClass(classType)){
+                break;
+            }
+        }
+
+        link.data('imgIndex', i);
+
+    }).on('click', openGallery);
 
 
     var $block = $('.right-block');
