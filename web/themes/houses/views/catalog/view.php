@@ -15,6 +15,7 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
 
 $firstAdviceSentence = $model->getAdviceSentence();
 if (strlen($firstAdviceSentence) > 0) {
+    $oldTitle = $this->title;
     $this->title .= ' - ' . $firstAdviceSentence;
 }
 
@@ -27,7 +28,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
     <?= $this->render('../layouts/_breadcrumbs', []) ?>
 
     <div class="main-title project">
-        <span itemprop="name"><?= strtoupper($this->title) ?></span> | <b><?= $model->effectiveArea ?> м<sup>2</sup></b>
+        <span itemprop="name"><?= strtoupper($oldTitle) ?></span> | <b><?= $model->effectiveArea ?> м<sup>2</sup></b>
     </div>
 
     <div class="main-block clearfix">

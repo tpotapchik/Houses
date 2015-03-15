@@ -15,6 +15,9 @@ $social = Yii::$app->params['social'];
 $mainArticle = Article::getMain();
 
 if (strlen($this->title) > 0) {
+    $expression = '/^.+? - (.+?)$/';
+    preg_match($expression, $mainArticle->title, $matches);
+    $title = $matches[1];
     $this->title .= ' - ' . $mainArticle->title;
 } else {
     $this->title = $mainArticle->title;
