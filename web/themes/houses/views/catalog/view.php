@@ -14,8 +14,8 @@ $this->params['breadcrumbs'][] = $this->title;
 Yii::$app->params['mainMenu']['items'][2]['active'] = true;
 
 $firstAdviceSentence = $model->getAdviceSentence();
+$oldTitle = $this->title;
 if (strlen($firstAdviceSentence) > 0) {
-    $oldTitle = $this->title;
     $this->title .= ' - ' . $firstAdviceSentence;
 }
 
@@ -41,6 +41,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
             $rate = $rate + (2/100) * $rate; //increment rate to 2 percent
             $formatter = Yii::$app->getFormatter();
             $totalPrice = $rate * $model->priceUSD;
+            $totalPrice = round($totalPrice, -4, PHP_ROUND_HALF_UP);
             $price = NbrbClient::formatter($totalPrice, 'BYR');
             ?>
             <div class="price-project">
