@@ -28,7 +28,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
     <?= $this->render('../layouts/_breadcrumbs', []) ?>
 
     <div class="main-title project">
-        <span itemprop="name"><?= strtoupper($oldTitle) ?></span> | <b><?= $model->effectiveArea ?> м<sup>2</sup></b>
+        Проект "<span itemprop="name" style="text-transform: uppercase;"><?= $model->title ?></span>" | <b><?= $model->effectiveArea ?> м<sup>2</sup></b>
     </div>
 
     <div class="main-block clearfix">
