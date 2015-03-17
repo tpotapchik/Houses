@@ -18,7 +18,7 @@ if (strlen($this->title) > 0) {
     $expression = '/^.+? - (.+?)$/';
     preg_match($expression, $mainArticle->title, $matches);
     $title = $matches[1];
-    $this->title .= ' - ' . $mainArticle->title;
+    $this->title .= ' - ' . $title;
 } else {
     $this->title = $mainArticle->title;
 }
@@ -37,6 +37,9 @@ if (strlen($this->title) > 0) {
     <meta charset="<?= Yii::$app->charset ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
+    <?php
+    $this->title = str_replace(['\'', '"'], '', $this->title);
+    ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head();
 
