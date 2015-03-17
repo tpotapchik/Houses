@@ -207,7 +207,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
         </div>
         <?php if (strlen($model->advice) > 0) : ?>
         <div class="text-block-project ovhidden">
-            <h3 class="advice-title">Полезный совет</h3>
+            <h3 class="advice-title">Полезная информация</h3>
             <div class="advice"><?= $model->advice ?></div>
         </div>
         <?php endif; ?>
