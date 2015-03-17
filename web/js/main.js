@@ -25,20 +25,6 @@ $(function () {
         width: "100px"
     });
 
-
-    //$('.more-btn').click(function () {
-    //    var $this = $(this);
-    //    $this.closest('.main-text-block-wrap').find('.news-body').slideToggle();
-    //
-    //    if ($this.hasClass('opened')) {
-    //        $this.text('Читать полностью');
-    //    } else {
-    //        $this.text('Свернуть');
-    //    }
-    //    $this.toggleClass('opened');
-    //
-    //});
-
     $(".fancybox").fancybox({
         nextEffect:'fade',
         prevEffect:'fade',
@@ -61,31 +47,6 @@ $(function () {
         }
     });
 
-    $('a.openGallery').each(function(index, link){
-        link = $(link);
-        var classType = link.data('index');
-
-        var imagesCollection = $('.fancybox');
-        for(var i=0; imagesCollection.length > i; i++)
-        {
-            if ($(imagesCollection[i]).hasClass(classType)){
-                break;
-            }
-        }
-
-        link.data('imgIndex', i);
-
-    }).on('click', openGallery);
-
-
-    var $block = $('.right-block');
-    var $stopBlock = $('.stop-element');
-    var fixedOffset, stopPosition;
-    setTimeout(function () {
-        fixedOffset = $block.offset().top;
-        stopPosition = $stopBlock.offset().top - $block.height();
-    }, 500);
-
     $(window).on('scroll', function () {
         var scrollTop = $(document).scrollTop();
 
@@ -94,13 +55,6 @@ $(function () {
         }
         else {
             $('.back-top').fadeOut();
-        }
-
-        //fixed right col
-        if (scrollTop >= fixedOffset && scrollTop < stopPosition) {
-            $block.css({position: 'fixed', top: '0', marginLeft: '714px'})
-        } else {
-            $block.css({position: 'static', marginLeft: '0'});
         }
     });
 

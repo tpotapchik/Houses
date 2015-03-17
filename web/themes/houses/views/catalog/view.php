@@ -212,33 +212,8 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
         </div>
         <?php endif; ?>
     </div>
-    <script>
-        var FancyOptions = {
-            nextEffect:'fade',
-            prevEffect:'fade',
-            scrollOutside: false,
-            helpers	: {
-                thumbs	: {
-                    width	: 150,
-                    height	: 150
-                },
-                overlay: {
-                    locked: false
-                }
-            },
-            beforeShow : function() {
-                var alt = this.element.find('img').attr('alt');
-
-                this.inner.find('img').attr('alt', alt);
-
-                this.title = alt;
-            }
-        };
-        var openGallery = function(){
-            FancyOptions.index = $(this).data('imgIndex');
-            $.fancybox($('a[rel=gallery2]'), FancyOptions);
-        };
-    </script>
 
     <?= $this->render('../layouts/_parthners', []) ?>
 </div>
+
+<?php $this->registerJsFile(Yii::$app->request->baseUrl.'/js/projectView.js',['depends' => [\yii\web\JqueryAsset::className()]]); ?>
