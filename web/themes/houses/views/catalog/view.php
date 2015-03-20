@@ -5,7 +5,7 @@ use app\models\GeneralHelper;
 use yii\helpers\Html;
 
 /* @var $model \app\models\Project */
-$this->title = Yii::t('house', 'Project "{projectName}"', ['projectName' => $model->title]);
+$this->title = Yii::t('house', 'Project house "{projectName}"', ['projectName' => $model->title]);
 /** @var \app\models\Category $category */
 $category = $model->getCategory()->one();
 $this->params['breadcrumbs'][] = ['label' => Yii::t('house', 'Catalog Projects'), 'url' => ['catalog/index']];
