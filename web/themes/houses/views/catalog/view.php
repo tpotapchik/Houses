@@ -6,6 +6,8 @@ use yii\helpers\Html;
 
 /* @var $model \app\models\Project */
 $this->title = Yii::t('house', 'Project house "{projectName}"', ['projectName' => $model->title]);
+Yii::$app->opengraph->title = $this->title;
+Yii::$app->opengraph->image = \yii\helpers\Url::to([$model->getMainPhoto()], true);
 /** @var \app\models\Category $category */
 $category = $model->getCategory()->one();
 $this->params['breadcrumbs'][] = ['label' => Yii::t('house', 'Catalog Projects'), 'url' => ['catalog/index']];

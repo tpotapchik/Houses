@@ -102,6 +102,10 @@ $config = [
                 ],
             ],
         ],
+        'opengraph' => [
+            'class' => 'dragonjet\opengraph\OpenGraph',
+            'site_name' => 'Проектная мастерская Dom-Tut.by'
+        ],
     ],
     'modules' => [
         'admin' => [

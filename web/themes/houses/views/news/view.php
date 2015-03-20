@@ -6,6 +6,8 @@ $this->title = $article->title;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'News'), 'url' => ['news/index']];
 $this->params['breadcrumbs'][] = $this->title;
 
+Yii::$app->opengraph->title = $this->title;
+
 $this->registerMetaTag(['name' => 'keywords', 'content' => $article->meta_keywords]);
 $this->registerMetaTag(['name' => 'description', 'content' => $article->meta_description]);
 

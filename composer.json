@@ -28,7 +28,8 @@
         "iutbay/yii2-fontawesome": "*",
         "karpoff/yii2-crop-image-upload": "*",
         "himiklab/yii2-sortable-grid-view-widget" : "*",
-        "himiklab/yii2-sitemap-module" : "*"
+        "himiklab/yii2-sitemap-module" : "*",
+        "dragonjet/yii2-opengraph": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*@stable",
