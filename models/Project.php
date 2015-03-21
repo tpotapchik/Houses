@@ -35,6 +35,7 @@ use yii\helpers\Url;
  * @property string $meta_keywords
  * @property string $meta_description
  *
+ * @property Design[] $designs
  * @property Floor[] $floors
  * @property Facade[] $facades
  * @property Photo[] $photos
@@ -335,5 +336,13 @@ class Project extends \yii\db\ActiveRecord
         }
         $match = strip_tags($match);
         return $match;
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getDesigns()
+    {
+        return $this->hasMany(Design::className(), ['project_id' => 'id']);
     }
 }
