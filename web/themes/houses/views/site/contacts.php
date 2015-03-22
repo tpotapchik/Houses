@@ -96,7 +96,7 @@ $contacts = Yii::$app->params['contacts'];
                 <img src="img/logo3.png" alt="" style="width: 100px; height: 39px"/><span itemprop="name">Проектная мастерская dom-tut.by</span><br><br>
                <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><?= $contacts['address'] ?></span><br><br>
                 <b itemprop="telephone"><?= $contacts['phone1'] ?></b><br>
-                <b itemprop="telephone"><?= $contacts['phone2'] ?><br><br>
+                <b itemprop="telephone"><?= $contacts['phone2'] ?></b><br><br>
                 E-mail: <a itemprop="email" href="mailto:<?= $contacts['email'] ?>"><?= $contacts['email'] ?></a>
 
             </div>
