@@ -90,14 +90,14 @@ $contacts = Yii::$app->params['contacts'];
         });
     }
 </script>
-  <div class="centralize">
+  <div class="centralize" itemscope itemtype="http://schema.org/LocalBusiness">
             <div class="office-block-map">
                 <div class="connect-map">С нами легко связаться:</div>
-                <img src="img/logo3.png" alt="" style="width: 100px; height: 39px"/><br><br>
-               <?= $contacts['address'] ?><br><br>
-                <b><?= $contacts['phone1'] ?></b><br>
-                <b><?= $contacts['phone2'] ?><br><br>
-                E-mail: <a href="mailto:<?= $contacts['email'] ?>"><?= $contacts['email'] ?></a>
+                <img src="img/logo3.png" alt="" style="width: 100px; height: 39px"/><span itemprop="name">Проектная мастерская dom-tut.by</span><br><br>
+               <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><?= $contacts['address'] ?></span><br><br>
+                <b itemprop="telephone"><?= $contacts['phone1'] ?></b><br>
+                <b itemprop="telephone"><?= $contacts['phone2'] ?><br><br>
+                E-mail: <a itemprop="email" href="mailto:<?= $contacts['email'] ?>"><?= $contacts['email'] ?></a>
 
             </div>
             <div id="officeMap">

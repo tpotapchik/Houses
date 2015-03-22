@@ -34,9 +34,9 @@ if (!isset($model)) {
             <a class="mail" href="mailto:<?= $contacts['email'] ?>"><i class="_ico"></i><?= $contacts['email'] ?></a>
             <a class="skype" href="skype:<?= $contacts['skype'] ?>"><i class="_ico"></i><?= $contacts['skype'] ?></a>
         </div>
-        <div itemscope itemtype="http://schema.org/LocalBusiness" class="phone right">
+        <div class="phone right">
             <div class="_ico"></div>
-            <p itemprop="telephone">
+            <p>
                 <a style="color:#434242; text-decoration: none;" href="tel:<?= Yii::$app->params['contacts']['phone1'] ?>"><?= Yii::$app->params['contacts']['phone1'] ?></a>
             </p>
             <?php
@@ -45,7 +45,7 @@ if (!isset($model)) {
              * PLEASE DO NOT TOUCH ANY PHP EXPRESSIONS LIKE <?= $contacts['email'] ?> OR <?= $contacts['phone'] ?>
              */
             ?>
-            <p itemprop="telephone">
+            <p>
                 <a style="color:#434242; text-decoration: none;" href="tel:<?= Yii::$app->params['contacts']['phone2'] ?>"><?= Yii::$app->params['contacts']['phone2'] ?></a>
             </p>
         </div>
