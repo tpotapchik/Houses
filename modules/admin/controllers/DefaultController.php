@@ -13,10 +13,6 @@ class DefaultController extends Controller
             'access' => [
                 'class' => AccessControl::className(),
                 'rules' => [
-//                    [
-//                        'actions' => ['login', 'error'],
-//                        'allow' => true,
-//                    ],
                     [
                         'actions' => ['index'],
                         'allow' => true,
@@ -24,12 +20,6 @@ class DefaultController extends Controller
                     ],
                 ],
             ],
-//            'verbs' => [
-//                'class' => VerbFilter::className(),
-//                'actions' => [
-////                    'logout' => ['post'],
-//                ],
-//            ],
         ];
     }
 

@@ -25,7 +25,7 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
             <?= $this->render('../layouts/_right-menu', []) ?>
         </div>
         <div class="main-text-block ovhidden">
-            <?= /** @var \AlexanderEmelyanov\yii\modules\articles\models\ArticleInstance $article */
+            <?= /** @var \app\models\Article $article */
             $article->full_text ?>
         </div>
         <div class="feedback-block-wrapper">

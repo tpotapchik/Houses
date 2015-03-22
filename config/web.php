@@ -25,6 +25,7 @@ $config = [
                 'catalog' => 'catalog/index',
                 'catalog/<category:[[:word:]-_]+>/<numCat:[[:word:]-]+>' => 'catalog/view',
                 'catalog/<category:[[:word:]-_]+>/<numCat:[[:word:]-]+>-foto.html' => 'design/view',
+                'minsk-design-interior' => 'design/index',
                 'catalog/search' => 'catalog/search',
                 'catalog/<category_url:[[:word:]-_]+>' => 'catalog/category',
                 'news' => 'news/index',
