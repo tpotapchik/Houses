@@ -1,6 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
+use app\models\Article;
 use yii\captcha\Captcha;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
@@ -25,7 +26,7 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
             <?= $this->render('../layouts/_right-menu', []) ?>
         </div>
         <div class="main-text-block ovhidden">
-            <?= /** @var \AlexanderEmelyanov\yii\modules\articles\models\ArticleInstance $article */
+            <?= /** @var Article $article */
             $article->full_text ?>
         </div>
         <div class="feedback-block-wrapper">
