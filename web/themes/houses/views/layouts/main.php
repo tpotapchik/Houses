@@ -57,6 +57,7 @@ if (strlen($this->title) > 0) {
 
         </script>
     <?php endif; ?>
+    <link rel="shortcut icon" href="http://dom-tut.by/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
