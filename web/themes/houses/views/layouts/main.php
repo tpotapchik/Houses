@@ -3,6 +3,7 @@ use app\assets\AppAsset;
 use app\models\Article;
 use yii\helpers\Html;
 use yii\web\NotFoundHttpException;
+use yii\helpers\BaseUrl;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -57,7 +58,7 @@ if (strlen($this->title) > 0) {
 
         </script>
     <?php endif; ?>
-    <link rel="shortcut icon" href="http://dom-tut.by/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="<?= Url::canonical() ?>favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
