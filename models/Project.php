@@ -341,8 +341,16 @@ class Project extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getDesigns()
+    public function getDesign()
     {
-        return $this->hasMany(Design::className(), ['project_id' => 'id']);
+        return $this->hasOne(Design::className(), ['project_id' => 'id']);
+    }
+
+    /**
+     * @return bool
+     */
+    public function hasDesigns()
+    {
+        return $this->getDesign()->count() > 0 ? true : false;
     }
 }

@@ -14,6 +14,12 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
+    <?php
+    /** @var int $project_id */
+    if ($project_id) {
+        $model->project_id = $project_id;
+    }
+    ?>
     <?= $this->render('_form', [
         'model' => $model,
     ]) ?>

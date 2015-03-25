@@ -1,6 +1,7 @@
 <?php
 
 use app\models\Category;
+use app\models\Project;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\grid\GridView;
@@ -74,7 +75,22 @@ $this->params['breadcrumbs'][] = $this->title;
 
             [
                 'class' => 'yii\grid\ActionColumn',
-                'buttons' => ['design' => function($url, $model, $key){}],
+                'buttons' => ['design' =>
+                function($url, $model, $key) {
+                    /** @var Project $model */
+                    if ($model->hasDesigns()) {
+                        $class = 'text-success';
+                        $url = ['design/update', 'id' => $model->getDesign()->one()->id ];
+                    } else {
+                        $class = 'text-danger';
+                        $url = ['design/create', 'project_id' => $model->id ];
+                    }
+                    return Html::a('<span class="glyphicon glyphicon-lamp"></span>', $url, [
+                        'title' => Yii::t('app', 'Design'),
+                        'data-pjax' => '0',
+                        'class' => $class
+                    ]);
+                }],
                 'template' => '{view} {update} {delete} {design}'
             ],
         ],

@@ -78,6 +78,7 @@ class DesignController extends Controller
         } else {
             return $this->render('create', [
                 'model' => $model,
+                'project_id' => Yii::$app->request->get('project_id', false)
             ]);
         }
     }
