@@ -11,17 +11,21 @@ $this->title = $name;
 ?>
 <div class="site-error">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1>404</h1>
 
     <div class="alert alert-danger">
-        <?= nl2br(Html::encode($message)) ?>
+        Страница не найдена
     </div>
 
     <p>
-        The above error occurred while the Web server was processing your request.
+        Это означает, что страницы, которую вы ищете, больше не существует. <br>
+        Возможно, она была удалена, либо вы набрали неправильный адрес.
     </p>
+    <p>Вы можете перейти на <a href="/index">главную страницу</a> либо в <a href="/catalog">каталог проектов</a>.</p>
     <p>
-        Please contact us if you think this is a server error. Thank you.
+        Мы можем перезвонить Вам сами:
+
     </p>
+    <div class="call_me"><a href="#popup" class="popup">Заказать звонок</a></div>
 
 </div>
