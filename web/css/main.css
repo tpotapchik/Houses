@@ -1999,17 +1999,34 @@ padding-top: 10px;}
     cursor: pointer;
 }
 .site-error {
+  text-align: center;
+  font-size: 20px;
+  color: #000;
+  padding: 30px 0 50px;
 
 }
 .site-error h1{
+  color: #00519E;
 
 }
 .site-error .alert {
 
 }
-.site-error p {
-
+.site-error p a{
+  color: #820084;
+  font-weight: 700;
 }
+.site-error .call_me {
+  background-color: #820084;
+}
+.site-error .call_me a {
+  text-decoration: none;
+  padding: 7px 23px 10px;
+  color: #fff;
+  display: inline-block;
+  vertical-align: top;
+}
+
 
 
 .order-call-btn {
