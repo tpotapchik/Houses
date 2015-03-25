@@ -2007,17 +2007,22 @@ padding-top: 10px;}
 }
 .site-error h1{
   color: #00519E;
+  font-size: 50px;
 
 }
-.site-error .alert {
-
-}
-.site-error p a{
+.site-error p a {
   color: #820084;
   font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid #820084;
+}
+.site-error p a:hover{
+  border-bottom: 0 none;
 }
 .site-error .call_me {
   background-color: #820084;
+  width: 210px;
+  margin: auto;
 }
 .site-error .call_me a {
   text-decoration: none;
