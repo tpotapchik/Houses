@@ -112,7 +112,7 @@ if (strlen($this->title) > 0) {
     </div>
 </div>
 
-<div class="footer">
+<!--<div class="footer">
 
     <?= \app\widgets\FooterMenu::widget(Yii::$app->params['mainMenu']) ?>
 
@@ -131,8 +131,8 @@ if (strlen($this->title) > 0) {
 
         </div>
     </div>
-</div>
-<div class="back-top"><span></span></div>
+</div>-->
+<!--<div class="back-top"><span></span></div>-->
 
 <?php $this->endBody() ?>
 
