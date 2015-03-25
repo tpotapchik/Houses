@@ -78,7 +78,6 @@ $config = [
                 'pathMap' => [
                     '@app/views' => [
                         '@webroot/themes/houses/views',
-
                     ]
                 ],
             ],

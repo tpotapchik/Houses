@@ -1,6 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
+use app\models\Article;
 use yii\captcha\Captcha;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;

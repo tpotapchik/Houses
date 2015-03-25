@@ -36,20 +36,18 @@ if (!isset($model)) {
         </div>
         <div class="phone right">
             <div class="_ico"></div>
-                <table>
-                    <tr>
-                        <td>+375 17</td><?php
-                        /*
-                         * IF you want to change any contact lets go to ../config/params.php
-                         * PLEASE DO NOT TOUCH ANY PHP EXPRESSIONS LIKE <?= $contacts['email'] ?> OR <?= $contacts['phone'] ?>
-                         */
-                        ?>
-                        <td rowspan="2"><font style="font-size:35px; padding-left:15px;"><?= $contacts['phone'] ?></font></td>
-                    </tr>
-                    <tr>
-                        <td>+375 29</td>
-                    </tr>
-                </table>
+            <p>
+                <a style="color:#434242; text-decoration: none;" href="tel:<?= Yii::$app->params['contacts']['phone1'] ?>"><?= Yii::$app->params['contacts']['phone1'] ?></a>
+            </p>
+            <?php
+            /*
+             * IF you want to change any contact lets go to ../config/params.php
+             * PLEASE DO NOT TOUCH ANY PHP EXPRESSIONS LIKE <?= $contacts['email'] ?> OR <?= $contacts['phone'] ?>
+             */
+            ?>
+            <p>
+                <a style="color:#434242; text-decoration: none;" href="tel:<?= Yii::$app->params['contacts']['phone2'] ?>"><?= Yii::$app->params['contacts']['phone2'] ?></a>
+            </p>
         </div>
     </div>
 </div>
