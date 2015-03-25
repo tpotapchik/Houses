@@ -29,7 +29,9 @@
         "karpoff/yii2-crop-image-upload": "*",
         "himiklab/yii2-sortable-grid-view-widget" : "*",
         "himiklab/yii2-sitemap-module" : "*",
-        "dragonjet/yii2-opengraph": "dev-master"
+        "dragonjet/yii2-opengraph": "dev-master",
+        "kartik-v/yii2-widget-select2": "v1.0.0",
+        "kartik-v/yii2-widget-fileinput": "v1.0.0"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*@stable",

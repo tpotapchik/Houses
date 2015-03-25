@@ -23,6 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
+        <?= Html::a(Yii::t('app', 'Photos'), ['designPhoto/index', 'design_id' => $model->id]) ?>
     </p>
 
     <?= DetailView::widget([

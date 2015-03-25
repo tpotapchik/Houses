@@ -36,7 +36,8 @@ class Design extends \yii\db\ActiveRecord
             [['title', 'meta_keywords', 'meta_description', 'text', 'project_id'], 'required'],
             [['meta_keywords', 'meta_description', 'text'], 'string'],
             [['project_id'], 'integer'],
-            [['title'], 'string', 'max' => 255]
+            [['title'], 'string', 'max' => 255],
+            [['project_id'], 'unique']
         ];
     }
 

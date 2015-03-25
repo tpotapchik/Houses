@@ -72,7 +72,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 'label' => 'Цена в EUR',
             ],
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'buttons' => ['design' => function($url, $model, $key){}],
+                'template' => '{view} {update} {delete} {design}'
+            ],
         ],
     ]); ?>
 

@@ -20,6 +20,8 @@ class m150321_192134_designs extends Migration
             'project_id' => Schema::TYPE_INTEGER . ' NOT NULL'
         ]);
 
+        $this->createIndex('uniq_design_to_project', self::DESIGN, 'project_id', true);
+
         $this->addForeignKey('fk_design_project', self::DESIGN, 'project_id', 'project', 'id', 'CASCADE', 'CASCADE');
 
         $this->createTable(self::PHOTO, [
@@ -36,6 +38,7 @@ class m150321_192134_designs extends Migration
         $this->dropForeignKey('fk_photo_design', self::PHOTO);
         $this->dropTable(self::PHOTO);
         $this->dropForeignKey('fk_design_project', self::DESIGN);
+        $this->dropIndex('uniq_design_to_project', self::DESIGN);
         $this->dropTable(self::DESIGN);
     }
 }
