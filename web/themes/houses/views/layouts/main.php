@@ -135,7 +135,8 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
     <div class="back-top"><span></span></div>
 
     <?php $this->endBody() ?>
-
+<div class="share42init" data-top1="150" data-top2="20" data-margin="0"></div>
+<script type="text/javascript" src="http://dom-tut.by/js/share42/share42.js"></script>
 </body>
 </html>
 <?php $this->endPage() ?>
