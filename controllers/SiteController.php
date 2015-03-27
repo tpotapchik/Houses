@@ -55,8 +55,9 @@ class SiteController extends Controller
     {
         if (parent::beforeAction($action)) {
             // change layout for error action
-            if ($action->id=='error')
-                $this->layout ='notFound';
+            if ($action->id == 'error') {
+                $this->layout = 'notFound';
+            }
             return true;
         } else {
             return false;

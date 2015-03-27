@@ -1999,25 +1999,34 @@ padding-top: 10px;}
     cursor: pointer;
 }
 .site-error {
+  top: 50%;
+  margin-top: -240px;
+  width: 100%;
   text-align: center;
   font-size: 20px;
+  position: absolute;
   color: #000;
   padding: 30px 0 50px;
-
+  background: url("../img/main-title-bg.png") repeat scroll 0 0 transparent;
 }
 .site-error h1{
   color: #00519E;
+  font-size: 50px;
 
 }
-.site-error .alert {
-
-}
-.site-error p a{
+.site-error p a {
   color: #820084;
   font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid #820084;
+}
+.site-error p a:hover{
+  border-bottom: 0 none;
 }
 .site-error .call_me {
   background-color: #820084;
+  width: 210px;
+  margin: auto;
 }
 .site-error .call_me a {
   text-decoration: none;
@@ -2026,10 +2035,31 @@ padding-top: 10px;}
   display: inline-block;
   vertical-align: top;
 }
-
-
-
-.order-call-btn {
+.social-help {
+  position: fixed;
+  bottom: 265px;
+  width: 127px;
+  height: 96px;
+  left: 10px;
+  top:255px;
+  display: none;
+}
+.sorting-projects {
+  font-size: 14px;
+  text-align: right;
+  margin: 10px 0;
+  line-height: 22px;
+  color: #444444;
+} .sorting-projects a {
+  display: inline-block;
+  color: #fff;
+  background-color: #7fb000;
+  text-decoration: none;
+  padding: 0 5px;
+} .sorting-projects a:hover {
+     background-color: #a0be3f;;
+   }
+ .order-call-btn {
   background: #820084;
   padding: 0 10px;
   width: 100%;

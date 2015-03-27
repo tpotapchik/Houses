@@ -100,39 +100,14 @@ if (strlen($this->title) > 0) {
 <?php $this->beginBody() ?>
 <div class="page">
     <div class="page_i">
-        <?= $this->render('_header', ['social' => $social]) ?>
-        <?= $this->render('_header-menu', []) ?>
 
-
-        <!--end HEADER-->
+        <?= $this->render('_callus') ?>
 
         <?= $content ?>
 
 
     </div>
 </div>
-
-<div class="footer">
-
-    <?= \app\widgets\FooterMenu::widget(Yii::$app->params['mainMenu']) ?>
-
-    <div class="footer-bottom">
-        <div class="centralize">
-                <span class="copyright">
-                    2013 - <?= date('Y') ?> &copy; Все права защищены
-                </span>
-
-            <div class="footer-social">
-                <a href="<?= $social['youtube'] ?>" class="yt"></a>
-                <a href="<?= $social['gPlus'] ?>" class="gp"></a>
-                <a href="<?= $social['vk'] ?>" class="vk"></a>
-                <a href="<?= $social['fb'] ?>" class="fb"></a>
-            </div>
-
-        </div>
-    </div>
-</div>
-<div class="back-top"><span></span></div>
 
 <?php $this->endBody() ?>
 
