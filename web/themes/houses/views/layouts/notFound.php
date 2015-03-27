@@ -100,7 +100,8 @@ if (strlen($this->title) > 0) {
 <?php $this->beginBody() ?>
 <div class="page">
     <div class="page_i">
-        
+
+        <?= $this->render('_callus') ?>
 
         <?= $content ?>
 
