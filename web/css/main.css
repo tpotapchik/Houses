@@ -2041,6 +2041,7 @@ padding-top: 10px;}
   width: 127px;
   height: 96px;
   left: 10px;
+  top:255px;
   display: none;
 }
 .sorting-projects {
@@ -2055,8 +2056,10 @@ padding-top: 10px;}
   background-color: #7fb000;
   text-decoration: none;
   padding: 0 5px;
-}
-.order-call-btn {
+} .sorting-projects a:hover {
+     background-color: #a0be3f;;
+   }
+ .order-call-btn {
   background: #820084;
   padding: 0 10px;
   width: 100%;
