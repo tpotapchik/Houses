@@ -2035,7 +2035,14 @@ padding-top: 10px;}
   display: inline-block;
   vertical-align: top;
 }
-
+.social-help {
+  position: fixed;
+  bottom: 265px;
+  width: 127px;
+  height: 96px;
+  left: 10px;
+  display: none;
+}
 
 
 .order-call-btn {

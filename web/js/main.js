@@ -57,6 +57,16 @@ $(function () {
             $('.back-top').fadeOut();
         }
     });
+    $(window).on('scroll', function () {
+        var scrollTop = $(document).scrollTop();
+
+        if (scrollTop >= 380) {
+            $('.social-help').fadeIn();
+        }
+        else {
+            $('.social-help').fadeOut();
+        }
+    });
 
     $('.back-top').click(function () {
         $('body,html').animate({
