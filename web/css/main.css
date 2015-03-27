@@ -2043,8 +2043,19 @@ padding-top: 10px;}
   left: 10px;
   display: none;
 }
-
-
+.sorting-projects {
+  font-size: 14px;
+  text-align: right;
+  margin: 10px 0;
+  line-height: 22px;
+  color: #444444;
+} .sorting-projects a {
+  display: inline-block;
+  color: #fff;
+  background-color: #7fb000;
+  text-decoration: none;
+  padding: 0 5px;
+}
 .order-call-btn {
   background: #820084;
   padding: 0 10px;
