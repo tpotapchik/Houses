@@ -2,6 +2,7 @@
 
 namespace app\modules\admin\controllers;
 
+use app\models\DesignPhoto;
 use Yii;
 use app\models\Design;
 use app\models\DesignSearch;
@@ -9,6 +10,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * DesignController implements the CRUD actions for Design model.
@@ -74,6 +76,18 @@ class DesignController extends Controller
         $model = new Design();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+
+            $a = UploadedFile::getInstances($model, 'designPhotos');
+            /** @var UploadedFile $file */
+            foreach ($a as $file) {
+                $designPhoto = new DesignPhoto();
+                $designPhoto->file = $file;
+                $designPhoto->design_id = $model->id;
+                if ($designPhoto->validate()) {
+                    $result = $designPhoto->save();
+                }
+            }
+
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [

@@ -31,7 +31,16 @@ class DesignPhoto extends \yii\db\ActiveRecord
         return [
             [['design_id'], 'required'],
             [['design_id'], 'integer'],
-            [['file'], 'string', 'max' => 255]
+            [['file'], 'file', 'extensions' => 'jpeg, gif, png', 'on' => ['insert', 'update']]
+        ];
+    }
+
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => 'app\library\PhotoBehavior'
+            ]
         ];
     }
 

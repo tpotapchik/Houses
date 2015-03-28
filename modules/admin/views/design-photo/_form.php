@@ -1,5 +1,6 @@
 <?php
 
+use karpoff\icrop\CropImageUpload;
 use kartik\file\FileInput;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
@@ -11,13 +12,10 @@ use yii\widgets\ActiveForm;
 
 <div class="design-photo-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
     <?= $form->field($model, 'file')->widget(FileInput::classname(), [
-        'options' => [
-            'accept' => 'image/*',
-            'multiple' => true
-        ],
+        'options' => ['accept' => 'image/*'],
     ]); ?>
 
     <?= $form->field($model, 'design_id')->textInput() ?>

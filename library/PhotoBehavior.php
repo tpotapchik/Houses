@@ -54,7 +54,12 @@ class PhotoBehavior extends Behavior
     {
         /** @var ActiveRecord $model */
         $model = $this->owner;
-        $this->_file = UploadedFile::getInstance($model, $this->attribute);
+        $a = $this->attribute;
+        if ($model->$a instanceof UploadedFile) {
+            $this->_file = $model->$a;
+        } else {
+            $this->_file = UploadedFile::getInstance($model, $this->attribute);
+        }
         if ($this->_file instanceof UploadedFile) {
             $this->_file->name = $this->generateFileName($this->_file);
             $model->setAttribute($this->attribute, $this->_urlPath . $this->_file);
