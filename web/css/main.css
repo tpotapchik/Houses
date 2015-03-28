@@ -2041,14 +2041,14 @@ padding-top: 10px;}
   width: 127px;
   height: 96px;
   left: 10px;
-  top:255px;
+  top:540px;
   display: none;
 }
 .sorting-projects {
-  font-size: 14px;
+  font-size: 20px;
   text-align: right;
-  margin: 10px 0;
-  line-height: 22px;
+  margin: 24px 0;
+  line-height: 31px;
   color: #444444;
 } .sorting-projects a {
   display: inline-block;
@@ -2056,6 +2056,7 @@ padding-top: 10px;}
   background-color: #7fb000;
   text-decoration: none;
   padding: 0 5px;
+  margin-left: 10px;
 } .sorting-projects a:hover {
      background-color: #a0be3f;;
    }

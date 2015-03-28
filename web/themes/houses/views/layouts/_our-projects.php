@@ -16,7 +16,7 @@ $panel = new \app\models\FilterPanel();
 ?>
 
 <div class="main-title stop-element">НАШИ ПРОЕКТЫ ДОМОВ</div>
-<div class="sorting-projects">Выводить по <a href="#">20</a> , <a href="#">50</a> , <a href="#">100</a></div>
+<div class="sorting-projects">Показать: <a href="#">20</a><a href="#">50</a><a href="#">100</a></div>
 <div class="main-block projects-house clearfix">
     <div class="_content left">
         <a href="<?= \yii\helpers\Url::toRoute(['catalog/index']) ?>" class="picture-block">
