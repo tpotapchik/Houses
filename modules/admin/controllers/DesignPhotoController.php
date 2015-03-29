@@ -46,11 +46,23 @@ class DesignPhotoController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionView($id)
+    public function actionView($id = null)
     {
-        return $this->render('view', [
-            'model' => $this->findModel($id),
-        ]);
+        if ($id === null) {
+            $designId = Yii::$app->request->get('design_id', false);
+            if ($designId) {
+                return $this->render('view', [
+                    'model' => DesignPhoto::findOne(['design_id' => $designId]),
+                ]);
+            } else {
+                throw new NotFoundHttpException();
+            }
+
+        } else {
+            return $this->render('view', [
+                'model' => $this->findModel($id),
+            ]);
+        }
     }
 
     /**

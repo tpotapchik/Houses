@@ -2,10 +2,12 @@
 
 namespace app\modules\admin\controllers;
 
+use app\library\PhotoBehavior;
 use app\models\DesignPhoto;
 use Yii;
 use app\models\Design;
 use app\models\DesignSearch;
+use yii\db\AfterSaveEvent;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -74,17 +76,23 @@ class DesignController extends Controller
     public function actionCreate()
     {
         $model = new Design();
+        $modelPhoto = new DesignPhoto();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
 
-            $a = UploadedFile::getInstances($model, 'designPhotos');
+            $a = UploadedFile::getInstances($modelPhoto, 'file');
             /** @var UploadedFile $file */
             foreach ($a as $file) {
                 $designPhoto = new DesignPhoto();
                 $designPhoto->file = $file;
                 $designPhoto->design_id = $model->id;
-                if ($designPhoto->validate()) {
-                    $result = $designPhoto->save();
+                if ($designPhoto->validate() && $designPhoto->save()) {
+                    $p = new PhotoBehavior();
+                    $p->init();
+                    $p->setFile($file);
+                    $p->owner = $designPhoto;
+                    $p->afterSave(new AfterSaveEvent());
+//                    $file->saveAs($designPhoto->file);
                 }
             }
 
@@ -92,6 +100,7 @@ class DesignController extends Controller
         } else {
             return $this->render('create', [
                 'model' => $model,
+                'modelPhoto' => $modelPhoto,
                 'project_id' => Yii::$app->request->get('project_id', false)
             ]);
         }

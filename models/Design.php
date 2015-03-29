@@ -71,4 +71,14 @@ class Design extends \yii\db\ActiveRecord
     {
         return $this->hasMany(DesignPhoto::className(), ['design_id' => 'id']);
     }
+
+    /**
+     * @return array
+     */
+    public function getLink()
+    {
+        /** @var Project $project */
+        $project = $this->getProject()->one();
+        return ['design/view', 'category' => $project->category->url, 'numCat' => $project->numCat];
+    }
 }

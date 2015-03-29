@@ -5,13 +5,34 @@
  * Date: 13.11.14
  * Time: 0:59
  */
+use app\models\Design;
+use yii\db\Connection;
+use yii\db\Expression;
+
 ?>
 <div class="main-title">ИНТЕРЬЕРЫ ПОПУЛЯРНЫХ ПРОЕКТОВ</div>
 <div class="main-block-interior clearfix">
-    <a href="#" class="interior-block left"><img src="/img/temp/interior1.jpg" alt="Интерьер"/></a>
-    <a href="#" class="interior-block left"><img src="/img/temp/interior2.jpg" alt="Интерьер"/></a>
-    <a href="#" class="interior-block left"><img src="/img/temp/interior3.jpg" alt="Интерьер"/></a>
-    <a href="#" class="interior-block left"><img src="/img/temp/interior4.jpg" alt="Интерьер"/></a>
-    <a href="#" class="interior-block left"><img src="/img/temp/interior5.jpg" alt="Интерьер"/></a>
-    <a href="#" class="interior-block left"><img src="/img/temp/interior6.jpg" alt="Интерьер"/></a>
+<?php
+    $photos = [];
+    $limit = 7;
+    for ($i = 1; $i < $limit; $i++) {
+        /** @var Design $design */
+        $design = Yii::$app->getDb()->cache(function (Connection $db) {
+            return Design::find()->where('project_id IS NOT NULL')->orderBy(new Expression('RAND()'))->limit(1)->one();
+        }, 2);
+
+        /** @var \app\models\DesignPhoto $photo */
+        $photo = $design->getDesignPhotos()->one();
+?>
+        <?=
+        $photo ?
+        \yii\helpers\Html::a(
+            \yii\helpers\Html::img($photo->file),
+            $design->getLink()
+        , ['class' => 'interior-block left']) : '';
+        ?>
+    <?php
+
+    }
+?>
 </div>

@@ -2132,3 +2132,8 @@ padding-top: 10px;}
   h2,
   h3 {
     page-break-after: avoid; } }
+
+.main-block-interior img {
+    width: 327px;
+    height: 206px;
+}

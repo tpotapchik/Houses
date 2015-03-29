@@ -9,6 +9,7 @@ use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Design */
+/* @var $modelPhoto app\models\DesignPhoto */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -25,7 +26,7 @@ use yii\widgets\ActiveForm;
     ])->label('Проект');
     ?>
 
-    <?= $form->field($model, 'designPhotos[]')->widget(FileInput::classname(), [
+    <?= $form->field($modelPhoto, 'file[]')->widget(FileInput::classname(), [
         'options' => [
             'accept' => 'image/*',
             'multiple' => true,

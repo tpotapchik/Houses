@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\Article;
 use app\models\CallUsForm;
+use app\models\DesignSearch;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -66,7 +67,12 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        return $this->render('index', ['article' => Article::getMain()]);
+        $searchModel = new DesignSearch();
+        $dataProvider = $searchModel->search([]);
+        return $this->render('index', [
+            'article' => Article::getMain(),
+            'dataProvider' => $dataProvider
+        ]);
     }
 
     public function actionLogin()

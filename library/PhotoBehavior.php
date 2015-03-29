@@ -9,6 +9,8 @@
 namespace app\library;
 
 
+use Symfony\Component\Config\Definition\Exception\Exception;
+use Symfony\Component\Filesystem\Filesystem;
 use Yii;
 use yii\base\Behavior;
 use yii\base\InvalidParamException;
@@ -30,6 +32,10 @@ class PhotoBehavior extends Behavior
     private $_baseUploadPath = '';
     private $_urlPath = '';
     private $_file = null;
+    /**
+     * @var Filesystem
+     */
+    private $filesystem;
 
     /**
      * Events declaration
@@ -122,8 +128,8 @@ class PhotoBehavior extends Behavior
     protected function delete($attribute, $old = false)
     {
         $path = $this->getUploadPath($attribute, $old);
-        if (is_file($path)) {
-            unlink($path);
+        if ($this->filesystem->exists($path)) {
+            $this->filesystem->remove($path);
         }
     }
 
@@ -174,6 +180,7 @@ class PhotoBehavior extends Behavior
         parent::init();
         $this->_baseUploadPath = \Yii::$app->basePath .
             DIRECTORY_SEPARATOR . 'web';
+        $this->filesystem = new Filesystem();
     }
 
     /**
@@ -185,5 +192,9 @@ class PhotoBehavior extends Behavior
         if ($this->unlinkOnDelete && $attribute) {
             $this->delete($attribute);
         }
+    }
+
+    public function setFile(UploadedFile $uploadedFile) {
+        $this->_file = $uploadedFile;
     }
 }
