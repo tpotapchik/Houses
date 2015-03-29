@@ -19,7 +19,7 @@ use yii\db\Expression;
         /** @var Design $design */
         $design = Yii::$app->getDb()->cache(function (Connection $db) {
             return Design::find()->where('project_id IS NOT NULL')->orderBy(new Expression('RAND()'))->limit(1)->one();
-        }, 2);
+        }, 60 * 5);
 
         /** @var \app\models\DesignPhoto $photo */
         $photo = $design->getDesignPhotos()->one();
