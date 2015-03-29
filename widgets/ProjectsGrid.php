@@ -18,6 +18,7 @@ use yii\widgets\BaseListView;
 class ProjectsGrid extends BaseListView
 {
     public $layout = "{items}\n{pager}";
+    public $mainBlockClass = 'main-block projects-house clearfix';
 
     /**
      * Renders the data models.
@@ -32,7 +33,7 @@ class ProjectsGrid extends BaseListView
             $result .= $this->renderItem($model, $index);
         }
 
-        return Html::tag('div', $result, ['class' => 'main-block projects-house clearfix']);
+        return Html::tag('div', $result, ['class' => $this->mainBlockClass]);
     }
 
     /**

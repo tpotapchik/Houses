@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Article;
 use app\models\Project;
 use yii\web\NotFoundHttpException;
 
@@ -9,7 +10,8 @@ class DesignController extends \yii\web\Controller
 {
     public function actionIndex()
     {
-        return $this->render('index');
+        $article = Article::getArticle('minsk-design-interior');
+        return $this->render('index', ['article' => $article]);
     }
 
     public function actionView($category, $numCat)
