@@ -10,8 +10,8 @@ use yii\helpers\Html;
 $this->title = $name;
 ?>
 <div class="site-error">
-    <div class="centralize">
-    
+    <div class="centralize clearfix">
+
         <h1>К сожалению, запрошенная вами страница не найдена</h1>
         <p>
             Это означает, что страницы, которую вы ищете, больше не существует. <br>
