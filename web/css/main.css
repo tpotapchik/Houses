@@ -2014,7 +2014,10 @@ padding-top: 10px;}
 .site-error h1{
   color: #00519E;
   font-size: 20px;
-
+}
+.gift-404 {
+  border: 1px solid #444444;
+  border-radius: 5px;
 }
 .site-error p a {
   color: #820084;
@@ -2026,12 +2029,13 @@ padding-top: 10px;}
   border-bottom: 0 none;
 }
 .site-error .call_me {
-  background-color: #820084;
+
   width: 210px;
-  margin: auto;
+  margin-left: 80px;
 }
 .site-error .call_me a {
   text-decoration: none;
+  background-color: #820084;
   padding: 7px 23px 10px;
   color: #fff;
   display: inline-block;
