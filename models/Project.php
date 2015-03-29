@@ -353,4 +353,9 @@ class Project extends \yii\db\ActiveRecord
     {
         return $this->getDesign()->count() > 0 ? true : false;
     }
+
+    public function getLink()
+    {
+        return ['catalog/'.$this->getCategory()->one()->url.'/'.$this->numCat];
+    }
 }

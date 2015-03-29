@@ -1,8 +1,11 @@
 <?php
 /* @var $this yii\web\View */
+use app\models\Design;
 use app\models\GeneralHelper;
+use app\models\Photo;
+use yii\helpers\Html;
 
-/* @var $design \app\models\Design */
+/* @var $design Design */
 $userTitle = $this->title = $design->title;
 $photos = $design->getDesignPhotos()->all();
 Yii::$app->opengraph->title = $this->title;
@@ -23,8 +26,48 @@ $this->registerMetaTag(['name' => 'description', 'content' => $design->meta_desc
         <?= $userTitle ?>
     </div>
 
-    <div class="main-block clearfix">
+    <div class="main-block-interior clearfix">
+        <?php
+            $photos = [];
+        /** @var \app\models\Project $project */
+        $project = $design->getProject()->one();
+        $photos [] = $project->getMainPhoto();
+        $otherPhotos = $project->getOtherPhotos();
+        /** @var Photo $pho */
+        foreach($otherPhotos as $pho) {
+            if ($pho->title !== 'участок') {
+                $photos[] = $pho->file;
+            }
+        }
 
+        $otherPhotos = $design->getDesignPhotos()->all();
+        foreach($otherPhotos as $pho) {
+            $photos[] = $pho->file;
+        }
+
+        foreach($photos as $photo) {
+            echo Html::a(Html::img($photo), $photo, ['class' => 'interior-block left fancybox']);
+        }
+        ?>
+    </div>
+
+    <p>
+        <?= Html::a('Перейти к проекту', $design->getProject()->one()->getLink(), [
+            'class' => '',
+            'rel' => 'gallery2'
+        ]) ?>
+    </p>
+
+    <div class="main-title">ДИЗАЙН ИНТЕРЬЕРОВ</div>
+
+    <div class="main-block clearfix">
+        <div class="right-block right" style="position: static; margin-left: 0px;">
+            <?= $this->render('../layouts/_right-menu', []) ?>
+            <?= $this->render('../layouts/_newsAnounce', []) ?>
+        </div>
+        <div class="main-text-block ovhidden">
+            <?= $design->text ?>
+        </div>
     </div>
 
     <?= $this->render('../layouts/_parthners', []) ?>

@@ -68,7 +68,7 @@ class ProjectsGrid extends BaseListView
             '<div class="_more-button">
                     <div class="show-more-btn-wrapper"><span class="show-more-btn">Подробнее</span></div>
             </div>',
-            ['catalog/'.$model->getCategory()->one()->url.'/'.$model->numCat],
+            $model->getLink(),
             ['class' => 'picture-block']
         );
 
