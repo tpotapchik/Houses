@@ -21,18 +21,21 @@ use yii\db\Expression;
             return Design::find()->where('project_id IS NOT NULL')->orderBy(new Expression('RAND()'))->limit(1)->one();
         }, 60 * 5);
 
-        /** @var \app\models\DesignPhoto $photo */
-        $photo = $design->getDesignPhotos()->one();
-?>
-        <?=
-        $photo ?
-        \yii\helpers\Html::a(
-            \yii\helpers\Html::img($photo->file),
-            $design->getLink()
-        , ['class' => 'interior-block left']) : '';
-        ?>
-    <?php
-
+        if ($design) {
+            /** @var \app\models\DesignPhoto $photo */
+            $photo = $design->getDesignPhotos()->one();
+            ?>
+            <?=
+            $photo ?
+                \yii\helpers\Html::a(
+                    \yii\helpers\Html::img($photo->file),
+                    $design->getLink()
+                    ,
+                    ['class' => 'interior-block left']
+                ) : '';
+            ?>
+        <?php
+        }
     }
 ?>
 </div>
