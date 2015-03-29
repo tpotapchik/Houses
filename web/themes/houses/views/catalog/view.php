@@ -95,8 +95,13 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
                 <a href="javascript: void(0);" onclick="openGallery()" data-imgIndex="0">визуализации</a>|
                 <a class="openGallery" data-index="plans" href="javascript: void(0);">планы</a>|
                 <a class="openGallery" data-index="facades" href="javascript: void(0);">фасады</a>|
-                <a class="openGallery" data-index="position" href="javascript: void(0);">расположение</a>|
-                <a href="">3D прогулка</a>
+                <a class="openGallery" data-index="position" href="javascript: void(0);">расположение</a>
+                <?php
+                    if ($model->hasDesigns()) {
+                        $link = $model->getDesign()->one()->getLink();
+                        echo '|' . Html::a('Интерьер', $link);
+                    }
+                ?>
             </div>
 
 
