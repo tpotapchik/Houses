@@ -963,7 +963,8 @@ body {
   background: url("../img/body-bg.jpg") no-repeat #e8e8e8;
   background-position: 50%, 88px;
   background-size: cover;
-  font: 300 62.5%/1.19 'Roboto', Arial, Helvetica, sans-serif;
+  /*font: 300 62.5%/1.19 'Roboto', Arial, Helvetica, sans-serif;*/
+  font: 9px Arial, Helvetica, sans-serif;
   color: #606060;
   min-width: 1000px; }
   body > .page {
