@@ -1,4 +1,6 @@
 RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.dom-tut\.by$ [NC]
+RewriteRule ^(.*)$ http://dom-tut.by/ [R=301,L]
 # if a directory or a file exists, use it directly
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
