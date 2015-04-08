@@ -13,22 +13,14 @@ $this->title = $name;
     <div class="centralize clearfix">
 
         <h1>К сожалению, запрошенная вами страница не найдена</h1>
-        <p>
-            Это означает, что страницы, которую вы ищете, больше не существует. <br>
-            Возможно, она была удалена, либо вы набрали неправильный адрес.
-        </p>
-        <p>Вы можете перейти на <?= Html::a('главную страницу', ['site/index']); ?> либо в <?= Html::a('каталог проектов', ['catalog/index']) ?>.</p>
-        <p>
-            Не повезло в поиске - мы вам поможем!
-        </p>
-        <div>
-        <div class="left" style="margin-left: 180px;">
-            <img src="/img/gift.jpg" class="gift-404" alt="Получи бесплатную консультацию">
-        </div>
-        <div class="left call_me">
-            <p>Если вам сразу не удалось найти то,<br> что искали,<br>не расстаривайтесь!</p>
-            <a href="#popup" class="popup">Заказать звонок</a></div>
-        </div>
+                <p><small>Это означает, что страницы, которую вы ищете, больше не существует. <br>
+                    Возможно, она была удалена, либо вы набрали неправильный адрес.</small></p>
+                <p><img src="http://dom-tut.by/img/error-bg.png"></p>
+                <p>Не повезло в поиске - повезет со скидкой!</p>
+                    <img src="http://dom-tut.by/img/error-bonus.png" width="200px">
+                <div class="call_me_error" style="margin:0px auto !inherit; width:300px !inherit;">
+                    <a href="#popup" class="popup" style="width:300px">Заказать бесплатный звонок!</a>
+        	</div>
     </div>
 
 </div>
