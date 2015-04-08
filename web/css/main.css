@@ -2052,6 +2052,19 @@ padding-top: 10px;}
     margin:0px auto; width:300px;
 }
 
+.site-error .call_me_error {
+    width: 210px;
+    margin-left: 80px;
+}
+.site-error .call_me_error a {
+    text-decoration: none;
+    background-color: #820084;
+    padding: 7px 23px 10px;
+    color: #fff;
+    display: inline-block;
+    vertical-align: top;
+}
+
 .social-help {
   position: fixed;
   bottom: 265px;
