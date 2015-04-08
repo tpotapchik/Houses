@@ -9,6 +9,35 @@ use yii\helpers\Html;
 
 $this->title = $name;
 ?>
+
+<div class="header">
+    <div class="centralize">
+        <a href="/" class="logo"><img src="/img/logo3.png" alt="Проектная мастерская Dom-Tut.by"/></a>
+
+        <div class="call-back right">
+            <div class="social">
+                <a rel="nofollow" href="https://www.youtube.com/channel/UCg34LYTRug0x8hNVbjbeZ3A" target="_blank" class="yt"></a>
+                <a rel="nofollow" href="https://plus.google.com/u/0/108290869583672576270/posts" target="_blank" class="gp"></a>
+                <a rel="nofollow" href="http://vk.com/dom_tut" target="_blank" class="vk"></a>
+                <a rel="nofollow" href="https://www.facebook.com/pages/Проектная-мастерская-Дом-Тутby/1602271246672110" target="_blank" class="fb"></a>
+             </div>
+        </div>
+        <div class="contact right">
+            <a class="mail" href="mailto:info@dom-tut.by"><i class="_ico"></i>info@dom-tut.by</a>
+            <a class="skype" href="skype:dom-tut.by"><i class="_ico"></i>dom-tut.by</a>
+        </div>
+        <div class="phone right">
+            <div class="_ico"></div>
+            <p>
+                <a style="color:#434242; text-decoration: none;" href="tel:+375 17 238 04 05">+375 17 238 04 05</a>
+            </p>
+                        <p>
+                <a style="color:#434242; text-decoration: none;" href="tel:+375 29 328 30 40">+375 29 328 30 40</a>
+            </p>
+        </div>
+    </div>
+</div>
+
 <div class="site-error">
     <div class="centralize clearfix">
 
