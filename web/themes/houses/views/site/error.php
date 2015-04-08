@@ -18,6 +18,8 @@ $this->title = $name;
                 <p><img src="http://dom-tut.by/img/error-bg.png"></p>
                 <p>Не повезло в поиске - повезет со скидкой!</p>
                     <img src="http://dom-tut.by/img/error-bonus.png" width="200px">
+                    <br/>
+                    <img src="http://dom-tut.by/img/error-strelki.png" width="120px" />
                 <div class="call_me_error">
                     <a href="#popup" class="popup" style="width:300px">Заказать бесплатный звонок!</a>
         	</div>
