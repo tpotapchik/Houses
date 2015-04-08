@@ -1,6 +1,6 @@
 .site-login {font:15px verdana; color:#fff;}
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
-  display: block; }
+  display: block; }.main-block ._category
 
 audio, canvas, video {
   vertical-align: middle;
@@ -1413,7 +1413,7 @@ body {
     text-decoration: none; }
 .main-block ._category {
   font-family: Tahoma, Arial, Helvetica, sans-serif;
-  font-size: 2.4em;
+  font-size: 20px;
   font-weight: 700;
   color: #414141;
   text-align: center;
