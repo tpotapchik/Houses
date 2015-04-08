@@ -1543,7 +1543,13 @@ h2 {
 .advice {text-align: justify;}
 .advice-title {color: #820084; font-weight: 700;
     font-size: 18px;}
-
+.go-back-project {
+    color: #444444;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 10px;
+    display: inline-block;
+}
 .characteristics {
   }
   .characteristics ._title {

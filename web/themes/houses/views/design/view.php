@@ -52,8 +52,8 @@ $this->registerMetaTag(['name' => 'description', 'content' => $design->meta_desc
     </div>
 
     <p>
-        <?= Html::a('Перейти к проекту', $design->getProject()->one()->getLink(), [
-            'class' => '',
+        <?= Html::a('< Перейти к проекту', $design->getProject()->one()->getLink(), [
+            'class' => 'go-back-project',
             'rel' => 'gallery2'
         ]) ?>
     </p>
