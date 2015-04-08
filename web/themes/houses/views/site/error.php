@@ -38,6 +38,8 @@ $this->title = $name;
     </div>
 </div>
 
+<div class="header-menu"><div class="centralize clearfix"><a class="header-menu-item active" href="/">Главная</a><a class="header-menu-item" href="/about">О нас</a><a class="header-menu-item" href="/catalog">Каталог проектов</a><a class="header-menu-item" href="/minsk-design-interior">Дизайн интерьеров</a><a class="header-menu-item" href="/news">Новости</a><a class="header-menu-item" href="/contacts">Контакты</a></div></div>
+
 <div class="site-error">
     <div class="centralize clearfix">
 
