@@ -17,9 +17,9 @@ $this->title = $name;
                     Возможно, она была удалена, либо вы набрали неправильный адрес.</small></p>
                 <p><img src="http://dom-tut.by/img/error-bg.png"></p>
                 <p>Не повезло в поиске - повезет со скидкой!</p>
-                    <img src="http://dom-tut.by/img/error-bonus.png" width="200px">
+                    <img src="http://dom-tut.by/img/error-bonus.png" width="200">
                     <br/>
-                    <img src="http://dom-tut.by/img/error-strelki.png" width="120px" />
+                    <img src="http://dom-tut.by/img/error-strelki.png" width="200" />
                 <div class="call_me_error">
                     <a href="#popup" class="popup" style="width:300px">Заказать бесплатный звонок!</a>
         	</div>
