@@ -1229,8 +1229,7 @@ body {
 .header_menu {
     height: 50px;
     color: #434242;
-    font-size: 1.8em;
-    background-color: #fff; }
+    font-size: 1.8em;}
 .header_menu .call_me {
     background-color: #820084; }
 .header_menu .call_me a {
