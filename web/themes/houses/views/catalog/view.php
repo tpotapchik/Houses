@@ -52,7 +52,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
                 <div class="_title"><?= $price ?></div>
             </div>
         <?php endif; ?>
-            
+
             <?= $this->render('../layouts/_right-menu', []) ?>
         </div>
 

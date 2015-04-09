@@ -1,8 +1,10 @@
 <div class="order-phone">
-Заказать этот проект<br/>
-Вы можете по телефонам:
+Вы можете связаться с нами<br/>
+по телефонам:
 <div class="_title"><a style="color:#fff; text-decoration: none;" href="tel:<?= Yii::$app->params['contacts']['phone1'] ?>"><?= Yii::$app->params['contacts']['phone1'] ?></a></div>
 <div class="_title"><a style="color:#fff; text-decoration: none;" href="tel:<?= Yii::$app->params['contacts']['phone2'] ?>"><?= Yii::$app->params['contacts']['phone2'] ?></a></div>
+или
+<div class="call_me"><a href="#popup" class="popup">Заказать звонок</a></div>
 </div>
 
 <div class="right-menu">
