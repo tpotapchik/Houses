@@ -1126,7 +1126,7 @@ body {
     background: #ebeced;
     color: #000; }
 
-.header, .header_menu {
+.header {
   height: 88px;
   color: #434242;
   font-size: 1.8em;
@@ -1225,6 +1225,25 @@ body {
     padding: 0 20px; }
   .header-menu-item.active, .header-menu-item:hover {
     background-color: #7fb000; }
+
+.header_menu {
+    height: 50px;
+    color: #434242;
+    font-size: 1.8em;
+    background-color: #fff; }
+.header_menu .call_me {
+    background-color: #820084; }
+.header_menu .call_me a {
+    text-decoration: none;
+    padding: 7px 23px 10px;
+    color: #fff;
+    display: inline-block;
+    vertical-align: top;
+    *display: inline;
+    *zoom: 1; }
+.header_menu .call_me:hover {
+    background-color: #970084; }
+
 .slider-item {
   position: relative;
   background-position: 50% 50%;
