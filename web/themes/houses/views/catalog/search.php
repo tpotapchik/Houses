@@ -16,7 +16,7 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
 
     <?= $this->render('../layouts/_breadcrumbs', []) ?>
 
-    <div class="footer-title"><?= strtoupper($this->title)?></div>
+    <div class="main-title"><?= strtoupper($this->title)?></div>
 
 
     <?= ProjectsGrid::widget([

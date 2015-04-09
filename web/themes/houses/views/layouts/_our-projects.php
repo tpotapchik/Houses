@@ -15,7 +15,7 @@ $projectSearch = new ProjectSearch();
 $panel = new \app\models\FilterPanel();
 ?>
 
-<div class="footer-title stop-element">НАШИ ПРОЕКТЫ ДОМОВ</div>
+<div class="main-title stop-element">НАШИ ПРОЕКТЫ ДОМОВ</div>
 <div class="sorting-projects">Показать: <a href="#">20</a><a href="#">50</a><a href="#">100</a></div>
 <div class="main-block projects-house clearfix">
     <div class="_content left">
