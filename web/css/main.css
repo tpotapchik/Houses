@@ -1126,12 +1126,11 @@ body {
     background: #ebeced;
     color: #000; }
 
-.header {
+.header, .header_menu {
   height: 88px;
   color: #434242;
   font-size: 1.8em;
   background-color: #fff; }
-.header_menu {height: 50px;}
   .header .logo {
     display: inline-block;
     vertical-align: top;
@@ -1226,7 +1225,6 @@ body {
     padding: 0 20px; }
   .header-menu-item.active, .header-menu-item:hover {
     background-color: #7fb000; }
-
 .slider-item {
   position: relative;
   background-position: 50% 50%;
