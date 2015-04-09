@@ -52,16 +52,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
                 <div class="_title"><?= $price ?></div>
             </div>
         <?php endif; ?>
-            <div class="order-phone">
-                Заказать этот проект<br/>
-                Вы можете по телефонам:
-                <div class="_title">
-                    <a style="color:#fff; text-decoration: none;" href="tel:<?= Yii::$app->params['contacts']['phone1'] ?>"><?= Yii::$app->params['contacts']['phone1'] ?></a>
-                </div>
-                <div class="_title">
-                    <a style="color:#fff; text-decoration: none;" href="tel:<?= Yii::$app->params['contacts']['phone2'] ?>"><?= Yii::$app->params['contacts']['phone2'] ?></a>
-                </div>
-            </div>
+            
             <?= $this->render('../layouts/_right-menu', []) ?>
         </div>
 

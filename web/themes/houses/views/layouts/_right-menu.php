@@ -1,3 +1,10 @@
+<div class="order-phone">
+Заказать этот проект<br/>
+Вы можете по телефонам:
+<div class="_title"><a style="color:#fff; text-decoration: none;" href="tel:<?= Yii::$app->params['contacts']['phone1'] ?>"><?= Yii::$app->params['contacts']['phone1'] ?></a></div>
+<div class="_title"><a style="color:#fff; text-decoration: none;" href="tel:<?= Yii::$app->params['contacts']['phone2'] ?>"><?= Yii::$app->params['contacts']['phone2'] ?></a></div>
+</div>
+
 <div class="right-menu">
     <?= \yii\helpers\Html::a('Как заказать проект?', ['catalog/pages/order-project']) ?>
     <?= \yii\helpers\Html::a('Состав проектов', ['catalog/pages/structure-projects']) ?>
