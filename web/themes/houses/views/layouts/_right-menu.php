@@ -4,7 +4,9 @@
 <div class="_title"><a style="color:#fff; text-decoration: none;" href="tel:<?= Yii::$app->params['contacts']['phone1'] ?>"><?= Yii::$app->params['contacts']['phone1'] ?></a></div>
 <div class="_title"><a style="color:#fff; text-decoration: none;" href="tel:<?= Yii::$app->params['contacts']['phone2'] ?>"><?= Yii::$app->params['contacts']['phone2'] ?></a></div>
 или
+<div class="header_menu">
 <div class="call-back right"><div class="call_me"><a href="#popup" class="popup">Заказать звонок</a></div></div>
+</div>
 </div>
 
 <div class="right-menu">
