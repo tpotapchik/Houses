@@ -1414,7 +1414,7 @@ body {
   height: 53px;
   background: url("../img/main-title-bg.png") repeat scroll 0 0 transparent;
   margin: 150px 0 10px;
-  padding-top: 23px; }
+  /*padding-top: 23px;*/ }
   .main-title.project,h1 {
     color: #820084;
     padding-left: 10px;
