@@ -1399,7 +1399,7 @@ body {
 .projects-house {
   margin-bottom: -22px; }
 
-.main-title {
+.main-title, h1 {
   font-size: 2.4em;
   color: #00519E;
   text-align: center;
@@ -1415,7 +1415,7 @@ body {
   background: url("../img/main-title-bg.png") repeat scroll 0 0 transparent;
   margin: 150px 0 10px;
   padding-top: 23px; }
-  .main-title.project {
+  .main-title.project,h1 {
     color: #820084;
     padding-left: 10px;
     font-weight: 500;
