@@ -5,7 +5,7 @@
  * Date: 13.11.14
  * Time: 0:52
  */ ?>
-<div class="main-title stop-element">НАШИ ПАРТНЕРЫ</div>
+<div class="footer-title stop-element">НАШИ ПАРТНЕРЫ</div>
 <div class="partners">
     <div class="partner-item" style="width: 134px;"><img src="/img/temp/partner1.jpg" alt="Партнер"/></div>
     <div class="partner-item" style="width: 100px;"><img src="/img/temp/partner2.jpg" alt="Партнер"/></div>
