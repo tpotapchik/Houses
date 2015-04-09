@@ -6,4 +6,4 @@
  * Time: 1:01
  */
 ?>
-<!--<div class="main-title">ИЗБРАННОЕ</div>-->
+<!--<div class="footer-title">ИЗБРАННОЕ</div>-->

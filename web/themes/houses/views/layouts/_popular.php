@@ -10,7 +10,7 @@ use yii\db\Connection;
 use yii\db\Expression;
 
 ?>
-<div class="main-title">ИНТЕРЬЕРЫ ПОПУЛЯРНЫХ ПРОЕКТОВ</div>
+<div class="footer-title">ИНТЕРЬЕРЫ ПОПУЛЯРНЫХ ПРОЕКТОВ</div>
 <div class="main-block-interior clearfix">
 <?php
     $photos = [];

@@ -6,7 +6,7 @@
  * Time: 0:57
  */
 ?>
-<div class="main-title">МЫ ПРЕДЛАГАЕМ</div>
+<div class="footer-title">МЫ ПРЕДЛАГАЕМ</div>
 <div class="main-block projects-house clearfix">
     <div class="_content left">
         <a href="<?= \yii\helpers\Url::toRoute(['catalog/index']) ?>" class="picture-block small">
