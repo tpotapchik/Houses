@@ -2068,6 +2068,7 @@ padding-top: 10px;}
 .site-error .call_me {
   width: 210px;
   margin-left: 80px;
+    font-size: 1.0em;
 }
 .site-error .call_me a {
   text-decoration: none;
