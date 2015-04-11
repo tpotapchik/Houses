@@ -1229,7 +1229,9 @@ body {
 .header_menu {
     height: 50px;
     color: #434242;
-    font-size: 1.8em;}
+    font-size: 1.0em;
+    margin: 0px auto;
+    width: 160px;}
 .header_menu .call_me {
     background-color: #820084; }
 .header_menu .call_me a {
@@ -1410,8 +1412,9 @@ body {
 
 .h1-title {
     font-size: 1.9em;
+    font-family:roboto;
     color: #820084;
-    text-align: center;
+    text-align: left;
     height: 53px;
     background: url("../img/main-title-bg.png") repeat scroll 0 0 transparent;
     margin: 50px 0 5px;
