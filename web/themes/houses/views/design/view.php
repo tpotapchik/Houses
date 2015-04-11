@@ -46,7 +46,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $design->meta_desc
         }
 
         foreach($photos as $photo) {
-            echo Html::a(Html::img($photo), $photo, ['class' => 'interior-block left fancybox']);
+            echo Html::a(Html::img($photo), $photo, ['class' => 'interior-block left fancybox', 'rel' => 'gallery2']);
         }
         ?>
     </div>
@@ -72,3 +72,4 @@ $this->registerMetaTag(['name' => 'description', 'content' => $design->meta_desc
 
     <?= $this->render('../layouts/_parthners', []) ?>
 </div>
+<?php $this->registerJsFile(Yii::$app->request->baseUrl.'/js/projectView.js',['depends' => [\yii\web\JqueryAsset::className()]]); ?>

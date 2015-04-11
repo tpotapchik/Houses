@@ -28,6 +28,7 @@ class AppAsset extends AssetBundle
         'js/plugins/chosen.min.js',
         'js/plugins/jquery.fancybox.pack.js',
         'js/plugins/jquery.fancybox-thumbs.js',
+        'js/share42/share42.js',
         'js/main.js',
     ];
     public $depends = [

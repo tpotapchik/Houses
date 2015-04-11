@@ -44,4 +44,5 @@ $(function(){
         link.data('imgIndex', i);
 
     }).on('click', openGallery);
+    $(".fancybox").fancybox(FancyOptions);
 });
