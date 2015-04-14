@@ -92,12 +92,15 @@ $contacts = Yii::$app->params['contacts'];
 </script>
   <div class="centralize" itemscope itemtype="http://schema.org/LocalBusiness">
             <div class="office-block-map">
+            Официальный представитель польской Проектной Мастерской MTM STYL в Беларуси ИП Нехай И.А.   УНП 192208267
+            <br/>
                 <div class="connect-map">С нами легко связаться:</div>
                 <img src="img/logo3.png" alt="" style="width: 100px; height: 39px"/><span itemprop="name">Проектная мастерская dom-tut.by</span><br><br>
                <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><?= $contacts['address'] ?></span><br><br>
                 <b itemprop="telephone"><?= $contacts['phone1'] ?></b><br>
                 <b itemprop="telephone"><?= $contacts['phone2'] ?></b><br><br>
-                E-mail: <a itemprop="email" href="mailto:<?= $contacts['email'] ?>"><?= $contacts['email'] ?></a>
+                E-mail: <a itemprop="email" href="mailto:<?= $contacts['email'] ?>"><?= $contacts['email'] ?></a><br/>
+                Skype: <a class="skype" href="skype:dom-tut.by"><i class="_ico"></i><?= $contacts['skype'] ?></a>
 
             </div>
             <div id="officeMap">
