@@ -92,15 +92,15 @@ $contacts = Yii::$app->params['contacts'];
 </script>
   <div class="centralize" itemscope itemtype="http://schema.org/LocalBusiness">
             <div class="office-block-map">
-            <b>Официальный представитель польской Проектной Мастерской MTM STYL в Беларуси ИП Нехай И.А.   УНП 192208267</b>
-            <br/>
-                <div class="connect-map">С нами легко связаться:</div>
+               <div class="connect-map">С нами легко связаться:</div>
+               <b>Официальный представитель польской Проектной Мастерской MTM STYL в Беларуси ИП Нехай И.А.   УНП 192208267</b>
+                <br/>
                 <img src="img/logo3.png" alt="" style="width: 100px; height: 39px"/><span itemprop="name">Проектная мастерская dom-tut.by</span><br><br>
-               <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><?= $contacts['address'] ?></span><br><br>
+                <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><?= $contacts['address'] ?></span><br><br>
                 <b itemprop="telephone"><?= $contacts['phone1'] ?></b><br>
                 <b itemprop="telephone"><?= $contacts['phone2'] ?></b><br><br>
                 E-mail: <a class="mail" href="mailto:<?= $contacts['email'] ?>"><i class="_ico"></i><?= $contacts['email'] ?></a><br/>
-                Skype: <a class="skype" href="skype:<?= $contacts['skype'] ?>"><i class="_ico"></i><?= $contacts['skype'] ?></a><br/>
+                Skype: <a class="skype" href="skype:<?= $contacts['skype'] ?>"><i class="_ico"></i><?= $contacts['skype'] ?></a><br/><br/>
                 <div class="connect-map">Офис открыт:</div>
                 Все дни недели с 9.00 до 20.00
 
