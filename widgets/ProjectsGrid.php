@@ -15,7 +15,7 @@ use yii\widgets\BaseListView;
 
 class ProjectsGrid extends BaseListView
 {
-    public $layout = "{pageSize}\n{items}\n{pager}";
+    public $layout = "{items}\n{pager}";
     public $mainBlockClass = 'main-block projects-house clearfix';
 
     /**

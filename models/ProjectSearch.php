@@ -95,6 +95,7 @@ class ProjectSearch extends Project
             'query' => $query,
             'pagination' => [
                 'defaultPageSize' => 10,
+                'pageSizeLimit' => [1, 100]
             ],
         ]);
 

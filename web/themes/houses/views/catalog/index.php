@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="main-title"><?= strtoupper($this->title)?></div>
 
     <?= CategoryGrid::widget([
-        'dataProvider' => $dataProvider,
+        'dataProvider' => $dataProvider
     ]);
     ?>
 
