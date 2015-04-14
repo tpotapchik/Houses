@@ -99,8 +99,8 @@ $contacts = Yii::$app->params['contacts'];
                <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><?= $contacts['address'] ?></span><br><br>
                 <b itemprop="telephone"><?= $contacts['phone1'] ?></b><br>
                 <b itemprop="telephone"><?= $contacts['phone2'] ?></b><br><br>
-                E-mail: <a itemprop="email" href="mailto:<?= $contacts['email'] ?>"><?= $contacts['email'] ?></a><br/>
-                Skype: <a class="skype" href="skype:dom-tut.by"><i class="_ico"></i><?= $contacts['skype'] ?></a>
+                E-mail: <a class="mail" href="mailto:<?= $contacts['email'] ?>"><i class="_ico"></i><?= $contacts['email'] ?></a><br/>
+                Skype: <a class="skype" href="skype:<?= $contacts['skype'] ?>"><i class="_ico"></i><?= $contacts['skype'] ?></a>
 
             </div>
             <div id="officeMap">
