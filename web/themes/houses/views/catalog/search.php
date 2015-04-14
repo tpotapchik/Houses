@@ -18,7 +18,6 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
 
     <div class="main-title"><?= strtoupper($this->title)?></div>
 
-    <div class="sorting-projects">Показать: <a href="#">20</a><a href="#">50</a><a href="#">100</a></div>
     <?= ProjectsGrid::widget([
         'dataProvider' => $dataProvider,
     ]);

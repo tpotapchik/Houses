@@ -8,8 +8,6 @@
 
 namespace app\widgets;
 
-
-use app\models\GeneralHelper;
 use app\models\Project;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
@@ -17,7 +15,7 @@ use yii\widgets\BaseListView;
 
 class ProjectsGrid extends BaseListView
 {
-    public $layout = "{items}\n{pager}";
+    public $layout = "{pageSize}\n{items}\n{pager}";
     public $mainBlockClass = 'main-block projects-house clearfix';
 
     /**
@@ -73,5 +71,33 @@ class ProjectsGrid extends BaseListView
         );
 
         return Html::tag('div', $content, ['class' => '_content ' . $odd]);
+    }
+
+    public function renderSection($name)
+    {
+        $parentResult = parent::renderSection($name);
+        if ($parentResult === false) {
+            switch ($name) {
+                case '{pageSize}':
+                    return $this->renderPageSize();
+                default:
+                    return false;
+            }
+        }
+
+        return $parentResult;
+    }
+
+    protected function renderPageSize()
+    {
+        $pagination = $this->dataProvider->getPagination();
+        //<div class="sorting-projects">Показать: <a href="#">20</a><a href="#">50</a><a href="#">100</a></div>
+        $result = '';
+        $links = '';
+        $links .= Html::a('20', $pagination->createUrl($pagination->getPage(), 20));
+        $links .= Html::a('50', $pagination->createUrl($pagination->getPage(), 50));
+        $links .= Html::a('100', $pagination->createUrl($pagination->getPage(), 100));
+        $result .= Html::tag('div', 'Показать: ' . $links, ['class' => 'sorting-projects']);
+        return $result;
     }
 }
