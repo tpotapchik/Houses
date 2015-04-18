@@ -32,19 +32,22 @@ $contacts = Yii::$app->params['contacts'];
             <a class="skype" href="skype:<?= $contacts['skype'] ?>"><i class="_ico"></i><?= $contacts['skype'] ?></a>
         </div>
         <div class="phone right">
+        <table>
+        <tr><td>
             <img src="/img/24-7.jpg" width="60" />
-
+</td>
+<td>
                 <a style="color:#434242; text-decoration: none;" href="tel:<?= Yii::$app->params['contacts']['phone1'] ?>"><?= Yii::$app->params['contacts']['phone1'] ?></a>
-            
+
             <?php
             /*
              * IF you want to change any contact lets go to ../config/params.php
              * PLEASE DO NOT TOUCH ANY PHP EXPRESSIONS LIKE <?= $contacts['email'] ?> OR <?= $contacts['phone'] ?>
              */
             ?>
-            <p>
                 <a style="color:#434242; text-decoration: none;" href="tel:<?= Yii::$app->params['contacts']['phone2'] ?>"><?= Yii::$app->params['contacts']['phone2'] ?></a>
-            </p>
+            </td></tr>
+            </table>
         </div>
     </div>
 </div>
