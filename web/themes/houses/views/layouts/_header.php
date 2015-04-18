@@ -32,6 +32,7 @@ $contacts = Yii::$app->params['contacts'];
             <a class="skype" href="skype:<?= $contacts['skype'] ?>"><i class="_ico"></i><?= $contacts['skype'] ?></a>
         </div>
         <div class="phone right">
+                    <div class="_ico_"></div>
         <table>
         <tr><td>
             <img src="/img/24-7.jpg" width="60" />
