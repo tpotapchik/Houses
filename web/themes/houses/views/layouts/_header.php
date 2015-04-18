@@ -27,12 +27,12 @@ $contacts = Yii::$app->params['contacts'];
              </div>
             <div class="call_me"><a href="#popup" class="popup">Заказать звонок</a></div>
         </div>
-        <img src="/img/24-7.jpg"/>
+        <div class="contact right">
             <a class="mail" href="mailto:<?= $contacts['email'] ?>"><i class="_ico"></i><?= $contacts['email'] ?></a>
             <a class="skype" href="skype:<?= $contacts['skype'] ?>"><i class="_ico"></i><?= $contacts['skype'] ?></a>
-        
+        </div>
         <div class="phone right">
-            <div class="_ico"></div>
+            <img src="/img/24-7.jpg"/>
             <p>
                 <a style="color:#434242; text-decoration: none;" href="tel:<?= Yii::$app->params['contacts']['phone1'] ?>"><?= Yii::$app->params['contacts']['phone1'] ?></a>
             </p>
