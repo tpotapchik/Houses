@@ -33,9 +33,9 @@ $contacts = Yii::$app->params['contacts'];
         </div>
         <div class="phone right">
                     <div class="_ico_"></div>
-        <table>
+        <table style="margin-top:-20px;">
         <tr><td>
-            <img src="/img/24-7.jpg" width="60" />
+            <img src="/img/24-7.jpg" width="80" />
 </td>
 <td>
             <p>
