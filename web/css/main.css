@@ -1416,9 +1416,10 @@ body {
     font-family:roboto;
     color: #820084;
     text-align: left;
-    height: 53px;
+    height: 45px;
     background: url("../img/main-title-bg.png") repeat scroll 0 0 transparent;
     margin: 50px 0 5px;
+    padding-left:10px;
     /*padding-top: 23px;*/ }
 
   .footer-title {
