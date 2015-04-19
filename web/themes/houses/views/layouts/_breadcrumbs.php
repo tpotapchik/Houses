@@ -22,7 +22,7 @@ echo Breadcrumbs::widget([
         'itemscope' => '',
         'itemtype' => "http://schema.org/BreadcrumbList"
     ],
-    'itemTemplate' => "<span itemprop=\"itemListElement\" itemscope itemtype=\"http://schema.org/ListItem\">{link}</span> - ",
+    'itemTemplate' => "<span itemprop=\"itemListElement\" itemscope itemtype=\"http://schema.org/ListItem\">{link}</span> ? ",
     'activeItemTemplate' => "{link}"
 ]);
 ?>
