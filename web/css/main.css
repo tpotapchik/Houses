@@ -1233,7 +1233,8 @@ body {
     margin: 0px auto;
     width: 160px;}
 .header_menu .call_me {
-    background-color: #820084; }
+    background-color: #820084;
+    border:1px solid #fff;}
 .header_menu .call_me a {
     text-decoration: none;
     padding: 7px 23px 10px;
