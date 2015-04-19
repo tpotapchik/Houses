@@ -15,7 +15,7 @@ $(function() {
 
         //fixed right col
         if (scrollTop >= fixedOffset && scrollTop < stopPosition) {
-            $block.css({position: 'fixed', top: '0', marginLeft: '744px'})
+            $block.css({position: 'fixed', top: '0', marginLeft: '714px'})
         } else {
             $block.css({position: 'static', marginLeft: '0'});
         }
