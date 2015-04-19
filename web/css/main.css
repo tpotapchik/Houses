@@ -1139,9 +1139,9 @@ body {
     margin-top: 19px; }
   .header .phone {
     position: relative;
-    padding-left: 95px;
+    /*padding-left: 95px;*/
     padding-top: 26px;
-    margin-right: 60px; }
+    margin-right: 30px; }
     .header .phone ._ico {
       background: url("../img/sprite.png") no-repeat scroll 0 0 transparent;
       position: absolute;
