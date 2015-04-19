@@ -1672,7 +1672,7 @@ h2 {
   .price-project ._title,
   .order-phone ._title {
     font-size: 1.9em;
-    font-weight: 700; }
+    /*font-weight: 700;*/ }
 
 .order-phone ._title {
   font-size: 1.7em; }
