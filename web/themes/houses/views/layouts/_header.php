@@ -35,21 +35,19 @@ $contacts = Yii::$app->params['contacts'];
                     <div class="_ico_"></div>
         <table style="margin-top:-20px;">
         <tr><td>
+        Работаем без выходных
             <img src="/img/24-7.jpg" width="80" />
 </td>
 <td>
-            <p>
-                <a style="color:#434242; text-decoration: none;" href="tel:<?= Yii::$app->params['contacts']['phone1'] ?>"><?= Yii::$app->params['contacts']['phone1'] ?></a>
-            </p>
+               <a style="color:#434242; text-decoration: none;" href="tel:<?= Yii::$app->params['contacts']['phone1'] ?>"><b><?= Yii::$app->params['contacts']['phone1'] ?></b></a>
             <?php
             /*
              * IF you want to change any contact lets go to ../config/params.php
              * PLEASE DO NOT TOUCH ANY PHP EXPRESSIONS LIKE <?= $contacts['email'] ?> OR <?= $contacts['phone'] ?>
              */
             ?>
-            <p>
-                <a style="color:#434242; text-decoration: none;" href="tel:<?= Yii::$app->params['contacts']['phone2'] ?>"><?= Yii::$app->params['contacts']['phone2'] ?></a>
-            </p>
+            <br/>
+                <a style="color:#434242; text-decoration: none;" href="tel:<?= Yii::$app->params['contacts']['phone2'] ?>"><b><?= Yii::$app->params['contacts']['phone2'] ?></b></a>
             </td></tr>
             </table>
         </div>
