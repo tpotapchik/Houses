@@ -15,11 +15,11 @@ use yii\db\Expression;
 <?php
     $photos = [];
     $limit = 7;
-    for ($i = 1; $i < $limit; $i++) {
+    $designs = Yii::$app->getDb()->cache(function (Connection $db) {
+        return Design::find()->where('project_id IS NOT NULL')->orderBy(new Expression('RAND()'))->limit(6)->all();
+    }, 60 * 5);
+    foreach ($designs as $design) {
         /** @var Design $design */
-        $design = Yii::$app->getDb()->cache(function (Connection $db) {
-            return Design::find()->where('project_id IS NOT NULL')->orderBy(new Expression('RAND()'))->limit(1)->one();
-        }, 60 * 5);
 
         if ($design) {
             /** @var \app\models\DesignPhoto $photo */
@@ -29,8 +29,7 @@ use yii\db\Expression;
             $photo ?
                 \yii\helpers\Html::a(
                     \yii\helpers\Html::img($photo->file),
-                    $design->getLink()
-                    ,
+                    $design->getLink(),
                     ['class' => 'interior-block left']
                 ) : '';
             ?>
