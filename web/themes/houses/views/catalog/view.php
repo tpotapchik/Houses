@@ -90,7 +90,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
                 <?php
                     if ($model->hasDesigns()) {
                         $link = $model->getDesign()->one()->getLink();
-                        echo '|' . Html::a('Интерьер', $link);
+                        echo '|' . Html::a('интерьер', $link);
                     }
                 ?>
             </div>
