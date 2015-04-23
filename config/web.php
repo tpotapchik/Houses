@@ -15,9 +15,14 @@ $config = [
         ],
         'urlManager'  => [
             'enablePrettyUrl' => true,
-            'enableStrictParsing' => true,
+//            'enableStrictParsing' => true,
             'showScriptName' => false,
             'rules' => [
+                'admin' => 'admin/default/index',
+                '<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
+                '<module:\w+>/<submodule:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<submodule>/<controller>/<action>',
+                'logout' => 'site/logout',
+                'login' => 'site/login',
                 'about' => 'site/about',
                 'catalog/pages/<article_url:[[:word:]-_]+>' => 'catalog/show-article',
                 '/' => 'site/index',
