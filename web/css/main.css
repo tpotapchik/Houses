@@ -1406,10 +1406,10 @@ body {
   font-size: 2.4em;
   color: #00519E;
   text-align: center;
-  height: 53px;
+  height: 35px;
   background: url("../img/main-title-bg.png") repeat scroll 0 0 transparent;
   margin: 50px 0 5px;
-  padding-top: 23px; }
+  padding-top: 10px; }
 
 .h1-title {
     font-size: 1.8em;
