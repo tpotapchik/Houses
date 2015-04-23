@@ -30,7 +30,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
     <?= $this->render('../layouts/_breadcrumbs', []) ?>
 
     <div class="h1-title project">
-        <h1>Проект "<span itemprop="name" style="text-transform: uppercase;"><?= $model->title ?></span>" | <b><?= $model->effectiveArea ?> м<sup>2</sup></b></h1>
+        <h1>Проект <?= $model->title ?> - <?= $model->effectiveArea ?> м<sup>2</sup></h1>
     </div>
 
     <div class="main-block clearfix">

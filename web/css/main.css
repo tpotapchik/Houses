@@ -1414,6 +1414,7 @@ body {
 .h1-title {
     font-size: 1.9em;
     font-family:roboto;
+    text-transform: uppercase;
     color: #820084;
     text-align: left;
     height: 45px;
