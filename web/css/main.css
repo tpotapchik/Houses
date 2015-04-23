@@ -1567,13 +1567,13 @@ h2 {
 
 .main-text-block,
 .text-block-project {
-  margin-right: 293px;
+  margin-right: 263px;
   font-size: 1.8em;
   line-height: 22px; }
   .main-text-block .main-pic,
   .text-block-project .main-pic {
     margin-bottom: 19px;
-    width: 707px; }
+    width: 737px; }
 .advice {text-align: justify;}
 .advice-title {color: #820084; font-weight: 700;
     font-size: 18px;}
@@ -1718,7 +1718,7 @@ h2 {
       top: 3px; }
 
 .right-block {
-  width: 286px;
+  width: 256px;
   font-size: 1.4em; }
 .right-menu a {
   text-decoration: none;
@@ -1729,7 +1729,7 @@ h2 {
   vertical-align: top;
   *display: inline;
   *zoom: 1;
-  width: 286px;
+  width: 256px;
   margin-bottom: 7px;
   text-align: center;
   padding: 16px 0; }
