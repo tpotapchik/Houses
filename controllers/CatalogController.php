@@ -39,10 +39,17 @@ class CatalogController extends Controller
         return $this->render('search', ['model' => $modelForm, 'dataProvider' => $dataProvider]);
     }
 
+    /**
+     * @param $category
+     * @param $numCat
+     * @return string
+     * @throws NotFoundHttpException
+     */
     public function actionView($category, $numCat)
     {
+        /** @var Project $model */
         $model = Project::findOne(['numCat' => $numCat]);
-        if (is_null($model)) {
+        if (is_null($model) || $model->category->url != $category) {
             throw new NotFoundHttpException('Project not exists');
         }
         return $this->render('view', ['model' => $model]);

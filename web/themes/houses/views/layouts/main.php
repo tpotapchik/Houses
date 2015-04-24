@@ -43,7 +43,12 @@ if (strlen($this->title) > 0) {
     ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head();
-
+    $this->registerLinkTag([
+        'rel' => 'canonical',
+        'href' => Yii::$app->urlManager->createAbsoluteUrl(
+            array_merge([Yii::$app->controller->getRoute()], Yii::$app->controller->actionParams)
+        )
+    ]);
     if ($isProdEnv) :
         //google analytics disable on test environment
     ?>
@@ -58,7 +63,7 @@ if (strlen($this->title) > 0) {
 
         </script>
     <?php endif; ?>
-    <link rel="shortcut icon" href="http://dom-tut.by/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="<?= Yii::$app->request->getHostInfo() ?>/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
