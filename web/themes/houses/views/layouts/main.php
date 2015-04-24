@@ -140,7 +140,7 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
     <div class="back-top"><span></span></div>
 
     <?php $this->endBody() ?>
-<div class="share42init" data-top1="150" data-top2="310" data-margin="20"></div>
+<div class="share42init" data-top1="150" data-top2="310" data-margin="20" data-path="/js/share42/"></div>
 <div><img src="/img/social-help.png" alt="" class="social-help"/></div>
 
 </body>
