@@ -19,8 +19,7 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 'admin' => 'admin/default/index',
-                '<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
-                '<module:\w+>/<submodule:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<submodule>/<controller>/<action>',
+
                 'logout' => 'site/logout',
                 'login' => 'site/login',
                 'about' => 'site/about',
@@ -35,6 +34,8 @@ $config = [
                 'catalog/<category_url:[[:word:]-_]+>' => 'catalog/category',
                 'news' => 'news/index',
                 'news/<article_url:[[:word:]-_]+>' => 'news/view',
+                '<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
+                '<module:\w+>/<submodule:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<submodule>/<controller>/<action>',
                 ['pattern' => 'sitemap', 'route' => 'sitemap/default/index', 'suffix' => '.xml'],
             ]
         ],

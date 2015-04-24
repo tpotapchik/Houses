@@ -49,7 +49,7 @@ class CatalogController extends Controller
     {
         /** @var Project $model */
         $model = Project::findOne(['numCat' => $numCat]);
-        if (is_null($model) || $model->category->url != $category) {
+        if (is_null($model) /*|| $model->category->url != $category*/) {
             throw new NotFoundHttpException('Project not exists');
         }
         return $this->render('view', ['model' => $model]);
