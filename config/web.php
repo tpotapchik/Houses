@@ -1,6 +1,10 @@
 <?php
 
 $params = require(__DIR__ . '/params.php');
+$bundles = [];
+if (YII_ENV_PROD) {
+    $bundles = require(__DIR__ . '/assets-prod.php');
+}
 
 $config = [
     'id' => 'basic',
@@ -113,6 +117,9 @@ $config = [
             'class' => 'dragonjet\opengraph\OpenGraph',
             'site_name' => 'Проектная мастерская Dom-Tut.by'
         ],
+        'assetManager' => [
+            'bundles' => $bundles,
+        ]
     ],
     'modules' => [
         'admin' => [

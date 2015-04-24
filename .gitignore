@@ -36,3 +36,5 @@ phpunit.phar
 
 psd/
 *.iml
+
+config/assets-prod.php
