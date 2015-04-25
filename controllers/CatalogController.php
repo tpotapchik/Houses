@@ -93,10 +93,4 @@ class CatalogController extends Controller
             }
         }
     }
-
-    public function actionTest($category, $numCat)
-    {
-
-        return 'test url';
-    }
 }

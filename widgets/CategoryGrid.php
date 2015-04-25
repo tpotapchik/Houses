@@ -12,11 +12,6 @@ class CategoryGrid extends ProjectsGrid
 {
     public function init()
     {
-//        $query = Category::find();
-//
-//        $this->dataProvider = new ActiveDataProvider([
-//            'query' => $query,
-//        ]);
         parent::init();
     }
 
@@ -31,17 +26,12 @@ class CategoryGrid extends ProjectsGrid
         $photoLink = $project->getMainPhoto();
 
         $content = Html::a(
-            GeneralHelper::mb_ucfirst($model->processedValue),
-            ['catalog/'.$model->url],
-            ['class' => '_category']
-        );
-        $content .= Html::a(
-            Html::tag('div', $project->title, ['class' => '_title-project']) .
+            Html::tag('div', GeneralHelper::mb_ucfirst($model->processedValue), ['class' => '_title-project']) .
             Html::img($photoLink, ['alt' => 'Картинка дома', 'style' => 'width: 492px; height: auto;']) .
             '<div class="_more-button">
                             <div class="show-more-btn-wrapper"><span class="show-more-btn">Подробнее</span></div>
                         </div>',
-            ['catalog/'.$model->url.'/'.$project->numCat],
+            $model->getLink(),
             ['class' => 'picture-block']
         );
 

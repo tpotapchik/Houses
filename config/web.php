@@ -2,7 +2,7 @@
 
 $params = require(__DIR__ . '/params.php');
 $bundles = [];
-if (YII_ENV_PROD||true) {
+if (YII_ENV_PROD) {
     $bundles = require(__DIR__ . '/assets-prod.php');
 }
 

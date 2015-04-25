@@ -111,4 +111,28 @@ class Category extends GeneralHelper
 
         return $project;
     }
+
+    /**
+     * @return array
+     */
+    public function getLink()
+    {
+        return ['catalog/'.$this->url];
+    }
+
+    public static function getMenu()
+    {
+        $searchModel = new CategorySearch();
+        $dataProvider = $searchModel->search([]);
+        $models = $dataProvider->getModels();
+
+        $result = [];
+
+        /** @var Category $model */
+        foreach ($models as $model) {
+            $result[] = ['label' => $model->processedValue, 'url' => $model->getLink()];
+        }
+
+        return $result;
+    }
 }
