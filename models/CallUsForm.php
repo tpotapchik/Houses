@@ -17,6 +17,7 @@ class CallUsForm extends Model
     public $name;
     public $phoneNumber;
     public $verifyCode;
+    public $comment;
 
     /**
      * @return array the validation rules.
@@ -25,6 +26,8 @@ class CallUsForm extends Model
     {
         return [
             [['name', 'phoneNumber'], 'required'],
+            ['phoneNumber', 'match', 'pattern' => '/[0-9+ ()-]+/i'],
+            ['comment', 'string', 'min' => 7],
             // verifyCode needs to be entered correctly
             ['verifyCode', 'captcha'],
         ];
@@ -39,6 +42,7 @@ class CallUsForm extends Model
             'name' => Yii::t('house', 'Name'),
             'phoneNumber' => Yii::t('house', 'Phone number'),
             'verifyCode' => Yii::t('yii', 'Verification Code'),
+            'comment' => 'Примечания'
         ];
     }
 
@@ -50,12 +54,16 @@ class CallUsForm extends Model
     public function contact($email)
     {
         if ($this->validate()) {
-            $bodyTemplate = 'Привет, меня зовут %s. Перезвоните мне на номер %s.';
+            $bodyTemplate = <<<EOD
+Привет, меня зовут %s. Перезвоните мне на номер %s.
+Мои примечания: %s
+EOD;
+
             $sendResult = Yii::$app->mailer->compose()
                 ->setTo($email)
                 ->setFrom([$email => $this->name])
                 ->setSubject('Перезвоните мне')
-                ->setTextBody(sprintf($bodyTemplate, $this->name, $this->phoneNumber))
+                ->setTextBody(sprintf($bodyTemplate, $this->name, $this->phoneNumber, $this->comment))
                 ->send();
 
             return $sendResult;
