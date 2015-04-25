@@ -38,21 +38,38 @@ class Menu extends Widget
 
     public function run()
     {
+//        $result = '';
+//
+//        $result .= Html::beginTag('div', [
+//            'class' => 'header-menu'
+//        ]);
+//        $result .= Html::beginTag('div', [
+//            'class' => 'centralize clearfix'
+//        ]);
+//
+//        foreach ($this->items as $item) {
+//            $result .= $this->renderItem($item);
+//        }
+//
+//        $result .= Html::endTag('div');
+//        $result .= Html::endTag('div');
+//
+//        return $result;
         $result = '';
 
-        $result .= Html::beginTag('div', [
-            'class' => 'header-menu'
+        $result .= Html::beginTag('ul', [
+            'id' => 'menu'
         ]);
-        $result .= Html::beginTag('div', [
-            'class' => 'centralize clearfix'
-        ]);
+//        $result .= Html::beginTag('div', [
+//            'class' => 'centralize clearfix'
+//        ]);
 
         foreach ($this->items as $item) {
             $result .= $this->renderItem($item);
         }
 
         $result .= Html::endTag('div');
-        $result .= Html::endTag('div');
+//        $result .= Html::endTag('div');
 
         return $result;
     }
@@ -82,7 +99,16 @@ class Menu extends Widget
             Html::addCssClass($options, 'active');
         }
 
-        return Html::a($item['label'], $url, $options);
+        $subItems = '';
+        if (isset($item['items'])) {
+            $subItems .= Html::beginTag('ul');
+            foreach ($item['items'] as $subItem) {
+                $subItems .= Html::tag('li', Html::a($subItem['label'], $subItem['url']));
+            }
+            $subItems .= Html::endTag('ul');
+        }
+
+        return Html::tag('li', Html::a($item['label'], $url, $options) . $subItems, ['class' => 'page_item']);
     }
 
     /**
