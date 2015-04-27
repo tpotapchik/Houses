@@ -1571,7 +1571,7 @@ body {
 
 h2 {
   color: #820084;
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
   margin: 0px 0 22px; }
   .list-news h2 {
@@ -1586,7 +1586,7 @@ h2 {
   .text-block-project .main-pic {
     margin-bottom: 19px;
     width: 737px; }
-.advice {text-align: justify;}
+.advice {text-align: justify; font-size: 0.8em;}
 .advice-title {color: #c0c0c0; font-weight: 700;
     font-size: 18px;}
 .go-back-project {
