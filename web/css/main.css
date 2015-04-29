@@ -1416,14 +1416,20 @@ body {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     color: #820084;
     text-align: left;
-    height: 42px;
+    height: 35px;
     background: url("../img/main-title-bg.png") repeat scroll 0 0 transparent;
     margin: 50px 0 5px;
     padding-left:5px;
-    /*padding-top: 23px;
-    text-transform: uppercase;*/ }
+    padding-top: 7px;
+    /*text-transform: uppercase;*/ }
+.h1-title h1 {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+}
 
-  .footer-title {
+
+.footer-title {
   font-size: 2.4em;
   color: #00519E;
   text-align: center;
