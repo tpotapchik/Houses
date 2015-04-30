@@ -1105,7 +1105,7 @@ body {
     color: #444444;
     padding-left: 7px;
     background: url("../img/filter-bg.png") repeat scroll 0 0 transparent;
-    width: 300px; }
+    width: 311px; }
     .component-select .chosen-single span {
       margin-right: 29px; }
     .component-select .chosen-single div {
@@ -1124,7 +1124,7 @@ body {
     border-top: 0;
     background-color: #fff;
     margin-top: -1px;
-    width: 311px; }
+    width: 322px; }
   .component-select .chosen-results li {
     padding: 7px 15px 8px; }
   .component-select .chosen-results .highlighted {
@@ -1334,10 +1334,10 @@ body {
 
 .filter-column {
   float: left;
-  width: 500px;
+  width: 512px;
   margin-left: 8px; }
   .filter-column + .filter-column {
-    margin-left: 45px; }
+    margin-left: 35px; }
 
 .filter-row + .filter-row {
   margin-top: 18px; }
@@ -1384,7 +1384,7 @@ body {
   font-weight: 700;
   background: url("../img/filter-bg.png") repeat scroll 0 0 transparent; }
   .small-input.margin-r {
-    margin-right: 39px; }
+    margin-right: 49px; }
   .small-input input {
     width: 65px;
     background: transparent;
