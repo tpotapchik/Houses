@@ -1373,7 +1373,7 @@ body {
 
 .small-input {
   float: left;
-  height: 39px;
+  height: 31px;
   line-height: 31px;
   width: 125px;
   padding-left: 7px;
@@ -1384,7 +1384,7 @@ body {
   font-weight: 700;
   background: url("../img/filter-bg.png") repeat scroll 0 0 transparent; }
   .small-input.margin-r {
-    margin-right: 11px; }
+    margin-right: 39px; }
   .small-input input {
     width: 65px;
     background: transparent;
