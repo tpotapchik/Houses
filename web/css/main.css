@@ -1334,10 +1334,12 @@ body {
 
 .filter-column {
   float: left;
-  width: 512px;
+  width: 542px;
   margin-left: 8px; }
   .filter-column + .filter-column {
-    margin-left: 35px; }
+    margin-left: 35px;
+    width: 477px;
+  }
 
 .filter-row + .filter-row {
   margin-top: 18px; }
@@ -1362,7 +1364,7 @@ body {
   float: right; }
 
 .filter-input {
-  width: 270px;
+  width: 250px;
   border: 2px solid #7fb000;
   color: #444444;
   background: url("../img/filter-bg.png") repeat scroll 0 0 transparent;
@@ -1375,7 +1377,7 @@ body {
   float: left;
   height: 31px;
   line-height: 31px;
-  width: 125px;
+  width: 135px;
   padding-left: 7px;
   border: 2px solid #7fb000;
   color: #444444;
@@ -1384,7 +1386,7 @@ body {
   font-weight: 700;
   background: url("../img/filter-bg.png") repeat scroll 0 0 transparent; }
   .small-input.margin-r {
-    margin-right: 49px; }
+    margin-right: 58px; }
   .small-input input {
     width: 65px;
     background: transparent;
