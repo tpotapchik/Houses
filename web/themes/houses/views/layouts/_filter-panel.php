@@ -25,7 +25,7 @@ $categoryDropDown = ArrayHelper::map($categorys, 'id', 'processedValue');
     <div class="centralize-big clearfix">
         <div class="filter-column">
             <div class="filter-row clearfix">
-                <label>Полезная площадь</label>
+                <label>Площадь</label>
 
                 <div class="small-input margin-r">от<?= Html::activeTextInput($model, 'effectiveAreaFrom') ?>м<sup>2</sup></div>
                 <div class="small-input">до<?= Html::activeTextInput($model, 'effectiveAreaTo') ?>м<sup>2</sup></div>
