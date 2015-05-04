@@ -209,6 +209,11 @@ textarea {
   margin: auto;
   max-width: 1000px;
   min-width: 1000px; }
+.centralize-big {
+  margin: auto;
+  max-width: 1170px;
+  min-width: 1170px;
+}
 
 a {
   color: #d81415; }
@@ -1100,7 +1105,7 @@ body {
     color: #444444;
     padding-left: 7px;
     background: url("../img/filter-bg.png") repeat scroll 0 0 transparent;
-    width: 227px; }
+    width: 345px; }
     .component-select .chosen-single span {
       margin-right: 29px; }
     .component-select .chosen-single div {
@@ -1119,7 +1124,7 @@ body {
     border-top: 0;
     background-color: #fff;
     margin-top: -1px;
-    width: 238px; }
+    width: 355px; }
   .component-select .chosen-results li {
     padding: 7px 15px 8px; }
   .component-select .chosen-results .highlighted {
@@ -1329,10 +1334,12 @@ body {
 
 .filter-column {
   float: left;
-  width: 425px;
+  width: 545px;
   margin-left: 8px; }
   .filter-column + .filter-column {
-    margin-left: 35px; }
+    margin-left: 35px;
+    width: 477px;
+  }
 
 .filter-row + .filter-row {
   margin-top: 18px; }
@@ -1357,7 +1364,7 @@ body {
   float: right; }
 
 .filter-input {
-  width: 219px;
+  width: 250px;
   border: 2px solid #7fb000;
   color: #444444;
   background: url("../img/filter-bg.png") repeat scroll 0 0 transparent;
@@ -1370,7 +1377,7 @@ body {
   float: left;
   height: 31px;
   line-height: 31px;
-  width: 102px;
+  width: 135px;
   padding-left: 7px;
   border: 2px solid #7fb000;
   color: #444444;
@@ -1379,9 +1386,9 @@ body {
   font-weight: 700;
   background: url("../img/filter-bg.png") repeat scroll 0 0 transparent; }
   .small-input.margin-r {
-    margin-right: 11px; }
+    margin-right: 63px; }
   .small-input input {
-    width: 36px;
+    width: 65px;
     background: transparent;
     border: 0 none;
     height: 31px;
