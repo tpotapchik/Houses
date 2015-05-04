@@ -1231,12 +1231,19 @@ body {
   line-height: 52px;
   padding: 0 33px;
   height: 51px;
-  float: left; }
+  display: inline-block;
+  vertical-align: top;
+   }
   .header-menu-item:first-child {
     padding: 0 20px; }
   .header-menu-item.active, .header-menu-item:hover {
     background-color: #7fb000; }
-
+.header-menu.small-menu {
+  text-align: center;
+}
+.header-menu.small-menu a {
+  line-height: 24px;
+}
 .header_menu {
     height: 50px;
     color: #434242;
