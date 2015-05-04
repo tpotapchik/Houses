@@ -1106,6 +1106,9 @@ body {
     padding-left: 7px;
     background: url("../img/filter-bg.png") repeat scroll 0 0 transparent;
     width: 345px; }
+.small-select.component-select  .chosen-single {
+  width: 268px;
+}
     .component-select .chosen-single span {
       margin-right: 29px; }
     .component-select .chosen-single div {
@@ -1125,6 +1128,9 @@ body {
     background-color: #fff;
     margin-top: -1px;
     width: 355px; }
+.small-select.component-select .chosen-drop {
+  width: 278px;
+}
   .component-select .chosen-results li {
     padding: 7px 15px 8px; }
   .component-select .chosen-results .highlighted {
