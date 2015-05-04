@@ -22,7 +22,7 @@ $categoryDropDown = ArrayHelper::map($categorys, 'id', 'processedValue');
     <div class="_title">НАЙТИ ПРОЕКТ МЕЧТЫ</div>
 
     <?php $form = ActiveForm::begin(['id' => 'contact-form', 'action' => ['catalog/search'], 'method' => 'get']); ?>
-    <div class="centralize-big clearfix">
+    <div class="centralize clearfix">
         <div class="filter-column">
             <div class="filter-row clearfix">
                 <label>Площадь</label>

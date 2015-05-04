@@ -1334,11 +1334,11 @@ body {
 
 .filter-column {
   float: left;
-  width: 545px;
+  width: 462px;
   margin-left: 8px; }
   .filter-column + .filter-column {
     margin-left: 35px;
-    width: 477px;
+    width: 384px;
   }
 
 .filter-row + .filter-row {
@@ -1350,7 +1350,7 @@ body {
   font-family: Tahoma, Arial, Helvetica, sans-serif;
   font-size: 1.8em;
   font-weight: 700;
-  width: 188px;
+  width: 105px;
   line-height: 36px; }
 .filter-row > select {
   float: left; }
