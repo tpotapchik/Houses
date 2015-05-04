@@ -8,11 +8,11 @@
 
 return [
     'All' => 'Все',
-    'Project category' => 'Категория проекта',
-    'Project title' => 'Название проекта',
+    'Project category' => 'Категория',
+    'Project title' => 'Название',
     'Garage' => 'Гараж',
     'Ground floor' => 'Цокольный этаж',
-    'Effective area' => 'Полезная площадь',
+    'Effective area' => 'Площадь',
     'Catalog Projects' => 'Каталог проектов',
     'Project house "{projectName}"' => 'Проект дома "{projectName}"',
     'Phone number' => 'Телефонный номер',
