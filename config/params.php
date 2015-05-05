@@ -3,7 +3,7 @@
 return [
     'mainMenu' => [
         'items' => [
-            ['label' => 'Главная', 'url' => ['site/index']],
+            ['label' => 'Главная', 'url' => ['site/index'], 'options' => ['title' => 'Проекты домов в Минске и Беларуси индивидуальные и типовые']],
             ['label' => 'О нас', 'url' => ['site/about']],
             ['label' => 'Каталог проектов', 'url' => ['catalog/index']],
             ['label' => 'Дизайн интерьеров', 'url' => ['design/index']],

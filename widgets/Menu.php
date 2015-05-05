@@ -68,9 +68,7 @@ class Menu extends Widget
         }
 
         $url = ArrayHelper::getValue($item, 'url', '#');
-        $options = [
-            'class' => 'header-menu-item'
-        ];
+        $options = ArrayHelper::merge(['class' => 'header-menu-item'], ArrayHelper::getValue($item, 'options', []));
 
         if (isset($item['active'])) {
             $active = ArrayHelper::remove($item, 'active', false);
