@@ -1106,6 +1106,9 @@ body {
     padding-left: 7px;
     background: url("../img/filter-bg.png") repeat scroll 0 0 transparent;
     width: 345px; }
+.small-select.component-select  .chosen-single {
+  width: 268px;
+}
     .component-select .chosen-single span {
       margin-right: 29px; }
     .component-select .chosen-single div {
@@ -1125,6 +1128,9 @@ body {
     background-color: #fff;
     margin-top: -1px;
     width: 355px; }
+.small-select.component-select .chosen-drop {
+  width: 278px;
+}
   .component-select .chosen-results li {
     padding: 7px 15px 8px; }
   .component-select .chosen-results .highlighted {
@@ -1225,12 +1231,19 @@ body {
   line-height: 52px;
   padding: 0 33px;
   height: 51px;
-  float: left; }
+  display: inline-block;
+  vertical-align: top;
+   }
   .header-menu-item:first-child {
     padding: 0 20px; }
   .header-menu-item.active, .header-menu-item:hover {
     background-color: #7fb000; }
-
+.header-menu.small-menu {
+  text-align: center;
+}
+.header-menu.small-menu a {
+  line-height: 24px;
+}
 .header_menu {
     height: 50px;
     color: #434242;
