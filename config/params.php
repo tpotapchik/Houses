@@ -20,7 +20,7 @@ return [
     ],
     'social' => [
         'fb' => 'https://www.facebook.com/pages/Проектная-мастерская-Дом-Тутby/1602271246672110',
-        'gPlus' => 'https://plus.google.com/u/0/108290869583672576270/posts',
+        'gPlus' => 'https://plus.google.com/108342422302740851341/posts',
         'youtube' => 'https://www.youtube.com/channel/UCg34LYTRug0x8hNVbjbeZ3A',
         'vk' => 'http://vk.com/dom_tut'
     ],
