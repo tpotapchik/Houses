@@ -114,7 +114,7 @@ $config = [
             ],
         ],
         'opengraph' => [
-            'class' => 'dragonjet\opengraph\OpenGraph',
+            'class' => 'app\library\OpenGraph',
             'site_name' => 'Проектная мастерская Dom-Tut.by'
         ],
         'assetManager' => [
