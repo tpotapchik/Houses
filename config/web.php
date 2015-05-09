@@ -2,7 +2,7 @@
 
 $params = require(__DIR__ . '/params.php');
 $bundles = [];
-if (YII_ENV_PROD) {
+if (YII_ENV_PROD && !isset($_GET['noAssets'])) {
     $bundles = require(__DIR__ . '/assets-prod.php');
 }
 

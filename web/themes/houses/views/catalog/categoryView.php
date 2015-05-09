@@ -34,6 +34,7 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
 
     <?= ProjectsGrid::widget([
         'dataProvider' => $dataProvider,
+        'layout' => "{pageSize}\n{items}\n{pager}"
     ]);
     ?>
 

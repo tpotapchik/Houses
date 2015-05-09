@@ -32,6 +32,19 @@ if (!isset($model)) {
         ]
     ]) ?>
 
+    <div class="form-row">Ваше примечание (если есть)</div>
+    <?= $form->field($model, 'comment', [
+        'template' => "{input}\n{hint}\n{error}",
+        'errorOptions' => [
+            'class' => 'error'
+        ],
+        'inputOptions' => [
+            'class' => 'popup-input',
+            'placeholder' => 'Меня заинтересовал проект ...',
+
+        ]
+    ]) ?>
+
     <div class="form-row">Введите ваш номер телефона<br><span>+375 (29) 000-00-11, +7 (495) 888-11-88, +380 (25) 111-11-11</span></div>
     <?= $form->field(
         $model,
@@ -41,27 +54,34 @@ if (!isset($model)) {
             'errorOptions' => [
                 'class' => 'error'
             ],
-        ])
-        ->widget(
-            MaskedInput::className(),
-            [
-                'mask' => '+9{1,3} (9{2,3}) 999-99-99',
-                'options' => [
-                    'class' => 'popup-input'
-                ]
+            'inputOptions' => [
+                'class' => 'popup-input',
+                'placeholder' => '+375 29 123-45-67',
+
             ]
-        ) ?>
+        ])
+//        ->widget(
+//            MaskedInput::className(),
+//            [
+//                'mask' => '+9{1,3} (9{2,3}) 999-99-99',
+//                'options' => [
+//                    'class' => 'popup-input'
+//                ]
+//            ]
+//        ) ?>
 
     <div class="form-row">Введите символы с картинки</div>
     <?= $form->field($model, 'verifyCode', [
         'template' => "{hint}\n{input}\n{error}",
         'inputOptions' => [],
         'errorOptions' => [
-            'class' => 'error'
+            'class' => 'error',
+            'style' => 'float: left;'
         ],
     ])->hint('Чтоб обновить картинку - нажмите на нее')->widget(Captcha::className(), [
         'options' => ['class' => 'popup-input'],
-        'imageOptions' => ['class' => 'capcha']
+        'imageOptions' => ['class' => 'capcha'],
+        'template' => '<div style="float: left;">{image}</div><div style="float: left;">{input}</div>'
     ]) ?>
     <?= Html::submitButton('ЗАКАЗАТЬ ЗВОНОК', ['class' => 'order-call-btn', 'name' => 'contact-button', 'id' => 'js-submit']) ?>
 

@@ -95,6 +95,7 @@ $(function () {
     };
 
     $('#callUsForm').on('beforeSubmit', beforeSubmit);
+    $('#w0').on('beforeSubmit', beforeSubmit);
 
 
     //feedback

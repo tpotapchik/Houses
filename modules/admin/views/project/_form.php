@@ -51,7 +51,7 @@ $types = Type::find()->all();
     <?= $form->field($model, 'priceUSD')->textInput()->label('EUR') ?>
 
     <?= $form->field($model, 'advice')->widget(CKEditor::className(), [
-        'options' => ['rows' => 6],
+        'options' => ['rows' => 6, 'cols' => 200],
         'preset' => 'full',
         'clientOptions' => [
             'contentsCss' => '/css/advice.css'
