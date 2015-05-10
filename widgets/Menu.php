@@ -68,7 +68,7 @@ class Menu extends Widget
             $result .= $this->renderItem($item);
         }
 
-        $result .= Html::endTag('div');
+        $result .= Html::endTag('ul');
 //        $result .= Html::endTag('div');
 
         return $result;

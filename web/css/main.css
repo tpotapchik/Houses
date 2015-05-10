@@ -2255,7 +2255,7 @@ padding-top: 10px;}
     padding-top:1px; /* Вводим отступ между li чтобы создать иллюзию разделенных пунктов меню */
     float:none;
     height:45px;
-    top:43px;
+    /*top:43px;*/
     left:-40px;
     font-size:19px;
 }
