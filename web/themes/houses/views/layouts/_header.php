@@ -16,7 +16,7 @@ $contacts = Yii::$app->params['contacts'];
 
 <div class="header">
     <div class="centralize">
-        <a href="<?= Yii::$app->homeUrl ?>" class="logo"><img src="/img/logo3.png" alt="<?=Yii::$app->params['projectName']?>"/></a>
+        <a href="<?= Yii::$app->homeUrl ?>" class="logo"><img src="/img/logo3.png" alt="<?=Yii::$app->params['projectName']?>" width="164" height="59" /></a>
 
         <div class="call-back right">
             <div class="social">
