@@ -110,6 +110,8 @@ class ProjectSearch extends Project
     {
         $query = Project::find();
 
+        $query->orderBy(['effectiveArea' => SORT_ASC]);
+
         $query->andFilterWhere(['category_id' => $model->categoryId])
             ->andFilterWhere(['like', new Expression('lower(title)'), explode(' ', $model->projectTitle)]);
 
