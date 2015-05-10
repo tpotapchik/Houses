@@ -113,8 +113,12 @@ class ProjectSearch extends Project
         $query->andFilterWhere(['category_id' => $model->categoryId])
             ->andFilterWhere(['like', new Expression('lower(title)'), explode(' ', $model->projectTitle)]);
 
-        if ($model->isGarage) {
-            $query->andFilterWhere(['>', 'carPlaces', intval($model->isGarage)]);
+        if ($model->isGarage > -1) {
+            if ($model->isGarage == 0) {
+                $query->andFilterWhere(['=', 'carPlaces', 0]);
+            } elseif ($model->isGarage == 1) {
+                $query->andFilterWhere(['>', 'carPlaces', 0]);
+            }
         }
 
         if ($model->effectiveAreaFrom > 0 && $model->effectiveAreaTo > 0) {
