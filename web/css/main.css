@@ -977,7 +977,7 @@ body {
     min-height: 100%; }
 
 .page_i {
-  padding-bottom: 215px; }
+  /*padding-bottom: 215px;*/ }
 
 .footer {
   height: 215px;
@@ -2255,7 +2255,7 @@ padding-top: 10px;}
     padding-top:1px; /* Вводим отступ между li чтобы создать иллюзию разделенных пунктов меню */
     float:none;
     height:45px;
-    top:43px;
+    top:-10px;/*43*/
     left:-40px;
     font-size:19px;
 }
