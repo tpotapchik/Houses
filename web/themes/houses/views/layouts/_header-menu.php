@@ -15,5 +15,6 @@ foreach ($menu['items'] as $key => $item) {
     }
 }
 ?>
-
+<div class="header-menu"><div class="centralize clearfix">
 <?= app\widgets\Menu::widget($menu) ?>
+</div></div>
