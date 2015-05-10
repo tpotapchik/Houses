@@ -29,7 +29,7 @@ class FilterPanel extends Model
         return [
             [['effectiveAreaFrom', 'effectiveAreaTo', 'categoryId'], 'integer'],
 //            [['isGarage', 'hasGroundFloor'], 'required'],
-            [['isGarage'], 'required'],
+//            [['isGarage'], 'required'],
 //            ['effectiveAreaFrom', 'compare', 'operator' => '<=', 'compareAttribute' => 'effectiveAreaTo'],
             ['projectTitle', 'string', 'length' => [0, 255]],
         ];
