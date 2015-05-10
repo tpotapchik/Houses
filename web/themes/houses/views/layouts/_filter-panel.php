@@ -51,9 +51,9 @@ $categoryDropDown = ArrayHelper::map($categorys, 'id', 'processedValue');
                         'class' => 'component-select small-select _label1',
                     ]
                 ])->dropDownList([
+                    '-1'=>'не важно',
                     '1'=>'да',
-                    '0'=>'нет',
-                    '-1'=>'не важно'
+                    '0'=>'нет'
                 ]) ?>
 
                 <?= $form->field($model, 'hasGroundFloor', [
