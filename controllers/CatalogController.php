@@ -47,6 +47,13 @@ class CatalogController extends Controller
      */
     public function actionView($category, $numCat)
     {
+        $redirect = $this->seoProtection(2);
+        if ($redirect !== false) {
+            return $redirect;
+        } else {
+            unset($redirect);
+        }
+
         /** @var Project $model */
         $model = Project::findOne(['numCat' => $numCat]);
         if (is_null($model) /*|| $model->category->url != $category*/) {
@@ -57,6 +64,13 @@ class CatalogController extends Controller
 
     public function actionCategory($category_url)
     {
+        $redirect = $this->seoProtection(1);
+        if ($redirect !== false) {
+            return $redirect;
+        } else {
+            unset($redirect);
+        }
+
         $category = Category::findOne(['url' => $category_url]);
         return $this->render('categoryView', ['category' => $category]);
     }
@@ -91,6 +105,18 @@ class CatalogController extends Controller
             } else {
                 throw new NotFoundHttpException();
             }
+        }
+    }
+
+    private function seoProtection($paramsCount)
+    {
+        //protection for SEO braking
+        if (count(Yii::$app->getRequest()->getQueryParams()) > $paramsCount) {
+            return $this->redirect(Yii::$app->urlManager->createAbsoluteUrl(
+                array_merge([Yii::$app->controller->getRoute()], Yii::$app->controller->actionParams)
+            ));
+        } else {
+            return false;
         }
     }
 }

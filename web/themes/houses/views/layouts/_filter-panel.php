@@ -41,16 +41,20 @@ $categoryDropDown = ArrayHelper::map($categorys, 'id', 'processedValue');
                 ])->dropDownList($categoryDropDown) ?>
         </div>
         <div class="filter-column">
-            <div class="filter-row clearfix">
-
                 <?= $form->field($model, 'isGarage', [
-                    'template' => "{input}\n{label}",
+                    'template' => "{label}\n{input}",
+                    'options' => [
+                        'class' => 'filter-row clearfix'
+                    ],
                     'labelOptions' => ['class' => ''],
-                    'options' => ['class' => 'component-checkbox _label1'],
                     'inputOptions' => [
-                        'class' => ''
+                        'class' => 'component-select small-select _label1',
                     ]
-                ])->checkbox([], false) ?>
+                ])->dropDownList([
+                    '-1'=>'не важно',
+                    '1'=>'да',
+                    '0'=>'нет'
+                ]) ?>
 
                 <?= $form->field($model, 'hasGroundFloor', [
                     'template' => "{input}\n{label}",
@@ -60,7 +64,6 @@ $categoryDropDown = ArrayHelper::map($categorys, 'id', 'processedValue');
                         'class' => '',
                     ]
                 ])->checkbox([], false) ?>
-            </div>
 
             <?= $form->field($model, 'projectTitle', [
                 'labelOptions' => ['class' => ''],
