@@ -27,7 +27,7 @@ class FilterPanel extends Model
     public function rules()
     {
         return [
-            [['effectiveAreaFrom', 'effectiveAreaTo', 'categoryId'], 'integer'],
+            [['effectiveAreaFrom', 'effectiveAreaTo', 'categoryId', 'isGarage'], 'integer'],
 //            [['isGarage', 'hasGroundFloor'], 'required'],
 //            [['isGarage'], 'required'],
 //            ['effectiveAreaFrom', 'compare', 'operator' => '<=', 'compareAttribute' => 'effectiveAreaTo'],
