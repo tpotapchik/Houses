@@ -67,7 +67,7 @@ $categoryDropDown = ArrayHelper::map($categorys, 'id', 'processedValue');
 
             <?= $form->field($model, 'projectTitle', [
                 'labelOptions' => ['class' => ''],
-                'options' => ['class' => 'filter-row without-m clearfix'],
+                'options' => ['class' => 'filter-row without-m with-m-top clearfix'],
                 'inputOptions' => [
                     'class' => 'filter-input'
                 ]
