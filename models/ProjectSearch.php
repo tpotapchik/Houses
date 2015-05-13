@@ -46,7 +46,7 @@ class ProjectSearch extends Project
      */
     public function search($params)
     {
-        $query = Project::find();
+        $query = Project::find()->orderBy(['effectiveArea' => SORT_ASC]);
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
