@@ -47,12 +47,12 @@ class CatalogController extends Controller
      */
     public function actionView($category, $numCat)
     {
-        $redirect = $this->seoProtection(2);
-        if ($redirect !== false) {
-            return $redirect;
-        } else {
-            unset($redirect);
-        }
+//        $redirect = $this->seoProtection(2);
+//        if ($redirect !== false) {
+//            return $redirect;
+//        } else {
+//            unset($redirect);
+//        }
 
         /** @var Project $model */
         $model = Project::findOne(['numCat' => $numCat]);
@@ -64,12 +64,12 @@ class CatalogController extends Controller
 
     public function actionCategory($category_url)
     {
-        $redirect = $this->seoProtection(1);
-        if ($redirect !== false) {
-            return $redirect;
-        } else {
-            unset($redirect);
-        }
+//        $redirect = $this->seoProtection(1);
+//        if ($redirect !== false) {
+//            return $redirect;
+//        } else {
+//            unset($redirect);
+//        }
 
         $category = Category::findOne(['url' => $category_url]);
         return $this->render('categoryView', ['category' => $category]);
