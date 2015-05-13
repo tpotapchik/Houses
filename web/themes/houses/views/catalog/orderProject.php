@@ -31,7 +31,7 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
         </div>
         <div class="feedback-block-wrapper">
             <div class="feedback-block">
-                <div class="message">Спасибо! Мы свяжемся с вами<br> в ближайшее время.</div>
+                <div class="message" <?= Yii::$app->session->getFlash('contactFormSubmitted', false)?'style="display: block"':'' ?>>Спасибо! Мы свяжемся с вами<br> в ближайшее время.</div>
                 <div class="_title">ФОРМА ОБРАТНОЙ СВЯЗИ</div>
 
                 <?php $form = ActiveForm::begin([

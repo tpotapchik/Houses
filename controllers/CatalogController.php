@@ -78,7 +78,9 @@ class CatalogController extends Controller
     public function actionOrderProject()
     {
         $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->validate() && $model->sendEmail(Yii::$app->params['callUsEmail'])) {
+        if ($model->load(Yii::$app->request->post()) &&
+            $model->validate() &&
+            $model->sendEmail(Yii::$app->params['callUsEmail'])) {
             Yii::$app->session->setFlash('contactFormSubmitted');
 
             return $this->refresh();
