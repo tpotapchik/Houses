@@ -3,5 +3,6 @@ Disallow: /cgi-bin/
 Disallow: /*search
 Disallow: /*FilterPanel
 Disallow: /*captcha
+Disallow: /*page=
 Host: dom-tut.by
 Sitemap: http://dom-tut.by/sitemap.xml
