@@ -12,6 +12,10 @@ RewriteRule . index.php
   php_value session.cookie_httponly true
 </IfModule>
 
+<ifModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
+</ifModule>
+
 <IfModule mod_autoindex.c>
   Options -Indexes
 </IfModule>
