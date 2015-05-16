@@ -41,6 +41,7 @@ $config = [
                 '<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
                 '<module:\w+>/<submodule:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<submodule>/<controller>/<action>',
                 ['pattern' => 'sitemap', 'route' => 'sitemap/default/index', 'suffix' => '.xml'],
+                ['route' => 'images/index', 'verb'=>'GET', 'pattern' => 'images/<path:[[:word:]/0-9.-]+>']
             ]
         ],
         'cache' => [

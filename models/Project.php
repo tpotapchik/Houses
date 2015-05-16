@@ -251,17 +251,26 @@ class Project extends \yii\db\ActiveRecord
     }
 
     /**
-     * @param string $DefaultPhoto
+     * @param null $width
+     * @param null $height
      * @return string
+     * @throws \Exception
+     * @internal param string $DefaultPhoto
      */
-    public function getMainPhoto($DefaultPhoto = '/img/temp/house1.jpg')
+    public function getMainPhoto($width = null, $height = null)
     {
+        $DefaultPhoto = '/img/temp/house1.jpg';
         /** @var Photo $photo */
         $photo = $this->getDb()->cache(function (Connection $db) {
             return $this->getPhotos()->where('title=:title', [':title'=>'фото'])->one();
         }, 60 * 5);
         if ($photo) {
             $DefaultPhoto = $photo->file;
+
+            if (!is_null($width) && !is_null($height)) {
+                preg_match('/\/(.+)\.(.+)$/', $DefaultPhoto, $matches);
+                $DefaultPhoto = '/'.$matches[1].'-'.$width.'x'.$height.'.'.$matches[2];
+            }
         }
         return $DefaultPhoto;
     }
