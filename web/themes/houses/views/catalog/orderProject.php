@@ -30,6 +30,7 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
             $article->full_text ?>
         </div>
         <div class="feedback-block-wrapper">
+            <a name="order"></a>
             <div class="feedback-block">
                 <div class="message" <?= Yii::$app->session->getFlash('contactFormSubmitted', false)?'style="display: block"':'' ?>>Спасибо! Мы свяжемся с вами<br> в ближайшее время.</div>
                 <div class="_title">ФОРМА ОБРАТНОЙ СВЯЗИ</div>
@@ -37,6 +38,7 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
                 <?php $form = ActiveForm::begin([
                     'method' => 'post',
                     'enableClientValidation' => true,
+                    'action' => ['catalog/pages/order-project', '#' => 'order']
                 ]); ?>
                 <div class="form-row">Введите свое имя</div>
                 <?= $form->field($model, 'name', [
@@ -99,7 +101,7 @@ Yii::$app->params['mainMenu']['items'][2]['active'] = true;
                     'options' => ['class' => 'popup-input',],
                     'imageOptions' => ['class' => 'capcha']
                 ]) ?>
-                <?= Html::submitButton('ОТПРАВИТЬ', ['class' => 'order-call-btn', 'name' => 'contact-button', 'id' => 'js-submit']) ?>
+                <?= Html::submitButton('ОТПРАВИТЬ', ['class' => 'order-call-btn', 'name' => 'contact-button']) ?>
 
                 <?php ActiveForm::end(); ?>
 
