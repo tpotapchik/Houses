@@ -22,7 +22,7 @@ $panel = new \app\models\FilterPanel();
             <div class="_title">ВСЕ ПРОЕКТЫ</div>
             <?php
             $project = $projectSearch->searchOneRandomByFilter(new \app\models\FilterPanel());
-            $photoLink = $project->getMainPhoto();
+            $photoLink = $project->getMainPhoto(492, 369);
             ?>
             <?= Html::img($photoLink, ['alt' => $project->title, 'style' => 'width: 492px; height: auto;']) ?>
 
@@ -35,7 +35,7 @@ $panel = new \app\models\FilterPanel();
         <?php
             $panel->effectiveAreaTo = 100;
             $project = $projectSearch->searchOneRandomByFilter($panel);
-            $photoLink = $project->getMainPhoto();
+            $photoLink = $project->getMainPhoto(492, 369);
         ?>
         <a href="<?= \yii\helpers\Url::toRoute(['catalog/search', $panel->formName() => $panel->getAttributes()]) ?>" class="picture-block">
             <div class="_title">ДОМА ДО 100 м<sup>2</sup></div>
@@ -51,7 +51,7 @@ $panel = new \app\models\FilterPanel();
         $panel->effectiveAreaFrom = 100;
         $panel->effectiveAreaTo = 180;
         $project = $projectSearch->searchOneRandomByFilter($panel);
-        $photoLink = $project->getMainPhoto();
+        $photoLink = $project->getMainPhoto(492, 369);
         ?>
         <a href="<?= \yii\helpers\Url::toRoute(['catalog/search', $panel->formName() => $panel->getAttributes()]) ?>" class="picture-block">
             <div class="_title">СРЕДНИЕ ДОМА ДО 100-180 м<sup>2</sup></div>
@@ -67,7 +67,7 @@ $panel = new \app\models\FilterPanel();
         $panel->effectiveAreaFrom = 180;
         $panel->effectiveAreaTo = null;
         $project = $projectSearch->searchOneRandomByFilter($panel);
-        $photoLink = $project->getMainPhoto();
+        $photoLink = $project->getMainPhoto(492, 369);
         ?>
         <a href="<?= \yii\helpers\Url::toRoute(['catalog/search', $panel->formName() => $panel->getAttributes()]) ?>" class="picture-block">
             <div class="_title">БОЛЬШИЕ ДОМА БОЛЕЕ 180 м<sup>2</sup></div>

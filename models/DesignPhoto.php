@@ -63,4 +63,16 @@ class DesignPhoto extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Design::className(), ['id' => 'design_id']);
     }
+
+    public function getFile($width = null, $height = null)
+    {
+        $DefaultPhoto = $this->file;
+
+        if (!is_null($width) && !is_null($height)) {
+            preg_match('/\/(.+)\.(.+)$/', $DefaultPhoto, $matches);
+            $DefaultPhoto = '/'.$matches[1].'-'.$width.'x'.$height.'.'.$matches[2];
+        }
+
+        return $DefaultPhoto;
+    }
 }

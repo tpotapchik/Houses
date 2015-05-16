@@ -28,7 +28,7 @@ use yii\db\Expression;
             <?=
             $photo ?
                 \yii\helpers\Html::a(
-                    \yii\helpers\Html::img($photo->file),
+                    \yii\helpers\Html::img($photo->getFile(327, 206)),
                     $design->getLink(),
                     ['class' => 'interior-block left']
                 ) : '';

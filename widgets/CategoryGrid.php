@@ -23,7 +23,7 @@ class CategoryGrid extends ProjectsGrid
         /** @var Category $model */
         $project = $model->getRandomProject();
 
-        $photoLink = $project->getMainPhoto();
+        $photoLink = $project->getMainPhoto(492, 369);
 
         $content = Html::a(
             Html::tag('div', GeneralHelper::mb_ucfirst($model->processedValue), ['class' => '_title-project']) .
