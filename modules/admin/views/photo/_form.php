@@ -25,7 +25,7 @@ use yii\widgets\ActiveForm;
         'crop_value' => '0-0-100-100'
     ]) ?>
 
-    <?= $form->field($model, 'project_id')->textInput() ?>
+
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

@@ -2,6 +2,8 @@
 
 namespace app\modules\admin\controllers;
 
+use app\models\Project;
+use Symfony\Component\Config\Definition\Exception\Exception;
 use Yii;
 use app\models\Photo;
 use app\models\PhotoSearch;
@@ -47,10 +49,13 @@ class PhotoController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
+    public function actionCreate($projectId)
     {
         $model = new Photo();
-
+        if (Project::findOne(['id' => $projectId]) === null) {
+            throw new NotFoundHttpException('Project not found');
+        }
+        $model->project_id = $projectId;
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
