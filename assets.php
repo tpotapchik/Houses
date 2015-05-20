@@ -27,8 +27,8 @@ return [
             'class' => 'yii\web\AssetBundle',
             'basePath' => '@webroot/assets',
             'baseUrl' => '@web/assets',
-            'js' => 'js/all-{hash}.js',
-            'css' => 'css/all-{hash}.css',
+            'js' => 'js/all.js',
+            'css' => 'css/all.css',
         ],
     ],
     // Asset manager configuration:
