@@ -27,7 +27,7 @@ class CategoryGrid extends ProjectsGrid
 
         $content = Html::a(
             Html::tag('div', GeneralHelper::mb_ucfirst($model->processedValue), ['class' => '_title-project']) .
-            Html::img($photoLink, ['alt' => 'Картинка дома', 'style' => 'width: 492px; height: auto;']) .
+            Html::img($photoLink, ['alt' => $project->title, 'style' => 'width: 492px; height: auto;']) .
             '<div class="_more-button">
                             <div class="show-more-btn-wrapper"><span class="show-more-btn">Подробнее</span></div>
                         </div>',

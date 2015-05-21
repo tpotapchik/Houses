@@ -62,7 +62,7 @@ class ProjectsGrid extends BaseListView
 
         $content = Html::a(
             Html::tag('div', $model->title . Html::tag('div', $model->effectiveArea . ' м<sup>2</sup>', ['class' => 'effectiveArea']), ['class' => '_title-project']) .
-            Html::img($photoLink, ['alt' => 'Картинка дома', 'style' => 'width: 492px; height: auto;']) .
+            Html::img($photoLink, ['alt' => $model->title, 'style' => 'width: 492px; height: auto;']) .
             '<div class="_more-button">
                     <div class="show-more-btn-wrapper"><span class="show-more-btn">Подробнее</span></div>
             </div>',
