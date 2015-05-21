@@ -117,18 +117,20 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
             foreach ($visualisations as $photo) {
                 $options = [
                     'class' => 'fancybox visualisation',
-                    'rel' => 'gallery2'
+                    'rel' => 'gallery2',
+                    'title' => $this->title,
+                    'alt' => $this->title
                 ];
                 if ($photo->title === 'участок') {
                     $options['class'] = $options['class'] . ' position';
                     $positionsPhotos[] = Html::a(
-                        '',
+                        Html::img($photo->file, ['alt' => $this->title.' '.$photo->title, 'style' => 'display:none']),
                         $photo->file,
                         $options
                     );
                 } else {
                     echo Html::a(
-                        '',
+                        Html::img($photo->file, ['alt' => $this->title.' '.$photo->title, 'style' => 'display:none']),
                         $photo->file,
                         $options
                     );
@@ -178,7 +180,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
                 /** @var \app\models\Floor $floor */
                 foreach ($floorsPhotos as $floor) {
                     echo Html::a(
-                        Html::img($floor->file, ['alt' => $floor->title]),
+                        Html::img($floor->file, ['alt' => $this->title.' '.$floor->title]),
                         $floor->file,
                         [
                             'class' => 'fancybox plans',
@@ -192,11 +194,12 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
             /** @var \app\models\Facade $facade */
             foreach ($facadesPhotos as $facade) {
                 echo Html::a(
-                    '',
+                    Html::img($facade->file, ['alt' => $this->title.' '.$facade->title, 'style' => 'display:none']),
                     $facade->file,
                     [
                         'class' => 'fancybox facades',
-                        'rel' => 'gallery2'
+                        'rel' => 'gallery2',
+                        'alt' => $this->title.' '.$floor->title
                     ]
                 );
             }
