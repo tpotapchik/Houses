@@ -124,7 +124,8 @@ class SiteController extends Controller
 
     public function actionContacts()
     {
-        return $this->render('contacts');
+        throw new NotFoundHttpException();
+        //return $this->render('contacts');
     }
 
     public function actionCallus()
