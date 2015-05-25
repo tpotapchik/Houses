@@ -1,4 +1,6 @@
 <?php
+header('HTTP/1.1 503 Service Temporarily Unavailable');
+header('Status: 503 Service Temporarily Unavailable');
 echo 'Извините, сайт временно не доступен';
 ini_set('display_errors', 'Off');
 throw new \Exception('Service not available', 503);
