@@ -19,10 +19,15 @@ return [
         //'address' => '220019, Республика Беларусь,<br>г.Минск, ул. Максима Горецкого, 7-113, 1 этаж (отдельный вход со двора)'
     ],
     'social' => [
-        'fb' => 'https://www.facebook.com/pages/Проектная-мастерская-Дом-Тутby/1602271246672110',
-        'gPlus' => 'https://plus.google.com/108342422302740851341/posts',
-        'youtube' => 'https://www.youtube.com/channel/UCg34LYTRug0x8hNVbjbeZ3A',
-        'vk' => 'http://vk.com/dom_tut'
+        //'fb' => 'https://www.facebook.com/pages/Проектная-мастерская-Дом-Тутby/1602271246672110',
+        //'gPlus' => 'https://plus.google.com/108342422302740851341/posts',
+        //'youtube' => 'https://www.youtube.com/channel/UCg34LYTRug0x8hNVbjbeZ3A',
+        //'vk' => 'http://vk.com/dom_tut'
+        'fb' => '',
+        'gPlus' => '',
+        'youtube' => '',
+        'vk' => ''
+        
     ],
     'callUsEmail' => 'info@dom-tut.by',
     'nbrbUrl' => 'http://www.nbrb.by/Services/XmlExRates.aspx',
