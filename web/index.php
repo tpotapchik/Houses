@@ -1,5 +1,6 @@
 <?php
 echo 'Извините, сайт временно не доступен';
+display_errors(false);
 throw new \Exception('Service not available', 503);
 if (getenv('APP_ENV') == 'dev' || $_SERVER['HTTP_HOST'] == 'house.loc') {
     // comment out the following two lines when deployed to production
