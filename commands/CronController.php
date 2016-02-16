@@ -6,7 +6,7 @@
  * Time: 18:41
  */
 
-namespace console\controllers;
+namespace app\commands;
 
 
 use common\components\BiletiByAPI;

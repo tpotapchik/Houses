@@ -12,10 +12,10 @@ return [
         ]
     ],
     'contacts' => [
-        //'email' => 'info@dom-tut.by',
-        //'phone1' => '<small>+375 17</small> <b>238 04 05</b>',
+        'email' => 'info@dom-tut.by',
+        'phone1' => '<small>+375 17</small> <b>238 04 05</b>',
         'phone2' => '<small>+375 29</small> <b>328 30 40</b>',
-        //'skype' => 'dom-tut.by',
+        'skype' => 'dom-tut.by',
         //'address' => '220019, Республика Беларусь,<br>г.Минск, ул. Максима Горецкого, 7-113, 1 этаж (отдельный вход со двора)'
     ],
     'social' => [

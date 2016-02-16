@@ -18,7 +18,7 @@ $mainArticle = Article::getMain();
 if (strlen($this->title) > 0) {
     $expression = '/^.+? - (.+?)$/';
     preg_match($expression, $mainArticle->title, $matches);
-    $title = $matches[1];
+    $title = @$matches[1];
     $this->title .= ' - ' . $title;
 } else {
     $this->title = $mainArticle->title;

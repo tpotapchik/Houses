@@ -164,6 +164,33 @@ $config = [
             ],
             'enableGzip' => true, // default is false
 //            'cacheExpire' => 10, // 1 second. Default is 24 hours
+        ],
+        'mySitemap' => [
+            'class' => 'app\library\Sitemap\Sitemap',
+            'urls' => [
+                [
+                    'model' => 'app\models\Project',
+                    'title' => 'Проекты'
+                ],
+                [
+                    'model' => 'app\models\Category',
+                    'title' => 'Категории'
+                ],
+                [
+                    'model' => 'app\models\Design',
+                    'title' => 'Дизайн интерьера'
+                ],
+                [
+                    'model' => 'app\models\Article',
+                    'db:where' => 'blah blah blah',
+                    'title' => 'Новости'
+                ],
+                [
+                    'model' => 'app\models\Article',
+                    'db:where' => 'aaa',
+                    'title' => 'Прочее'
+                ]
+            ]
         ]
     ],
     'params' => $params,
