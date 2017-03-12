@@ -1,0 +1,19 @@
+---
+# - name: Disable selinux
+#   selinux:
+#     state: disabled
+
+- name: Install editors
+  apt:
+    name: vim
+    state: present
+
+- name: Install mc
+  apt:
+    name: mc
+    state: present
+
+- name: Install java
+  apt:
+    name: openjdk-7-jre
+    state: present

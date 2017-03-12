@@ -1,0 +1,19 @@
+---
+- hosts: all
+  become: yes
+  become_method: sudo
+  vars_files:
+    - vars/config.yml
+
+  tasks:
+    - include: tasks/prerequisites.yml
+    - include: tasks/apache.yml
+    - include: tasks/memcached.yml
+    - include: tasks/php.yml
+    - include: tasks/composer.yml
+    - include: tasks/mysql.yml
+    # - include: tasks/npm.yml
+    # - include: tasks/batik.yml
+  handlers:
+    - name: Restart Apache
+      service: name=apache2 state=restarted

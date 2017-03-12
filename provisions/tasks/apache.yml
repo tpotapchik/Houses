@@ -1,0 +1,40 @@
+---
+- name: Install apache
+  apt:
+    name: apache2
+    state: present
+  notify:
+    - Restart Apache
+
+- name: Install itk module
+  apt:
+    name: apache2-mpm-itk
+    state: present
+  notify:
+    - Restart Apache
+
+- name: enabled mod_rewrite
+  apache2_module:
+    name: rewrite
+    state: present
+  notify:
+    - Restart Apache
+
+#- name: Make apache run as vagrant
+#  lineinfile:
+#    dest: /etc/apache2/envvars
+#    regexp: '^export APACHE_RUN_USER='
+#    line: "export APACHE_RUN_USER=vagrant"
+#    state: present
+#  notify:
+#    - Restart Apache
+
+- name: Start Apache
+  service:
+    name: apache2
+    state: started
+
+- name: Start Apache on boot
+  service:
+    name: apache2
+    enabled: yes

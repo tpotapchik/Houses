@@ -36,3 +36,7 @@ psd/
 *.iml
 
 config/assets-prod.php
+
+.vagrant
+
+*.retry

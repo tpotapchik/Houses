@@ -1,0 +1,17 @@
+---
+#Vagrant configuration
+vagrant_provider: "virtualbox"
+vagrant_box: "ubuntu/trusty64"
+vagrant_ip: "192.168.33.12"
+vagrant_memory: "512"
+vagrant_hostname: "houses-virt-dev-server"
+vhost_domain: "192.168.33.12"
+
+houses_synced_folder: ""
+houses_project_root: "/vagrant"
+houses_sync_type: ""
+
+houses_public_root: "{{ houses_project_root }}/web"
+
+#Mysql configuraion
+mysql_root_password: mysqlRootPass

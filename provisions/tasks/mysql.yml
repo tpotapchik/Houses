@@ -1,0 +1,70 @@
+---
+- name: Instal mysqldb Python module for Ansible
+  apt:
+    name: python-mysqldb
+    state: present
+  # with_items:
+  #   - python-pip
+  #   - python-dev
+  #   - libmysqlclient-dev
+
+# - name: Inatall mysqldb python
+#   pip:
+#     name: MySQL-python
+#     state: present
+
+- name: Install MySQL Server
+  apt:
+    name: mysql-server
+    state: installed
+
+# - name: Configure MySQL Server
+#   template:
+#     src: templates/mysql/my.cnf
+#     dest: /etc/my.cnf
+
+- name: Start Mysql on boot
+  service:
+    name: mysql
+    enabled: yes
+
+- name: Start MySQL
+  service:
+    name: mysql
+    state: started
+
+# - name: Set MySQL client config for root
+#   template:
+#     src: templates/mysql/client.cnf
+#     dest: /root/.my.cnf
+
+- name: Update MySQL root password for all root accounts
+  mysql_user:
+    name: root
+    host: "{{ item }}"
+    password: "{{ mysql_root_password }}"
+    priv: "*.*:ALL,GRANT"
+  with_items:
+   - "{{ ansible_hostname }}"
+   - 127.0.0.1
+   - ::1
+   - localhost
+
+- name: Set MySQL client config for root
+  template:
+    src: templates/mysql/client.cnf
+    dest: /root/.my.cnf
+
+- name: Set MySQL client config for vagrant user
+  template:
+    src: templates/mysql/client.cnf
+    dest: ~vagrant/.my.cnf
+
+- name: Delete MySQL users with empty names
+  mysql_user:
+    name: ""
+    host: "{{ item }}"
+    state: absent
+  with_items:
+   - "{{ ansible_hostname }}"
+   - localhost

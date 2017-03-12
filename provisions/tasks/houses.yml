@@ -1,0 +1,65 @@
+---
+- name: Create test database
+  mysql_db:
+    name: houses_test
+    state: present
+
+- name: Create default database
+  mysql_db:
+    name: houses
+    state: present
+
+- name: Copy db dump
+  copy:
+    src: files/dump.sql
+    dest: /tmp/dump.sql
+
+- name: Import dump
+  mysql_db:
+    name: houses
+    state: import
+    target: /tmp/dump.sql
+
+- name: Create DB user for the databases
+  mysql_user:
+    name: vagrant
+    password: vagrant
+    priv: "*.*:ALL"
+    host: "{{ item }}"
+    state: present
+  with_items:
+    - "%"
+    - localhost
+    - 127.0.0.1
+    - ::1
+
+- name: Create Apache virtual host
+  template: src=houses.conf dest=/etc/apache2/sites-available/houses.conf
+  notify:
+    - Restart Apache
+
+- name: Enable virtual host
+  file:
+      src: /etc/apache2/sites-available/houses.conf
+      dest: /etc/apache2/sites-enabled/houses.conf
+      state: link
+  notify:
+    - Restart Apache
+
+- name: Create js compressed log directory
+  file:
+    path: "{{ houses_public_root }}/assets/js"
+    state: directory
+    owner: vagrant
+
+- name: Create css compressed log directory
+  file:
+    path: "{{ houses_public_root }}/assets/css"
+    state: directory
+    owner: vagrant
+
+- name: Run compressing js and css tool
+  become_user: vagrant
+  command: ./yii asset assets.php config/assets-prod.php
+  args:
+    chdir: "{{ houses_project_root }}"

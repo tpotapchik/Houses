@@ -1,0 +1,15 @@
+---
+- name: Install memcached related packages required for project
+  apt:
+    name: memcached
+    state: present
+
+- name: Start memcached on boot
+  service:
+    name: memcached
+    enabled: yes
+
+- name: Start memcached
+  service:
+    name: memcached
+    state: started

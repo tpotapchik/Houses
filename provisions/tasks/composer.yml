@@ -1,0 +1,12 @@
+---
+- name: Download and install composer
+  get_url:
+    url: https://getcomposer.org/composer.phar
+    dest: /usr/local/bin/composer.phar
+    mode: 0755
+
+- name: Create a symlink to just 'composer'
+  file:
+    src: /usr/local/bin/composer.phar
+    dest: /usr/local/bin/composer
+    state: link
