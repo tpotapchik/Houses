@@ -8,17 +8,22 @@
   mysql_db:
     name: houses
     state: present
+  register: db_create
 
 - name: Copy db dump
   copy:
     src: files/dump.sql
     dest: /tmp/dump.sql
+  run_once: true
+  when: db_create.changed
 
 - name: Import dump
   mysql_db:
     name: houses
     state: import
     target: /tmp/dump.sql
+  run_once: true
+  when: db_create.changed
 
 - name: Create DB user for the databases
   mysql_user:
@@ -51,14 +56,18 @@
     path: "{{ houses_public_root }}/assets/js"
     state: directory
     owner: vagrant
+  register: compressing
 
 - name: Create css compressed log directory
   file:
     path: "{{ houses_public_root }}/assets/css"
     state: directory
     owner: vagrant
+  register: compressing
 
 - name: Run compressing js and css tool
+  run_once: true
+  when: compressing.changed
   become_user: vagrant
   command: ./yii asset assets.php config/assets-prod.php
   args:

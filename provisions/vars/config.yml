@@ -5,7 +5,7 @@ vagrant_box: "ubuntu/trusty64"
 vagrant_ip: "192.168.33.12"
 vagrant_memory: "512"
 vagrant_hostname: "houses-virt-dev-server"
-vhost_domain: "192.168.33.12"
+vhost_domain: "houses.local"
 
 houses_synced_folder: ""
 houses_project_root: "/vagrant"
