@@ -15,3 +15,4 @@ Also needed some additional plugins for Vagrant
 ## Let's start
 Just run
 `$ vagrant up` and enjoy!
+http://houses.local

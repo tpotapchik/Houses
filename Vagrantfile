@@ -21,6 +21,8 @@ Vagrant.configure("2") do |config|
 
   config.hostsupdater.aliases = [config_yml["vhost_domain"]]
 
+  config.vbguest.no_remote = true
+
   config.vm.hostname = config_yml["vagrant_hostname"]
 
   config.vm.network(:private_network, {:ip=>config_yml["vagrant_ip"]})
@@ -31,6 +33,7 @@ Vagrant.configure("2") do |config|
 
   end
 
+  config.vm.synced_folder "", "/vagrant", id: "hsrc"
   #config.vm.synced_folder config_yml["houses_synced_folder"], config_yml["houses_project_root"], type: config_yml["houses_sync_type"]
 
   # Provisioning configuration for Ansible
