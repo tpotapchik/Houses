@@ -69,6 +69,6 @@
   run_once: true
   when: compressing.changed
   become_user: vagrant
-  command: ./yii asset assets.php config/assets-prod.php
+  command: php ./yii asset assets.php config/assets-prod.php
   args:
     chdir: "{{ houses_project_root }}"
