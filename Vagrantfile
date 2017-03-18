@@ -19,11 +19,11 @@ Vagrant.configure("2") do |config|
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = config_yml['vagrant_box']
 
-  config.hostsupdater.aliases = [config_yml["vhost_domain"]]
+  #config.hostsupdater.aliases = [config_yml["vhost_domain"]]
 
   config.vbguest.no_remote = true
 
-  config.vm.hostname = config_yml["vagrant_hostname"]
+  #config.vm.hostname = config_yml["vagrant_hostname"]
 
   config.vm.network(:private_network, {:ip=>config_yml["vagrant_ip"]})
 
