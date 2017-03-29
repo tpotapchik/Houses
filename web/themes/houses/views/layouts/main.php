@@ -106,7 +106,7 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
     <div class="page">
     <div class="page_i">
     <?= $this->render('_header', ['social' => $social]) ?>
-    <?= $this->render('_header-menu', []) ?>
+
 
 
     <!--end HEADER-->

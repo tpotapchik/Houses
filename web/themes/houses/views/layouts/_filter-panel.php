@@ -19,10 +19,11 @@ $categorys = Yii::$app->getDb()->cache(function (\yii\db\Connection $db) {
 $categoryDropDown = ArrayHelper::map($categorys, 'id', 'processedValue');
 ?>
 <div class="filter-panel <?= $other?'other-page':'' ?>">
+ <div>
     <div class="_title">НАЙТИ ПРОЕКТ МЕЧТЫ</div>
-
+<div class="clearfix">
     <?php $form = ActiveForm::begin(['id' => 'contact-form', 'action' => ['catalog/search'], 'method' => 'get']); ?>
-    <div class="centralize clearfix">
+
         <div class="filter-column">
             <div class="filter-row clearfix">
                 <label>Площадь</label>
@@ -56,30 +57,34 @@ $categoryDropDown = ArrayHelper::map($categorys, 'id', 'processedValue');
                     '0'=>'нет'
                 ]) ?>
 
-                <?= $form->field($model, 'hasGroundFloor', [
-                    'template' => "{input}\n{label}",
-                    'labelOptions' => ['class' => ''],
-                    'options' => ['class' => 'component-checkbox _label2', 'style' => 'display: none;'],
-                    'inputOptions' => [
-                        'class' => '',
-                    ]
-                ])->checkbox([], false) ?>
+
 
             <?= $form->field($model, 'projectTitle', [
                 'labelOptions' => ['class' => ''],
-                'options' => ['class' => 'filter-row without-m with-m-top clearfix'],
+                'options' => ['class' => 'filter-row clearfix'],
                 'inputOptions' => [
                     'class' => 'filter-input'
                 ]
             ])?>
 
+                    <?= $form->field($model, 'hasGroundFloor', [
+                                'template' => "{input}\n{label}",
+                                'labelOptions' => ['class' => ''],
+                                'options' => ['class' => 'component-checkbox _label2', 'style' => 'display: none;'],
+                                'inputOptions' => [
+                                    'class' => '',
+                                ]
+                            ])->checkbox([], false) ?>
+
         </div>
-        <div class="filter-submit js-submit-form">
-            <button type="submit"><span>Найти!</span></button>
+        <div class="filter-column">
+            <div class="filter-submit js-submit-form">
+                <button type="submit"><span>Найти!</span></button>
+            </div>
         </div>
 
 
     </div>
     <?php ActiveForm::end(); ?>
-
+</div>
 </div>

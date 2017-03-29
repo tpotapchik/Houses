@@ -15,10 +15,10 @@ $contacts = Yii::$app->params['contacts'];
 ?>
 
 <div class="header">
-    <div class="centralize">
-        <a href="<?= Yii::$app->homeUrl ?>" class="logo"><img src="/img/logo3.png" alt="<?=Yii::$app->params['projectName']?>" width="164" height="59" /></a>
+    <div class="centralize clearfix">
+        <a href="<?= Yii::$app->homeUrl ?>" class="logo left"><img src="/img/logo5.png" alt="<?=Yii::$app->params['projectName']?>" width="164" height="59" /></a>
 
-        <div class="call-back right">
+        <!--<div class="call-back right">
             <div class="social">
                 <a rel="nofollow" href="<?= $social['youtube'] ?>" target="_blank" class="yt"></a>
                 <a rel="nofollow" href="<?= $social['gPlus'] ?>" target="_blank" class="gp"></a>
@@ -26,14 +26,20 @@ $contacts = Yii::$app->params['contacts'];
                 <a rel="nofollow" href="<?= $social['fb'] ?>" target="_blank" class="fb"></a>
              </div>
             <div class="call_me"><a href="#popup" class="popup">Заказать звонок</a></div>
-        </div>
-        <div class="contact right">
+        </div>-->
+        <!--<div class="contact right">
             <a class="mail" href="mailto:<?= $contacts['email'] ?>"><i class="_ico"></i><?= $contacts['email'] ?></a>
             <a class="skype" href="skype:<?= $contacts['skype'] ?>"><i class="_ico"></i><?= $contacts['skype'] ?></a>
-        </div>
-        <div class="phone right">
+        </div>-->
+        <div class="phone left">
                     <div class="_ico_"></div>
-        <table style="margin-top:-20px;">
+                    <p>898 897 987</p>
+                     <p>898 897 987</p>
+
+
+
+
+        <!--<table style="margin-top:-20px;">
         <tr><td>
         Работаем без выходных
             <img src="/img/24-7.jpg" width="80" />
@@ -49,8 +55,11 @@ $contacts = Yii::$app->params['contacts'];
             <br/>
                 <a style="color:#434242; text-decoration: none;" href="tel:<?= Yii::$app->params['contacts']['phone2'] ?>"><?= Yii::$app->params['contacts']['phone2'] ?></a>
             </td></tr>
-            </table>
+            </table>-->
         </div>
+
+
+           <?= $this->render('_header-menu', []) ?>
     </div>
 </div>
 

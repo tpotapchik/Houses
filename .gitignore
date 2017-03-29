@@ -40,3 +40,6 @@ config/assets-prod.php
 .vagrant
 
 *.retry
+
+# work hours
+hours.txt

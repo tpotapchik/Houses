@@ -8,7 +8,7 @@
 ?>
 <div class="main-title">МЫ ПРЕДЛАГАЕМ</div>
 <div class="main-block projects-house clearfix">
-    <div class="_content left">
+    <div class="_content">
         <a href="<?= \yii\helpers\Url::toRoute(['catalog/index']) ?>" class="picture-block small">
             <div class="_title">ГОТОВЫЕ ПРОЕКТЫ ДОМОВ</div>
             <img src="/img/temp/house2.jpg" alt="Готовые проекты"/>
@@ -19,7 +19,7 @@
             </div>
         </a>
     </div>
-    <div class="_content right">
+    <div class="_content">
         <a href="<?= \yii\helpers\Url::toRoute(['catalog/pages/custom_projects']) ?>" class="picture-block small">
             <div class="_title">ПРОЕКТИРОВАНИЕ ДОМОВ</div>
             <img src="/img/temp/house3.jpg" alt="Проектирование домов"/>
@@ -32,4 +32,18 @@
             </div>
         </a>
     </div>
+     <div class="_content">
+            <a href="<?= \yii\helpers\Url::toRoute(['catalog/pages/custom_projects']) ?>" class="picture-block small">
+                <div class="_title">ПРОЕКТИРОВАНИЕ ДОМОВ</div>
+                <img src="/img/temp/house3.jpg" alt="Проектирование домов"/>
+
+                <div class="_more-button">
+                    <div class="text"><b>Индивидуальное проектирование</b> - поможет спроетировать и построить дом, который реализует прежде всего Ваши
+                        пожелания.
+                    </div>
+                    <div class="show-more-btn-wrapper"><span class="show-more-btn">Заказать индивидуальный проект</span></div>
+                </div>
+            </a>
+        </div>
+
 </div>
