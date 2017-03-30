@@ -121,13 +121,22 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
 
         <?= \app\widgets\FooterMenu::widget(Yii::$app->params['mainMenu']) ?>
 
-        <div class="footer-bottom">
+        <div class="footer-bottom clearfix">
             <div class="centralize">
-                <span class="copyright">
+                <div class="copyright footer-bottom-item">
                     2013 - <?= date('Y') ?> &copy; Все права защищены
-                </span>
+                </div>
 
-                <div class="footer-social">
+                    <div class="footer-address footer-bottom-item">
+                                    <div>ул. Тимирязева 67, офис 1412 <br>
+                                       220035, Республика Беларусь, г.Минcк</div>
+                                </div>
+                                    <div class="footer-phones  footer-bottom-item">
+                                                 <div>898 897 987</div>
+                                                 <div>898 897 987</div>
+                                                </div>
+
+                <div class="footer-social footer-bottom-item">
                     <a href="<?= $social['youtube'] ?>" class="yt"></a>
                     <a href="<?= $social['gPlus'] ?>" class="gp"></a>
                     <a href="<?= $social['vk'] ?>" class="vk"></a>

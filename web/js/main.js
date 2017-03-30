@@ -25,7 +25,13 @@ $(function () {
         width: "100px"
     });
 
-
+    $('.slider-to-start').slick({
+        dots: false,
+        autoplay: true,
+        autoplaySpeed: 5000,
+            slidesToShow: 4,
+        slidesToScroll: 1
+    });
 
     $(window).on('scroll', function () {
         var scrollTop = $(document).scrollTop();

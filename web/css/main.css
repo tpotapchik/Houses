@@ -1018,7 +1018,7 @@ body {
 .show-more-btn {
   text-decoration: none;
   color: #fff;
-  padding: 0 10px;
+  padding: 0 20px;
   cursor: pointer;
   display: inline-block;
   vertical-align: top;
@@ -1026,7 +1026,7 @@ body {
   *zoom: 1;
   height: 48px;
   background-color: #820084;
-  font-size: 2.4em;
+  font-size: 1.8em;
   line-height: 44px;
   margin-top: 12px;
   z-index: 1;
@@ -1249,6 +1249,35 @@ body {
 .header_menu .call_me:hover {
   background-color: #970084; }
 
+.slider-to-start {
+  font-size: 14px;
+  text-align: center; }
+  .slider-to-start .ing-content {
+    margin-bottom: 10px; }
+    .slider-to-start .ing-content img {
+      width: 100px;
+      height: 50px;
+      margin: auto; }
+
+.slider-to-start-item {
+  height: 200px;
+  width: 25%;
+  box-sizing: border-box; }
+
+.slider-to-start-link {
+  color: #fff;
+  margin: 0 5px;
+  background-color: #606060;
+  text-decoration: none;
+  padding: 10px;
+  box-sizing: border-box;
+  max-width: 100%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  *display: inline;
+  *zoom: 1; }
+
 .slider-item {
   position: relative;
   background-position: 50% 0;
@@ -1438,17 +1467,42 @@ body {
       background-color: #a0be3f;
       color: #fff; }
 
+.layout-sidebar {
+  margin-top: 20px; }
+
 .sidebar {
   float: left;
-  width: 283px;
-  margin-left: -100%; }
+  width: 280px;
+  margin-right: 20px;
+  background-color: #fff;
+  padding: 20px 0; }
+  .sidebar ul {
+    padding-left: 0; }
+  .sidebar .sidebar-item {
+    list-style: none;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease; }
+    .sidebar .sidebar-item a {
+      text-decoration: none;
+      color: #000;
+      font-size: 1.4em;
+      display: block;
+      padding: 10px 20px; }
+    .sidebar .sidebar-item:hover {
+      background-color: #a0be3f; }
+      .sidebar .sidebar-item:hover a {
+        color: #fff; }
+  .sidebar .feedback {
+    background-color: #820084;
+    margin-top: 20px; }
+    .sidebar .feedback a {
+      text-decoration: none;
+      padding: 7px 20px 10px;
+      color: #fff;
+      display: block;
+      font-size: 1.4em; }
 
 .left-block-content {
-  margin-left: 298px; }
-
-.layout {
-  float: left;
-  width: 100%; }
+  overflow: hidden; }
 
 .main-title {
   font-size: 2.4em;
@@ -1463,29 +1517,29 @@ body {
     font-weight: 500;
     text-align: left; }
 
-.main-block.projects-house {
-  margin-bottom: -16px; }
-.main-block ._content {
-  width: 32%;
-  margin-right: 2%;
-  margin-bottom: 16px;
-  float: left;
-  box-sizing: border-box; }
-  .main-block ._content a {
-    text-decoration: none;
-    width: 100%; }
-  .main-block ._content:nth-child(3n) {
-    margin-right: 0; }
-.main-block ._category {
-  font-family: Tahoma, Arial, Helvetica, sans-serif;
-  font-size: 2.4em;
-  font-weight: 700;
-  color: #767575;
-  text-align: center;
-  margin: 2px 0;
-  display: block; }
-  .main-block ._category:hover {
-    text-decoration: underline; }
+.main-block {
+  margin-top: 20px; }
+  .main-block ._content {
+    width: 32%;
+    margin-right: 2%;
+    margin-bottom: 20px;
+    float: left;
+    box-sizing: border-box; }
+    .main-block ._content a {
+      text-decoration: none;
+      width: 100%; }
+    .main-block ._content:nth-child(3n) {
+      margin-right: 0; }
+  .main-block ._category {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 2.4em;
+    font-weight: 700;
+    color: #767575;
+    text-align: center;
+    margin: 2px 0;
+    display: block; }
+    .main-block ._category:hover {
+      text-decoration: underline; }
 
 .picture-block {
   display: inline-block;
@@ -1505,7 +1559,7 @@ body {
     position: absolute;
     top: 0;
     width: 100%;
-    font-size: 24px;
+    font-size: 18px;
     text-align: center;
     line-height: 48px;
     height: 48px;
@@ -1594,9 +1648,17 @@ h2 {
   .list-news h2 {
     margin-bottom: 10px; }
 
+.social-help {
+  position: fixed;
+  bottom: 265px;
+  width: 127px;
+  height: 96px;
+  left: 10px;
+  top: 470px;
+  display: none; }
+
 .main-text-block,
 .text-block-project {
-  margin-right: 293px;
   font-size: 1.8em;
   line-height: 22px; }
   .main-text-block .main-pic,
@@ -1656,7 +1718,8 @@ h2 {
 
 .main-text-block {
   background-color: #fff;
-  padding: 20px 22px 33px; }
+  padding: 20px 22px 33px;
+  overflow: hidden; }
 
 .list-news {
   background-color: #fff;
@@ -1734,9 +1797,11 @@ h2 {
       left: 0;
       top: 3px; }
 
-.right-block {
-  width: 286px;
-  font-size: 1.4em; }
+.left-block {
+  width: 280px;
+  float: left;
+  font-size: 1.4em;
+  margin-right: 20px; }
 
 .right-menu a {
   text-decoration: none;
@@ -1813,21 +1878,26 @@ h2 {
       background-color: #767575; }
 
 .footer-bottom {
-  height: 118px;
+  padding: 20px 0;
   color: #fff;
   font-size: 14px;
   font-family: Tahoma, Arial, Helvetica, sans-serif;
   background-color: #434343; }
 
-.copyright {
+.footer-bottom-item {
   float: left;
-  margin: 22px 0 0 8px; }
+  width: 23%;
+  box-sizing: border-box;
+  margin-left: 2.6%; }
+  .footer-bottom-item:first-child {
+    margin-left: 0; }
+
+.copyright {
+  margin: 14px 0 0 0; }
 
 .footer-social {
-  float: left;
   text-align: center;
-  margin-top: 18px;
-  margin-left: 220px; }
+  margin-top: 18px; }
   .footer-social a {
     width: 26px;
     height: 26px;
