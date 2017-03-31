@@ -33,6 +33,8 @@ $(function () {
         slidesToScroll: 1
     });
 
+    $('.parallax-window').parallax({imageSrc: '/img/temp/slider-pic-3.jpg'});
+
     $(window).on('scroll', function () {
         var scrollTop = $(document).scrollTop();
 

@@ -155,6 +155,7 @@
 .slider-to-start {
 font-size: 14px;
     text-align: center;
+    margin-bottom: 20px;
 
 .ing-content {
     margin-bottom: 10px;
@@ -165,23 +166,23 @@ font-size: 14px;
     }
 }
 }
+.slick-list {
+ margin: 0 -10px;
+}
 .slider-to-start-item {
     height: 200px;
-    width: 25%;
-    box-sizing: border-box;
-
 }
+
 .slider-to-start-link {
     color: #fff;
-    margin: 0 5px;
+    padding: 10px;
+    margin: 0 10px;
     background-color: #606060;
     text-decoration: none;
-    padding: 10px;
-    box-sizing: border-box;
-    max-width: 100%;
     height: 100%;
-    @include inblock;
+    display: block;
 }
+
 .slider-content {
     //max-width: 1920px;
     //margin: auto;
@@ -262,6 +263,10 @@ font-size: 14px;
         }
 
     }
+}
+.parallax-window {
+    min-height: 500px;
+    background: transparent;
 }
 
 .filter-panel {
@@ -547,6 +552,28 @@ width: 16%;
     }
 }
 
+.main-block-four-row {
+    margin: 20px -10px;
+}
+
+.main-block-four {
+    width: 25%;
+    float: left;
+
+    ._content {
+        margin: 0 10px 20px;
+
+        box-sizing: border-box;
+
+        a {
+            text-decoration: none;
+            width: 100%;
+        }
+
+    }
+
+}
+
 .picture-block {
     @include inblock;
     position: relative;
@@ -604,7 +631,7 @@ width: 16%;
         .show-more-btn {
             font-size: 1.7em;
             line-height: 40px;
-            width: 289px;
+            //width: 289px;
             padding: 0;
             height: 40px;
         }

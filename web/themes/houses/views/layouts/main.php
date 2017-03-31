@@ -62,6 +62,7 @@ if (strlen($this->title) > 0) {
           ga('send', 'pageview');
 
         </script>
+
     <?php endif; ?>
     <link rel="shortcut icon" href="<?= Yii::$app->request->getHostInfo() ?>/favicon.ico" type="image/x-icon" />
 </head>
@@ -151,7 +152,7 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
     <?php $this->endBody() ?>
 <div class="share42init" data-top1="150" data-top2="310" data-margin="20" data-path="/js/share42/"></div>
 <div><img src="/img/social-help.png" alt="" class="social-help"/></div>
-
+<script src="/js/plugins/parallax.min.js"></script>
 </body>
 </html>
 <?php $this->endPage() ?>
