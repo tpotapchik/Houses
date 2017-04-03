@@ -1,21 +1,29 @@
 .header {
-    height: 88px;
+    height: 70px;
     //color: #434242;
     //font-size: 1.8em;
     background-color: $clr_title;
-    color:#fff;
-    margin-bottom: 20px;
+    color: #fff;
+    margin-bottom: 10px;
 
     .logo {
         @include inblock;
-        margin-top: 10px;
+        margin-top: 5px;
+        width: 160px;
+        height: 63px;
+
+        img{
+            width: 100%;
+        }
     }
 
     .phone {
         position: relative;
-        padding-top: 22px;
-        margin-right: 20px;
-        margin-left: 40px;
+        margin-top: 10px;
+        margin-right: 10px;
+        padding-left: 30px;
+        border-left:1px solid #fff;
+        margin-left: 30px;
         font-size: 1.8em;
 
         ._ico {
@@ -104,16 +112,14 @@
     float: right;
     max-width: 800px;
 
-
 }
 
 .header-menu-item {
     color: #fff;
     text-decoration: none;
     font-size: 1.8em;
-    line-height: 88px;
+    line-height: 70px;
     padding: 0 18px 0 19px;
-    //height: 81px;
     float: left;
 
     &:first-child {
@@ -128,18 +134,24 @@
 .header-menu.small-menu {
     text-align: center;
 }
+
 .header-menu.small-menu a {
     line-height: 24px;
 }
+
 .header_menu {
     height: 50px;
     color: #434242;
     font-size: 1.0em;
     margin: 0px auto;
-    width: 160px;}
+    width: 160px;
+}
+
 .header_menu .call_me {
     background-color: #820084;
-    border:1px solid #fff;}
+    border: 1px solid #fff;
+}
+
 .header_menu .call_me a {
     text-decoration: none;
     padding: 7px 23px 10px;
@@ -147,28 +159,31 @@
     display: inline-block;
     vertical-align: top;
     *display: inline;
-    *zoom: 1; }
-.header_menu .call_me:hover {
-    background-color: #970084; }
+    *zoom: 1;
+}
 
+.header_menu .call_me:hover {
+    background-color: #970084;
+}
 
 .slider-to-start {
-font-size: 14px;
+    font-size: 14px;
     text-align: center;
     margin-bottom: 20px;
 
-.ing-content {
-    margin-bottom: 10px;
-    img {
-        width: 100px;
-        height: 50px;
-        margin: auto;
+    .ing-content {
+        margin-bottom: 10px;
+        img {
+            width: 75%;
+            //height: 50px;
+            margin: auto;
+        }
+    }
+    .slick-list {
+        margin: 0 -10px;
     }
 }
-}
-.slick-list {
- margin: 0 -10px;
-}
+
 .slider-to-start-item {
     height: 200px;
 }
@@ -181,12 +196,17 @@ font-size: 14px;
     text-decoration: none;
     height: 100%;
     display: block;
+
+    &:hover {
+        background-color: #585858;
+    }
 }
 
 .slider-content {
     //max-width: 1920px;
     //margin: auto;
 }
+
 .slider-item {
     position: relative;
     background-position: 50% 0;
@@ -264,6 +284,7 @@ font-size: 14px;
 
     }
 }
+
 .parallax-window {
     min-height: 500px;
     background: transparent;
@@ -302,7 +323,7 @@ font-size: 14px;
         margin-left: 0;
     }
     &:last-child {
-width: 16%;
+        width: 16%;
     }
 }
 
@@ -410,7 +431,7 @@ width: 16%;
 
         /*IE6-7*/
         text-justify: newspaper;
-        zoom:1;
+        zoom: 1;
 
         text-align-last: justify;
 
@@ -429,7 +450,7 @@ width: 16%;
         font-size: 16px;
         line-height: 76px;
         text-decoration: none;
-        color: #a0be3f;
+        color: #000;
         display: inline-block;
         text-align: left;
         vertical-align: top;
@@ -437,13 +458,15 @@ width: 16%;
         &.active,
         &:hover {
             background-color: #a0be3f;
-            color:#fff;
+            color: #fff;
         }
     }
 }
+
 .layout-sidebar {
     margin-top: 20px;
 }
+
 .sidebar {
     float: left;
     width: 280px;
@@ -462,7 +485,7 @@ width: 16%;
 
         a {
             text-decoration: none;
-            color:#000;
+            color: #000;
             font-size: 1.4em;
             display: block;
             padding: 10px 20px;
@@ -492,7 +515,12 @@ width: 16%;
 
 .left-block-content {
     overflow: hidden;
+    .main-block {
+        margin-top: 0;
+
+    }
 }
+
 .layout {
 
 }
@@ -517,7 +545,7 @@ width: 16%;
     margin-top: 20px;
 
     &.projects-house {
-      //  margin-bottom: -20px;
+        //  margin-bottom: -20px;
     }
     ._content {
         width: 32%;
@@ -569,9 +597,7 @@ width: 16%;
             text-decoration: none;
             width: 100%;
         }
-
     }
-
 }
 
 .picture-block {
@@ -613,6 +639,7 @@ width: 16%;
             color: #606060;
             text-align: left;
             padding: 7px 3px 0;
+            min-height: 70px; /*********************/
         }
     }
     img {
@@ -621,7 +648,8 @@ width: 16%;
 
     &.small {
         ._more-button {
-            height: 106px;
+            height: 100%;
+            padding-bottom: 20px;
         }
 
         ._title {
@@ -726,6 +754,7 @@ h2 {
         margin-bottom: 10px;
     }
 }
+
 .social-help {
     position: fixed;
     bottom: 265px;
@@ -735,6 +764,7 @@ h2 {
     top: 470px;
     display: none;
 }
+
 .main-text-block,
 .text-block-project {
     font-size: 1.8em;
@@ -905,7 +935,7 @@ h2 {
         padding-left: 15px;
 
         a {
-            color:inherit;
+            color: inherit;
             text-decoration: none;
 
             &:hover {
@@ -933,6 +963,7 @@ h2 {
     font-size: 1.4em;
     margin-right: 20px;
 }
+
 .right-menu {
 
     a {
@@ -941,7 +972,7 @@ h2 {
         font-size: 20px;
         background-color: $bg_green;
         @include inblock;
-        width: 286px;
+        width: 100%;
         margin-bottom: 7px;
         text-align: center;
         padding: 16px 0;
@@ -972,7 +1003,6 @@ h2 {
     width: 100%;
     box-sizing: border-box;
     height: 90px;
-
 
     button {
         width: 100%;
@@ -1036,6 +1066,7 @@ h2 {
     font-family: $ptr;
     background-color: #434343;
 }
+
 .footer-bottom-item {
     float: left;
     width: 23%;
@@ -1047,6 +1078,7 @@ h2 {
     }
 
 }
+
 .copyright {
     margin: 14px 0 0 0;
 }
@@ -1167,9 +1199,6 @@ h2 {
     &.result {
         margin-bottom: 18px;
     }
-
-
-
 
     a {
         text-decoration: none;
@@ -1320,73 +1349,115 @@ h2 {
         background: $bg_pink_hover;
     }
 }
+
 .message {
     display: none;
     font-size: 1.6em;
     margin-bottom: 10px;
     background: $bg_green;
     padding: 10px 0;
-    color:#fff;
+    color: #fff;
 }
+
 .fancybox-skin {
     border-radius: 0;
 }
-
-
 
 .main-block-interior img {
     width: 327px;
     height: 206px;
 }
+
 /*¬ыпадающий список*/
-#menu{float:left;padding:0;margin:0;}
-#menu li{float:left; position:relative; display:block;padding:0;margin:0;}
-#menu li a{display:block; color:#fff; text-decoration:none;  margin:0;
+#menu {
+    float: left;
+    padding: 0;
+    margin: 0;
 }
-#menu li a:hover{
-    color:#fff;
-    background:#6b0c36;
-    background:rgba(127,176,0,0.85);
+
+#menu li {
+    float: left;
+    position: relative;
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin: 0;
+}
+
+#menu li a:hover {
+    color: #fff;
+    background: rgba(127, 176, 0, 0.85);
     //text-decoration:underline;
 }
-#menu ul{list-style:none; position:absolute;
-    left:-9999px; /* —крываем за экраном, когда не нужно (данный метод лучше, чем display:none;) */
-    opacity:0; /* ”станавливаем начальное состо€ние прозрачности */
-    -webkit-transition:0.25s linear opacity; /* ¬ Webkit выпадающие пункты будут про€вл€тьс€ */
-    z-index:9999;
-    top:88px;
+
+#menu ul {
+    list-style: none;
+    position: absolute;
+    left: -9999px; /* —крываем за экраном, когда не нужно (данный метод лучше, чем display:none;) */
+    opacity: 0; /* ”станавливаем начальное состо€ние прозрачности */
+    -webkit-transition: 0.25s linear opacity; /* ¬ Webkit выпадающие пункты будут про€вл€тьс€ */
+    z-index: 9999;
+    top: 70px;
 }
-#menu ul li{
-    padding-top:1px; /* ¬водим отступ между li чтобы создать иллюзию разделенных пунктов меню */
-    float:none;
-    height:45px;
-    top:-10px;
-    left:-40px;
-    font-size:19px;
+
+#menu ul li {
+    //padding-top: 1px; /* ¬водим отступ между li чтобы создать иллюзию разделенных пунктов меню */
+    float: none;
+    height: 35px;
+    top: -10px;
+    left: -40px;
+    font-size: 14px;
 }
-#menu ul a{
-    white-space:nowrap; /* ќстанавливаем перенос текста и создаем многострочный выпадающий пункт */
-    padding:10px;
+
+#menu ul a {
+    white-space: nowrap; /* ќстанавливаем перенос текста и создаем многострочный выпадающий пункт */
+    padding: 10px;
+
 }
-#menu li:hover ul{ /* ¬ыводим выпадающий пункт при наведении курсора */
-    left:0; /* ѕриносим его обратно на экран, когда нужно */
-    opacity:1; /* ƒелаем непрозрачным */
+
+#menu li:hover ul {
+    /* ¬ыводим выпадающий пункт при наведении курсора */
+    left: 0; /* ѕриносим его обратно на экран, когда нужно */
+    opacity: 1; /* ƒелаем непрозрачным */
 }
-#menu li:hover a{ /* ”станавливаем стили дл€ верхнего уровн€, когда выводитс€ выпадающий список */
-    background:#0072BC;
-    background:rgba(127,176,0,0.85); /* ¬ыгл€дит полупрозрачным */
+
+#menu li:hover a {
+    /* ”станавливаем стили дл€ верхнего уровн€, когда выводитс€ выпадающий список */
+    background: $bg_green;
+    //background: rgba(127, 176, 0, 0.85); /* ¬ыгл€дит полупрозрачным */
     //text-decoration:underline;
-    display:block;
+    display: block;
 }
-#menu li:hover ul a{ /* »змен€ем некоторые стили верхнего уровн€ при выводе выпадающего пункта */
-    text-decoration:none;
-    -webkit-transition:-webkit-transform 0.075s linear;
+
+#menu li:hover ul a {
+    /* »змен€ем некоторые стили верхнего уровн€ при выводе выпадающего пункта */
+    text-decoration: none;
+    -webkit-transition: -webkit-transform 0.075s linear;
 }
-#menu li:hover ul li{display:block; width:100%;text-align:left;}
-#menu li:hover ul li a:hover{ /* ”станавливаем стили дл€ выпадающих пунктов, когда курсор наводитс€ на конкретный пункт */
-    background:#4EBAF6;
-    background:rgba(127,176,0,0.85); /* Ѕудет полупрозрачным */
-    color:#fff;
-    -moz-transform:scale(1.05);
-    -webkit-transform:scale(1.05);
+
+#menu li:hover ul li {
+    display: block;
+    width: 100%;
+    text-align: left;
+
+    a {
+        background: #f5f5f5;
+        color:#000;
+        border-left: 5px solid transparent;
+    }
+}
+
+#menu li:hover ul li a:hover {
+    /* ”станавливаем стили дл€ выпадающих пунктов, когда курсор наводитс€ на конкретный пункт */
+    background: #f5f5f5;
+    //background: rgba(127, 176, 0, 0.85); /* Ѕудет полупрозрачным */
+    color: $bg_green;
+    border-left: 5px solid $bg_green;
+
 }

@@ -33,8 +33,8 @@ $contacts = Yii::$app->params['contacts'];
         </div>-->
         <div class="phone left">
                     <div class="_ico_"></div>
-                    <p>898 897 987</p>
-                     <p>898 897 987</p>
+                    <p><small>+375 29 </small>897 98 57</p>
+                     <p><small>+375 29 </small>898 89 87</p>
 
 
 

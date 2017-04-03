@@ -12,7 +12,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
     <div class="slider-content">
         <?= $this->render('../layouts/_filter-panel', ['other' => false]) ?>
         <div class="slider">
-            <div class="slider-item" style="background-image: url('/img/temp/slider.jpg')">
+            <div class="slider-item" style="background-image: url('http://1house.by/wp-content/uploads/2017/01/Perspektiva-12.jpg")">
                 <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel" class="slider-link">
                     <div class="slider-text">
                         <div class="_title">ARIEL</div>
@@ -24,7 +24,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
                 </a>
             </div>
 
-            <div class="slider-item" style="background-image: url('/img/temp/slider2.jpg')">
+            <div class="slider-item" style="background-image: url('http://1house.by/wp-content/uploads/2017/01/Perspektiva-12.jpg')">
                 <a href="/catalog/odnosemeynyy_odnoetajnyy/decyma" class="slider-link">
                     <div class="slider-text">
                         <div class="_title">DECYMA</div>
