@@ -19,8 +19,7 @@ $categorys = Yii::$app->getDb()->cache(function (\yii\db\Connection $db) {
 $categoryDropDown = ArrayHelper::map($categorys, 'id', 'processedValue');
 ?>
 <div class="filter-panel <?= $other?'other-page':'' ?>">
- <div>
-    <div class="_title">НАЙТИ ПРОЕКТ МЕЧТЫ</div>
+ <div class="centralize">
 <div class="clearfix">
     <?php $form = ActiveForm::begin(['id' => 'contact-form', 'action' => ['catalog/search'], 'method' => 'get']); ?>
 

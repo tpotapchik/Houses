@@ -8,89 +8,95 @@ $mainArticle = Article::getMain();
 $this->registerMetaTag(['name' => 'keywords', 'content' => $mainArticle->meta_keywords]);
 $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta_description]);
 ?>
-<div class="centralize">
-    <div class="slider-content">
-        <?= $this->render('../layouts/_filter-panel', ['other' => false]) ?>
-        <div class="slider">
-            <div class="slider-item" style="background-image: url('http://1house.by/wp-content/uploads/2017/01/Perspektiva-12.jpg")">
-                <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel" class="slider-link">
-                    <div class="slider-text">
+
+<div class="slider-content">
+    <?= $this->render('../layouts/_filter-panel', ['other' => false]) ?>
+    <div class="slider">
+        <div class="slider-item" style="background-image: url('http://1house.by/wp-content/uploads/2017/01/Perspektiva-12.jpg')">
+
+            <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel" class="slider-link">
+                <div class="slider-text">
+                    <div class="centralize clearfix">
                         <div class="_title">ARIEL</div>
-                        <div class="_content ovhidden">Просторный одноэтажный дом с гаражом для 2 автомобилей.<br> В
-                            составе помещений гостиная с выходом на террасу, кухня-столовая, 3 спальни, 2 ванные комнаты
-                            и гостевой санузел.
+                        <div class="_content ovhidden">Просторный одноэтажный дом с гаражом для 2 автомобилей.<br>
+                            И еще одна строчка
                         </div>
                     </div>
-                </a>
-            </div>
+                </div>
+            </a>
+        </div>
 
-            <div class="slider-item" style="background-image: url('http://1house.by/wp-content/uploads/2017/01/Perspektiva-12.jpg')">
-                <a href="/catalog/odnosemeynyy_odnoetajnyy/decyma" class="slider-link">
-                    <div class="slider-text">
+        <div class="slider-item" style="background-image: url('http://1house.by/wp-content/uploads/2017/01/Perspektiva-12.jpg')">
+            <a href="/catalog/odnosemeynyy_odnoetajnyy/decyma" class="slider-link">
+                <div class="slider-text">
+                    <div class="centralize clearfix">
                         <div class="_title">DECYMA</div>
                         <div class="_content ovhidden">Симпатичный одноэтажный дом с гаражом для 2 автомобилей.
-                            Внутренняя планировка представляет собой эффективное взаимодействие дневной и ночных зон.
-                            Удобная кухня-столовая с кладовкой, а также уютная гостиная с выходом на террасу и камином -
-                            места ежедневного досуга жильцов и их гостей. Дом располагает 4 спальнями и 2 ванными
-                            комнатами.
+                            И еще одна строчка
                         </div>
                     </div>
-                </a>
-            </div>
+                </div>
+            </a>
+        </div>
 
-            <div class="slider-item" style="background-image: url('/img/temp/slider3.jpg')">
-                <a href="/catalog/odnosemeynyy_odnoetajnyy/ambrozja" class="slider-link">
-                    <div class="slider-text">
+        <div class="slider-item" style="background-image: url('/img/temp/slider3.jpg')">
+            <a href="/catalog/odnosemeynyy_odnoetajnyy/ambrozja" class="slider-link">
+                <div class="slider-text">
+                    <div class="centralize clearfix">
                         <div class="_title">AMBROZJA</div>
                         <div class="_content ovhidden">Одноэтажный современный дом с гаражом на 2 автомобиля. <br>
-                            Дневная зона включает: столовую, совмещенную с просторной гостиной и кухню, ночная – 3
-                            спальни и ванную.
+                            И еще одна строчка
                         </div>
                     </div>
-                </a>
-            </div>
-            <div class="slider-item" style="background-image: url('/img/temp/slider4.jpg')">
-                <a href="/catalog/odnosemeynyy_odnoetajnyy/ambrozja_3" class="slider-link">
-                    <div class="slider-text">
+                </div>
+            </a>
+        </div>
+        <div class="slider-item" style="background-image: url('/img/temp/slider4.jpg')">
+            <a href="/catalog/odnosemeynyy_odnoetajnyy/ambrozja_3" class="slider-link">
+                <div class="slider-text">
+                    <div class="centralize clearfix">
                         <div class="_title">AMBROZJA 3</div>
                         <div class="_content ovhidden">Современный и просторный одноэтажный дом с гаражом для 2
-                            автомобилей. <br>В составе помещений: холл, кухня-столовая, большая гостиная с камином и
-                            выходом на террасу, 4 спальни с гардеробными, 2 ванные комнаты, санузел и котельная.
+                            автомобилей. <br>И еще одна строчка
                         </div>
                     </div>
-                </a>
-            </div>
-            <div class="slider-item" style="background-image: url('/img/temp/slider5.jpg')">
-                <a href="/catalog/odnosemeynyy_s_jiloy_mansardoy/jezyna" class="slider-link">
-                    <div class="slider-text">
+                </div>
+            </a>
+        </div>
+        <div class="slider-item" style="background-image: url('/img/temp/slider5.jpg')">
+            <a href="/catalog/odnosemeynyy_s_jiloy_mansardoy/jezyna" class="slider-link">
+                <div class="slider-text">
+                    <div class="centralize">
                         <div class="_title">JEŻYNA</div>
-                        <div class="_content ovhidden">Опрятный односемейный дом с мансардой. <br> Первый этаж включает
-                            кухню-гостиную, гостевую спальню и санузел. <br> На мансарде расположились 4 спальни и
-                            ванная.
+                        <div class="_content ovhidden">Опрятный односемейный дом с мансардой. <br> И еще одна строчка
                         </div>
                     </div>
-                </a>
-            </div>
+                </div>
+            </a>
         </div>
     </div>
+
     <!--main part-->
-    <div>
-        <!--tabs-->
-        <div class="tabs-panel-content">
+    <div class="centralize">
+        <div class="main-title">Заголовок</div>
+    </div>
+
+    <!--tabs-->
+    <div class="tabs-panel-content">
+        <div class="centralize">
             <div class="tabs" id="tab-main">
-                <a href="#" class="active tab-item">ТОП - 10 </a>
-                <a href="#" class="tab-item">ТОП - 50</a>
+                <a href="#" class="active tab-item">ТОП - 100 </a>
                 <a href="#" class="tab-item">Новые</a>
                 <a href="#" class="tab-item">Одноэтажные</a>
                 <a href="#" class="tab-item">С мансардой</a>
-                <a href="#" class="tab-item">Классика</a>
-                <a href="#" class="tab-item">Современные</a>
-                <a href="#" class="tab-item">Небольшой</a>
-                <a href="#" class="tab-item">Средний</a>
-                <a href="#" class="tab-item">Большой</a>
-                <a href="#" class="tab-item">С гаражом</a>
+                <a href="#" class="tab-item">Двухэтажные</a>
+                <a href="#" class="tab-item">Маленькие</a>
+                <a href="#" class="tab-item">Средние</a>
+                <a href="#" class="tab-item">Большие</a>
             </div>
         </div>
+    </div>
+    <div class="centralize">
 
         <!--part with sidebar-->
         <div class="layout-sidebar">
@@ -116,121 +122,157 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
                 <div class="main-block clearfix">
                     <div class="_content">
                         <a href="project-house.html" class="picture-block">
-                            <div class="_title-project">Aplauz 2 / Аплауш 2</div>
+
                             <img src="img/temp/house1.jpg" alt="Картинка дома"/>
 
-                            <div class="_more-button">
-                                <div class="show-more-btn-wrapper"><span class="show-more-btn">Подробнее</span></div>
+                            <div class="info-block">
+                                <div class="_title-project">Aplauz 2 / Аплауш 2
+                                    <div class="effectiveArea">150 м<sup>2</sup></div>
+                                </div>
+
                             </div>
                         </a>
                     </div>
                     <div class="_content">
-                        <a href="#" class="picture-block">
-                            <div class="_title-project">Aplauz 2 / Аплауш 2</div>
+                        <a href="project-house.html" class="picture-block">
+
                             <img src="img/temp/house1.jpg" alt="Картинка дома"/>
 
-                            <div class="_more-button">
-                                <div class="show-more-btn-wrapper"><span class="show-more-btn">Подробнее</span></div>
+                            <div class="info-block">
+                                <div class="_title-project">Aplauz 2 / Аплауш 2
+                                    <div class="effectiveArea">150 м<sup>2</sup></div>
+                                </div>
+
                             </div>
                         </a>
                     </div>
                     <div class="_content">
-                        <a href="#" class="picture-block">
-                            <div class="_title-project">Aplauz 2 / Аплауш 2</div>
+                        <a href="project-house.html" class="picture-block">
+
                             <img src="img/temp/house1.jpg" alt="Картинка дома"/>
 
-                            <div class="_more-button">
-                                <div class="show-more-btn-wrapper"><span class="show-more-btn">Подробнее</span></div>
+                            <div class="info-block">
+                                <div class="_title-project">Aplauz 2 / Аплауш 2
+                                    <div class="effectiveArea">150 м<sup>2</sup></div>
+                                </div>
+
                             </div>
                         </a>
                     </div>
                     <div class="_content">
-                        <a href="#" class="picture-block">
-                            <div class="_title-project">Aplauz 2 / Аплауш 2</div>
+                        <a href="project-house.html" class="picture-block">
+
                             <img src="img/temp/house1.jpg" alt="Картинка дома"/>
 
-                            <div class="_more-button">
-                                <div class="show-more-btn-wrapper"><span class="show-more-btn">Подробнее</span></div>
+                            <div class="info-block">
+                                <div class="_title-project">Aplauz 2 / Аплауш 2
+                                    <div class="effectiveArea">150 м<sup>2</sup></div>
+                                </div>
+
                             </div>
                         </a>
                     </div>
                     <div class="_content">
-                        <a href="#" class="picture-block">
-                            <div class="_title-project">Aplauz 2 / Аплауш 2</div>
+                        <a href="project-house.html" class="picture-block">
+
                             <img src="img/temp/house1.jpg" alt="Картинка дома"/>
 
-                            <div class="_more-button">
-                                <div class="show-more-btn-wrapper"><span class="show-more-btn">Подробнее</span></div>
+                            <div class="info-block">
+                                <div class="_title-project">Aplauz 2 / Аплауш 2
+                                    <div class="effectiveArea">150 м<sup>2</sup></div>
+                                </div>
+
                             </div>
                         </a>
                     </div>
                     <div class="_content">
-                        <a href="#" class="picture-block">
-                            <div class="_title-project">Aplauz 2 / Аплауш 2</div>
+                        <a href="project-house.html" class="picture-block">
+
                             <img src="img/temp/house1.jpg" alt="Картинка дома"/>
 
-                            <div class="_more-button">
-                                <div class="show-more-btn-wrapper"><span class="show-more-btn">Подробнее</span></div>
+                            <div class="info-block">
+                                <div class="_title-project">Aplauz 2 / Аплауш 2
+                                    <div class="effectiveArea">150 м<sup>2</sup></div>
+                                </div>
+
                             </div>
                         </a>
                     </div>
                     <div class="_content">
-                        <a href="#" class="picture-block">
-                            <div class="_title-project">Aplauz 2 / Аплауш 2</div>
+                        <a href="project-house.html" class="picture-block">
+
                             <img src="img/temp/house1.jpg" alt="Картинка дома"/>
 
-                            <div class="_more-button">
-                                <div class="show-more-btn-wrapper"><span class="show-more-btn">Подробнее</span></div>
+                            <div class="info-block">
+                                <div class="_title-project">Aplauz 2 / Аплауш 2
+                                    <div class="effectiveArea">150 м<sup>2</sup></div>
+                                </div>
+
                             </div>
                         </a>
                     </div>
                     <div class="_content">
-                        <a href="#" class="picture-block">
-                            <div class="_title-project">Aplauz 2 / Аплауш 2</div>
+                        <a href="project-house.html" class="picture-block">
+
                             <img src="img/temp/house1.jpg" alt="Картинка дома"/>
 
-                            <div class="_more-button">
-                                <div class="show-more-btn-wrapper"><span class="show-more-btn">Подробнее</span></div>
+                            <div class="info-block">
+                                <div class="_title-project">Aplauz 2 / Аплауш 2
+                                    <div class="effectiveArea">150 м<sup>2</sup></div>
+                                </div>
+
                             </div>
                         </a>
                     </div>
                     <div class="_content">
-                        <a href="#" class="picture-block">
-                            <div class="_title-project">Aplauz 2 / Аплауш 2</div>
+                        <a href="project-house.html" class="picture-block">
+
                             <img src="img/temp/house1.jpg" alt="Картинка дома"/>
 
-                            <div class="_more-button">
-                                <div class="show-more-btn-wrapper"><span class="show-more-btn">Подробнее</span></div>
+                            <div class="info-block">
+                                <div class="_title-project">Aplauz 2 / Аплауш 2
+                                    <div class="effectiveArea">150 м<sup>2</sup></div>
+                                </div>
+
                             </div>
                         </a>
                     </div>
                     <div class="_content">
-                        <a href="#" class="picture-block">
-                            <div class="_title-project">Aplauz 2 / Аплауш 2</div>
+                        <a href="project-house.html" class="picture-block">
+
                             <img src="img/temp/house1.jpg" alt="Картинка дома"/>
 
-                            <div class="_more-button">
-                                <div class="show-more-btn-wrapper"><span class="show-more-btn">Подробнее</span></div>
+                            <div class="info-block">
+                                <div class="_title-project">Aplauz 2 / Аплауш 2
+                                    <div class="effectiveArea">150 м<sup>2</sup></div>
+                                </div>
+
                             </div>
                         </a>
                     </div>
                     <div class="_content">
-                        <a href="#" class="picture-block">
-                            <div class="_title-project">Aplauz 2 / Аплауш 2</div>
+                        <a href="project-house.html" class="picture-block">
+
                             <img src="img/temp/house1.jpg" alt="Картинка дома"/>
 
-                            <div class="_more-button">
-                                <div class="show-more-btn-wrapper"><span class="show-more-btn">Подробнее</span></div>
+                            <div class="info-block">
+                                <div class="_title-project">Aplauz 2 / Аплауш 2
+                                    <div class="effectiveArea">150 м<sup>2</sup></div>
+                                </div>
+
                             </div>
                         </a>
                     </div>
                     <div class="_content">
-                        <a href="#" class="picture-block">
-                            <div class="_title-project">Aplauz 2 / Аплауш 2</div>
+                        <a href="project-house.html" class="picture-block">
+
                             <img src="img/temp/house1.jpg" alt="Картинка дома"/>
 
-                            <div class="_more-button">
-                                <div class="show-more-btn-wrapper"><span class="show-more-btn">Подробнее</span></div>
+                            <div class="info-block">
+                                <div class="_title-project">Aplauz 2 / Аплауш 2
+                                    <div class="effectiveArea">150 м<sup>2</sup></div>
+                                </div>
+
                             </div>
                         </a>
                     </div>
@@ -241,64 +283,66 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
 
         <!--/part with sidebar-->
 
+        <div class="slider-to-start">
+            <div class="slider-to-start-item">
+                <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
+                    <div class="ing-content">
+                        <img src="img/temp/interior5.jpg" alt=""/>
+                    </div>
+                    <div class="slider-to-start-text">
+                        Основание дома -тратата
+                    </div>
+                </a>
+            </div>
+
+            <div class="slider-to-start-item">
+                <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
+                    <div class="ing-content">
+                        <img src="img/temp/interior5.jpg" alt=""/>
+                    </div>
+                    <div class="slider-to-start-text">
+                        Закажите проект и будет счастье2
+                    </div>
+                </a>
+            </div>
+
+            <div class="slider-to-start-item">
+                <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
+                    <div class="ing-content">
+                        <img src="img/temp/interior5.jpg" alt=""/>
+                    </div>
+                    <div class="slider-to-start-text">
+                        Закажите проект и будет счастье3
+                    </div>
+                </a>
+            </div>
+
+            <div class="slider-to-start-item">
+                <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
+                    <div class="ing-content">
+                        <img src="img/temp/interior5.jpg" alt=""/>
+                    </div>
+                    <div class="slider-to-start-text">
+                        Закажите проект и будет счастье4
+                    </div>
+                </a>
+            </div>
+
+            <div class="slider-to-start-item">
+                <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
+                    <div class="ing-content">
+                        <img src="img/temp/interior5.jpg" alt=""/>
+                    </div>
+                    <div class="slider-to-start-text">
+                        Закажите проект и будет счастье5
+                    </div>
+                </a>
+            </div>
+        </div>
+
     </div>
 
-    <div class="slider-to-start">
-        <div class="slider-to-start-item">
-            <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
-                <div class="ing-content">
-                    <img src="img/temp/interior5.jpg" alt=""/>
-                </div>
-                <div class="slider-to-start-text">
-                    Основание дома -тратата
-                </div>
-            </a>
-        </div>
 
-        <div class="slider-to-start-item">
-            <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
-                <div class="ing-content">
-                    <img src="img/temp/interior5.jpg" alt=""/>
-                </div>
-                <div class="slider-to-start-text">
-                    Закажите проект и будет счастье2
-                </div>
-            </a>
-        </div>
-
-        <div class="slider-to-start-item">
-            <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
-                <div class="ing-content">
-                    <img src="img/temp/interior5.jpg" alt=""/>
-                </div>
-                <div class="slider-to-start-text">
-                    Закажите проект и будет счастье3
-                </div>
-            </a>
-        </div>
-
-        <div class="slider-to-start-item">
-            <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
-                <div class="ing-content">
-                    <img src="img/temp/interior5.jpg" alt=""/>
-                </div>
-                <div class="slider-to-start-text">
-                    Закажите проект и будет счастье4
-                </div>
-            </a>
-        </div>
-
-        <div class="slider-to-start-item">
-            <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
-                <div class="ing-content">
-                    <img src="img/temp/interior5.jpg" alt=""/>
-                </div>
-                <div class="slider-to-start-text">
-                    Закажите проект и будет счастье5
-                </div>
-            </a>
-        </div>
-    </div>
 
 
 </div>
