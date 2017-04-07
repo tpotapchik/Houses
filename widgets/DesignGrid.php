@@ -38,7 +38,7 @@ class DesignGrid extends CategoryGrid
             Html::tag('div', $model->title, ['class' => '_title']) .
             Html::img($photoLink->getFile(327, 206), ['alt' => '', 'style' => 'width: 327px; max-height: 206px;']),
             $model->getLink(),
-            ['class' => 'interior-block left']
+            ['class' => 'interior-block']
         );
 
 //        return Html::tag('div', $content, ['class' => '_content ' . $odd]);

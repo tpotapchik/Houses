@@ -100,6 +100,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
 
         <!--part with sidebar-->
         <div class="layout-sidebar">
+        <div class="sidebar-wrap">
             <div class="sidebar">
                 <ul>
                     <li class="sidebar-item"><a href="#"><span>Проекты</span></a></li>
@@ -107,181 +108,189 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
                     <li class="sidebar-item"><a href="#"><span>Что включает проект?</span></a></li>
                     <li class="sidebar-item"><a href="#"><span>Ландшафтный дизайн</span></a></li>
                 </ul>
-                <div class="feedback">
-                    <a href="#popup" class="popup">Заказать звонок</a>
-                </div>
-            </div>
-            <div class="left-block-content">
-
-                <!-- место для баннеров-->
-                <!--<div class="banners-content clearfix">-->
-                <!--<div>Место для баннера 1</div>-->
-                <!--<div>Место для баннера 2</div>-->
-                <!--</div>-->
-
-                <div class="main-block clearfix">
-                    <div class="_content">
-                        <a href="project-house.html" class="picture-block">
-
-                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
-
-                            <div class="info-block">
-                                <div class="_title-project">Aplauz 2 / Аплауш 2
-                                    <div class="effectiveArea">150 м<sup>2</sup></div>
-                                </div>
-
-                            </div>
-                        </a>
-                    </div>
-                    <div class="_content">
-                        <a href="project-house.html" class="picture-block">
-
-                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
-
-                            <div class="info-block">
-                                <div class="_title-project">Aplauz 2 / Аплауш 2
-                                    <div class="effectiveArea">150 м<sup>2</sup></div>
-                                </div>
-
-                            </div>
-                        </a>
-                    </div>
-                    <div class="_content">
-                        <a href="project-house.html" class="picture-block">
-
-                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
-
-                            <div class="info-block">
-                                <div class="_title-project">Aplauz 2 / Аплауш 2
-                                    <div class="effectiveArea">150 м<sup>2</sup></div>
-                                </div>
-
-                            </div>
-                        </a>
-                    </div>
-                    <div class="_content">
-                        <a href="project-house.html" class="picture-block">
-
-                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
-
-                            <div class="info-block">
-                                <div class="_title-project">Aplauz 2 / Аплауш 2
-                                    <div class="effectiveArea">150 м<sup>2</sup></div>
-                                </div>
-
-                            </div>
-                        </a>
-                    </div>
-                    <div class="_content">
-                        <a href="project-house.html" class="picture-block">
-
-                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
-
-                            <div class="info-block">
-                                <div class="_title-project">Aplauz 2 / Аплауш 2
-                                    <div class="effectiveArea">150 м<sup>2</sup></div>
-                                </div>
-
-                            </div>
-                        </a>
-                    </div>
-                    <div class="_content">
-                        <a href="project-house.html" class="picture-block">
-
-                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
-
-                            <div class="info-block">
-                                <div class="_title-project">Aplauz 2 / Аплауш 2
-                                    <div class="effectiveArea">150 м<sup>2</sup></div>
-                                </div>
-
-                            </div>
-                        </a>
-                    </div>
-                    <div class="_content">
-                        <a href="project-house.html" class="picture-block">
-
-                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
-
-                            <div class="info-block">
-                                <div class="_title-project">Aplauz 2 / Аплауш 2
-                                    <div class="effectiveArea">150 м<sup>2</sup></div>
-                                </div>
-
-                            </div>
-                        </a>
-                    </div>
-                    <div class="_content">
-                        <a href="project-house.html" class="picture-block">
-
-                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
-
-                            <div class="info-block">
-                                <div class="_title-project">Aplauz 2 / Аплауш 2
-                                    <div class="effectiveArea">150 м<sup>2</sup></div>
-                                </div>
-
-                            </div>
-                        </a>
-                    </div>
-                    <div class="_content">
-                        <a href="project-house.html" class="picture-block">
-
-                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
-
-                            <div class="info-block">
-                                <div class="_title-project">Aplauz 2 / Аплауш 2
-                                    <div class="effectiveArea">150 м<sup>2</sup></div>
-                                </div>
-
-                            </div>
-                        </a>
-                    </div>
-                    <div class="_content">
-                        <a href="project-house.html" class="picture-block">
-
-                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
-
-                            <div class="info-block">
-                                <div class="_title-project">Aplauz 2 / Аплауш 2
-                                    <div class="effectiveArea">150 м<sup>2</sup></div>
-                                </div>
-
-                            </div>
-                        </a>
-                    </div>
-                    <div class="_content">
-                        <a href="project-house.html" class="picture-block">
-
-                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
-
-                            <div class="info-block">
-                                <div class="_title-project">Aplauz 2 / Аплауш 2
-                                    <div class="effectiveArea">150 м<sup>2</sup></div>
-                                </div>
-
-                            </div>
-                        </a>
-                    </div>
-                    <div class="_content">
-                        <a href="project-house.html" class="picture-block">
-
-                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
-
-                            <div class="info-block">
-                                <div class="_title-project">Aplauz 2 / Аплауш 2
-                                    <div class="effectiveArea">150 м<sup>2</sup></div>
-                                </div>
-
-                            </div>
-                        </a>
-                    </div>
-                </div>
             </div>
 
+             <div class="sidebar">
+                <div class="feedback-form">
+                              <form method="POST" action="/">
+                                  <input type="hidden" name="" id="sessid" value="">
+                                  <input type="hidden" name="" value="">
+                                  <div class="form-title">Будьте в курсе <span>событий!</span></div>
+                                  <div class="form">
+                                      <button type="submit">+</button>
+                                      <div>
+                                          <input type="email" name="" value="" title="Введите ваш e-mail" placeholder="Введите ваш e-mail">
+                                      </div>
+                                  </div>
+                              </form>
+                          </div>
+             </div>
+             </div>
+            <div class="right-block-content-wrapper">
+                <div class="right-block-content clearfix">
+                    <div class="_content">
+                        <a href="project-house.html" class="picture-block">
+
+                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
+
+                            <div class="info-block">
+                                <div class="_title-project">Aplauz 2 / Аплауш 2
+                                    <div class="effectiveArea">150 м<sup>2</sup></div>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="_content">
+                        <a href="project-house.html" class="picture-block">
+
+                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
+
+                            <div class="info-block">
+                                <div class="_title-project">Aplauz 2 / Аплауш 2
+                                    <div class="effectiveArea">150 м<sup>2</sup></div>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="_content">
+                        <a href="project-house.html" class="picture-block">
+
+                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
+
+                            <div class="info-block">
+                                <div class="_title-project">Aplauz 2 / Аплауш 2
+                                    <div class="effectiveArea">150 м<sup>2</sup></div>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="_content">
+                        <a href="project-house.html" class="picture-block">
+
+                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
+
+                            <div class="info-block">
+                                <div class="_title-project">Aplauz 2 / Аплауш 2
+                                    <div class="effectiveArea">150 м<sup>2</sup></div>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="_content">
+                        <a href="project-house.html" class="picture-block">
+
+                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
+
+                            <div class="info-block">
+                                <div class="_title-project">Aplauz 2 / Аплауш 2
+                                    <div class="effectiveArea">150 м<sup>2</sup></div>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="_content">
+                        <a href="project-house.html" class="picture-block">
+
+                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
+
+                            <div class="info-block">
+                                <div class="_title-project">Aplauz 2 / Аплауш 2
+                                    <div class="effectiveArea">150 м<sup>2</sup></div>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="_content">
+                        <a href="project-house.html" class="picture-block">
+
+                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
+
+                            <div class="info-block">
+                                <div class="_title-project">Aplauz 2 / Аплауш 2
+                                    <div class="effectiveArea">150 м<sup>2</sup></div>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="_content">
+                        <a href="project-house.html" class="picture-block">
+
+                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
+
+                            <div class="info-block">
+                                <div class="_title-project">Aplauz 2 / Аплауш 2
+                                    <div class="effectiveArea">150 м<sup>2</sup></div>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="_content">
+                        <a href="project-house.html" class="picture-block">
+
+                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
+
+                            <div class="info-block">
+                                <div class="_title-project">Aplauz 2 / Аплауш 2
+                                    <div class="effectiveArea">150 м<sup>2</sup></div>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="_content">
+                        <a href="project-house.html" class="picture-block">
+
+                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
+
+                            <div class="info-block">
+                                <div class="_title-project">Aplauz 2 / Аплауш 2
+                                    <div class="effectiveArea">150 м<sup>2</sup></div>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="_content">
+                        <a href="project-house.html" class="picture-block">
+
+                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
+
+                            <div class="info-block">
+                                <div class="_title-project">Aplauz 2 / Аплауш 2
+                                    <div class="effectiveArea">150 м<sup>2</sup></div>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="_content">
+                        <a href="project-house.html" class="picture-block">
+
+                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
+
+                            <div class="info-block">
+                                <div class="_title-project">Aplauz 2 / Аплауш 2
+                                    <div class="effectiveArea">150 м<sup>2</sup></div>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!--/part with sidebar-->
+
+        <div class="main-title">Наши преимущества</div>
 
         <div class="slider-to-start">
             <div class="slider-to-start-item">
@@ -341,34 +350,51 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
         </div>
 
     </div>
-
-
-
-
 </div>
+
+
 <!--Parallax-->
 
-<div class="parallax-window" data-parallax="scroll" data-image-src="/img/temp/slider-pic-3.jpg"></div>
+<div class="parallax-window" data-parallax="scroll" data-image-src="/img/temp/parallax-bg.png">
+    <div class="parallax-window-container">
+        <div class="shadow"></div>
+        <div class="parallax-description centralize">
+            <div class="txt">
+                <a class="title" href="#" title="Стройте с нами">Стройте с нами</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/Parallax-->
+
 
 <div class="centralize">
 
     <?= $this->render('../layouts/_favorite', []) ?>
 
-    <div class="main-block clearfix">
+    <div class="common-block clearfix">
         <div class="left-block">
-            <?= $this->render('../layouts/_newsAnounce', []) ?>
-            <?= $this->render('../layouts/_right-menu', []) ?>
+            <!--<?= $this->render('../layouts/_newsAnounce', []) ?>
+            <?= $this->render('../layouts/_right-menu', []) ?>-->
+
+             <!--место для баннеров-->
+            <div class="banners-content clearfix">
+            <div>Место для баннера 1</div>
+            <div>Место для баннера 2</div>
+            </div>
 
         </div>
         <div class="main-text-block ovhidden">
+        <?= $this->render('../layouts/_newsAnounce', []) ?>
             <?= $mainArticle->full_text ?>
         </div>
     </div>
 
+<?= $this->render('../layouts/_popular', []) ?>
 
-    <?= $this->render('../layouts/_our-projects', []) ?>
+    <!--<?= $this->render('../layouts/_our-projects', []) ?>
 
-    <?= $this->render('../layouts/_we-suggest', []) ?>
+    <?= $this->render('../layouts/_we-suggest', []) ?>-->
 
     <div>
         <?= $this->render('../layouts/_parthners', []) ?>

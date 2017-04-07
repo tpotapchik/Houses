@@ -1,10 +1,18 @@
+.page_i {
+    padding-top: 80px;
+}
+
 .header {
     height: 70px;
-    //color: #434242;
-    //font-size: 1.8em;
     background-color: $clr_title;
     color: #fff;
-    margin-bottom: 10px;
+    //margin-bottom: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 10px 0 #444444;
+    z-index: 4;
 
     .logo {
         @include inblock;
@@ -185,7 +193,7 @@
 }
 
 .slider-to-start-item {
-    height: 200px;
+    height: 300px;
 }
 
 .slider-to-start-link {
@@ -318,6 +326,51 @@
 .parallax-window {
     min-height: 500px;
     background: transparent;
+    position: relative;
+    .parallax-window-container {
+        cursor: pointer;
+    }
+
+    .shadow {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        cursor: pointer;
+        background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.25) 60%, rgba(0,0,0,0.65) 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(60%,rgba(0,0,0,0.25)), color-stop(100%,rgba(0,0,0,0.65)));
+        background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 60%,rgba(0,0,0,0.65) 100%);
+        background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 60%,rgba(0,0,0,0.65) 100%);
+        background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 60%,rgba(0,0,0,0.65) 100%);
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 60%,rgba(0,0,0,0.65) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+    }
+    .parallax-description {
+        height: 100%;
+        position: absolute;
+        z-index: 3;
+        left: 0;
+        right: 0;
+        width: 100%;
+
+        .txt{
+            position: absolute;
+            bottom: 20px;
+            color: #FFF;
+            font-size: 35px;
+            left: 0;
+            right: 0;
+
+            .title {
+                color: #FFF;
+                text-decoration: none;
+            }
+        }
+
+    }
+
 }
 
 .filter-panel {
@@ -431,17 +484,11 @@
 }
 
 .banners-content {
-    margin: 9px 0 0 0;
-
     div {
-        width: 480px;
         height: 148px;
         border: 2px solid #000;
-        float: right;
+        margin-bottom: 10px;
 
-        &:first-child {
-            float: left;
-        }
     }
 }
 
@@ -498,14 +545,19 @@
 .layout-sidebar {
     margin-top: 20px;
 }
-
-.sidebar {
+.sidebar-wrap {
     float: left;
     width: 24%;
     margin-right: 20px;
+}
+.sidebar {
     background-color: #fff;
     padding: 20px;
     box-sizing: border-box;
+
+    +.sidebar {
+        margin-top: 20px;
+    }
 
     ul {
         padding-left: 0;
@@ -551,13 +603,49 @@
         }
     }
 }
+.feedback-form {
+background: #fff;
+margin-bottom: 20px;
+    .form-title {
+        font-size: 30px;
+        line-height: 36px;
 
-.left-block-content {
-    overflow: hidden;
-    .main-block {
-        margin-top: 0;
-
+         span {
+            display: block;
+            color: $bg_pink;
+        }
     }
+    .form {
+        padding: 15px 0;
+
+        button {
+            float: right;
+            width: 34px;
+            height: 31px;
+            background: $bg_pink;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+            font-size: 20px;
+        }
+        div {
+            margin-right: 55px;
+        }
+        input {
+             font-size: 14px;
+             color: #898989;
+             border: 1px solid #c3c3c3;
+             border-right: none;
+             width: 100%;
+             height: 21px;
+             padding: 4px 10px;
+         }
+    }
+
+}
+
+.right-block-content-wrapper {
+    overflow: hidden;
 }
 
 .layout {
@@ -579,17 +667,16 @@
         text-align: left;
     }
 }
+.common-block{
+    margin: 20px 0;
+}
 
-.main-block {
-    margin: 20px -1% 0;
+.right-block-content {
+    margin: 0 -1% 0;
 
-    &.projects-house {
-        //  margin-bottom: -20px;
-    }
     ._content {
         width: 31.33333%;
-        margin: 0 1%;
-        margin-bottom: 20px;
+        margin: 0 1% 20px;
         float: left;
         box-sizing: border-box;
 
@@ -599,19 +686,19 @@
         }
     }
 
-    ._category {
-        font-family: $ptr;
-        font-size: 2.4em;
-        font-weight: 700;
-        color: $clr_gray;
-        text-align: center;
-        margin: 2px 0;
-        display: block;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
+    //._category {
+    //    font-family: $ptr;
+    //    font-size: 2.4em;
+    //    font-weight: 700;
+    //    color: $clr_gray;
+    //    text-align: center;
+    //    margin: 2px 0;
+    //    display: block;
+    //
+    //    &:hover {
+    //        text-decoration: underline;
+    //    }
+    //}
 }
 
 .main-block-four-row {
@@ -724,7 +811,7 @@
 }
 
 .main-block-interior {
-    margin: 0 -5px -7px -4px;
+    margin: 20px -1%;
 
     &.virtual {
         margin-bottom: 7px;
@@ -738,9 +825,10 @@
 
 .interior-block {
     display: block;
-    width: 327px;
+    float: left;
+    width: 23%;
     height: 206px;
-    margin: 0 5px 7px 4px;
+    margin: 0 1% 10px;
     position: relative;
     color: #fff;
     font-size: 14px;
@@ -1101,16 +1189,17 @@ h2 {
 
 .footer-bottom {
     //height: 118px;
-    padding: 20px 0;
+    padding: 40px 0;
     color: #fff;
     font-size: 14px;
+    line-height: 22px;
     font-family: $ptr;
     background-color: #434343;
 }
 
 .footer-bottom-item {
     float: left;
-    width: 23%;
+    width: 22%;
     box-sizing: border-box;
     margin-left: 2.6%;
 
@@ -1121,36 +1210,56 @@ h2 {
 }
 
 .copyright {
-    margin: 14px 0 0 0;
+    //margin: 14px 0 0 0;
+}
+.footer-logo-name {
+    margin-bottom: 10px;
 }
 
 .footer-social {
-    text-align: center;
-    margin-top: 18px;
+    text-align: right;
+    width: 26%;
 
     a {
-        width: 26px;
-        height: 26px;
+        width: 67px;
         display: inline-block;
-        margin: 0 2px;
+        vertical-align: top;
+        text-align: center;
 
-        &.yt {
-            @include bg(-167px, 0);
+        svg {
+            fill:#ccc;
+        }
+
+        &.yt svg{
+            &:hover {
+                fill:#CF3427;
+            }
         }
         &.vk {
-            @include bg(-196px, 0);
+            position: relative;
+            top: 4px;
+
+            svg {
+                &:hover {
+                    fill:#507299;
+                }
+            }
         }
-        &.fb {
-            @include bg(-225px, 0);
+        &.fb svg{
+            &:hover {
+                fill:#3A589B;
+            }
+        }
+        &.gp svg{
+            &:hover {
+                fill:#D6492F;
+            }
         }
         &.tw {
-            @include bg(-196px, -36px);
         }
         &.in {
-            @include bg(-225px, -36px);
         }
         &.ok {
-            @include bg(-254px, -36px);
         }
 
         &:hover {
@@ -1404,10 +1513,6 @@ h2 {
     border-radius: 0;
 }
 
-.main-block-interior img {
-    width: 327px;
-    height: 206px;
-}
 
 /*Выпадающий список*/
 #menu {

@@ -30,7 +30,7 @@ use yii\db\Expression;
                 \yii\helpers\Html::a(
                     \yii\helpers\Html::img($photo->getFile(327, 206)),
                     $design->getLink(),
-                    ['class' => 'interior-block left']
+                    ['class' => 'interior-block']
                 ) : '';
             ?>
         <?php
