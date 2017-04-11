@@ -9,5 +9,7 @@
     - php5-mysql
     - libapache2-mod-php5
     - php5-imagick
+    - php5-gd
+    - php5-curl
   notify:
     - Restart Apache

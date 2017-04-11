@@ -1,7 +1,7 @@
 ---
 #Vagrant configuration
 vagrant_provider: "virtualbox"
-vagrant_box: "ubuntu/trusty32"
+vagrant_box: "wzurowski/vivid32"
 vagrant_ip: "192.168.33.13"
 vagrant_memory: "512"
 vagrant_hostname: "houses-virt-dev-server"
