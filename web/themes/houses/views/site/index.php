@@ -78,7 +78,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
 
     <!--main part-->
     <div class="centralize">
-        <div class="main-title">Заголовок</div>
+        <div class="main-title">Проекты домов DOBRY DOM</div>
     </div>
 
     <!--tabs-->
@@ -131,7 +131,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
                     <div class="_content">
                         <a href="project-house.html" class="picture-block">
 
-                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
+                            <img src="img/temp/house-new.jpg" alt="Картинка дома"/>
 
                             <div class="info-block">
                                 <div class="_title-project">Aplauz 2 / Аплауш 2
@@ -144,7 +144,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
                     <div class="_content">
                         <a href="project-house.html" class="picture-block">
 
-                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
+                            <img src="img/temp/house-new.jpg" alt="Картинка дома"/>
 
                             <div class="info-block">
                                 <div class="_title-project">Aplauz 2 / Аплауш 2
@@ -157,7 +157,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
                     <div class="_content">
                         <a href="project-house.html" class="picture-block">
 
-                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
+                            <img src="img/temp/house-new.jpg" alt="Картинка дома"/>
 
                             <div class="info-block">
                                 <div class="_title-project">Aplauz 2 / Аплауш 2
@@ -170,7 +170,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
                     <div class="_content">
                         <a href="project-house.html" class="picture-block">
 
-                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
+                            <img src="img/temp/house-new.jpg" alt="Картинка дома"/>
 
                             <div class="info-block">
                                 <div class="_title-project">Aplauz 2 / Аплауш 2
@@ -183,7 +183,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
                     <div class="_content">
                         <a href="project-house.html" class="picture-block">
 
-                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
+                            <img src="img/temp/house-new.jpg" alt="Картинка дома"/>
 
                             <div class="info-block">
                                 <div class="_title-project">Aplauz 2 / Аплауш 2
@@ -196,7 +196,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
                     <div class="_content">
                         <a href="project-house.html" class="picture-block">
 
-                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
+                            <img src="img/temp/house-new.jpg" alt="Картинка дома"/>
 
                             <div class="info-block">
                                 <div class="_title-project">Aplauz 2 / Аплауш 2
@@ -209,7 +209,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
                     <div class="_content">
                         <a href="project-house.html" class="picture-block">
 
-                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
+                            <img src="img/temp/house-new.jpg" alt="Картинка дома"/>
 
                             <div class="info-block">
                                 <div class="_title-project">Aplauz 2 / Аплауш 2
@@ -222,7 +222,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
                     <div class="_content">
                         <a href="project-house.html" class="picture-block">
 
-                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
+                            <img src="img/temp/house-new.jpg" alt="Картинка дома"/>
 
                             <div class="info-block">
                                 <div class="_title-project">Aplauz 2 / Аплауш 2
@@ -235,7 +235,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
                     <div class="_content">
                         <a href="project-house.html" class="picture-block">
 
-                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
+                            <img src="img/temp/house-new.jpg" alt="Картинка дома"/>
 
                             <div class="info-block">
                                 <div class="_title-project">Aplauz 2 / Аплауш 2
@@ -248,7 +248,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
                     <div class="_content">
                         <a href="project-house.html" class="picture-block">
 
-                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
+                            <img src="img/temp/house-new.jpg" alt="Картинка дома"/>
 
                             <div class="info-block">
                                 <div class="_title-project">Aplauz 2 / Аплауш 2
@@ -261,7 +261,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
                     <div class="_content">
                         <a href="project-house.html" class="picture-block">
 
-                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
+                            <img src="img/temp/house-new.jpg" alt="Картинка дома"/>
 
                             <div class="info-block">
                                 <div class="_title-project">Aplauz 2 / Аплауш 2
@@ -274,7 +274,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
                     <div class="_content">
                         <a href="project-house.html" class="picture-block">
 
-                            <img src="img/temp/house1.jpg" alt="Картинка дома"/>
+                            <img src="img/temp/house-new.jpg" alt="Картинка дома"/>
 
                             <div class="info-block">
                                 <div class="_title-project">Aplauz 2 / Аплауш 2
@@ -296,10 +296,11 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
             <div class="slider-to-start-item">
                 <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
                     <div class="ing-content">
-                        <img src="img/temp/interior5.jpg" alt=""/>
+                        <img src="img/adv1.png" alt=""/>
                     </div>
                     <div class="slider-to-start-text">
-                        Основание дома -тратата
+                        Опыт свыше <br>
+                        10 лет
                     </div>
                 </a>
             </div>
@@ -307,10 +308,10 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
             <div class="slider-to-start-item">
                 <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
                     <div class="ing-content">
-                        <img src="img/temp/interior5.jpg" alt=""/>
+                        <img src="img/adv2.png" alt=""/>
                     </div>
                     <div class="slider-to-start-text">
-                        Закажите проект и будет счастье2
+                        Комплексный <br>подход
                     </div>
                 </a>
             </div>
@@ -318,10 +319,10 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
             <div class="slider-to-start-item">
                 <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
                     <div class="ing-content">
-                        <img src="img/temp/interior5.jpg" alt=""/>
+                        <img src="img/adv3.png" alt=""/>
                     </div>
                     <div class="slider-to-start-text">
-                        Закажите проект и будет счастье3
+                        Авторский <br>надзор
                     </div>
                 </a>
             </div>
@@ -329,24 +330,24 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
             <div class="slider-to-start-item">
                 <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
                     <div class="ing-content">
-                        <img src="img/temp/interior5.jpg" alt=""/>
+                        <img src="img/adv4.png" alt=""/>
                     </div>
                     <div class="slider-to-start-text">
-                        Закажите проект и будет счастье4
+                        Всё <br>официально
+                    </div>
+                </a>
+            </div>
+        <div class="slider-to-start-item">
+                <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
+                    <div class="ing-content">
+                        <img src="img/adv4.png" alt=""/>
+                    </div>
+                    <div class="slider-to-start-text">
+                         2 Всё <br>официально
                     </div>
                 </a>
             </div>
 
-            <div class="slider-to-start-item">
-                <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
-                    <div class="ing-content">
-                        <img src="img/temp/interior5.jpg" alt=""/>
-                    </div>
-                    <div class="slider-to-start-text">
-                        Закажите проект и будет счастье5
-                    </div>
-                </a>
-            </div>
         </div>
 
     </div>
@@ -370,6 +371,16 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
 
 <div class="centralize">
 
+<!--<?= $this->render('../layouts/_popular', []) ?>-->
+<!-do later and _delete html below-->
+
+<div class="main-block-interior clearfix">
+            <a class="interior-block" href="/catalog/odnosemeynyy_s_jiloy_mansardoy/lara_3-foto.html"><img src="/images/7a1/d33/bb59447ecc033cc00129837e7e-327x206.jpg" alt=""></a>
+</div>
+
+
+
+
     <?= $this->render('../layouts/_favorite', []) ?>
 
     <div class="common-block clearfix">
@@ -390,7 +401,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
         </div>
     </div>
 
-<?= $this->render('../layouts/_popular', []) ?>
+
 
     <!--<?= $this->render('../layouts/_our-projects', []) ?>
 

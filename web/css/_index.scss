@@ -179,31 +179,44 @@
     text-align: center;
     margin-bottom: 20px;
 
+
     .ing-content {
         margin-bottom: 10px;
+
         img {
-            width: 75%;
-            //height: 50px;
-            margin: auto;
+            //width: 75%;
+            max-width: 130px;
+            height: auto;
+            margin: 70px auto 50px;
         }
     }
     .slick-list {
        // margin: 0 -1px;
     }
+    .slider-to-start-text {
+        font-size: 20px;
+        bottom: 25px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
 }
 
 .slider-to-start-item {
-    height: 300px;
+    //height: 340px;
 }
 
 .slider-to-start-link {
     color: #fff;
-    padding: 10px;
+    padding: 10px 10px 85px 10px;
     margin: 0 1px;
     background-color: #606060;
     text-decoration: none;
-    height: 100%;
+    //height: 100%;
     display: block;
+    position: relative;
+    height: 255px;
 
     &:hover {
         background-color: #585858;
@@ -221,8 +234,13 @@
     margin-top: -10px;
 
      li {
-         width: 20%;
-         margin: 0;
+         width: 19%;
+         margin: 0 1.25% 0 0;
+
+         &:last-child {
+             margin-right: 0;
+         }
+
          button {
              border-radius: 0;
              border:none;
@@ -259,13 +277,19 @@
 
 .slider-text {
     position: absolute;
-    bottom: 15px;
-    @include bg(0, 0, "slider-bg.png", repeat);
+    //bottom: 15px;
+    bottom: 200px;
+   // @include bg(0, 0, "slider-bg.png", repeat);
     color: #fff;
-    padding: 11px 20px;
+  //  padding: 11px 20px;
     box-sizing: border-box;
     width: 100%;
     //height: 85px;
+
+    >div.centralize {
+        @include bg(0, 0, "slider-bg.png", repeat);
+        padding: 11px 20px;
+    }
 
     ._title {
         font-size: 4.8em;
@@ -399,14 +423,16 @@
 .filter-column {
     float: left;
     width: 37%;
-    margin-left: 5%;
+    //margin-left: 5%;
+    margin-left: 4%;
     box-sizing: border-box;
 
     &:first-child {
         margin-left: 0;
     }
     &:last-child {
-        width: 16%;
+        //width: 16%;
+        width: 17%;
     }
 }
 
@@ -423,7 +449,7 @@
         float: left;
         font-family: $ptr;
         font-size: 1.8em;
-        font-weight: 700;
+       // font-weight: 700;
         width: 160px;
         line-height: 36px;
     }
@@ -552,7 +578,7 @@
 }
 .sidebar {
     background-color: #fff;
-    padding: 20px;
+    padding: 20px 0;
     box-sizing: border-box;
 
     +.sidebar {
@@ -566,6 +592,7 @@
     .sidebar-item {
         list-style: none;
         transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+        border-left: 5px solid transparent;
 
         a {
             text-decoration: none;
@@ -573,14 +600,17 @@
             font-size: 1.6em;
             display: block;
             padding: 10px 0;
+            margin: 0 20px;
             border-bottom: 1px solid #ccc;
+
 
 
         }
         &:hover {
-            background-color: #a0be3f;
+            border-left-color: #820084;
+
             a {
-                color: #fff;
+                color: #820084;
             }
 
         }
@@ -606,6 +636,8 @@
 .feedback-form {
 background: #fff;
 margin-bottom: 20px;
+padding: 0 20px;
+
     .form-title {
         font-size: 30px;
         line-height: 36px;
@@ -656,8 +688,9 @@ margin-bottom: 20px;
     font-size: 2.4em;
     color: $clr_title;
     text-align: center;
-    @include bg(0, 0, "main-title-bg.png", repeat);
-    line-height: 76px;
+    //@include bg(0, 0, "main-title-bg.png", repeat);
+    //line-height: 76px;
+    line-height: 50px;
     margin: 20px 0 10px;
 
     &.project {

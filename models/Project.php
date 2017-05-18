@@ -259,7 +259,7 @@ class Project extends \yii\db\ActiveRecord
      */
     public function getMainPhoto($width = null, $height = null)
     {
-        $DefaultPhoto = '/img/temp/house1.jpg';
+        $DefaultPhoto = '/img/temp/house-new.jpg';
         /** @var Photo $photo */
         $photo = $this->getDb()->cache(function (Connection $db) {
             return $this->getPhotos()->where('title=:title', [':title'=>'фото'])->one();
