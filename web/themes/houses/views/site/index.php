@@ -10,406 +10,581 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
 ?>
 
 <div class="slider-content">
-    <?= $this->render('../layouts/_filter-panel', ['other' => false]) ?>
-    <div class="slider">
-        <div class="slider-item" style="background-image: url('http://1house.by/wp-content/uploads/2017/01/Perspektiva-12.jpg')">
+	<?= $this->render('../layouts/_filter-panel', ['other' => false]) ?>
+	<div class="slider">
+		<div class="slider-item" style="background-image: url('http://1house.by/wp-content/uploads/2017/01/Perspektiva-12.jpg')">
 
-            <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel" class="slider-link">
-                <div class="slider-text">
-                    <div class="centralize clearfix">
-                        <div class="_title">ARIEL</div>
-                        <div class="_content ovhidden">Просторный одноэтажный дом с гаражом для 2 автомобилей.<br>
-                            И еще одна строчка
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
+			<a href="/catalog/odnosemeynyy_odnoetajnyy/ariel" class="slider-link">
+				<div class="slider-text">
+					<div class="centralize clearfix">
+						<div class="_title">ARIEL</div>
+						<div class="_content ovhidden">Просторный одноэтажный дом с гаражом для 2 автомобилей.<br>
+							И еще одна строчка
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
 
-        <div class="slider-item" style="background-image: url('http://1house.by/wp-content/uploads/2017/01/Perspektiva-12.jpg')">
-            <a href="/catalog/odnosemeynyy_odnoetajnyy/decyma" class="slider-link">
-                <div class="slider-text">
-                    <div class="centralize clearfix">
-                        <div class="_title">DECYMA</div>
-                        <div class="_content ovhidden">Симпатичный одноэтажный дом с гаражом для 2 автомобилей.
-                            И еще одна строчка
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
+		<div class="slider-item" style="background-image: url('http://1house.by/wp-content/uploads/2017/01/Perspektiva-12.jpg')">
+			<a href="/catalog/odnosemeynyy_odnoetajnyy/decyma" class="slider-link">
+				<div class="slider-text">
+					<div class="centralize clearfix">
+						<div class="_title">DECYMA</div>
+						<div class="_content ovhidden">Симпатичный одноэтажный дом с гаражом для 2 автомобилей.
+							И еще одна строчка
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
 
-        <div class="slider-item" style="background-image: url('/img/temp/slider3.jpg')">
-            <a href="/catalog/odnosemeynyy_odnoetajnyy/ambrozja" class="slider-link">
-                <div class="slider-text">
-                    <div class="centralize clearfix">
-                        <div class="_title">AMBROZJA</div>
-                        <div class="_content ovhidden">Одноэтажный современный дом с гаражом на 2 автомобиля. <br>
-                            И еще одна строчка
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="slider-item" style="background-image: url('/img/temp/slider4.jpg')">
-            <a href="/catalog/odnosemeynyy_odnoetajnyy/ambrozja_3" class="slider-link">
-                <div class="slider-text">
-                    <div class="centralize clearfix">
-                        <div class="_title">AMBROZJA 3</div>
-                        <div class="_content ovhidden">Современный и просторный одноэтажный дом с гаражом для 2
-                            автомобилей. <br>И еще одна строчка
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="slider-item" style="background-image: url('/img/temp/slider5.jpg')">
-            <a href="/catalog/odnosemeynyy_s_jiloy_mansardoy/jezyna" class="slider-link">
-                <div class="slider-text">
-                    <div class="centralize">
-                        <div class="_title">JEŻYNA</div>
-                        <div class="_content ovhidden">Опрятный односемейный дом с мансардой. <br> И еще одна строчка
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
+		<div class="slider-item" style="background-image: url('/img/temp/slider3.jpg')">
+			<a href="/catalog/odnosemeynyy_odnoetajnyy/ambrozja" class="slider-link">
+				<div class="slider-text">
+					<div class="centralize clearfix">
+						<div class="_title">AMBROZJA</div>
+						<div class="_content ovhidden">Одноэтажный современный дом с гаражом на 2 автомобиля. <br>
+							И еще одна строчка
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+		<div class="slider-item" style="background-image: url('/img/temp/slider4.jpg')">
+			<a href="/catalog/odnosemeynyy_odnoetajnyy/ambrozja_3" class="slider-link">
+				<div class="slider-text">
+					<div class="centralize clearfix">
+						<div class="_title">AMBROZJA 3</div>
+						<div class="_content ovhidden">Современный и просторный одноэтажный дом с гаражом для 2
+							автомобилей. <br>И еще одна строчка
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+		<div class="slider-item" style="background-image: url('/img/temp/slider5.jpg')">
+			<a href="/catalog/odnosemeynyy_s_jiloy_mansardoy/jezyna" class="slider-link">
+				<div class="slider-text">
+					<div class="centralize">
+						<div class="_title">JEŻYNA</div>
+						<div class="_content ovhidden">Опрятный односемейный дом с мансардой. <br> И еще одна строчка
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
 
-    <!--main part-->
-    <div class="centralize">
-        <div class="main-title">Проекты домов DOBRY DOM</div>
-    </div>
+	<!--main part-->
+	<div class="centralize">
+		<div class="main-title">Проекты домов DOBRY DOM</div>
+	</div>
 
-    <!--tabs-->
-    <div class="tabs-panel-content">
-        <div class="centralize">
-            <div class="tabs" id="tab-main">
-                <a href="#" class="active tab-item">ТОП - 100 </a>
-                <a href="#" class="tab-item">Новые</a>
-                <a href="#" class="tab-item">Одноэтажные</a>
-                <a href="#" class="tab-item">С мансардой</a>
-                <a href="#" class="tab-item">Двухэтажные</a>
-                <a href="#" class="tab-item">Маленькие</a>
-                <a href="#" class="tab-item">Средние</a>
-                <a href="#" class="tab-item">Большие</a>
-            </div>
-        </div>
-    </div>
-    <div class="centralize">
+	<!--tabs-->
+	<div class="tabs-panel-content">
+		<div class="centralize">
+			<div class="tabs" id="tab-main">
+				<a href="#" class="active tab-item">ТОП - 100 </a>
+				<a href="#" class="tab-item">Новые</a>
+				<a href="#" class="tab-item">Одноэтажные</a>
+				<a href="#" class="tab-item">С мансардой</a>
+				<a href="#" class="tab-item">Двухэтажные</a>
+				<a href="#" class="tab-item">Маленькие</a>
+				<a href="#" class="tab-item">Средние</a>
+				<a href="#" class="tab-item">Большие</a>
+			</div>
+		</div>
+	</div>
+	<div class="centralize">
 
-        <!--part with sidebar-->
-        <div class="layout-sidebar">
-        <div class="sidebar-wrap">
-            <div class="sidebar">
-                <ul>
-                    <li class="sidebar-item"><a href="#"><span>Проекты</span></a></li>
-                    <li class="sidebar-item"><a href="#"><span>Как купить проект дома?</span></a></li>
-                    <li class="sidebar-item"><a href="#"><span>Что включает проект?</span></a></li>
-                    <li class="sidebar-item"><a href="#"><span>Ландшафтный дизайн</span></a></li>
-                </ul>
-            </div>
+		<!--part with sidebar-->
+		<div class="layout-sidebar">
+			<div class="sidebar-wrap">
+				<div class="sidebar">
+					<ul>
+						<li class="sidebar-item"><a href="#"><span>Проекты</span></a></li>
+						<li class="sidebar-item"><a href="#"><span>Как купить проект дома?</span></a></li>
+						<li class="sidebar-item"><a href="#"><span>Что включает проект?</span></a></li>
+						<li class="sidebar-item"><a href="#"><span>Ландшафтный дизайн</span></a></li>
+					</ul>
+				</div>
 
-             <div class="sidebar">
-                <div class="feedback-form">
-                              <form method="POST" action="/">
-                                  <input type="hidden" name="" id="sessid" value="">
-                                  <input type="hidden" name="" value="">
-                                  <div class="form-title">Будьте в курсе <span>событий!</span></div>
-                                  <div class="form">
-                                      <button type="submit">+</button>
-                                      <div>
-                                          <input type="email" name="" value="" title="Введите ваш e-mail" placeholder="Введите ваш e-mail">
-                                      </div>
-                                  </div>
-                              </form>
-                          </div>
-             </div>
-             </div>
-            <div class="right-block-content-wrapper">
-                <div class="right-block-content clearfix">
-                    <div class="_content">
-                        <a href="project-house.html" class="picture-block">
+				<div class="sidebar">
+					<div class="feedback-form">
+						<form method="POST" action="/">
+							<input type="hidden" name="" id="sessid" value="">
+							<input type="hidden" name="" value="">
 
-                            <img src="img/temp/house-new.jpg" alt="Картинка дома"/>
+							<div class="form-title">Будьте в курсе <span>событий!</span></div>
+							<div class="form">
+								<button type="submit">+</button>
+								<div>
+									<input type="email" name="" value="" title="Введите ваш e-mail" placeholder="Введите ваш e-mail">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="right-block-content-wrapper">
+				<div class="right-block-content clearfix">
+					<div class="_content">
+						<a href="project-house.html" class="picture-block">
 
-                            <div class="info-block">
-                                <div class="_title-project">Aplauz 2 / Аплауш 2
-                                    <div class="effectiveArea">150 м<sup>2</sup></div>
-                                </div>
+							<img src="img/temp/house-new.jpg" alt="Картинка дома"/>
 
-                            </div>
-                        </a>
-                    </div>
-                    <div class="_content">
-                        <a href="project-house.html" class="picture-block">
+							<div class="info-block">
+								<div class="_title-project">Aplauz 2 / Аплауш 2
+									<div class="effectiveArea">150 м<sup>2</sup></div>
+								</div>
 
-                            <img src="img/temp/house-new.jpg" alt="Картинка дома"/>
+							</div>
+						</a>
+					</div>
+					<div class="_content">
+						<a href="project-house.html" class="picture-block">
 
-                            <div class="info-block">
-                                <div class="_title-project">Aplauz 2 / Аплауш 2
-                                    <div class="effectiveArea">150 м<sup>2</sup></div>
-                                </div>
+							<img src="img/temp/house-new.jpg" alt="Картинка дома"/>
 
-                            </div>
-                        </a>
-                    </div>
-                    <div class="_content">
-                        <a href="project-house.html" class="picture-block">
+							<div class="info-block">
+								<div class="_title-project">Aplauz 2 / Аплауш 2
+									<div class="effectiveArea">150 м<sup>2</sup></div>
+								</div>
 
-                            <img src="img/temp/house-new.jpg" alt="Картинка дома"/>
+							</div>
+						</a>
+					</div>
+					<div class="_content">
+						<a href="project-house.html" class="picture-block">
 
-                            <div class="info-block">
-                                <div class="_title-project">Aplauz 2 / Аплауш 2
-                                    <div class="effectiveArea">150 м<sup>2</sup></div>
-                                </div>
+							<img src="img/temp/house-new.jpg" alt="Картинка дома"/>
 
-                            </div>
-                        </a>
-                    </div>
-                    <div class="_content">
-                        <a href="project-house.html" class="picture-block">
+							<div class="info-block">
+								<div class="_title-project">Aplauz 2 / Аплауш 2
+									<div class="effectiveArea">150 м<sup>2</sup></div>
+								</div>
 
-                            <img src="img/temp/house-new.jpg" alt="Картинка дома"/>
+							</div>
+						</a>
+					</div>
+					<div class="_content">
+						<a href="project-house.html" class="picture-block">
 
-                            <div class="info-block">
-                                <div class="_title-project">Aplauz 2 / Аплауш 2
-                                    <div class="effectiveArea">150 м<sup>2</sup></div>
-                                </div>
+							<img src="img/temp/house-new.jpg" alt="Картинка дома"/>
 
-                            </div>
-                        </a>
-                    </div>
-                    <div class="_content">
-                        <a href="project-house.html" class="picture-block">
+							<div class="info-block">
+								<div class="_title-project">Aplauz 2 / Аплауш 2
+									<div class="effectiveArea">150 м<sup>2</sup></div>
+								</div>
 
-                            <img src="img/temp/house-new.jpg" alt="Картинка дома"/>
+							</div>
+						</a>
+					</div>
+					<div class="_content">
+						<a href="project-house.html" class="picture-block">
 
-                            <div class="info-block">
-                                <div class="_title-project">Aplauz 2 / Аплауш 2
-                                    <div class="effectiveArea">150 м<sup>2</sup></div>
-                                </div>
+							<img src="img/temp/house-new.jpg" alt="Картинка дома"/>
 
-                            </div>
-                        </a>
-                    </div>
-                    <div class="_content">
-                        <a href="project-house.html" class="picture-block">
+							<div class="info-block">
+								<div class="_title-project">Aplauz 2 / Аплауш 2
+									<div class="effectiveArea">150 м<sup>2</sup></div>
+								</div>
 
-                            <img src="img/temp/house-new.jpg" alt="Картинка дома"/>
+							</div>
+						</a>
+					</div>
+					<div class="_content">
+						<a href="project-house.html" class="picture-block">
 
-                            <div class="info-block">
-                                <div class="_title-project">Aplauz 2 / Аплауш 2
-                                    <div class="effectiveArea">150 м<sup>2</sup></div>
-                                </div>
+							<img src="img/temp/house-new.jpg" alt="Картинка дома"/>
 
-                            </div>
-                        </a>
-                    </div>
-                    <div class="_content">
-                        <a href="project-house.html" class="picture-block">
+							<div class="info-block">
+								<div class="_title-project">Aplauz 2 / Аплауш 2
+									<div class="effectiveArea">150 м<sup>2</sup></div>
+								</div>
 
-                            <img src="img/temp/house-new.jpg" alt="Картинка дома"/>
+							</div>
+						</a>
+					</div>
+					<div class="_content">
+						<a href="project-house.html" class="picture-block">
 
-                            <div class="info-block">
-                                <div class="_title-project">Aplauz 2 / Аплауш 2
-                                    <div class="effectiveArea">150 м<sup>2</sup></div>
-                                </div>
+							<img src="img/temp/house-new.jpg" alt="Картинка дома"/>
 
-                            </div>
-                        </a>
-                    </div>
-                    <div class="_content">
-                        <a href="project-house.html" class="picture-block">
+							<div class="info-block">
+								<div class="_title-project">Aplauz 2 / Аплауш 2
+									<div class="effectiveArea">150 м<sup>2</sup></div>
+								</div>
 
-                            <img src="img/temp/house-new.jpg" alt="Картинка дома"/>
+							</div>
+						</a>
+					</div>
+					<div class="_content">
+						<a href="project-house.html" class="picture-block">
 
-                            <div class="info-block">
-                                <div class="_title-project">Aplauz 2 / Аплауш 2
-                                    <div class="effectiveArea">150 м<sup>2</sup></div>
-                                </div>
+							<img src="img/temp/house-new.jpg" alt="Картинка дома"/>
 
-                            </div>
-                        </a>
-                    </div>
-                    <div class="_content">
-                        <a href="project-house.html" class="picture-block">
+							<div class="info-block">
+								<div class="_title-project">Aplauz 2 / Аплауш 2
+									<div class="effectiveArea">150 м<sup>2</sup></div>
+								</div>
 
-                            <img src="img/temp/house-new.jpg" alt="Картинка дома"/>
+							</div>
+						</a>
+					</div>
+					<div class="_content">
+						<a href="project-house.html" class="picture-block">
 
-                            <div class="info-block">
-                                <div class="_title-project">Aplauz 2 / Аплауш 2
-                                    <div class="effectiveArea">150 м<sup>2</sup></div>
-                                </div>
+							<img src="img/temp/house-new.jpg" alt="Картинка дома"/>
 
-                            </div>
-                        </a>
-                    </div>
-                    <div class="_content">
-                        <a href="project-house.html" class="picture-block">
+							<div class="info-block">
+								<div class="_title-project">Aplauz 2 / Аплауш 2
+									<div class="effectiveArea">150 м<sup>2</sup></div>
+								</div>
 
-                            <img src="img/temp/house-new.jpg" alt="Картинка дома"/>
+							</div>
+						</a>
+					</div>
+					<div class="_content">
+						<a href="project-house.html" class="picture-block">
 
-                            <div class="info-block">
-                                <div class="_title-project">Aplauz 2 / Аплауш 2
-                                    <div class="effectiveArea">150 м<sup>2</sup></div>
-                                </div>
+							<img src="img/temp/house-new.jpg" alt="Картинка дома"/>
 
-                            </div>
-                        </a>
-                    </div>
-                    <div class="_content">
-                        <a href="project-house.html" class="picture-block">
+							<div class="info-block">
+								<div class="_title-project">Aplauz 2 / Аплауш 2
+									<div class="effectiveArea">150 м<sup>2</sup></div>
+								</div>
 
-                            <img src="img/temp/house-new.jpg" alt="Картинка дома"/>
+							</div>
+						</a>
+					</div>
+					<div class="_content">
+						<a href="project-house.html" class="picture-block">
 
-                            <div class="info-block">
-                                <div class="_title-project">Aplauz 2 / Аплауш 2
-                                    <div class="effectiveArea">150 м<sup>2</sup></div>
-                                </div>
+							<img src="img/temp/house-new.jpg" alt="Картинка дома"/>
 
-                            </div>
-                        </a>
-                    </div>
-                    <div class="_content">
-                        <a href="project-house.html" class="picture-block">
+							<div class="info-block">
+								<div class="_title-project">Aplauz 2 / Аплауш 2
+									<div class="effectiveArea">150 м<sup>2</sup></div>
+								</div>
 
-                            <img src="img/temp/house-new.jpg" alt="Картинка дома"/>
+							</div>
+						</a>
+					</div>
+					<div class="_content">
+						<a href="project-house.html" class="picture-block">
 
-                            <div class="info-block">
-                                <div class="_title-project">Aplauz 2 / Аплауш 2
-                                    <div class="effectiveArea">150 м<sup>2</sup></div>
-                                </div>
+							<img src="img/temp/house-new.jpg" alt="Картинка дома"/>
 
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+							<div class="info-block">
+								<div class="_title-project">Aplauz 2 / Аплауш 2
+									<div class="effectiveArea">150 м<sup>2</sup></div>
+								</div>
 
-        <!--/part with sidebar-->
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
 
-        <div class="main-title">Наши преимущества</div>
+		<!--/part with sidebar-->
 
-        <div class="slider-to-start">
-            <div class="slider-to-start-item">
-                <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
-                    <div class="ing-content">
-                        <img src="img/adv1.png" alt=""/>
-                    </div>
-                    <div class="slider-to-start-text">
-                        Опыт свыше <br>
-                        10 лет
-                    </div>
-                </a>
-            </div>
+		<div class="main-title">Наши преимущества</div>
 
-            <div class="slider-to-start-item">
-                <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
-                    <div class="ing-content">
-                        <img src="img/adv2.png" alt=""/>
-                    </div>
-                    <div class="slider-to-start-text">
-                        Комплексный <br>подход
-                    </div>
-                </a>
-            </div>
+		<div class="slider-to-start">
+			<div class="slider-to-start-item">
+				<a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
+					<div class="ing-content">
+						<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="35.293mm" height="35.2926mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                       viewBox="0 0 161 161"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Слой_x0020_1">
 
-            <div class="slider-to-start-item">
-                <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
-                    <div class="ing-content">
-                        <img src="img/adv3.png" alt=""/>
-                    </div>
-                    <div class="slider-to-start-text">
-                        Авторский <br>надзор
-                    </div>
-                </a>
-            </div>
+                         <g id="_1825851656112">
+                          <path class="fil0" d="M105 75c1,0 3,-1 3,-2l0 -22c0,-1 -2,-3 -3,-3l-16 0c-2,0 -3,2 -3,3l0 22c0,1 1,2 3,2l16 0zm-14 -21l11 0 0 16 -11 0 0 -16z"/>
+                          <path class="fil0" d="M34 51c0,0 1,0 1,0 1,0 1,0 2,-1l44 -44 44 44c0,1 1,1 2,1 1,0 2,-1 2,-3l0 -40c0,-1 -1,-3 -3,-3l-26 0c-2,0 -3,2 -3,3 0,2 1,3 3,3l24 0 0 31 -41 -41c-1,-1 -3,-1 -4,0l-41 41 0 -31 13 0c2,0 3,-1 3,-3l0 -3 5 0 0 3c0,2 1,3 3,3 1,0 3,-1 3,-3l0 -5c0,-2 -2,-3 -3,-3l-11 0c-1,0 -3,1 -3,3l0 2 -13 0c-2,0 -3,2 -3,3l0 40c0,2 1,3 2,3z"/>
+                          <path class="fil0" d="M40 52c-1,0 -2,2 -2,3l0 34c0,1 1,2 2,2l81 0c2,0 3,-1 3,-2l0 -34c0,-1 -1,-3 -3,-3 -1,0 -3,2 -3,3l0 31 -37 0 0 -35c0,-1 -1,-3 -3,-3l-21 0c-2,0 -3,2 -3,3l0 35 -11 0 0 -31c0,-1 -1,-3 -3,-3zm19 2l16 0 0 13 -2 0c-2,0 -3,1 -3,3 0,1 1,3 3,3l2 0 0 13 -16 0 0 -32z"/>
+                          <path class="fil0" d="M151 48c-6,0 -11,5 -11,11l0 21c0,2 1,3 3,3 1,0 2,-1 2,-3l0 -21c0,-3 3,-5 6,-5 3,0 5,2 5,5l0 41c0,7 -4,11 -5,11l-24 24c-1,1 -1,3 0,4 1,1 1,1 2,1 1,0 2,0 2,-1l24 -24c0,0 6,-5 6,-15l0 -41c0,-6 -4,-11 -10,-11z"/>
+                          <path class="fil0" d="M143 145l-35 0 0 -21c0,-8 4,-11 4,-12l19 -19c1,-1 2,-1 4,-1 1,0 2,0 3,1 1,1 2,2 2,3 0,2 -1,3 -2,4l-13 14c-1,1 -1,3 0,4 1,1 2,1 3,0l14 -14c2,-2 3,-5 3,-8 0,-2 -1,-5 -3,-7 -2,-2 -5,-3 -7,-3 -3,0 -6,2 -8,4l-18 18c-1,1 -7,6 -7,16l0 21 -2 0c-2,0 -3,2 -3,3l0 11c0,1 1,2 3,2 1,0 2,-1 2,-2l0 -8 38 0 0 8c0,1 1,2 3,2 1,0 2,-1 2,-2l0 -11c0,-1 -1,-3 -2,-3z"/>
+                          <path class="fil0" d="M62 145l-3 0 0 -21c0,-10 -6,-15 -6,-16l-19 -18c-2,-2 -4,-4 -7,-4 -3,0 -6,1 -8,3 -2,2 -3,5 -3,8 0,3 2,5 4,7l13 14c1,1 3,1 4,0 1,-1 1,-3 0,-4l-14 -14c-1,-1 -1,-2 -1,-3 0,-2 0,-3 1,-4 1,-1 2,-1 4,-1 1,0 2,0 3,1l19 19c1,1 5,4 5,12l0 21 -35 0c-2,0 -3,2 -3,3l0 11c0,1 1,2 3,2 1,0 3,-1 3,-2l0 -8 37 0 0 8c0,1 1,2 3,2 1,0 3,-1 3,-2l0 -11c0,-1 -2,-3 -3,-3z"/>
+                          <path class="fil0" d="M32 140c1,0 2,0 2,-1 1,-1 1,-3 0,-4l-24 -24c0,0 -5,-4 -5,-11l0 -41c0,-3 3,-5 6,-5 3,0 5,2 5,5l0 21c0,2 1,3 3,3 1,0 3,-1 3,-3l0 -21c0,-6 -5,-11 -11,-11 -6,0 -11,5 -11,11l0 41c0,10 6,15 6,15l24 24c1,1 2,1 2,1z"/>
+                         </g>
+                        </g>
+                       </svg>
+					</div>
+					<div class="slider-to-start-text">
+						Опыт свыше <br>
+						10 лет
+					</div>
+				</a>
+			</div>
 
-            <div class="slider-to-start-item">
-                <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
-                    <div class="ing-content">
-                        <img src="img/adv4.png" alt=""/>
-                    </div>
-                    <div class="slider-to-start-text">
-                        Всё <br>официально
-                    </div>
-                </a>
-            </div>
-        <div class="slider-to-start-item">
-                <a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
-                    <div class="ing-content">
-                        <img src="img/adv4.png" alt=""/>
-                    </div>
-                    <div class="slider-to-start-text">
-                         2 Всё <br>официально
-                    </div>
-                </a>
-            </div>
+			<div class="slider-to-start-item">
+				<a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
+					<div class="ing-content">
+						<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="35.2926mm" height="35.2925mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 137 137"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                         <g id="Слой_x0020_1">
 
-        </div>
+                          <g id="_1825959750160">
+                           <path class="fil0" d="M116 105c-6,0 -11,5 -11,11 0,7 5,12 11,12 7,0 12,-5 12,-12 0,-6 -5,-11 -12,-11zm0 18c-3,0 -6,-3 -6,-7 0,-3 3,-6 6,-6 4,0 7,3 7,6 0,4 -3,7 -7,7z"/>
+                           <path class="fil0" d="M132 104l0 -77c0,-2 -2,-4 -4,-4l-23 0c-2,0 -5,2 -5,4l0 62c0,1 2,2 3,2l4 0c2,0 3,-1 3,-2 0,-1 -1,-2 -3,-2l-2 0 0 -5 2 0c2,0 3,-1 3,-2 0,-1 -1,-2 -3,-2l-2 0 0 -5 7 0c1,0 2,-1 2,-2 0,-1 -1,-2 -2,-2l-7 0 0 -5 2 0c2,0 3,-1 3,-2 0,-2 -1,-3 -3,-3l-2 0 0 -4 2 0c2,0 3,-1 3,-2 0,-2 -1,-3 -3,-3l-2 0 0 -4 2 0c2,0 3,-1 3,-3 0,-1 -1,-2 -3,-2l-2 0 0 -4 7 0c1,0 2,-1 2,-3 0,-1 -1,-2 -2,-2l-7 0 0 -5 23 0 0 72c-3,-2 -7,-3 -12,-3 -11,0 -20,9 -20,20 0,5 1,9 3,12l-62 0 0 -23 4 0 0 7c0,1 1,2 2,2 2,0 3,-1 3,-2l0 -7 4 0 0 2c0,2 1,3 3,3 1,0 2,-1 2,-3l0 -2 4 0 0 2c0,2 1,3 3,3 1,0 2,-1 2,-3l0 -2 5 0 0 2c0,2 1,3 2,3 1,0 2,-1 2,-3l0 -2 5 0 0 7c0,1 1,2 2,2 1,0 2,-1 2,-2l0 -7 5 0 0 2c0,2 1,3 2,3 1,0 2,-1 2,-3l0 -4c0,-1 -1,-2 -2,-2l-52 0c-3,0 -5,1 -5,4l0 23c0,3 2,4 5,4l67 0c3,3 8,5 12,5 12,0 21,-9 21,-21 0,-4 -2,-9 -5,-12zm-16 28c-8,0 -15,-7 -15,-16 0,-8 7,-15 15,-15 9,0 16,7 16,15 0,9 -7,16 -16,16z"/>
+                           <path class="fil0" d="M119 16c0,-1 -1,-2 -3,-2l-89 0c0,-8 -6,-14 -13,-14 -8,0 -14,6 -14,14l0 109c0,8 6,14 14,14l11 0c1,0 2,-1 2,-2 0,-1 -1,-3 -2,-3l-11 0c-5,0 -9,-4 -9,-9 0,-5 4,-9 9,-9 5,0 9,4 9,9 0,2 1,3 2,3 1,0 2,-1 2,-3l0 -105 89 0c2,0 3,-1 3,-2zm-96 97c-3,-2 -6,-3 -9,-3 -4,0 -7,1 -9,3l0 -99c0,-5 4,-9 9,-9 5,0 9,4 9,9l0 99z"/>
+                           <path class="fil0" d="M87 31c1,1 1,1 2,1 1,0 1,0 2,-1 1,-1 1,-2 0,-3l-5 -4c0,-1 0,-1 -1,-1 0,0 -1,0 -1,0 -1,0 -1,0 -1,1l-5 4c-1,1 -1,2 0,3 1,1 3,1 4,0l0 0 0 53 0 -1c-1,-1 -3,-1 -4,0 -1,1 -1,2 0,3l5 5c0,0 0,0 1,0 0,0 0,0 1,0 0,0 0,0 0,0 1,0 1,0 1,0l5 -5c1,-1 1,-2 0,-3 -1,-1 -3,-1 -4,0l0 1 0 -53 0 0z"/>
+                          </g>
+                         </g>
+                        </svg>
+					</div>
+					<div class="slider-to-start-text">
+						Комплексный <br>подход
+					</div>
+				</a>
+			</div>
 
-    </div>
+			<div class="slider-to-start-item">
+				<a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
+					<div class="ing-content">
+						<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="35.2927mm" height="35.2905mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                       viewBox="0 0 120 120"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                        <g id="Слой_x0020_1">
+
+                         <g id="_1825959752944">
+                          <path class="fil0" d="M90 79c0,1 0,2 0,3l5 4c0,0 0,1 1,1 0,0 1,-1 1,-1 1,-1 1,-2 0,-3l-4 -4c-1,-1 -2,-1 -3,0z"/>
+                          <path class="fil0" d="M112 45l0 19 -8 0 0 -10c0,-1 -1,-2 -2,-2 -1,0 -2,1 -2,2l0 12c0,1 1,2 2,2l12 0c1,0 2,-1 2,-2l0 -17 0 0c1,1 1,1 2,1 0,0 1,0 1,-1 1,0 1,-2 0,-3l-4 -4 -18 -17c-1,-1 -2,-1 -3,0 0,0 0,2 0,2l18 18z"/>
+                          <path class="fil0" d="M67 42c0,0 0,0 0,0l-18 -17c0,-1 -2,-1 -3,0l-21 21c-1,1 -1,3 0,3 0,1 2,1 2,0l1 0 0 17c0,1 1,2 2,2l14 0c1,0 2,-1 2,-2l0 -10 4 0 0 10c0,1 1,2 2,2l14 0c1,0 2,-1 2,-2l0 -17 0 0c1,1 1,1 2,1 0,0 1,0 1,-1 1,0 1,-2 0,-3l-4 -4zm-3 22l-10 0 0 -10c0,-1 -1,-2 -2,-2l-8 0c-1,0 -2,1 -2,2l0 10 -10 0 0 -19 16 -16 16 16 0 19z"/>
+                          <path class="fil0" d="M48 8c-22,0 -40,18 -40,40 0,22 18,40 40,40 22,0 40,-18 40,-40 0,-22 -18,-40 -40,-40zm0 76c-20,0 -36,-16 -36,-36 0,-20 16,-36 36,-36 20,0 36,16 36,36 0,20 -16,36 -36,36z"/>
+                          <path class="fil0" d="M103 89c-1,-1 -1,-1 -2,-1l0 0c0,0 -1,0 -1,1l-6 5c0,1 0,2 0,3 1,1 2,1 3,0l4 -4 13 13c1,1 2,2 2,4 0,1 -1,3 -2,4 -2,2 -6,2 -8,0l-24 -24c-1,0 -2,0 -3,0 -1,1 -1,2 0,3l24 24c2,2 4,3 7,3 2,0 5,-1 7,-3 2,-2 3,-5 3,-7 0,-3 -1,-5 -3,-7l-14 -14z"/>
+                          <path class="fil0" d="M96 48c0,-27 -22,-48 -48,-48 -27,0 -48,21 -48,48 0,26 21,48 48,48 26,0 48,-22 48,-48zm-48 44c-24,0 -44,-20 -44,-44 0,-24 20,-44 44,-44 24,0 44,20 44,44 0,24 -20,44 -44,44z"/>
+                         </g>
+                        </g>
+                       </svg>
+					</div>
+					<div class="slider-to-start-text">
+						Авторский <br>надзор
+					</div>
+				</a>
+			</div>
+
+			<div class="slider-to-start-item">
+				<a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
+					<div class="ing-content">
+						<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="35.2946mm" height="35.2925mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 107 107"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                         <g id="Слой_x0020_1">
+
+                          <g id="_1825848150016">
+                           <path class="fil0" d="M44 85l25 0c1,0 2,0 2,-1 0,-1 -1,-2 -2,-2l-25 0c-1,0 -1,1 -1,2 0,1 0,1 1,1z"/>
+                           <path class="fil0" d="M34 16c0,1 1,2 2,2l62 0c3,0 5,2 5,5l0 43c0,1 1,2 2,2 1,0 2,-1 2,-2l0 -43c0,-5 -4,-9 -9,-9l-62 0c-1,0 -2,1 -2,2z"/>
+                           <path class="fil0" d="M44 75l18 0c1,0 2,-1 2,-2 0,-1 -1,-2 -2,-2l-18 0c-1,0 -1,1 -1,2 0,1 0,2 1,2z"/>
+                           <path class="fil0" d="M62 103l-30 0 0 -80c0,-5 -4,-9 -9,-9 -5,0 -9,4 -9,9l0 61c0,3 -2,5 -5,5 -3,0 -5,-2 -5,-5l0 -80 71 0 0 5c0,1 0,2 1,2 1,0 2,-1 2,-2l0 -7c0,-1 -1,-2 -2,-2l-74 0c-1,0 -2,1 -2,2l0 82c0,4 4,8 9,8 5,0 9,-4 9,-8l0 -61c0,-3 2,-5 5,-5 3,0 5,2 5,5l0 66 -8 0c-1,0 -2,1 -2,2 0,1 1,1 2,1l8 0 0 13c0,1 1,2 2,2l32 0c1,0 2,-1 2,-2 0,-1 -1,-2 -2,-2z"/>
+                           <path class="fil0" d="M82 73c0,-1 -1,-2 -2,-2l-11 0c-1,0 -1,1 -1,2 0,1 0,2 1,2l11 0c1,0 2,-1 2,-2z"/>
+                           <path class="fil0" d="M105 73l-4 -3c-3,-3 -7,-3 -10,0l-23 23c0,0 0,1 0,1l0 11c0,1 0,2 1,2l11 0c0,0 1,0 1,-1l24 -23c2,-3 2,-7 0,-10zm-16 4l3 3 -16 15 -2 -3 15 -15zm-18 26l0 -8 8 8 -8 0zm11 -2l-3 -3 15 -16 3 3 -15 16zm20 -21l-2 3 -8 -8 2 -3c1,-1 3,-1 5,0l3 4c2,1 2,3 0,4z"/>
+                           <path class="fil0" d="M85 62l0 -15 1 0c0,1 1,1 1,1 1,0 1,0 1,-1 1,0 1,-1 0,-2l-3 -4 0 0 -16 -16c-1,0 -2,0 -3,0l-16 16 0 0 -3 4c-1,1 -1,2 0,2 0,1 2,1 2,0l1 0 0 15c0,1 1,2 2,2l12 0c1,0 2,-1 2,-2l0 -9 3 0 0 9c0,1 1,2 2,2l13 0c1,0 1,-1 1,-2zm-3 -2l-9 0 0 -8c0,-1 -1,-2 -2,-2l-7 0c-1,0 -2,1 -2,2l0 8 -9 0 0 -17 15 -14 14 14 0 17z"/>
+                          </g>
+                         </g>
+                        </svg>
+					</div>
+					<div class="slider-to-start-text">
+						Всё <br>официально
+					</div>
+				</a>
+			</div>
+			
+			<div class="slider-to-start-item">
+				<a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
+					<div class="ing-content">
+						<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="35.314mm" height="35.292mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 1703 1702"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                         <g id="Слой_x0020_1">
+
+                          <g id="_2224675010032">
+                           <path class="fil0" d="M280 1010c1,2 1,4 2,5 1,2 2,3 3,4l58 57 -52 38 -45 -91 32 -21 2 8zm-53 -233l0 -110 6 0c22,-2 57,-7 94,-19 36,-12 76,-31 109,-61l6 -6 4 8c7,15 18,31 32,45 11,11 25,21 41,27l4 2 0 114c0,37 -14,70 -38,94 -24,24 -57,38 -93,38l-33 0c-37,0 -70,-14 -94,-38 -24,-24 -38,-57 -38,-94zm-69 -53c0,-7 2,-13 5,-19 3,-6 7,-11 12,-14l11 -7 0 80 -11 -7c-5,-4 -9,-9 -12,-14 -3,-6 -5,-12 -5,-19zm208 -330l17 0c52,0 98,21 132,54 34,34 55,81 55,132l0 64c-7,-6 -13,-13 -22,-16 -20,-5 -36,-17 -48,-30 -22,-27 -31,-61 -31,-61 -1,-4 -3,-8 -5,-10 -3,-3 -7,-5 -11,-6 -3,-1 -7,0 -11,1 -4,2 -7,4 -9,7 -24,33 -57,55 -91,69 -66,29 -134,29 -136,29 -12,0 -18,11 -26,19l0 -66c0,-51 21,-98 55,-132 33,-33 80,-54 131,-54zm198 358l0 -68 11 7c5,3 9,8 13,14 3,6 4,12 4,19 0,7 -1,13 -4,19 -4,5 -8,10 -13,14l-11 7 0 -12zm-114 357l-45 -33 60 -63c1,0 1,-1 2,-2 0,0 1,-1 1,-2l4 -6 29 19 -44 92 -7 -5zm162 -37c2,1 26,9 48,32 23,22 45,58 45,114l0 110 -84 0 0 -116c0,-5 -2,-10 -6,-14 -3,-4 -8,-6 -14,-6 -6,0 -11,2 -14,6 -4,4 -6,9 -6,14l0 116 -118 0 80 -285c23,10 46,20 69,29zm-272 248l20 -125 30 0 22 133 -74 0 2 -8zm-45 -158l15 -12 11 27 -12 76 -24 -87 5 -2c1,0 2,-1 3,-1 1,0 2,-1 2,-1zm94 -8l-33 0 -12 -28 30 -22 30 22 -11 28 -4 0zm63 8c1,0 2,1 4,1 1,1 2,1 3,2l7 2 -25 87 -12 -78 9 -25 14 11zm-132 -199l0 -17 8 1c5,1 10,2 15,2 5,1 10,1 16,1l33 0c5,0 10,0 15,-1 5,0 10,-1 15,-2l8 -1 0 45 -56 58 -54 -53 0 -33zm-6 406c110,-9 317,0 412,0 5,0 10,-3 14,-6 4,-4 6,-9 6,-15l0 -130c0,-46 -13,-84 -32,-112 -26,-41 -63,-64 -88,-72 -28,-10 -62,-27 -91,-38 -21,-15 -43,-29 -64,-43l0 -22 3 -2c23,-12 42,-30 57,-50 15,-21 26,-44 30,-70l1 -5 5 0c19,-4 35,-14 47,-28 12,-14 19,-32 19,-52 0,-10 -2,-20 -5,-29 -4,-9 -9,-18 -16,-25l-2 -2 0 -88c0,-63 -25,-119 -66,-161 -41,-41 -98,-66 -161,-66l-17 0c-62,0 -119,25 -160,66 -41,42 -67,98 -67,161l0 88 -1 2c-7,7 -12,16 -16,25 -3,9 -5,19 -5,29 0,20 7,38 19,52 12,14 28,24 47,28l5 0 1 5c5,26 15,49 30,70 15,20 34,38 57,50l3 2 0 21 -64 42c-32,11 -64,29 -95,40 -25,8 -62,31 -88,72 -19,28 -32,66 -32,112l0 130c0,6 2,11 6,15 4,3 9,6 14,6l178 0c6,0 11,-3 15,-6 3,-4 6,-9 6,-15 0,-5 -3,-11 -6,-14 -4,-4 -9,-6 -15,-6l-33 0 0 -116c0,-5 -2,-10 -6,-14 -3,-4 -8,-6 -14,-6 -6,0 -11,2 -14,6 -4,4 -6,9 -6,14l0 116 -84 0 0 -110c0,-38 10,-67 24,-88 26,-42 66,-57 68,-58 25,-9 50,-20 74,-30 27,95 54,190 80,285l-7 1c-4,1 -8,4 -11,7 -3,4 -5,8 -5,13 0,6 3,11 6,15 4,3 9,6 15,6l29 0z"/>
+                           <path class="fil0" d="M297 260c76,-71 162,-126 256,-163 94,-37 195,-56 298,-56 92,0 183,16 269,46 85,30 166,74 238,132l15 12 -63 0c-6,0 -11,2 -14,6l0 0c-4,4 -6,9 -6,14 0,6 2,11 6,15l0 0c3,4 8,6 14,6l108 0c6,0 11,-2 15,-6 3,-4 6,-9 6,-15l0 -97c0,-6 -3,-11 -6,-14 -4,-4 -9,-6 -15,-6 -5,0 -11,2 -14,6 -4,3 -6,8 -6,14l0 45 -11 -9c-76,-61 -161,-109 -252,-141 -90,-32 -186,-49 -284,-49 -109,0 -214,20 -313,59 -98,39 -189,97 -268,171l-1 0c-4,4 -6,9 -6,14 0,5 2,10 5,14l0 1c4,4 9,6 15,6 5,0 10,-2 14,-5z"/>
+                           <path class="fil0" d="M1382 1462c-73,64 -157,114 -247,147 -91,34 -187,52 -284,52 -88,0 -174,-15 -256,-42 -82,-27 -160,-68 -230,-120l-16 -12 65 0c6,0 11,-2 15,-6 3,-4 6,-9 6,-14 0,-6 -3,-11 -6,-15 -4,-4 -9,-6 -15,-6l-108 0c-6,0 -11,2 -15,6 -3,4 -6,9 -6,15l0 97c0,6 3,11 6,14 4,4 9,6 15,6 6,0 11,-2 14,-6 4,-3 6,-8 6,-14l0 -43 11 8c74,56 156,99 243,128 86,29 178,45 271,45 102,0 203,-19 298,-54 94,-36 183,-88 260,-155 4,-4 7,-9 7,-14 0,-5 -1,-11 -5,-15 -4,-4 -9,-7 -14,-7 -5,0 -11,1 -15,5z"/>
+                           <path class="fil0" d="M1655 1328l-77 0 0 -116c0,-5 -2,-10 -6,-14 -4,-4 -9,-6 -14,-6 -6,0 -11,2 -15,6 -3,4 -6,9 -6,14l0 116 -118 0 80 -285c23,10 47,21 70,29 3,1 43,16 69,58 14,21 24,50 24,88l0 110 -7 0zm-359 -8l20 -125 31 0 21 133 -73 0 1 -8zm-59 -310c0,2 1,4 2,5 1,2 2,3 3,4l58 57 -53 38 -44 -91 31 -21 3 8zm-54 -233l0 -110 6 0c23,-2 57,-7 94,-19 37,-12 76,-31 109,-61l7 -6 4 8c7,15 18,31 32,45 11,11 25,21 41,27l4 2 0 114c0,37 -15,70 -39,94 -24,24 -57,38 -93,38l-33 0c-36,0 -69,-14 -93,-38 -24,-24 -39,-57 -39,-94zm-69 -53c0,-7 2,-13 5,-19 3,-6 8,-11 13,-14l10 -7 0 80 -10 -7c-5,-4 -10,-9 -13,-14 -3,-6 -5,-12 -5,-19zm209 -330l17 0c51,0 98,21 132,54 33,34 54,81 54,132l0 64c-7,-6 -12,-13 -21,-16l0 0c0,0 0,0 0,0l0 0c-21,-5 -36,-17 -48,-30 -23,-27 -31,-61 -31,-61 -1,-4 -3,-8 -6,-10 -3,-3 -6,-5 -10,-6 -4,-1 -8,0 -11,1 -4,2 -7,4 -10,7 -23,33 -57,55 -90,69 -66,29 -135,29 -136,29 -2,0 -3,1 -4,1 -1,0 -3,1 -4,1l-2 1c-7,4 -11,11 -16,16l0 -66c0,-51 21,-98 54,-132 34,-33 80,-54 132,-54zm182 234c0,0 0,0 0,0zm16 124l0 -68 10 7c6,3 10,8 13,14 3,6 5,12 5,19 0,7 -2,13 -5,19 -3,5 -7,10 -13,14l-10 7 0 -12zm-114 357l-46 -33 61 -63c0,0 1,-1 1,-2 1,0 1,-1 2,-2l3 -6 30 19 -45 92 -6 -5zm-97 39l-9 -22 29 -22 31 22 -11 28 -40 0 0 -6zm-58 14l15 -12 11 27 -12 76 -25 -87 6 -2c1,0 2,-1 2,-1 1,0 2,-1 3,-1zm157 0c1,0 2,1 3,1 1,1 3,1 4,2l6 2 -24 87 -13 -78 10 -25 14 11zm-132 -206l0 -10 8 1c5,1 10,2 15,2 5,1 10,1 15,1l33 0c6,0 11,0 16,-1 5,0 10,-1 15,-2l8 -1 0 45 -56 58 -54 -53 0 -40zm306 78l-91 -38c-22,-15 -43,-29 -65,-43l0 -22 4 -2c22,-12 42,-30 57,-50 15,-21 25,-44 30,-70l1 -5 4 0c19,-4 36,-14 48,-28 12,-14 19,-32 19,-52 0,-10 -2,-20 -6,-29 -3,-9 -9,-18 -15,-25l-2 -2 0 -88c0,-63 -25,-119 -67,-161 -41,-41 -97,-66 -160,-66l-17 0c-63,0 -120,25 -161,66 -41,42 -66,98 -66,161l0 88 -2 2c-6,7 -12,16 -15,25 -4,9 -5,19 -5,29 0,20 7,38 18,52 12,14 29,24 48,28l5 0 0 5c5,26 16,49 30,70 15,20 35,38 57,50l4 2 0 21 -65 42c-31,11 -64,29 -95,40 -24,8 -61,31 -88,72 -18,28 -31,66 -31,112l0 130c0,6 2,11 6,15 3,3 8,6 14,6l178 0c5,0 11,-3 14,-6 4,-4 6,-9 6,-15 0,-5 -2,-11 -6,-14 -3,-4 -9,-6 -14,-6l-33 0 0 -116c0,-5 -2,-10 -6,-14l0 0c-4,-4 -9,-6 -14,-6 -6,0 -11,2 -15,6 -4,4 -6,9 -6,14l0 116 -84 0 0 -110c0,-38 11,-67 24,-88 27,-42 66,-57 69,-58 24,-9 50,-20 74,-30 26,95 53,190 80,285l-7 1c-5,1 -9,4 -12,7 -2,4 -4,8 -4,13 0,6 2,11 6,15 4,3 9,6 14,6l441 0c6,0 11,-3 15,-6 3,-4 6,-9 6,-15l0 -130c0,-46 -14,-84 -32,-112 -27,-41 -63,-64 -88,-72l0 0z"/>
+                          </g>
+                         </g>
+                        </svg>
+					</div>
+					<div class="slider-to-start-text">
+						Индивидуальный <br>подход к каждому <br>клиенту
+					</div>
+				</a>
+			</div>
+			
+			<div class="slider-to-start-item">
+				<a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
+					<div class="ing-content">
+						<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="43.5264mm" height="35.292mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 799 648"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+
+ <g id="Слой_x0020_1">
+
+  <g id="_2224675026864">
+   <path class="fil0" d="M323 466c-4,0 -7,3 -7,7l0 83c0,4 3,7 7,7 4,0 7,-3 7,-7l0 -83c0,-4 -3,-7 -7,-7z"/>
+   <path class="fil0" d="M233 445l0 -55c0,-4 -3,-7 -7,-7 -3,0 -7,3 -7,7l0 55c0,4 4,7 7,7 4,0 7,-3 7,-7z"/>
+   <path class="fil0" d="M296 522l-97 0c-4,0 -7,3 -7,7 0,3 3,6 7,6l97 0c3,0 6,-3 6,-6 0,-4 -3,-7 -6,-7z"/>
+   <path class="fil0" d="M296 549l-97 0c-4,0 -7,3 -7,7 0,4 3,7 7,7l97 0c3,0 6,-3 6,-7 0,-4 -3,-7 -6,-7z"/>
+   <path class="fil0" d="M323 383l-55 0c-4,0 -7,3 -7,7l0 55c0,4 3,7 7,7 4,0 7,-3 7,-7l0 -7 41 0 0 7c0,4 3,7 7,7 4,0 7,-3 7,-7l0 -55c0,-4 -3,-7 -7,-7zm-7 42l-41 0 0 -28 41 0 0 28z"/>
+   <path class="fil0" d="M296 494l-97 0c-4,0 -7,3 -7,7 0,4 3,7 7,7l97 0c3,0 6,-3 6,-7 0,-4 -3,-7 -6,-7z"/>
+   <path class="fil0" d="M296 466l-97 0c-4,0 -7,3 -7,7 0,4 3,7 7,7l97 0c3,0 6,-3 6,-7 0,-4 -3,-7 -6,-7z"/>
+   <path class="fil0" d="M427 286c0,-15 -12,-28 -28,-28 -15,0 -27,13 -27,28 0,15 12,28 27,28 16,0 28,-13 28,-28zm-41 0c0,-7 6,-14 13,-14 8,0 14,7 14,14 0,8 -6,14 -14,14 -7,0 -13,-6 -13,-14z"/>
+   <path class="fil0" d="M434 549l-83 0c-4,0 -7,3 -7,7 0,4 3,7 7,7l83 0c4,0 7,-3 7,-7 0,-4 -3,-7 -7,-7z"/>
+   <path class="fil0" d="M351 535l57 0c4,0 7,-3 7,-6 0,-4 -3,-7 -7,-7l-57 0c-4,0 -7,3 -7,7 0,3 3,6 7,6z"/>
+   <path class="fil0" d="M510 369c-53,0 -97,44 -97,97 0,54 44,97 97,97 54,0 97,-43 97,-97 0,-53 -43,-97 -97,-97zm0 180c-46,0 -83,-37 -83,-83 0,-46 37,-83 83,-83 46,0 83,37 83,83 0,46 -37,83 -83,83z"/>
+   <path class="fil0" d="M469 202l131 0c2,0 4,1 6,3 1,1 2,3 2,5l0 173c0,2 -1,3 -1,4 -1,2 -2,3 -4,3 -1,1 -2,1 -3,1 -1,0 -2,0 -3,-1 -1,0 -1,-1 -2,-2l-196 -195 -195 195c-1,1 -2,2 -2,2 -1,1 -2,1 -3,1 -1,0 -1,0 -2,0 0,-1 -1,-1 -1,-1 -2,0 -3,-1 -4,-3 0,-1 -1,-2 -1,-4l0 -173c0,-1 0,-2 1,-3 0,-1 1,-2 1,-2 1,-1 2,-2 3,-2 1,0 2,-1 3,-1l75 0 0 -12 -6 0c-2,0 -4,-1 -6,-2 -1,-2 -2,-4 -2,-6l0 -27c0,-3 1,-4 2,-6 2,-1 4,-2 6,-2l55 0c2,0 4,1 6,2 1,2 2,3 2,6l0 27c0,2 -1,4 -2,6 -2,1 -4,2 -6,2l-6 0 0 12 13 0c2,0 4,1 6,3 1,1 2,3 2,5 0,2 -1,4 -2,5 -2,2 -4,3 -6,3l-21 0c-2,0 -4,-1 -5,-3 -1,-1 -2,-3 -2,-5l0 -28c0,-2 1,-4 2,-5 1,-1 3,-2 5,-2l7 0 0 -13 -40 0 0 13 6 0c2,0 4,1 5,2 1,1 2,3 2,5l0 28c0,2 -1,4 -2,5 -1,2 -3,3 -5,3l-76 0 0 147 188 -188c1,-1 2,-1 2,-2 1,0 2,0 3,0 1,0 2,0 3,0 1,1 2,1 3,2l188 188 0 -147 -124 0c-2,0 -4,-1 -6,-3 -1,-1 -2,-3 -2,-5 0,-2 1,-4 2,-5 2,-2 4,-3 6,-3zm76 227l-1 -1c0,0 -1,0 -2,0 0,0 -1,0 -2,0 -1,0 -1,0 -2,1 -1,0 -1,1 -1,2 -8,13 -15,26 -22,39l-11 20 -20 -24c0,-1 -1,-2 -2,-2 -1,-1 -1,-1 -2,-1 -1,0 -2,0 -2,0 -1,0 -1,0 -2,0l0 1c-1,0 -2,1 -2,1 0,1 -1,2 -1,2 0,1 0,2 0,3 0,0 0,1 0,2l1 0 24 29c0,1 0,1 1,1 0,1 1,1 1,1 0,1 1,1 1,1 1,0 1,0 1,0l1 1c0,0 2,0 3,0 2,-1 4,-2 5,-4l36 -64c0,0 1,-1 1,-2 0,-1 0,-2 0,-3 -1,0 -1,-1 -2,-2 0,-1 -1,-1 -1,-1zm0 -2l0 0c1,1 2,2 3,2 0,1 1,2 1,3 0,1 0,2 0,3 0,1 0,2 -1,3l-36 64c-1,3 -3,4 -5,4 -2,0 -4,0 -5,0l0 0c0,0 -1,0 -1,-1 -1,0 -1,0 -2,0 0,-1 -1,-1 -1,-2 -1,0 -1,0 -1,-1 -8,-9 -19,-21 -25,-30 0,0 -1,-1 -1,-2 0,-1 0,-2 1,-3 0,-1 0,-2 1,-3 0,0 1,-1 2,-2l0 0c1,0 2,-1 3,-1 0,0 1,0 2,0 1,1 2,1 3,2 1,0 2,1 2,2l19 22 9 -18c8,-13 15,-26 22,-39l0 0c1,-1 1,-2 2,-2 1,-1 2,-1 3,-1 1,-1 2,-1 3,-1 0,0 1,1 2,1zm-200 46c0,2 0,3 2,5 1,1 2,1 4,1l42 0c1,0 3,0 4,-1 1,-2 2,-3 2,-5 0,-2 -1,-3 -2,-4 -1,-1 -3,-2 -4,-2l-42 0c-2,0 -3,1 -4,2 -2,1 -2,2 -2,4zm1 5c-2,-1 -3,-3 -3,-5 0,-2 1,-4 3,-5 1,-2 3,-3 5,-3l42 0c2,0 4,1 5,3 1,1 2,3 2,5 0,2 -1,4 -2,5 -1,2 -3,3 -5,3l-42 0c-2,0 -4,-1 -5,-3zm13 -88l0 55c0,2 0,4 1,5 2,1 3,2 5,2 2,0 3,-1 4,-2 1,-1 2,-3 2,-5l0 -49 49 0c2,0 3,0 5,-2 1,-1 1,-2 1,-4 0,-2 0,-3 -1,-4 -2,-2 -3,-2 -5,-2l-55 0c-2,0 -3,0 -5,2 -1,1 -1,2 -1,4zm-2 55l0 -55c0,-2 1,-4 2,-5 2,-2 4,-3 6,-3l55 0c2,0 4,1 6,3 1,1 2,3 2,5 0,2 -1,4 -2,5 -2,2 -4,3 -6,3l-48 0 0 47c0,3 0,4 -2,6 -1,1 -3,2 -5,2 -2,0 -4,-1 -6,-2 -1,-2 -2,-3 -2,-6zm-6 62l45 0c2,0 3,-1 4,-2 2,-1 2,-2 2,-4 0,-2 0,-3 -2,-5 -1,-1 -2,-1 -4,-1l-45 0c-2,0 -3,0 -4,1 -2,2 -2,3 -2,5 0,2 0,3 2,4 1,1 2,2 4,2zm45 1l-45 0c-2,0 -4,0 -5,-2 -2,-1 -3,-3 -3,-5 0,-2 1,-4 3,-6 1,-1 3,-2 5,-2l45 0c2,0 4,1 5,2 2,2 3,4 3,6 0,2 -1,4 -3,5 -1,2 -3,2 -5,2zm114 -138c-26,0 -50,11 -68,28 -17,18 -28,42 -28,68 0,27 11,51 28,68 18,18 42,28 68,28 27,0 51,-10 68,-28 18,-17 28,-41 28,-68 0,-26 -10,-50 -28,-68 -17,-17 -41,-28 -68,-28zm-69 27c18,-18 42,-28 69,-28 27,0 52,10 69,28 18,18 29,42 29,69 0,27 -11,52 -29,69 -17,18 -42,29 -69,29 -27,0 -51,-11 -69,-29 -17,-17 -28,-42 -28,-69 0,-27 11,-51 28,-69zm69 153c-23,0 -44,-9 -59,-25 -15,-15 -25,-36 -25,-59 0,-23 10,-44 25,-59 15,-15 36,-25 59,-25 23,0 44,10 59,25 16,15 25,36 25,59 0,23 -9,44 -25,59 -15,16 -36,25 -59,25zm-58 -26c15,15 36,25 58,25 23,0 44,-10 58,-25 15,-14 25,-35 25,-58 0,-23 -10,-43 -25,-58 -14,-15 -35,-24 -58,-24 -22,0 -43,9 -58,24 -15,15 -24,35 -24,58 0,23 9,44 24,58zm-101 11l57 0c2,0 3,-1 4,-2 2,-1 2,-3 2,-4 0,-2 0,-4 -2,-5 -1,-1 -2,-2 -4,-2l-57 0c-2,0 -3,1 -4,2 -2,1 -2,3 -2,5 0,1 0,3 2,4 1,1 2,2 4,2zm57 1l-57 0c-2,0 -4,-1 -5,-2 -2,-1 -3,-3 -3,-5 0,-3 1,-5 3,-6 1,-1 3,-2 5,-2l57 0c2,0 4,1 5,2 2,1 3,3 3,6 0,2 -1,4 -3,5 -1,1 -3,2 -5,2zm26 14l-83 0c-2,0 -3,1 -4,2 -2,1 -2,2 -2,4 0,2 0,3 2,5 1,1 2,1 4,1l83 0c2,0 3,0 4,-1 2,-2 2,-3 2,-5 0,-2 0,-3 -2,-4 -1,-1 -2,-2 -4,-2zm-83 -1l83 0c2,0 4,0 5,2 2,1 3,3 3,5 0,2 -1,4 -3,6 -1,1 -3,2 -5,2l-83 0c-2,0 -4,-1 -5,-2 -2,-2 -3,-4 -3,-6 0,-2 1,-4 3,-5 1,-2 3,-2 5,-2zm75 -263c0,-7 -3,-14 -7,-19 -5,-5 -12,-8 -20,-8 -7,0 -14,3 -19,8 -5,5 -8,12 -8,19 0,8 3,14 8,19 5,5 12,8 19,8 8,0 15,-3 20,-8 4,-5 7,-11 7,-19zm-6 -20c5,5 8,12 8,20 0,8 -3,15 -8,20 -6,5 -13,9 -21,9 -7,0 -14,-4 -20,-9 -5,-5 -8,-12 -8,-20 0,-8 3,-15 8,-20 6,-5 13,-8 20,-8 8,0 15,3 21,8zm-35 20c0,-4 2,-7 4,-10 3,-3 6,-4 10,-4 4,0 8,1 11,4 2,3 4,6 4,10 0,4 -2,8 -4,10 -3,3 -7,5 -11,5 -4,0 -7,-2 -10,-5 -2,-2 -4,-6 -4,-10zm5 -9c-2,2 -4,6 -4,9 0,4 2,7 4,9 3,3 6,4 9,4 4,0 7,-1 10,-4 2,-2 4,-5 4,-9 0,-3 -2,-7 -4,-9 -3,-3 -6,-4 -10,-4 -3,0 -6,1 -9,4zm-94 190l-97 0c-2,0 -4,1 -5,2 -1,1 -2,2 -2,4 0,2 1,3 2,5 1,1 3,1 5,1l97 0c1,0 3,0 4,-1 1,-2 2,-3 2,-5 0,-2 -1,-3 -2,-4 -1,-1 -3,-2 -4,-2zm-97 -2l97 0c2,0 4,1 5,3 1,1 2,3 2,5 0,2 -1,4 -2,5 -1,2 -3,3 -5,3l-97 0c-2,0 -4,-1 -6,-3 -1,-1 -2,-3 -2,-5 0,-2 1,-4 2,-5 2,-2 4,-3 6,-3zm97 30l-97 0c-2,0 -4,0 -5,1 -1,2 -2,3 -2,5 0,2 1,3 2,4 1,1 3,2 5,2l97 0c1,0 3,-1 4,-2 1,-1 2,-2 2,-4 0,-2 -1,-3 -2,-5 -1,-1 -3,-1 -4,-1zm-97 -2l97 0c2,0 4,1 5,2 1,2 2,4 2,6 0,2 -1,4 -2,5 -1,2 -3,2 -5,2l-97 0c-2,0 -4,0 -6,-2 -1,-1 -2,-3 -2,-5 0,-2 1,-4 2,-6 2,-1 4,-2 6,-2zm124 -109l-55 0c-2,0 -3,0 -5,2 -1,1 -1,2 -1,4l0 55c0,2 0,4 1,5 2,1 3,2 5,2 2,0 3,-1 4,-2 1,-1 2,-3 2,-5l0 -7 43 0 0 7c0,2 1,4 2,5 1,1 3,2 4,2 2,0 4,-1 5,-2 1,-1 1,-3 1,-5l0 -55c0,-2 0,-3 -1,-4 -1,-2 -3,-2 -5,-2zm-55 -2l55 0c2,0 4,1 6,3 1,1 2,3 2,5l0 55c0,3 -1,4 -2,6 -2,1 -4,2 -6,2 -2,0 -4,-1 -5,-2 -1,-2 -2,-3 -2,-6l0 -6 -40 0 0 6c0,3 -1,4 -3,6 -1,1 -3,2 -5,2 -2,0 -4,-1 -6,-2 -1,-2 -2,-3 -2,-6l0 -55c0,-2 1,-4 2,-5 2,-2 4,-3 6,-3zm48 43l-42 0 0 -29 43 0 0 29 -1 0zm-40 -1l40 0 0 -26 -40 0 0 26zm20 126l-97 0c-2,0 -4,1 -5,2 -1,1 -2,2 -2,4 0,2 1,3 2,5 1,1 3,1 5,1l97 0c1,0 3,0 4,-1 1,-2 2,-3 2,-5 0,-2 -1,-3 -2,-4 -1,-1 -3,-2 -4,-2zm-97 -1l97 0c2,0 4,0 5,2 1,1 2,3 2,5 0,2 -1,4 -2,6 -1,1 -3,2 -5,2l-97 0c-2,0 -4,-1 -6,-2 -1,-2 -2,-4 -2,-6 0,-2 1,-4 2,-5 2,-2 4,-2 6,-2zm97 -27l-97 0c-2,0 -4,1 -5,2 -1,1 -2,3 -2,5 0,1 1,3 2,4 1,1 3,2 5,2l97 0c1,0 3,-1 4,-2 1,-1 2,-3 2,-4 0,-2 -1,-4 -2,-5 -1,-1 -3,-2 -4,-2zm-97 -1l97 0c2,0 4,1 5,2 1,1 2,3 2,6 0,2 -1,4 -2,5 -1,1 -3,2 -5,2l-97 0c-2,0 -4,-1 -6,-2 -1,-1 -2,-3 -2,-5 0,-3 1,-5 2,-6 2,-1 4,-2 6,-2zm34 -76l0 -55c0,-2 -1,-3 -2,-4 -1,-2 -3,-2 -5,-2 -1,0 -3,0 -4,2 -1,1 -2,2 -2,4l0 55c0,2 1,4 2,5 1,1 3,2 4,2 2,0 4,-1 5,-2 1,-1 2,-3 2,-5zm1 -55l0 55c0,3 -1,4 -2,6 -2,1 -4,2 -6,2 -2,0 -4,-1 -5,-2 -1,-2 -2,-3 -2,-6l0 -55c0,-2 1,-4 2,-5 1,-2 3,-3 5,-3 2,0 4,1 6,3 1,1 2,3 2,5zm89 77c-1,0 -3,1 -4,2 -1,1 -2,2 -2,4l0 83c0,2 1,3 2,5 1,1 3,1 4,1 2,0 4,0 5,-1 1,-2 1,-3 1,-5l0 -83c0,-2 0,-3 -1,-4 -1,-1 -3,-2 -5,-2zm-5 1c1,-2 3,-3 5,-3 2,0 4,1 6,3 1,1 2,3 2,5l0 83c0,2 -1,4 -2,6 -2,1 -4,2 -6,2 -2,0 -4,-1 -5,-2 -1,-2 -2,-4 -2,-6l0 -83c0,-2 1,-4 2,-5z"/>
+   <path class="fil0" d="M351 508l45 0c4,0 7,-3 7,-7 0,-4 -3,-7 -7,-7l-45 0c-4,0 -7,3 -7,7 0,4 3,7 7,7z"/>
+   <path class="fil0" d="M358 390l0 55c0,4 3,7 7,7 4,0 7,-3 7,-7l0 -48 48 0c4,0 7,-3 7,-7 0,-4 -3,-7 -7,-7l-55 0c-4,0 -7,3 -7,7z"/>
+   <path class="fil0" d="M344 473c0,4 3,7 7,7l42 0c3,0 6,-3 6,-7 0,-4 -3,-7 -6,-7l-42 0c-4,0 -7,3 -7,7z"/>
+   <path class="fil0" d="M545 428l0 0c-2,-1 -3,-1 -5,-1 -2,1 -3,2 -4,3 -11,20 -22,39 -32,58l-19 -22c-2,-2 -3,-3 -5,-4 -1,0 -3,0 -4,1l-1 0c-1,1 -2,3 -3,4 0,2 0,4 1,5l0 0 24 30c1,1 2,1 3,2 0,1 1,1 2,1l1 0c0,0 6,1 9,-3l35 -64c1,-2 2,-4 1,-6 0,-2 -1,-3 -3,-4z"/>
+   <path class="fil0" d="M399 65l-237 0c-6,0 -11,5 -11,11 0,6 5,10 11,10l237 0 238 0c6,0 11,-4 11,-10 0,-6 -5,-11 -11,-11l-238 0zm0 561l-194 0 0 0 -140 0c-24,0 -43,-19 -43,-43 0,-24 19,-43 43,-43 24,0 43,19 43,43 0,6 5,11 11,11 6,0 11,-5 11,-11l0 -518c0,-36 -30,-65 -65,-65 -36,0 -65,29 -65,65l0 518c0,36 29,65 65,65l97 0 43 0 194 0 195 0 43 0 97 0c36,0 65,-29 65,-65l0 -518c0,-36 -29,-65 -65,-65 -36,0 -65,29 -65,65l0 518c0,6 5,11 11,11 6,0 11,-5 11,-11 0,-24 19,-43 43,-43 24,0 43,19 43,43 0,24 -19,43 -43,43l-140 0 -1 0 -194 0zm378 -561c0,-24 -19,-43 -43,-43 -24,0 -43,19 -43,43l0 470c11,-10 27,-17 43,-17 17,0 32,7 43,17l0 -470zm-755 0c0,-24 19,-43 43,-43 24,0 43,19 43,43l0 470c-12,-10 -27,-17 -43,-17 -17,0 -32,7 -43,17l0 -470z"/>
+  </g>
+ </g>
+</svg>
+					</div>
+					<div class="slider-to-start-text">
+						100% проектов <br>проходят <br>согласование
+					</div>
+				</a>
+			</div>
+			
+			<div class="slider-to-start-item">
+				<a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
+					<div class="ing-content">
+						<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="63.0572mm" height="35.292mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 1025 574"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+
+ <g id="Слой_x0020_1">
+  <g id="_2224665032848">
+   <g>
+    <path class="fil0" d="M472 375c-6,0 -10,5 -10,10l0 169 -70 0c-5,0 -10,4 -10,10 0,5 5,10 10,10l80 0c5,0 10,-5 10,-10l0 -179c0,-5 -5,-10 -10,-10z"/>
+    <path class="fil0" d="M442 464l0 -79c0,-5 -4,-10 -10,-10l-59 0c-6,0 -10,5 -10,10l0 79c0,6 4,10 10,10l59 0c6,0 10,-4 10,-10zm-20 -9l-40 0 0 -60 40 0 0 60z"/>
+    <path class="fil0" d="M353 534l-100 0c-5,0 -10,4 -10,10l0 10 -99 0 0 -139c0,-6 -4,-10 -10,-10 -5,0 -10,4 -10,10l0 149c0,5 5,10 10,10l119 0c6,0 10,-5 10,-10l0 -10 80 0 0 10c0,5 4,10 10,10 5,0 10,-5 10,-10l0 -20c0,-6 -5,-10 -10,-10z"/>
+    <path class="fil0" d="M333 514c5,0 10,-4 10,-10l0 -119c0,-5 -5,-10 -10,-10l-60 0c-5,0 -10,5 -10,10l0 119c0,6 5,10 10,10 6,0 10,-4 10,-10l0 -109 40 0 0 40 -10 0c-6,0 -10,4 -10,10 0,5 4,10 10,10l10 0 0 49c0,6 4,10 10,10z"/>
+    <path class="fil0" d="M174 375c-6,0 -10,5 -10,10l0 79c0,6 4,10 10,10l59 0c6,0 10,-4 10,-10l0 -79c0,-5 -4,-10 -10,-10l-59 0zm50 80l-40 0 0 -60 40 0 0 60z"/>
+   </g>
+   <path class="fil0" d="M472 375c-6,0 -10,5 -10,10l0 169 -70 0c-5,0 -10,4 -10,10 0,5 5,10 10,10l80 0c5,0 10,-5 10,-10l0 -179c0,-5 -5,-10 -10,-10z"/>
+   <path class="fil0" d="M501 564c0,5 4,10 10,10l161 0 0 -20 -161 0c-6,0 -10,4 -10,10z"/>
+   <path class="fil0" d="M472 261c-6,0 -10,4 -10,10l0 161 20 0 0 -161c0,-6 -5,-10 -10,-10z"/>
+   <path class="fil0" d="M472 195c-6,0 -10,5 -10,10l0 161 20 0 0 -161c0,-5 -5,-10 -10,-10z"/>
+   <path class="fil0" d="M134 261c-5,0 -10,4 -10,10l0 161 20 0 0 -161c0,-6 -4,-10 -10,-10z"/>
+   <path class="fil0" d="M134 151c-5,0 -10,4 -10,10l0 161 20 0 0 -161c0,-6 -4,-10 -10,-10z"/>
+   <g>
+    <path class="fil0" d="M127 167c4,4 10,5 14,1l119 -109 -14 -15 -119 109c-4,4 -4,10 0,14z"/>
+    <path class="fil0" d="M306 3c-4,-4 -10,-4 -14,0l-119 108 13 15 119 -109c4,-3 4,-10 1,-14z"/>
+   </g>
+   <g>
+    <path class="fil0" d="M470 167c-4,4 -10,5 -14,1l-119 -109 14 -15 118 109c4,4 5,10 1,14z"/>
+    <path class="fil0" d="M291 3c4,-4 10,-4 14,0l119 108 -14 15 -118 -109c-4,-3 -5,-10 -1,-14z"/>
+   </g>
+   <g>
+    <path class="fil0" d="M453 161c0,5 4,9 10,9l161 0 0 -19 -161 0c-6,0 -10,4 -10,10z"/>
+    <path class="fil0" d="M807 161c0,5 -5,9 -10,9l-161 0 0 -19 161 0c5,0 10,4 10,10z"/>
+    <path class="fil0" d="M752 161c0,5 -5,9 -10,9l-161 0 0 -19 161 0c5,0 10,4 10,10z"/>
+   </g>
+   <g>
+    <path class="fil0" d="M348 10c0,5 5,10 10,10l161 0 0 -20 -161 0c-5,0 -10,4 -10,10z"/>
+    <path class="fil0" d="M702 10c0,5 -4,10 -9,10l-162 0 0 -20 162 0c5,0 9,4 9,10z"/>
+    <path class="fil0" d="M647 10c0,5 -4,10 -10,10l-161 0 0 -20 161 0c6,0 10,4 10,10z"/>
+   </g>
+   <g>
+    <path class="fil0" d="M864 167c-4,4 -10,5 -14,1l-119 -109 14 -15 118 109c5,4 5,10 1,14z"/>
+    <path class="fil0" d="M685 3c4,-4 10,-4 14,0l119 108 -13 15 -119 -109c-4,-3 -5,-10 -1,-14z"/>
+   </g>
+   <path class="fil1" d="M303 124c19,0 36,8 48,20 12,13 20,30 20,48 0,19 -8,36 -20,48 -12,13 -29,20 -48,20 -19,0 -36,-7 -48,-20 -12,-12 -20,-29 -20,-48 0,-18 8,-35 20,-48 12,-12 29,-20 48,-20zm35 34c-9,-9 -21,-15 -35,-15 -14,0 -26,6 -35,15 -9,8 -14,21 -14,34 0,14 5,26 14,35 9,9 21,14 35,14 14,0 26,-5 35,-14 9,-9 14,-21 14,-35 0,-13 -5,-26 -14,-34z"/>
+   <path class="fil0" d="M775 403c-6,0 -10,4 -10,10l0 161 20 0 0 -161c0,-6 -5,-10 -10,-10z"/>
+   <path class="fil1" d="M775 225c34,0 65,14 87,36 22,23 36,54 36,88 0,34 -14,64 -36,87 -15,15 -34,26 -56,32l0 -2c21,-5 40,-16 55,-31 22,-22 36,-53 36,-86 0,-34 -14,-65 -36,-87 -22,-22 -53,-35 -86,-35 -34,0 -65,13 -87,35 -21,22 -35,52 -35,85l-2 0c1,-33 14,-64 36,-86 23,-22 54,-36 88,-36z"/>
+   <path class="fil1" d="M775 216c17,0 35,4 50,10 16,7 31,17 43,29 12,12 22,27 29,43 6,16 10,33 10,51 0,17 -4,34 -10,50 -7,16 -17,31 -29,43 -8,8 -17,15 -27,21 -10,6 -21,10 -32,13 -5,2 -10,-1 -11,-6 0,-1 0,-1 0,-2l0 0 0 -2c0,-4 3,-7 7,-8 9,-3 18,-7 26,-11 9,-5 17,-11 24,-18 10,-11 19,-23 24,-37 6,-13 9,-28 9,-43 0,-16 -3,-30 -9,-44 -5,-14 -14,-26 -24,-37 -11,-10 -23,-18 -37,-24 -13,-6 -28,-9 -43,-9 -16,0 -30,3 -44,9 -13,6 -26,14 -36,24 -11,11 -19,23 -25,37 -5,13 -8,27 -9,42 0,5 -3,9 -8,9l-1 0c-5,1 -9,-3 -9,-8 0,0 0,-1 0,-1 0,-18 3,-34 10,-50 6,-15 16,-30 28,-42 12,-12 27,-22 43,-29 16,-6 33,-10 51,-10z"/>
+   <path class="fil0" d="M662 454c-6,0 -10,4 -10,9l0 111 20 0 0 -111c0,-5 -5,-9 -10,-9z"/>
+   <path class="fil1" d="M662 383c17,0 33,7 45,18 11,12 18,28 18,45 0,18 -7,33 -18,45 -4,4 -9,7 -13,10l0 -2c4,-2 8,-5 12,-9 11,-11 18,-27 18,-44 0,-17 -7,-32 -18,-44 -12,-11 -27,-18 -44,-18 -17,0 -33,7 -44,18 -11,12 -18,27 -18,44 0,17 7,33 18,44 4,4 8,7 12,9l0 2c-5,-3 -9,-6 -13,-10 -11,-12 -18,-27 -18,-45 0,-17 7,-33 18,-45 12,-11 27,-18 45,-18z"/>
+   <path class="fil1" d="M662 374c10,0 19,2 27,6 9,3 17,9 24,15l0 0c6,7 12,15 15,24 4,8 6,17 6,27 0,10 -2,19 -6,28 -3,8 -9,16 -15,23l0 0 0 0c-2,2 -5,4 -7,6 -3,2 -5,4 -8,5 -4,3 -10,1 -12,-3 -1,-1 -1,-3 -1,-4l0 0 0 -2c0,-3 2,-6 5,-7 1,-2 3,-3 5,-4l0 0 0 0c1,-1 3,-3 4,-4 5,-5 9,-11 12,-18 3,-6 4,-13 4,-20 0,-7 -1,-14 -4,-20 -3,-7 -7,-12 -12,-17 -4,-5 -10,-9 -17,-12 -6,-3 -13,-4 -20,-4 -7,0 -14,1 -20,4 -7,3 -13,7 -18,12 -5,5 -9,10 -11,17 -3,6 -4,13 -4,20 0,7 1,14 4,20 2,7 6,13 11,18l1 0c1,2 3,3 4,4l0 0c2,2 4,3 6,4 2,1 4,4 4,7l0 0 0 2c0,5 -4,9 -9,9 -2,0 -3,-1 -5,-2 -2,-1 -5,-3 -7,-5 -3,-2 -5,-4 -7,-6l0 0c-7,-7 -12,-15 -16,-23 -3,-9 -5,-18 -5,-28 0,-10 2,-19 5,-27 4,-9 9,-17 16,-24l0 0c7,-6 15,-12 23,-15 9,-4 18,-6 28,-6z"/>
+   <path class="fil1" d="M128 196c3,-1 4,-3 4,-5 1,-3 -2,-6 -6,-5 -3,1 -6,1 -9,2 -7,1 -5,10 1,10 4,-1 7,-2 10,-2zm-39 9c6,-2 5,-11 -1,-10 -1,0 -1,0 -1,0 -3,1 -7,2 -10,3 -6,1 -4,10 2,9 0,0 1,0 1,0 3,-1 6,-2 9,-2zm-37 11c5,-2 3,-10 -3,-9 -1,0 -1,0 -1,0 -3,1 -6,2 -10,4 -4,2 -4,7 0,9 2,1 3,1 4,0 3,-1 6,-2 10,-4zm-35 18c5,-4 0,-12 -6,-9 -3,2 -6,5 -8,8 -4,4 0,10 5,8 1,0 2,-1 2,-1 2,-2 5,-4 7,-6zm-8 27c-2,-2 -5,-3 -7,-1 -2,1 -3,5 -1,7 3,3 5,5 8,8 4,3 10,-2 8,-7 -1,0 -1,-1 -2,-1 -2,-2 -4,-4 -6,-6zm31 20c-5,-2 -9,4 -5,8 1,1 1,1 1,1 4,2 7,3 10,4 5,2 9,-5 5,-9 -1,0 -1,0 -2,0 -3,-1 -6,-3 -9,-4zm38 13c-6,-2 -9,6 -4,9 0,0 1,1 1,1 3,1 7,1 10,2 2,1 4,0 5,-2 2,-3 1,-6 -3,-7 -3,-1 -6,-2 -9,-3zm39 10c-6,-2 -9,5 -4,9 0,0 1,0 1,0 4,1 7,2 10,3 6,1 9,-8 3,-10 0,0 0,0 -1,0 -3,-1 -6,-2 -9,-2zm39 7c-1,0 -2,0 -4,1 -4,2 -3,8 2,9l10 2c7,1 8,-9 2,-10l-10 -2zm39 6c-5,0 -8,7 -2,10 0,0 1,0 1,0 3,1 7,1 10,2 6,0 8,-7 3,-10 -1,0 -1,0 -2,0 -3,-1 -6,-1 -10,-2zm40 5c-6,0 -7,10 -1,10l10 2c6,0 8,-9 2,-10 0,0 0,0 -1,0l-10 -2zm40 5c-6,-1 -8,7 -2,9 1,0 1,1 1,1l10 1c6,0 8,-8 2,-10 0,0 0,0 -1,-1l-10 0zm40 3c-1,0 -2,0 -2,0 -5,3 -4,9 2,10l10 1c6,0 7,-10 0,-10l-10 -1zm40 3c-6,-1 -7,9 0,10 3,0 6,0 10,0 6,0 7,-9 1,-10 -4,0 -7,0 -11,0zm40 1c-1,0 -2,1 -3,2 -3,3 -2,8 3,9l10 0c6,0 8,-8 2,-10 -1,0 -1,0 -1,0l-11 -1zm41 2c-7,0 -7,10 -1,10 4,0 7,0 10,0 7,0 7,-10 1,-10 -4,0 -7,0 -10,0zm40 1c-7,0 -7,9 -1,10 4,0 7,0 11,0 3,0 6,-4 4,-7 0,-2 -2,-3 -4,-3l-10 0zm40 0c-6,0 -7,8 -1,10 0,0 1,0 1,0l10 0c6,0 7,-9 1,-10 0,0 -1,0 -1,0l-10 0zm40 -1c-5,0 -7,8 -2,10 1,0 2,0 2,0l10 0c7,0 7,-10 0,-10l-10 0zm40 -1c-6,1 -6,10 0,11 3,0 9,0 11,-1 6,0 6,-10 0,-10 -4,0 -7,0 -11,0zm41 -1c-6,0 -7,8 -1,10 0,0 0,0 1,0 3,0 7,0 10,0 6,-1 7,-9 1,-10 -1,-1 -1,-1 -1,-1 -4,1 -7,1 -10,1zm40 -2c-6,0 -7,8 -1,10 0,0 1,0 1,0l10 -1c7,0 6,-10 0,-10l-10 1zm40 -3c-6,0 -7,8 -1,10 0,0 1,0 2,0l10 -1c6,0 6,-10 -1,-10l0 0 -10 1zm40 -4c-6,1 -7,9 -1,10 1,0 1,1 2,0l10 -1c5,0 6,-8 0,-9 0,-1 -1,-1 -1,-1 -4,1 -7,1 -10,1zm40 -4c-6,1 -6,10 0,10 0,0 1,0 1,0 3,0 7,-1 10,-1 6,-1 5,-11 -1,-10 -4,0 -7,1 -10,1zm39 -5c-5,0 -6,8 0,10 1,0 1,0 2,0 3,-1 7,-1 10,-2 5,-1 6,-8 0,-10 -1,0 -1,0 -2,0l-10 2zm40 -7c-2,0 -3,2 -4,3 -1,4 2,8 6,7 3,-1 6,-1 10,-2 1,0 3,-1 3,-3 2,-4 -1,-7 -5,-7 -3,1 -7,2 -10,2zm39 -8c-5,1 -5,9 1,10 0,0 1,0 1,0 4,-1 7,-2 10,-3 6,-1 5,-9 -1,-10 0,0 -1,1 -1,1 -3,0 -7,1 -10,2zm39 -10c-7,2 -4,11 2,9 4,-1 7,-2 10,-3 5,-2 5,-9 -1,-10 -1,0 -1,0 -2,0 -3,1 -6,3 -9,4zm36 -15c-5,3 -2,10 3,9 1,0 1,0 2,0 3,-2 6,-3 9,-5 4,-3 2,-10 -3,-10 -1,1 -2,1 -3,1 -2,2 -5,4 -8,5zm25 -24c0,3 1,5 3,6 3,1 7,-1 7,-5 0,-4 0,-8 -2,-12 -3,-5 -11,-3 -10,4 1,0 1,0 1,0 1,2 1,5 1,7zm-21 -24c5,2 9,-4 6,-8 -1,-1 -1,-1 -2,-1 -3,-2 -6,-3 -9,-5 -6,-2 -10,6 -4,9 3,2 6,3 9,5zm-37 -15c5,1 9,-5 5,-9 0,-1 -1,-1 -1,-1 -4,-1 -7,-2 -10,-3 -5,-1 -8,3 -6,7 1,1 2,2 3,3 3,0 6,1 9,3zm-38 -11c6,1 9,-7 3,-10 0,0 0,0 -1,0 -3,-1 -6,-2 -9,-2 -6,-2 -9,6 -4,9 0,0 1,0 1,0 4,1 7,2 10,3zm-39 -9c6,1 8,-7 3,-9 0,0 -1,0 -1,0 -4,-1 -7,-2 -10,-2 -6,-1 -9,7 -3,9 1,0 1,1 1,1 3,0 7,1 10,1z"/>
+   <g>
+    <path class="fil0" d="M847 545l0 9 -12 0 0 20 22 0c5,0 10,-5 10,-10l0 -19 -20 0z"/>
+    <path class="fil0" d="M857 494c-6,0 -10,5 -10,10l0 42 20 0 0 -42c0,-5 -5,-10 -10,-10z"/>
+    <path class="fil0" d="M854 554l-37 0c-5,0 -10,4 -10,10 0,5 5,10 10,10l37 0 0 -20z"/>
+   </g>
+   <path class="fil0" d="M857 151c-6,0 -10,4 -10,10l0 9 0 2 0 0 0 8 0 1 0 0 0 2 0 7 0 2 0 0 0 1 0 8 0 0 0 2 0 10c0,5 4,9 10,9 5,0 10,-4 10,-9l0 -10 0 -2 0 0 0 -8 0 -1 0 0 0 -2 0 -7 0 -2 0 0 0 -1 0 -8 0 0 0 -2 0 -9c0,-6 -5,-10 -10,-10z"/>
+   <path class="fil0" d="M969 290l0 1 0 0 -2 5 0 0 0 0 -1 2 -1 3 -1 1 0 0 0 1 -2 5 0 0 0 1 -3 5c-1,3 1,7 4,8 3,1 6,0 8,-3l2 -6 0 -1 0 0 2 -5 0 0 1 0 0 -1 1 -4 1 -1 0 0 0 -1 2 -4 0 0 1 -2 2 -5 0 0c0,0 0,0 0,0l0 0 0 0 0 0 0 -1c0,0 0,0 0,0l0 0 0 0 0 0c0,-1 0,-1 0,-1l0 0 0 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1 0 0 0c0,-1 0,-1 -1,-1l0 0 0 0 0 0c0,0 0,0 0,0l0 -1 0 0 0 0 0 0c0,0 -1,0 -1,0l0 0 -5 -2 -1 0 0 0 -5 -2 -1 -1 0 0 -1 0 -3 -2 -2 0 0 0 0 0 -5 -2 0 0 -1 -1 -5 -2c-4,-1 -7,1 -8,4 -2,3 0,6 3,8l5 2 2 0 0 0 4 2 1 0 0 0 1 1 4 1 1 1 0 0 0 0 5 2 0 0 1 0z"/>
+   <path class="fil0" d="M52 291l0 0 0 0 -2 -5 0 -1 0 0 -1 -1 -1 -4 -1 -1 0 0 0 0 -2 -5 0 0 0 -1 -3 -6c-1,-3 1,-6 4,-8 3,-1 7,1 8,4l2 5 0 1 0 0 2 5 1 1 0 0 0 1 2 3 0 2 0 0 0 0 2 5 0 0 1 1 2 6 0 0c0,0 0,0 0,0l0 0 0 0 0 0 0 0c0,0 0,1 0,1l0 0 0 0 0 0c0,0 0,1 0,1l0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 0c0,0 0,1 0,1l0 0 -1 0 0 0c0,0 0,0 0,0l0 0 0 0 0 0 0 0c0,0 -1,0 -1,0l0 0 -5 3 -1 0 0 0 -5 2 0 0 -1 0 -1 1 -3 1 -1 1 -1 0 0 0 -5 2 0 0 -1 0 -5 2c-3,2 -7,0 -8,-3 -2,-3 0,-7 3,-8l5 -2 2 -1 0 0 4 -2 1 0 0 0 1 0 4 -2 1 0 0 0 0 0 5 -2 0 0 1 -1z"/>
+  </g>
+ </g>
+</svg>
+					</div>
+					<div class="slider-to-start-text">
+						3D визуализация <br>проекта <br>
+					</div>
+				</a>
+			</div>
+		</div>
+
+	</div>
 </div>
 
 
 <!--Parallax-->
 
 <div class="parallax-window" data-parallax="scroll" data-image-src="/img/temp/parallax-bg.png">
-    <div class="parallax-window-container">
-        <div class="shadow"></div>
-        <div class="parallax-description centralize">
-            <div class="txt">
-                <a class="title" href="#" title="Стройте с нами">Стройте с нами</a>
-            </div>
-        </div>
-    </div>
+	<div class="parallax-window-container">
+		<div class="shadow"></div>
+		<div class="parallax-description centralize">
+			<div class="txt">
+				<a class="title" href="#" title="Стройте с нами">Стройте с нами</a>
+			</div>
+		</div>
+	</div>
 </div>
 <!--/Parallax-->
 
 
 <div class="centralize">
 
-<!--<?= $this->render('../layouts/_popular', []) ?>-->
-<!-do later and _delete html below-->
+	<!--<?= $this->render('../layouts/_popular', []) ?>-->
+	<!-do later and _delete html below-->
 
-<div class="main-block-interior clearfix">
-            <a class="interior-block" href="/catalog/odnosemeynyy_s_jiloy_mansardoy/lara_3-foto.html"><img src="/images/7a1/d33/bb59447ecc033cc00129837e7e-327x206.jpg" alt=""></a>
-</div>
-
-
+	<div class="main-block-interior clearfix">
+		<a class="interior-block" href="/catalog/odnosemeynyy_s_jiloy_mansardoy/lara_3-foto.html"><img src="/images/7a1/d33/bb59447ecc033cc00129837e7e-327x206.jpg" alt=""></a>
+	</div>
 
 
-    <?= $this->render('../layouts/_favorite', []) ?>
+	<?= $this->render('../layouts/_favorite', []) ?>
 
-    <div class="common-block clearfix">
-        <div class="left-block">
-            <!--<?= $this->render('../layouts/_newsAnounce', []) ?>
-            <?= $this->render('../layouts/_right-menu', []) ?>-->
+	<div class="common-block clearfix">
+		<div class="left-block">
+			<!--<?= $this->render('../layouts/_newsAnounce', []) ?>
+			<?= $this->render('../layouts/_right-menu', []) ?>-->
 
-             <!--место для баннеров-->
-            <div class="banners-content clearfix">
-            <div>Место для баннера 1</div>
-            <div>Место для баннера 2</div>
-            </div>
+			<!--место для баннеров-->
+			<div class="banners-content clearfix">
+				<div>Место для баннера 1</div>
+				<div>Место для баннера 2</div>
+			</div>
 
-        </div>
-        <div class="main-text-block ovhidden">
-        <?= $this->render('../layouts/_newsAnounce', []) ?>
-            <?= $mainArticle->full_text ?>
-        </div>
-    </div>
+		</div>
+		<div class="main-text-block ovhidden">
+			<?= $this->render('../layouts/_newsAnounce', []) ?>
+			<?= $mainArticle->full_text ?>
+		</div>
+	</div>
 
 
+	<!--<?= $this->render('../layouts/_our-projects', []) ?>
 
-    <!--<?= $this->render('../layouts/_our-projects', []) ?>
+	<?= $this->render('../layouts/_we-suggest', []) ?>-->
 
-    <?= $this->render('../layouts/_we-suggest', []) ?>-->
-
-    <div>
-        <?= $this->render('../layouts/_parthners', []) ?>
-    </div>
+	<div>
+		<?= $this->render('../layouts/_parthners', []) ?>
+	</div>
 
 </div>
 
