@@ -1,3 +1,4 @@
+
 .page_i {
     padding-top: 80px;
 }
@@ -20,7 +21,7 @@
         width: 160px;
         height: 63px;
 
-        img{
+        img {
             width: 100%;
         }
     }
@@ -30,7 +31,7 @@
         margin-top: 10px;
         margin-right: 10px;
         padding-left: 30px;
-        border-left:1px solid #fff;
+        border-left: 1px solid #fff;
         margin-left: 30px;
         font-size: 1.8em;
 
@@ -179,9 +180,9 @@
     text-align: center;
     margin-bottom: 20px;
 
-
     .ing-content {
-        margin-bottom: 10px;
+        margin-bottom: 42px;
+        fill:#fff;
 
         img {
             //width: 75%;
@@ -191,14 +192,10 @@
         }
     }
     .slick-list {
-       // margin: 0 -1px;
+        // margin: 0 -1px;
     }
     .slider-to-start-text {
         font-size: 20px;
-        bottom: 25px;
-        position: absolute;
-        left: 0;
-        right: 0;
         text-align: center;
     }
 }
@@ -209,7 +206,7 @@
 
 .slider-to-start-link {
     color: #fff;
-    padding: 10px 10px 85px 10px;
+    padding: 40px 10px 30px;
     margin: 0 1px;
     background-color: #606060;
     text-decoration: none;
@@ -227,32 +224,33 @@
     max-width: 1920px;
     margin: auto;
 }
+
 .slick-dots {
     margin: auto;
     max-width: $page_max;
     min-width: $page_min;
     margin-top: -10px;
 
-     li {
-         width: 19%;
-         margin: 0 1.25% 0 0;
+    li {
+        width: 19%;
+        margin: 0 1.25% 0 0;
 
-         &:last-child {
-             margin-right: 0;
-         }
+        &:last-child {
+            margin-right: 0;
+        }
 
-         button {
-             border-radius: 0;
-             border:none;
-             background-color: $clr_title;
-             width: 100%;
+        button {
+            border-radius: 0;
+            border: none;
+            background-color: $clr_title;
+            width: 100%;
 
-             &:hover,
-             &:focus{
-                 background-color: $bg_green;
-             }
-         }
-     }
+            &:hover,
+            &:focus {
+                background-color: $bg_green;
+            }
+        }
+    }
     .slick-active button {
         background-color: $bg_green;
         height: 15px;
@@ -279,14 +277,14 @@
     position: absolute;
     //bottom: 15px;
     bottom: 200px;
-   // @include bg(0, 0, "slider-bg.png", repeat);
+    // @include bg(0, 0, "slider-bg.png", repeat);
     color: #fff;
-  //  padding: 11px 20px;
+    //  padding: 11px 20px;
     box-sizing: border-box;
     width: 100%;
     //height: 85px;
 
-    >div.centralize {
+    > div.centralize {
         @include bg(0, 0, "slider-bg.png", repeat);
         padding: 11px 20px;
     }
@@ -316,7 +314,7 @@
         -moz-osx-font-smoothing: grayscale;
         transform: translate(0, 0);
         color: #ccc;
-        top:50%;
+        top: 50%;
         margin-top: -25px;
 
         &:before {
@@ -346,7 +344,6 @@
     }
 }
 
-
 .parallax-window {
     min-height: 500px;
     background: transparent;
@@ -363,13 +360,13 @@
         right: 0;
         z-index: 2;
         cursor: pointer;
-        background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.25) 60%, rgba(0,0,0,0.65) 100%);
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(60%,rgba(0,0,0,0.25)), color-stop(100%,rgba(0,0,0,0.65)));
-        background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 60%,rgba(0,0,0,0.65) 100%);
-        background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 60%,rgba(0,0,0,0.65) 100%);
-        background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 60%,rgba(0,0,0,0.65) 100%);
-        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 60%,rgba(0,0,0,0.65) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+        background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 60%, rgba(0, 0, 0, 0.65) 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(60%, rgba(0, 0, 0, 0.25)), color-stop(100%, rgba(0, 0, 0, 0.65)));
+        background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 60%, rgba(0, 0, 0, 0.65) 100%);
+        background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 60%, rgba(0, 0, 0, 0.65) 100%);
+        background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 60%, rgba(0, 0, 0, 0.65) 100%);
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 60%, rgba(0, 0, 0, 0.65) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
     }
     .parallax-description {
         height: 100%;
@@ -379,7 +376,7 @@
         right: 0;
         width: 100%;
 
-        .txt{
+        .txt {
             position: absolute;
             bottom: 20px;
             color: #FFF;
@@ -449,7 +446,7 @@
         float: left;
         font-family: $ptr;
         font-size: 1.8em;
-       // font-weight: 700;
+        // font-weight: 700;
         width: 160px;
         line-height: 36px;
     }
@@ -571,17 +568,19 @@
 .layout-sidebar {
     margin-top: 20px;
 }
+
 .sidebar-wrap {
     float: left;
     width: 24%;
     margin-right: 20px;
 }
+
 .sidebar {
     background-color: #fff;
     padding: 20px 0;
     box-sizing: border-box;
 
-    +.sidebar {
+    + .sidebar {
         margin-top: 20px;
     }
 
@@ -602,8 +601,6 @@
             padding: 10px 0;
             margin: 0 20px;
             border-bottom: 1px solid #ccc;
-
-
 
         }
         &:hover {
@@ -633,16 +630,17 @@
         }
     }
 }
+
 .feedback-form {
-background: #fff;
-margin-bottom: 20px;
-padding: 0 20px;
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 0 20px;
 
     .form-title {
         font-size: 30px;
         line-height: 36px;
 
-         span {
+        span {
             display: block;
             color: $bg_pink;
         }
@@ -664,14 +662,14 @@ padding: 0 20px;
             margin-right: 55px;
         }
         input {
-             font-size: 14px;
-             color: #898989;
-             border: 1px solid #c3c3c3;
-             border-right: none;
-             width: 100%;
-             height: 21px;
-             padding: 4px 10px;
-         }
+            font-size: 14px;
+            color: #898989;
+            border: 1px solid #c3c3c3;
+            border-right: none;
+            width: 100%;
+            height: 21px;
+            padding: 4px 10px;
+        }
     }
 
 }
@@ -700,7 +698,8 @@ padding: 0 20px;
         text-align: left;
     }
 }
-.common-block{
+
+.common-block {
     margin: 20px 0;
 }
 
@@ -712,10 +711,12 @@ padding: 0 20px;
         margin: 0 1% 20px;
         float: left;
         box-sizing: border-box;
+        height: 276px;
 
         a {
             text-decoration: none;
             width: 100%;
+            height: 100%;
         }
     }
 
@@ -744,7 +745,6 @@ padding: 0 20px;
 
     ._content {
         margin: 0 10px 20px;
-
         box-sizing: border-box;
 
         a {
@@ -766,10 +766,10 @@ padding: 0 20px;
         text-align: center;
         margin: 2px 0;
     }
-.info-block {
-    //height: 50px;
-    background-color: #fff;
-}
+    .info-block {
+        //height: 50px;
+        background-color: #fff;
+    }
     ._title-project {
         color: #fff;
         font-size: 16px;
@@ -803,9 +803,6 @@ padding: 0 20px;
             min-height: 70px; /*********************/
         }
     }
-    img {
-        width: 100%;
-    }
 
     &.small {
         ._more-button {
@@ -838,9 +835,48 @@ padding: 0 20px;
             top: 2px
         }
     }
-    //&:hover {
-    //    box-shadow: 0 0 5px 1px $clr_gray;
-    //}
+
+    &:hover {
+        .picture-block__img {
+            img {
+                -webkit-transform: scale(1.05, 1.05);
+                -ms-transform: scale(1.05, 1.05);
+                transform: scale(1.05, 1.05);
+            }
+        }
+    }
+}
+
+.picture-block__img {
+    width: 100%;
+    height: 228px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all 250ms;
+        transition: all 250ms;
+    }
+}
+
+.picture-block--promo {
+    background-color: $bg_pink;
+    position: relative;
+
+    ._text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    &:hover {
+        opacity: 0.9;
+    }
 }
 
 .main-block-interior {
@@ -853,22 +889,33 @@ padding: 0 20px;
             display: block;
         }
     }
-
 }
 
 .interior-block {
     display: block;
     float: left;
     width: 23%;
-    height: 206px;
+    //height: 206px;
+    height: 174px;
     margin: 0 1% 10px;
     position: relative;
     color: #fff;
     font-size: 14px;
     text-decoration: none;
+    overflow: hidden;
+
+    img {
+        -webkit-transition: all 250ms;
+        transition: all 250ms;
+    }
 
     &:hover {
-        box-shadow: 0 0 5px 1px $clr_gray;
+        //box-shadow: 0 0 5px 1px $clr_gray;
+        img {
+            -webkit-transform: scale(1.05, 1.05);
+            -ms-transform: scale(1.05, 1.05);
+            transform: scale(1.05, 1.05);
+        }
     }
 
     &.fancybox {
@@ -1085,37 +1132,41 @@ h2 {
 
 }
 
-.list-news-content {
+.list-news__content {
     list-style: none;
     padding: 0;
     position: relative;
     margin-left: 5px;
+}
 
-    li {
-        margin-bottom: 11px;
-        position: relative;
-        padding-left: 15px;
+.list-news__item-wrap {
+    margin-bottom: 20px;
+    position: relative;
+}
 
-        a {
-            color: inherit;
-            text-decoration: none;
+.list-news__item{
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    overflow: hidden;
 
-            &:hover {
-                text-decoration: underline;
-            }
-        }
+    img {
+        display: block;
+        float: left;
+        margin-right: 20px;
+        width: 120px;
+        height: 80px;
+        background-color: #cacaca;
+    }
 
-        &:before {
-            content: '';
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background-color: $bg_green;
-            left: 0;
-            top: 3px;
+    div {
+        overflow: hidden;
+        color:$clr_def;
+        padding: 5px 15px 5px 0;
+    }
 
-        }
-
+    &:hover {
+        text-decoration: none;
     }
 }
 
@@ -1245,6 +1296,7 @@ h2 {
 .copyright {
     //margin: 14px 0 0 0;
 }
+
 .footer-logo-name {
     margin-bottom: 10px;
 }
@@ -1260,12 +1312,12 @@ h2 {
         text-align: center;
 
         svg {
-            fill:#ccc;
+            fill: #ccc;
         }
 
-        &.yt svg{
+        &.yt svg {
             &:hover {
-                fill:#CF3427;
+                fill: #CF3427;
             }
         }
         &.vk {
@@ -1274,18 +1326,18 @@ h2 {
 
             svg {
                 &:hover {
-                    fill:#507299;
+                    fill: #507299;
                 }
             }
         }
-        &.fb svg{
+        &.fb svg {
             &:hover {
-                fill:#3A589B;
+                fill: #3A589B;
             }
         }
-        &.gp svg{
+        &.gp svg {
             &:hover {
-                fill:#D6492F;
+                fill: #D6492F;
             }
         }
         &.tw {
@@ -1546,8 +1598,7 @@ h2 {
     border-radius: 0;
 }
 
-
-/*Выпадающий список*/
+/*пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ*/
 #menu {
     float: left;
     padding: 0;
@@ -1578,15 +1629,15 @@ h2 {
 #menu ul {
     list-style: none;
     position: absolute;
-    left: -9999px; /* Скрываем за экраном, когда не нужно (данный метод лучше, чем display:none;) */
-    opacity: 0; /* Устанавливаем начальное состояние прозрачности */
-    -webkit-transition: 0.25s linear opacity; /* В Webkit выпадающие пункты будут проявляться */
+    left: -9999px; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ display:none;) */
+    opacity: 0; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
+    -webkit-transition: 0.25s linear opacity; /* пїЅ Webkit пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
     z-index: 9999;
     top: 70px;
 }
 
 #menu ul li {
-    //padding-top: 1px; /* Вводим отступ между li чтобы создать иллюзию разделенных пунктов меню */
+    //padding-top: 1px; /* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ li пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ */
     float: none;
     height: 35px;
     top: -10px;
@@ -1595,27 +1646,27 @@ h2 {
 }
 
 #menu ul a {
-    white-space: nowrap; /* Останавливаем перенос текста и создаем многострочный выпадающий пункт */
+    white-space: nowrap; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
     padding: 10px;
 
 }
 
 #menu li:hover ul {
-    /* Выводим выпадающий пункт при наведении курсора */
-    left: 0; /* Приносим его обратно на экран, когда нужно */
-    opacity: 1; /* Делаем непрозрачным */
+    /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
+    left: 0; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
+    opacity: 1; /* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 }
 
 #menu li:hover a {
-    /* Устанавливаем стили для верхнего уровня, когда выводится выпадающий список */
+    /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ */
     background: $bg_green;
-    //background: rgba(127, 176, 0, 0.85); /* Выглядит полупрозрачным */
+    //background: rgba(127, 176, 0, 0.85); /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
     //text-decoration:underline;
     display: block;
 }
 
 #menu li:hover ul a {
-    /* Изменяем некоторые стили верхнего уровня при выводе выпадающего пункта */
+    /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ */
     text-decoration: none;
     -webkit-transition: -webkit-transform 0.075s linear;
 }
@@ -1627,15 +1678,15 @@ h2 {
 
     a {
         background: #f5f5f5;
-        color:#000;
+        color: #000;
         border-left: 5px solid transparent;
     }
 }
 
 #menu li:hover ul li a:hover {
-    /* Устанавливаем стили для выпадающих пунктов, когда курсор наводится на конкретный пункт */
+    /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
     background: #f5f5f5;
-    //background: rgba(127, 176, 0, 0.85); /* Будет полупрозрачным */
+    //background: rgba(127, 176, 0, 0.85); /* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
     color: $bg_green;
     border-left: 5px solid $bg_green;
 
