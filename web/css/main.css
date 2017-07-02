@@ -2906,6 +2906,11 @@ body {
         top: 50%;
         left: 50%;
         margin: -5px 0 0 -12px; }
+        @media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
+          .component-select .chosen-single div b {
+            background-image: url("../img/sprite.png") !important;
+            background-position: -99px -56px !important;
+            background-size: 400px 700px !important; } }
   .component-select .chosen-drop {
     border: 1px solid #ebeced;
     border-top: 0;

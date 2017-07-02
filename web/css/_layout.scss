@@ -177,7 +177,7 @@ body {
     color: $clr_title;
     font-family: Tahoma, Arial, Helvetica, sans-serif;
     font-weight: 700;
-//    margin: 0 10px;
+    //    margin: 0 10px;
 
     .chosen-single {
         height: 31px;
@@ -204,6 +204,11 @@ body {
                 left: 50%;
                 margin: -5px 0 0 -12px;
 
+                @media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
+                    background-image: url("../img/sprite.png")!important;
+                    background-position: -99px -56px!important;
+                    background-size: 400px 700px !important;
+                }
             }
         }
         &:hover {
