@@ -337,6 +337,10 @@
     }
 }
 
+.product-page__wrapper {
+    overflow: hidden;
+}
+
 .main-block {
 
     &.projects-house {
@@ -708,8 +712,9 @@ h2 {
 }
 
 .right-block {
-    width: 286px;
+    width: 390px;
     font-size: 1.4em;
+    float: right;
 }
 .right-menu {
 

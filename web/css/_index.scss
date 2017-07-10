@@ -671,8 +671,27 @@
             padding: 4px 10px;
         }
     }
-
 }
+
+.product-page__wrapper {
+    overflow: hidden;
+}
+
+
+
+.right-block {
+    width: 390px;
+    font-size: 14px;
+    float: right;
+    background-color: #fff;
+
+    h1 {
+        font-size: 20px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
 
 .right-block-content-wrapper {
     overflow: hidden;
@@ -734,6 +753,7 @@
     //    }
     //}
 }
+
 
 .main-block-four-row {
     margin: 20px -10px;
@@ -976,7 +996,7 @@ h2 {
 
 .main-text-block,
 .text-block-project {
-    font-size: 1.8em;
+    font-size: 16px;
     line-height: 22px;
 
     .main-pic {
@@ -988,11 +1008,12 @@ h2 {
 }
 
 .characteristics {
-    margin-right: 317px;
+    //margin-right: 317px;
 
     ._title {
         color: $bg_pink;
         font-weight: 700;
+        font-size: 16px;
 
     }
 
@@ -1042,6 +1063,14 @@ h2 {
 
         }
     }
+}
+
+.characteristics--sidebar {
+    padding: 10px;
+}
+
+.characteristics--main {
+    margin-right: 10px;
 }
 
 .plan-pictures {
@@ -1358,7 +1387,7 @@ h2 {
 .breadcrums {
     font-size: 1.4em;
     margin-top: 14px;
-    margin-bottom: -15px;
+    margin-bottom: 15px;
     color: $clr_title;
 
     a {

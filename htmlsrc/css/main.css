@@ -74,7 +74,7 @@ hr {
 
 mark {
   background: #ff0;
-  color: black; }
+  color: #000; }
 
 p, pre {
   margin: 1em 0; }
@@ -286,7 +286,7 @@ a {
   .slick-list:focus {
     outline: none; }
   .slick-loading .slick-list {
-    background: white url("../img/ajax-loader.gif") center center no-repeat; }
+    background: #fff url("../img/ajax-loader.gif") center center no-repeat; }
   .slick-list.dragging {
     cursor: pointer;
     cursor: hand; }
@@ -540,11 +540,11 @@ a {
   height: 1%;
   border: 1px solid #aaa;
   background-color: #fff;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(1%, #eeeeee), color-stop(15%, white));
-  background-image: -webkit-linear-gradient(#eeeeee 1%, white 15%);
-  background-image: -moz-linear-gradient(#eeeeee 1%, white 15%);
-  background-image: -o-linear-gradient(#eeeeee 1%, white 15%);
-  background-image: linear-gradient(#eeeeee 1%, white 15%);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(1%, #eeeeee), color-stop(15%, #ffffff));
+  background-image: -webkit-linear-gradient(#eeeeee 1%, #ffffff 15%);
+  background-image: -moz-linear-gradient(#eeeeee 1%, #ffffff 15%);
+  background-image: -o-linear-gradient(#eeeeee 1%, #ffffff 15%);
+  background-image: linear-gradient(#eeeeee 1%, #ffffff 15%);
   cursor: text; }
 
 .chosen-container-multi .chosen-choices li {
@@ -1385,6 +1385,9 @@ body {
     font-weight: 500;
     text-align: left; }
 
+.product-page__wrapper {
+  overflow: hidden; }
+
 .main-block.projects-house {
   margin-bottom: -16px; }
 .main-block ._content {
@@ -1649,8 +1652,9 @@ h2 {
       top: 3px; }
 
 .right-block {
-  width: 286px;
-  font-size: 1.4em; }
+  width: 390px;
+  font-size: 1.4em;
+  float: right; }
 
 .right-menu a {
   text-decoration: none;
@@ -1991,3 +1995,5 @@ h2 {
   h2,
   h3 {
     page-break-after: avoid; } }
+
+/*# sourceMappingURL=main.css.map */
