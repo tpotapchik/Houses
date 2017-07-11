@@ -190,12 +190,16 @@
             height: auto;
             margin: 70px auto 50px;
         }
+        svg {
+            width: 90px;
+            height: 90px;
+        }
     }
     .slick-list {
         // margin: 0 -1px;
     }
     .slider-to-start-text {
-        font-size: 20px;
+        font-size: 24px;
         text-align: center;
     }
 }
@@ -596,7 +600,8 @@
         a {
             text-decoration: none;
             color: #000;
-            font-size: 1.6em;
+            //font-size: 1.6em;
+            font-size: 16px;
             display: block;
             padding: 10px 0;
             margin: 0 20px;
@@ -1001,7 +1006,7 @@ h2 {
 
     .main-pic {
         margin-bottom: 19px;
-        width: 707px;
+        width: 100%;
 
     }
 

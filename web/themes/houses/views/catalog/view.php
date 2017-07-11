@@ -81,172 +81,188 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_descr
 			</div>
 			<?php endif; ?>
 
+			<div class="sidebar">
+				<ul>
+					<li class="sidebar-item">
+						<a href="#"><span>Проекты</span></a>
+					</li>
+					<li class="sidebar-item">
+						<a href="#"><span>Как купить проект дома?</span></a>
+					</li>
+					<li class="sidebar-item">
+						<a href="#"><span>Что включает проект?</span></a>
+					</li>
+					<li class="sidebar-item">
+						<a href="#"><span>Ландшафтный дизайн</span></a>
+					</li>
+				</ul>
+			</div>
 			<!--<?= $this->render('../layouts/_right-menu', []) ?>-->
 		</div>
 
 		<div class="product-page__wrapper">
 
 
-		<div class="text-block-project">
-			<?php
-            $mainPhoto = $model->getMainPhoto();
-			$facadesPhotos = $model->getFacades()->all();
-			$floorsPhotos = $model->getFloors()->all();
-			$visualisations = $model->getOtherPhotos();
-
-			usort($visualisations, function($a, $b) {
-			if ($b->title === 'участок') {
-			return -1;
-			} elseif ($a->title === 'участок') {
-			return 1;
-			}
-			return 0;
-			});
-
-			/** @var \app\models\Photo $photo */
-			foreach ($visualisations as $key => $photo) {
-			if ($photo->title === 'участок') {
-			$indexes['position'] = $key+1;
-			break;
-			}
-			}
-
-			?>
-			<div class="project-nav">
-				<a href="javascript: void(0);" onclick="openGallery()" data-imgIndex="0">визуализации</a>|
-				<a class="openGallery" data-index="plans" href="javascript: void(0);">планы</a>|
-				<a class="openGallery" data-index="facades" href="javascript: void(0);">фасады</a>|
-				<a class="openGallery" data-index="position" href="javascript: void(0);">расположение</a>
+			<div class="text-block-project">
 				<?php
-                    if ($model->hasDesigns()) {
-				$link = $model->getDesign()->one()->getLink();
-				echo '|' . Html::a('интерьер', $link);
+            $mainPhoto = $model->getMainPhoto();
+				$facadesPhotos = $model->getFacades()->all();
+				$floorsPhotos = $model->getFloors()->all();
+				$visualisations = $model->getOtherPhotos();
+
+				usort($visualisations, function($a, $b) {
+				if ($b->title === 'участок') {
+				return -1;
+				} elseif ($a->title === 'участок') {
+				return 1;
 				}
+				return 0;
+				});
+
+				/** @var \app\models\Photo $photo */
+				foreach ($visualisations as $key => $photo) {
+				if ($photo->title === 'участок') {
+				$indexes['position'] = $key+1;
+				break;
+				}
+				}
+
 				?>
-			</div>
+				<div class="project-nav">
+					<a href="javascript: void(0);" onclick="openGallery()" data-imgIndex="0">визуализации</a>|
+					<a class="openGallery" data-index="plans" href="javascript: void(0);">планы</a>|
+					<a class="openGallery" data-index="facades" href="javascript: void(0);">фасады</a>|
+					<a class="openGallery" data-index="position" href="javascript: void(0);">расположение</a>
+					<?php
+                    if ($model->hasDesigns()) {
+					$link = $model->getDesign()->one()->getLink();
+					echo '|' . Html::a('интерьер', $link);
+					}
+					?>
+				</div>
 
 
-			<?php
+				<?php
             echo Html::a(
                 Html::img(
                     $mainPhoto,
                     [
                         'alt' => $this->title,
-			'class' => 'main-pic'
-			]
-			),
-			$mainPhoto,
-			[
-			'class' => 'fancybox',
-			'rel' => 'gallery2'
-			]
-			);
-			//visualisations
-			$positionsPhotos = [];
-			/** @var \app\models\Photo $photo */
-			foreach ($visualisations as $photo) {
-			$options = [
-			'class' => 'fancybox visualisation',
-			'rel' => 'gallery2',
-			'title' => $this->title,
-			'alt' => $this->title
-			];
-			if ($photo->title === 'участок') {
-			$options['class'] = $options['class'] . ' position';
-			$positionsPhotos[] = Html::a(
-			Html::img($photo->file, ['alt' => $this->title.' '.$photo->title, 'style' => 'display:none']),
-			$photo->file,
-			$options
-			);
-			} else {
-			echo Html::a(
-			Html::img($photo->file, ['alt' => $this->title.' '.$photo->title, 'style' => 'display:none']),
-			$photo->file,
-			$options
-			);
-			}
-			}
-			?>
+				'class' => 'main-pic'
+				]
+				),
+				$mainPhoto,
+				[
+				'class' => 'fancybox',
+				'rel' => 'gallery2'
+				]
+				);
+				//visualisations
+				$positionsPhotos = [];
+				/** @var \app\models\Photo $photo */
+				foreach ($visualisations as $photo) {
+				$options = [
+				'class' => 'fancybox visualisation',
+				'rel' => 'gallery2',
+				'title' => $this->title,
+				'alt' => $this->title
+				];
+				if ($photo->title === 'участок') {
+				$options['class'] = $options['class'] . ' position';
+				$positionsPhotos[] = Html::a(
+				Html::img($photo->file, ['alt' => $this->title.' '.$photo->title, 'style' => 'display:none']),
+				$photo->file,
+				$options
+				);
+				} else {
+				echo Html::a(
+				Html::img($photo->file, ['alt' => $this->title.' '.$photo->title, 'style' => 'display:none']),
+				$photo->file,
+				$options
+				);
+				}
+				}
+				?>
 
-		</div>
-		<div class="text-block-project">
-
-			<div class="characteristics characteristics--main">
-				<div class="_title">Технические характеристики</div>
-				<ul class="_parameters">
-					<?php
-                    $areas = \yii\helpers\ArrayHelper::map($model->getAreas()->all(), 'type', 'value');
-					$sizes = \yii\helpers\ArrayHelper::map($model->getSizes()->all(), 'type', 'value');
-					?>
-					<li>
-						<span>Общая площадь:</span>
-						<span><?= $model->effectiveArea ?> м<sup>2</sup></span></li>
-					<li>
-						<span>Площадь кровли:</span>
-						<span><?= $areas['кровли'] ?> м<sup>2</sup></span></li>
-					<li>
-						<span>Площадь застройки:</span>
-						<span><?= $areas['застройки'] ?> м<sup>2</sup></span>
-					</li>
-					<li>
-						<span>Объем:</span>
-						<span><?= $model->cubage ?> м<sup>3</sup></span></li>
-					<li>
-						<span>Высота:</span>
-						<span><?= $sizes['высота'] ?> м</span></li>
-					<li>
-						<span>Минимальная площадь участка:</span>
-						<span><?= sprintf('%Gx%G', $sizes['ширина'], $sizes['длина']) ?></span>
-					</li>
-				</ul>
-				<div class="_title">Описание</div>
-				<ul class="_technology">
-					<?= $model->technology ?>
-				</ul>
 			</div>
-			<div class="plan-pictures">
-				<?php
+			<div class="text-block-project">
+
+				<div class="characteristics characteristics--main">
+					<div class="_title">Технические характеристики</div>
+					<ul class="_parameters">
+						<?php
+                    $areas = \yii\helpers\ArrayHelper::map($model->getAreas()->all(), 'type', 'value');
+						$sizes = \yii\helpers\ArrayHelper::map($model->getSizes()->all(), 'type', 'value');
+						?>
+						<li>
+							<span>Общая площадь:</span>
+							<span><?= $model->effectiveArea ?> м<sup>2</sup></span></li>
+						<li>
+							<span>Площадь кровли:</span>
+							<span><?= $areas['кровли'] ?> м<sup>2</sup></span></li>
+						<li>
+							<span>Площадь застройки:</span>
+							<span><?= $areas['застройки'] ?> м<sup>2</sup></span>
+						</li>
+						<li>
+							<span>Объем:</span>
+							<span><?= $model->cubage ?> м<sup>3</sup></span></li>
+						<li>
+							<span>Высота:</span>
+							<span><?= $sizes['высота'] ?> м</span></li>
+						<li>
+							<span>Минимальная площадь участка:</span>
+							<span><?= sprintf('%Gx%G', $sizes['ширина'], $sizes['длина']) ?></span>
+						</li>
+					</ul>
+					<div class="_title">Описание</div>
+					<ul class="_technology">
+						<?= $model->technology ?>
+					</ul>
+				</div>
+				<div class="plan-pictures">
+					<?php
                 //plans
                 /** @var \app\models\Floor $floor */
                 foreach ($floorsPhotos as $floor) {
                     echo Html::a(
                         Html::img($floor->file, ['alt' => $this->title.' '.$floor->title]),
-				$floor->file,
-				[
-				'class' => 'fancybox plans',
-				'rel' => 'gallery2'
-				]
-				);
-				}
-				?>
-			</div>
-			<?php
+					$floor->file,
+					[
+					'class' => 'fancybox plans',
+					'rel' => 'gallery2'
+					]
+					);
+					}
+					?>
+				</div>
+				<?php
             /** @var \app\models\Facade $facade */
             foreach ($facadesPhotos as $facade) {
                 echo Html::a(
                     Html::img($facade->file, ['alt' => $this->title.' '.$facade->title, 'style' => 'display:none']),
-			$facade->file,
-			[
-			'class' => 'fancybox facades',
-			'rel' => 'gallery2',
-			'alt' => $this->title.' '.$floor->title
-			]
-			);
-			}
+				$facade->file,
+				[
+				'class' => 'fancybox facades',
+				'rel' => 'gallery2',
+				'alt' => $this->title.' '.$floor->title
+				]
+				);
+				}
 
-			foreach ($positionsPhotos as $a) {
-			echo $a;
-			}
-			?>
+				foreach ($positionsPhotos as $a) {
+				echo $a;
+				}
+				?>
 
 
-		</div>
-		<?php if (strlen($model->advice) > 0) : ?>
-		<div class="text-block-project">
-			<h3 class="advice-title">Полезная информация</h3>
-			<div class="advice"><?= $model->advice ?></div>
-		</div>
-		<?php endif; ?>
+			</div>
+			<?php if (strlen($model->advice) > 0) : ?>
+			<div class="text-block-project">
+				<h3 class="advice-title">Полезная информация</h3>
+				<div class="advice"><?= $model->advice ?></div>
+			</div>
+			<?php endif; ?>
 		</div>
 	</div>
 
