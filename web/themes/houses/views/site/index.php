@@ -88,7 +88,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
 	<!--tabs-->
 	<div class="tabs-panel-content">
 		<div class="centralize">
-			<div class="tabs" id="tab-main">
+			<div class="tabs clearfix" id="tab-main">
 				<a href="#" class="active tab-item">ТОП - 100 </a>
 				<a href="#" class="tab-item">Новые</a>
 				<a href="#" class="tab-item">Одноэтажные</a>
@@ -295,7 +295,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
 		<div class="main-title">Наши преимущества</div>
 		<div class="slider-to-start">
 			<div class="slider-to-start-item">
-				<a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
+				<div class="slider-to-start-link">
 					<div class="ing-content">
 						<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="35.293mm" height="35.2926mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
                        viewBox="0 0 161 161"
@@ -319,10 +319,10 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
 						<br>
 						10 лет
 					</div>
-				</a>
+				</div>
 			</div>
 			<div class="slider-to-start-item">
-				<a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
+				<div class="slider-to-start-link">
 					<div class="ing-content">
 						<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="35.2926mm" height="35.2925mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
                         viewBox="0 0 137 137"
@@ -342,10 +342,10 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
 						Комплексный
 						<br>подход
 					</div>
-				</a>
+				</div>
 			</div>
 			<div class="slider-to-start-item">
-				<a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
+				<div class="slider-to-start-link">
 					<div class="ing-content">
 						<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="35.2927mm" height="35.2905mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
                        viewBox="0 0 120 120"
@@ -368,10 +368,10 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
 						Авторский
 						<br>надзор
 					</div>
-				</a>
+				</div>
 			</div>
 			<div class="slider-to-start-item">
-				<a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
+				<div class="slider-to-start-link">
 					<div class="ing-content">
 						<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="35.2946mm" height="35.2925mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
                         viewBox="0 0 107 107"
@@ -394,10 +394,10 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
 						Всё
 						<br>официально
 					</div>
-				</a>
+				</div>
 			</div>
 			<div class="slider-to-start-item">
-				<a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
+				<div class="slider-to-start-link">
 					<div class="ing-content">
 						<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="35.314mm" height="35.292mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
                         viewBox="0 0 1703 1702"
@@ -419,10 +419,10 @@ $this->registerMetaTag(['name' => 'description', 'content' => $mainArticle->meta
 						<br>подход к каждому
 						<br>клиенту
 					</div>
-				</a>
+				</div>
 			</div>
 			<div class="slider-to-start-item">
-				<a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
+				<div class="slider-to-start-link">
 					<div class="ing-content">
 						<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="43.5264mm" height="35.292mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
 viewBox="0 0 799 648"
@@ -457,12 +457,12 @@ viewBox="0 0 799 648"
 						<br>проходят
 						<br>согласование
 					</div>
-				</a>
+				</div>
 			</div>
 			<div class="slider-to-start-item">
-				<a href="/catalog/odnosemeynyy_odnoetajnyy/ariel_KO" class="slider-to-start-link">
+				<div class="slider-to-start-link">
 					<div class="ing-content">
-						<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="63.0572mm" height="35.292mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+						<svg class="ing-content--3D" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="63.0572mm" height="35.292mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
 viewBox="0 0 1025 574"
  xmlns:xlink="http://www.w3.org/1999/xlink">
 
@@ -528,7 +528,7 @@ viewBox="0 0 1025 574"
 						<br>проекта
 						<br>
 					</div>
-				</a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -565,6 +565,7 @@ viewBox="0 0 1025 574"
 	</div>
 	<?= $this->render('../layouts/_favorite', []) ?>
 	<div class="common-block clearfix">
+		<div class="main-title">Новости</div>
 		<div class="left-block">
 			<!--<?= $this->render('../layouts/_newsAnounce', []) ?>
 			<?= $this->render('../layouts/_right-menu', []) ?>-->
@@ -574,10 +575,15 @@ viewBox="0 0 1025 574"
 				<div>Место для баннера 2</div>
 			</div>
 		</div>
-		<div class="main-text-block ovhidden">
+		<div class="ovhidden">
 			<?= $this->render('../layouts/_newsAnounce', []) ?>
-			<?= $mainArticle->full_text ?>
+
+			<div class="main-text-block">
+
+				<?= $mainArticle->full_text ?>
+			</div>
 		</div>
+	
 	</div>
 	<!--<?= $this->render('../layouts/_our-projects', []) ?>
 
